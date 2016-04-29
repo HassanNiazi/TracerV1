@@ -28,6 +28,7 @@ namespace TracerV1
         //TODO: Add Snap It ---- Done
         //Add Normal Map Search 
         bool started = false;
+        bool unknownCellsFlag = false;
         List<string[]> rows;
         DataTable traceDataTable = new DataTable();
         DataTable dt = new DataTable();
@@ -156,11 +157,6 @@ namespace TracerV1
 
         }
 
-        private void chartControl()
-        {
-            
-        }
-
         private void refetchData()
         {
             try
@@ -224,6 +220,7 @@ namespace TracerV1
         /// Designed for excel
         /// but we shifted to csv format
         /// </summary>
+        /// 
         private void _cellLevelDatabaseUpdate()
         {
 
@@ -699,7 +696,7 @@ namespace TracerV1
 
                 int i = 1;
                 toolStripProgressBar1.ProgressBar.Value = 0;
-     
+            unknownCellsFlag = false;
                 foreach (string s in IMSIChkList.CheckedItems)
                 {
                     img1 = Image.FromFile(mainDir + "/TrackingDot" + i.ToString() + ".png");
@@ -707,7 +704,8 @@ namespace TracerV1
                     i++;
                     toolStripProgressBar1.ProgressBar.Value = toolStripProgressBar1.ProgressBar.Value + (100 / IMSIChkList.CheckedItems.Count);
                 }
-
+            if (unknownCellsFlag)
+                MsgBox("Some Cell Coordinates were not available and cant be plotted. Please see the Alien Cells in Tool Config Tab for Cell Ids");
                 //PointLatLng p = new PointLatLng(33.7294, 73.0931);
                 // MainMap.Position = new PointLatLng(33.7294, 73.0931);
                 //   img.Dispose();
@@ -836,7 +834,8 @@ namespace TracerV1
         {
             try
             {
-                DataRow[] dr = traceDataTable.Select("ueId LIKE '%" + imsi + "%' And rrcMsgName = '" + RRCMessages.SelectedItem.ToString() + "'");
+
+                DataRow[] dr = traceDataTable.Select(string.Format("ueId LIKE '%{0}%' And rrcMsgName = '{1}'", imsi, RRCMessages.SelectedItem));
                 PointLatLng p = new PointLatLng(33.7294, 73.0931);
                 //   MainMap.Position = new PointLatLng(33.7294, 73.0931);
                 GMapOverlay markersOverlay = new GMapOverlay("markers");
@@ -845,27 +844,37 @@ namespace TracerV1
                 _point pLocal = new _point(33.7294, 73.0931);
                 foreach (DataRow d in dr)
                 {
-                    DataRow[] cdr = dt.Select("[Cell ID] = " + d["CellId"].ToString() );
-
-                    double latCell = double.Parse(cdr[0]["LAT"].ToString());
-                    double lngCell = double.Parse(cdr[0]["LONG"].ToString());
-                    pLocal = new _point(latCell, lngCell);
-                    allcoords.Add(pLocal);
-                    if (!listConatains_point(coords, pLocal))
+                    try
                     {
+                        DataRow[] cdr = dt.Select("[Cell ID] = " + d["CellId"].ToString());
 
-                        p.Lat = latCell;
-                        p.Lng = lngCell;
+                        double latCell = double.Parse(cdr[0]["LAT"].ToString());
+                        double lngCell = double.Parse(cdr[0]["LONG"].ToString());
+                        pLocal = new _point(latCell, lngCell);
+                        allcoords.Add(pLocal);
+                        if (!listConatains_point(coords, pLocal))
+                        {
 
-                        GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
+                            p.Lat = latCell;
+                            p.Lng = lngCell;
 
-                        markersOverlay.Markers.Add(cusMarker);
-                        MainMap.Overlays.Add(markersOverlay);
+                            GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
 
-                        coords.Add(pLocal);
+                            markersOverlay.Markers.Add(cusMarker);
+                            MainMap.Overlays.Add(markersOverlay);
 
+                            coords.Add(pLocal);
+
+                        }
                     }
+                    catch {
+                        //   MsgBox(string.Format("Unable to locate Coordinates for the cell Id : {0} Please update Cell database", d["CellId"]));
+                        //   coords.Add(pLocal);
+                        if(!unknownCells.Items.Contains(d["CellId"].ToString()))
+                        unknownCells.Items.Add(d["CellId"].ToString());
 
+                        unknownCellsFlag = true;
+                    }
 
                 }
 
@@ -1271,7 +1280,30 @@ namespace TracerV1
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            DevExpress.XtraPrinting.XlsExportOptions dxo = new DevExpress.XtraPrinting.XlsExportOptions();
+            dxo.ExportMode = DevExpress.XtraPrinting.XlsExportMode.SingleFile;
 
+            chartControl1.ExportToXlsx(openFileDialog1.FileName);
+        }
+
+        private void GoTOCoord_Click(object sender, EventArgs e)
+        {
+            MainMap.Position = new PointLatLng(double.Parse(LAT.Text), double.Parse(LNG.Text));
+        }
+
+        private void MainMap_MouseMove(object sender, MouseEventArgs e)
+        {
+            PointLatLng p = MainMap.FromLocalToLatLng(e.X, e.Y);
+            currentCoords.Text = string.Format("Lat : {0} , Lng : {1}", p.Lat, p.Lng);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            unknownCells.Items.Clear();
+        }
     }
 
 
