@@ -1,21 +1,16 @@
 ﻿using GMap.NET;
 using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
-using GMap.NET.WindowsForms.Markers;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
-using Excel = Microsoft.Office.Interop.Excel;
-using System.Windows.Forms.DataVisualization.Charting;
+
 using DevExpress.XtraCharts;
 using System.Drawing.Imaging;
 namespace TracerV1
@@ -48,11 +43,6 @@ namespace TracerV1
                 lng = _lng;
             }
 
-            public bool isEqual(double _lat, double _lng)
-            {
-                return _lat == lat && _lng == lng;
-            }
-
         }
 
         public Form1()
@@ -60,8 +50,8 @@ namespace TracerV1
             InitializeComponent();
 
             mapProviderList.DataSource = GMapProviders.List;
-           
-            
+
+
             //SaveFileDialog svff = new SaveFileDialog();
             //svff.ShowDialog();
             //Excel_Com xlC = new Excel_Com(svff.FileName);
@@ -75,8 +65,7 @@ namespace TracerV1
 
             try
             {
-                System.Net.IPHostEntry e =
-                     System.Net.Dns.GetHostEntry("www.google.com");
+                System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
 
             }
             catch
@@ -88,7 +77,7 @@ namespace TracerV1
             }
 
             // config map
-            MainMap.MapProvider = GMapProviders.OpenStreetMap;
+            MainMap.MapProvider = GMapProviders.GoogleMap;
             MainMap.Position = new PointLatLng(33.7294, 73.0931);
             MainMap.MinZoom = 0;
             MainMap.MaxZoom = 24;
@@ -150,9 +139,9 @@ namespace TracerV1
             //  MsgBox(mainDir);
             sqlConOpen();
             refetchData();
-           barDockControlTop.Visible = false;
-           barDockControlRight.Visible = false;
-      //      ribbonControl1.Visible = false;
+            barDockControlTop.Visible = false;
+            barDockControlRight.Visible = false;
+            //      ribbonControl1.Visible = false;
 
 
         }
@@ -166,6 +155,7 @@ namespace TracerV1
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
                 UpdateRRCMsgsList();
+                updateUserList_DataVisualizer();
                 started = true;
             }
             catch (Exception ex)
@@ -179,7 +169,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + System.IO.Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -214,111 +204,6 @@ namespace TracerV1
                 MsgBox(ex.Message);
             }
         }
-
-        /// <summary>
-        /// Depriciated
-        /// Designed for excel
-        /// but we shifted to csv format
-        /// </summary>
-        /// 
-        private void _cellLevelDatabaseUpdate()
-        {
-
-            string _cellName, _lat, _long;
-            int rCnt = 0;
-            int cCnt = 0;
-            _cellName = null;
-            _lat = null;
-            _long = null;
-            MessageBox.Show("Task Started");
-            Excel.Application xlApp = null;
-            Excel.Workbook xlWorkBook = null;
-            Excel.Worksheet xlWorkSheet = null;
-            Excel.Range range = null;
-            try
-            {
-                openFileDialog1.ShowDialog();
-                string xPath = openFileDialog1.FileName;
-
-                xlApp = new Excel.Application();
-                xlWorkBook = xlApp.Workbooks.Open(xPath, 0, true, 5, "", "", true, Microsoft.Office.Interop.Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-                range = xlWorkSheet.UsedRange;
-
-
-
-
-
-
-                for (rCnt = 1; rCnt <= range.Rows.Count; rCnt++)
-                {
-                    for (cCnt = 1; cCnt <= range.Columns.Count; cCnt++)
-                    {
-                        //str = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Value2;
-                        if (cCnt == 2) // Cell Name
-                        {
-                            _cellName = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Text;
-                        }
-
-                        if (cCnt == 10) // LAT Name
-                        {
-                            _lat = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Text;
-                        }
-                        if (cCnt == 11) // Long Name
-                        {
-                            _long = (string)(range.Cells[rCnt, cCnt] as Excel.Range).Text;
-                        }
-
-                    }
-
-                    //Update Database
-
-
-                }
-
-                xlWorkBook.Close(true, null, null);
-                xlApp.Quit();
-
-                releaseObject(xlWorkSheet);
-                releaseObject(xlWorkBook);
-                releaseObject(xlApp);
-
-
-
-                MessageBox.Show("Task Completed");
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                xlWorkBook.Close(true, null, null);
-                xlApp.Quit();
-
-                releaseObject(xlWorkSheet);
-                releaseObject(xlWorkBook);
-                releaseObject(xlApp);
-            }
-        }
-
-        private void releaseObject(object obj)
-        {
-            try
-            {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                obj = null;
-            }
-            catch (Exception ex)
-            {
-                obj = null;
-                MessageBox.Show("Unable to release the Object " + ex.ToString());
-            }
-            finally
-            {
-                GC.Collect();
-            }
-        }
         /// <summary>
         /// Trace Data Load
         /// </summary>
@@ -335,20 +220,36 @@ namespace TracerV1
                 openFileDialog1.ShowDialog();
                 // MessageBox.Show( openFileDialog1.FileName.ToString());
 
-                string FilePath = openFileDialog1.FileName.ToString();
+                string FilePath = openFileDialog1.FileName;
                 path.Text = FilePath;
 
-                File.Copy(FilePath, "CTO Trace.csv", true);
+                //File.Copy(FilePath, "CTO Trace.csv", true);
+                //File.AppendAllLines()
+                if (traceDataTable.Columns.Count > 0)
+                {
+                    string[] fileReadAllLines = File.ReadAllLines(FilePath);
+                    string[] fileData = new string[fileReadAllLines.Length - 1];
+                    for (int i = 1; i < (fileReadAllLines.Length); i++)
+                    {
+                        fileData[i - 1] = fileReadAllLines[i];
+                    }
+                    File.AppendAllLines("CTO Trace.csv", fileData);
+                }
+                else
+                {
+                    File.Copy(FilePath, "CTO Trace.csv", true);
+                }
 
-                rows = System.IO.File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
-                traceDataTable = new DataTable();
+                rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                //   traceDataTable = new DataTable();
                 string[] headers = rows[0];
                 rows.RemoveAt(0);
-                for (int i = 0; i <= 26; i++)
-                {
-                    // dt.Columns.Add(i.ToString());
-                    traceDataTable.Columns.Add(headers[i].ToString());
-                }
+                if (!(traceDataTable.Columns.Count > 0))
+                    for (int i = 0; i <= 26; i++)
+                    {
+                        // dt.Columns.Add(i.ToString());
+                        traceDataTable.Columns.Add(headers[i]);
+                    }
 
                 rows.ForEach(x =>
                 {
@@ -366,35 +267,46 @@ namespace TracerV1
             }
         }
 
+        private void updateUserList_DataVisualizer()
+        {
+            try
+            {
+
+                List<string> lis = SelectAllUserFromDB();
+                foreach (string s in lis)
+                {
+                    UserNames_DataVisualizer.Items.Add(s);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
+        }
+
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void toolStripSplitButton1_ButtonClick(object sender, EventArgs e)
-        {
-            // _cellLevelDatabaseUpdate();
-            _cellDataUpload();
-        }
-
         private void _cellDataUpload()
         {
+
 
             try
             {
 
-
                 openFileDialog1.ShowDialog();
-                MessageBox.Show(openFileDialog1.FileName.ToString());
+                MessageBox.Show(openFileDialog1.FileName);
 
-                string FilePath;
-                FilePath = openFileDialog1.FileName.ToString();
+                string FilePath = openFileDialog1.FileName.ToString();
                 fpCell.Text = FilePath;
                 // FilePath = "Cells Lat Longs.csv";
                 File.Copy(FilePath, "Cells Lat Longs.csv", true);
-                rows = System.IO.File.ReadAllLines(FilePath).Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                rows = File.ReadAllLines(FilePath).Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
                 dt = new DataTable();
-                
+
                 string[] headers = rows[0];
                 rows.RemoveAt(0);
 
@@ -412,7 +324,6 @@ namespace TracerV1
 
 
                 dataGridView2.DataSource = dt;
-
             }
 
             catch (Exception ex)
@@ -434,9 +345,9 @@ namespace TracerV1
                 string FilePath;
                 //FilePath = openFileDialog1.FileName.ToString();
                 FilePath = "Cells Lat Longs.csv";
-             //   File.Copy(FilePath, mainDir + "Cells Lat Longs.csv", true);
-               
-                rows = System.IO.File.ReadAllLines(FilePath).Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                //   File.Copy(FilePath, mainDir + "Cells Lat Longs.csv", true);
+
+                rows = File.ReadAllLines(FilePath).Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
                 dt = new DataTable();
                 string[] headers = rows[0];
                 rows.RemoveAt(0);
@@ -541,13 +452,22 @@ namespace TracerV1
         private List<string> extractIMSI(string[] ueIDs)
         {
             List<string> IMSI = new List<string>();
-
-            foreach (string s in ueIDs)
+            try
             {
-                if (!isEqualToIMSI(IMSI, s.Substring(5, 15)))
-                    IMSI.Add(s.Substring(5, 15));
+                
+
+                foreach (string s in ueIDs)
+                {
+                    if (!isEqualToIMSI(IMSI, s.Substring(5, 15)))
+                        IMSI.Add(s.Substring(5, 15));
+                }
+                return IMSI;
             }
-            return IMSI;
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+                return IMSI;
+            }
         }
 
         private bool isEqualToIMSI(List<string> lis, string s)
@@ -598,7 +518,7 @@ namespace TracerV1
             try
             {
 
-                rows = System.IO.File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
 
                 string[] headers = rows[0];
                 rows.RemoveAt(0);
@@ -637,21 +557,21 @@ namespace TracerV1
 
         private void MapPage_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void UpdateIMSIChkList()
         {
             IMSIChkList.Items.Clear();
 
-           List<string> imsis = SelectAllUserFromDB();
-            
+            List<string> imsis = SelectAllUserFromDB();
+
             foreach (var s in imsis)
             {
-                IMSIChkList.Items.Add( s );
+                IMSIChkList.Items.Add(s);
                 try
                 {
-                   // insertToImsiDB(s);
+                    // insertToImsiDB(s);
                 }
                 catch// (Exception ex)
                 {
@@ -659,7 +579,7 @@ namespace TracerV1
                     //MsgBox( ex.Message );
                 }
 
-                
+
 
             }
         }
@@ -687,56 +607,56 @@ namespace TracerV1
 
         private void PlotMarkers_Click(object sender, EventArgs e)
         {
-
-
-
-
-            //try
-            //{
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            resetMap();
+            
+            try
+            {
 
                 int i = 1;
-                toolStripProgressBar1.ProgressBar.Value = 0;
+            toolStripProgressBar1.ProgressBar.Value = 0;
             unknownCellsFlag = false;
-                foreach (string s in IMSIChkList.CheckedItems)
-                {
-                    img1 = Image.FromFile(mainDir + "/TrackingDot" + i.ToString() + ".png");
-                    plotMarkers2( getIMSIFromUserName(s) , img1);
-                    i++;
-                    toolStripProgressBar1.ProgressBar.Value = toolStripProgressBar1.ProgressBar.Value + (100 / IMSIChkList.CheckedItems.Count);
-                }
+            foreach (string s in IMSIChkList.CheckedItems)
+            {
+                img1 = Image.FromFile(string.Format("{0}/TrackingDot{1}.png", mainDir, i));
+                plotMarkers2(getIMSIFromUserName(s), img1);
+                i++;
+                toolStripProgressBar1.ProgressBar.Value = toolStripProgressBar1.ProgressBar.Value + (100 / IMSIChkList.CheckedItems.Count);
+            }
             if (unknownCellsFlag)
                 MsgBox("Some Cell Coordinates were not available and cant be plotted. Please see the Alien Cells in Tool Config Tab for Cell Ids");
                 //PointLatLng p = new PointLatLng(33.7294, 73.0931);
                 // MainMap.Position = new PointLatLng(33.7294, 73.0931);
                 //   img.Dispose();
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MsgBox(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
         }
 
         private string getIMSIFromUserName(string names)
         {
-          // List<string> imsis = new List<string>();
+            // List<string> imsis = new List<string>();
             string imsi = null;
-              try
+            try
             {
 
-                con = new SqlCeConnection("Data Source=" + System.IO.Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
                 con.Open();
-               
-                    cmd.CommandText = "SELECT * FROM ImsiUsers where UserName = '" + names +"'";
-                    sda.SelectCommand = cmd;
 
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
-                    imsi = dt.Rows[0][0].ToString();
-          
+                cmd.CommandText = "SELECT * FROM ImsiUsers where UserName = '" + names + "'";
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                imsi = dt.Rows[0][0].ToString();
+
 
                 con.Close();
                 return imsi;
@@ -749,7 +669,7 @@ namespace TracerV1
                 return null;
             }
 
-           
+
 
         }
 
@@ -867,11 +787,12 @@ namespace TracerV1
 
                         }
                     }
-                    catch {
+                    catch
+                    {
                         //   MsgBox(string.Format("Unable to locate Coordinates for the cell Id : {0} Please update Cell database", d["CellId"]));
                         //   coords.Add(pLocal);
-                        if(!unknownCells.Items.Contains(d["CellId"].ToString()))
-                        unknownCells.Items.Add(d["CellId"].ToString());
+                        if (!unknownCells.Items.Contains(d["CellId"].ToString()))
+                            unknownCells.Items.Add(d["CellId"].ToString());
 
                         unknownCellsFlag = true;
                     }
@@ -1110,7 +1031,7 @@ namespace TracerV1
             catch// (Exception ex)
             {
                 con.Close();
-              //  MsgBox(ex.Message);
+                //  MsgBox(ex.Message);
             }
         }
 
@@ -1123,14 +1044,14 @@ namespace TracerV1
             catch// (Exception ex)
             {
 
-              //  MsgBox(ex.Message);
+                //  MsgBox(ex.Message);
             }
         }
 
         private List<string> SelectAllUserFromDB()
         {
             List<string> users = new List<string>();
-         
+
             try
             {
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
@@ -1144,10 +1065,10 @@ namespace TracerV1
                 sda.Fill(dt);
                 //dataGridView3.DataSource = dt;
                 IMSIChkList.Items.Clear();
-                foreach(DataRow r in dt.Rows )
+                foreach (DataRow r in dt.Rows)
                 {
-                    users.Add( r[1].ToString());
-               
+                    users.Add(r[1].ToString());
+
                 }
                 con.Close();
 
@@ -1167,23 +1088,23 @@ namespace TracerV1
         {
             if (MapTab.SelectedIndex == 0)
             {
-             //   _cellDataUpload_FromFile();
-             //   _traceDataUpload();
+                //   _cellDataUpload_FromFile();
+                //   _traceDataUpload();
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
                 UpdateRRCMsgsList();
-            //    started = true;
+                //    started = true;
             }
             if (MapTab.SelectedIndex == 4)
             {
-             barDockControlTop.Visible = true;
-             barDockControlRight.Visible = true;
-            //    ribbonControl1.Visible = true;
+                barDockControlTop.Visible = true;
+                barDockControlRight.Visible = true;
+                //    ribbonControl1.Visible = true;
             }
             else
             {
                 barDockControlTop.Visible = false;
-            //    ribbonControl1.Visible = false;
+                //    ribbonControl1.Visible = false;
                 barDockControlRight.Visible = false;
             }
         }
@@ -1203,21 +1124,21 @@ namespace TracerV1
                 exc.openExcelBook(opf.FileName);
                 DataTable dt = exc.getWorkSheetData(1);
 
-            //    dataGridView5.DataSource = dt;
+                //    dataGridView5.DataSource = dt;
                 exc.closeExcelBook(opf.FileName);
 
-               /**
-                * 
-                * 
-                * 
-                * 
-                * */
+                /**
+                 * 
+                 * 
+                 * 
+                 * 
+                 * */
                 // Specify data members to bind the series.
                 DevExpress.XtraCharts.Series series = new DevExpress.XtraCharts.Series("Series1", ViewType.Line);
                 chartControl1.Series.Add(series);
                 series.DataSource = dt;
                 dataGridView5.DataSource = dt;
-//                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
                 dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 series.ArgumentScaleType = ScaleType.Auto;
                 series.ArgumentDataMember = "UserName";
@@ -1225,10 +1146,10 @@ namespace TracerV1
                 string[] STR = new string[1];
                 STR[0] = "Value";
                 series.ValueDataMembers.AddRange(STR);
-                    //.AddRange(new string[] { "Value" });
+                //.AddRange(new string[] { "Value" });
 
                 // Set some properties to get a nice-looking chart.
-             //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
+                //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
                 //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
                 //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
                 chartControl1.Refresh();
@@ -1267,7 +1188,7 @@ namespace TracerV1
 
 
 
-                chartControl1.ExportToImage(svf.FileName+".jpeg", ImageFormat.Jpeg);
+                chartControl1.ExportToImage(svf.FileName + ".jpeg", ImageFormat.Jpeg);
             }
             catch (Exception ex)
             {
@@ -1298,11 +1219,17 @@ namespace TracerV1
         {
             PointLatLng p = MainMap.FromLocalToLatLng(e.X, e.Y);
             currentCoords.Text = string.Format("Lat : {0} , Lng : {1}", p.Lat, p.Lng);
+            ZoomStatusStrip.Text = string.Format(" Zoom Level : {0}", MainMap.Zoom);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             unknownCells.Items.Clear();
+        }
+
+        private void MainMap_Scroll(object sender, ScrollEventArgs e)
+        {
+           
         }
     }
 
