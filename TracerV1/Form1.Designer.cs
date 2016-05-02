@@ -153,7 +153,6 @@ namespace TracerV1
             DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
             DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
-            this.database1DataSet = new TracerV1.bin.Debug.Database1DataSet();
             this.MainMap = new GMap.NET.WindowsForms.GMapControl();
             this.MapTab = new System.Windows.Forms.TabControl();
             this.MapPage = new System.Windows.Forms.TabPage();
@@ -203,6 +202,13 @@ namespace TracerV1
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.mocMessageFilter = new System.Windows.Forms.TextBox();
+            this.callDropFilterMessage = new System.Windows.Forms.TextBox();
+            this.mtcMessageFilter = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.unknownCells = new System.Windows.Forms.ListBox();
@@ -220,6 +226,7 @@ namespace TracerV1
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -228,7 +235,6 @@ namespace TracerV1
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataSet1 = new System.Data.DataSet();
             this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -297,14 +303,7 @@ namespace TracerV1
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.chartPrintExportBar1 = new DevExpress.XtraCharts.UI.ChartPrintExportBar();
-            this.mocMessageFilter = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.mtcMessageFilter = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.callDropFilterMessage = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            this.updateMessageBackup = new System.Windows.Forms.Button();
             this.MapTab.SuspendLayout();
             this.MapPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -331,6 +330,7 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.IMSI_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
@@ -364,13 +364,7 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // MainMap
             // 
@@ -406,7 +400,6 @@ namespace TracerV1
             this.MapTab.Controls.Add(this.tabPage1);
             this.MapTab.Controls.Add(this.tabPage2);
             this.MapTab.Controls.Add(this.DataVisualization);
-            this.MapTab.Controls.Add(this.tabPage3);
             this.MapTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MapTab.Location = new System.Drawing.Point(0, 24);
             this.MapTab.Name = "MapTab";
@@ -946,6 +939,72 @@ namespace TracerV1
             this.splitContainer5.SplitterDistance = 178;
             this.splitContainer5.TabIndex = 12;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.updateMessageBackup);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.mocMessageFilter);
+            this.groupBox1.Controls.Add(this.callDropFilterMessage);
+            this.groupBox1.Controls.Add(this.mtcMessageFilter);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Location = new System.Drawing.Point(414, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(183, 191);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Message Filters";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(15, 26);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "MOC Filter Message ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(15, 104);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(121, 13);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Call Drop Filter Message";
+            // 
+            // mocMessageFilter
+            // 
+            this.mocMessageFilter.Location = new System.Drawing.Point(15, 42);
+            this.mocMessageFilter.Name = "mocMessageFilter";
+            this.mocMessageFilter.Size = new System.Drawing.Size(149, 20);
+            this.mocMessageFilter.TabIndex = 15;
+            this.mocMessageFilter.Text = "radioBearerSetupComplete";
+            // 
+            // callDropFilterMessage
+            // 
+            this.callDropFilterMessage.Location = new System.Drawing.Point(15, 120);
+            this.callDropFilterMessage.Name = "callDropFilterMessage";
+            this.callDropFilterMessage.Size = new System.Drawing.Size(149, 20);
+            this.callDropFilterMessage.TabIndex = 19;
+            this.callDropFilterMessage.Text = "signallingConnectionRelease";
+            // 
+            // mtcMessageFilter
+            // 
+            this.mtcMessageFilter.Location = new System.Drawing.Point(15, 81);
+            this.mtcMessageFilter.Name = "mtcMessageFilter";
+            this.mtcMessageFilter.Size = new System.Drawing.Size(149, 20);
+            this.mtcMessageFilter.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(15, 65);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "MTC Filter Message ";
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(331, 243);
@@ -1124,6 +1183,7 @@ namespace TracerV1
             // 
             // splitContainer6.Panel1
             // 
+            this.splitContainer6.Panel1.Controls.Add(this.button5);
             this.splitContainer6.Panel1.Controls.Add(this.button3);
             this.splitContainer6.Panel1.Controls.Add(this.button2);
             this.splitContainer6.Panel1.Controls.Add(this.button1);
@@ -1136,6 +1196,16 @@ namespace TracerV1
             this.splitContainer6.Size = new System.Drawing.Size(1082, 650);
             this.splitContainer6.SplitterDistance = 35;
             this.splitContainer6.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(680, 8);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Plot";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -1187,6 +1257,7 @@ namespace TracerV1
             // splitContainer7
             // 
             this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer7.Location = new System.Drawing.Point(0, 0);
             this.splitContainer7.Name = "splitContainer7";
             this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -1199,7 +1270,7 @@ namespace TracerV1
             // 
             this.splitContainer7.Panel2.Controls.Add(this.dataGridView5);
             this.splitContainer7.Size = new System.Drawing.Size(1082, 611);
-            this.splitContainer7.SplitterDistance = 303;
+            this.splitContainer7.SplitterDistance = 529;
             this.splitContainer7.TabIndex = 1;
             // 
             // chartControl1
@@ -1211,7 +1282,7 @@ namespace TracerV1
             sideBySideBarSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
             sideBySideBarSeriesLabel1.TextPattern = "{V:G}";
             this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
-            this.chartControl1.Size = new System.Drawing.Size(1082, 303);
+            this.chartControl1.Size = new System.Drawing.Size(1082, 529);
             this.chartControl1.TabIndex = 0;
             // 
             // dataGridView5
@@ -1220,27 +1291,12 @@ namespace TracerV1
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView5.Location = new System.Drawing.Point(0, 0);
             this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(1082, 304);
+            this.dataGridView5.Size = new System.Drawing.Size(1082, 78);
             this.dataGridView5.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1088, 656);
-            this.tabPage3.TabIndex = 5;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "NewDataSet";
-            // 
-            // database1DataSetBindingSource
-            // 
-            this.database1DataSetBindingSource.DataSource = this.database1DataSet;
-            this.database1DataSetBindingSource.Position = 0;
             // 
             // openFileDialog1
             // 
@@ -1279,11 +1335,6 @@ namespace TracerV1
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // database1DataSetBindingSource1
-            // 
-            this.database1DataSetBindingSource1.DataSource = this.database1DataSet;
-            this.database1DataSetBindingSource1.Position = 0;
             // 
             // backstageViewTabItem1
             // 
@@ -1993,68 +2044,15 @@ namespace TracerV1
             this.chartPrintExportBar1.Offset = 287;
             this.chartPrintExportBar1.Text = "";
             // 
-            // mocMessageFilter
+            // updateMessageBackup
             // 
-            this.mocMessageFilter.Location = new System.Drawing.Point(15, 42);
-            this.mocMessageFilter.Name = "mocMessageFilter";
-            this.mocMessageFilter.Size = new System.Drawing.Size(149, 20);
-            this.mocMessageFilter.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 26);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "MOC Filter Message ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 65);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "MTC Filter Message ";
-            // 
-            // mtcMessageFilter
-            // 
-            this.mtcMessageFilter.Location = new System.Drawing.Point(15, 81);
-            this.mtcMessageFilter.Name = "mtcMessageFilter";
-            this.mtcMessageFilter.Size = new System.Drawing.Size(149, 20);
-            this.mtcMessageFilter.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 104);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 13);
-            this.label15.TabIndex = 18;
-            this.label15.Text = "Call Drop Filter Message";
-            // 
-            // callDropFilterMessage
-            // 
-            this.callDropFilterMessage.Location = new System.Drawing.Point(15, 120);
-            this.callDropFilterMessage.Name = "callDropFilterMessage";
-            this.callDropFilterMessage.Size = new System.Drawing.Size(149, 20);
-            this.callDropFilterMessage.TabIndex = 19;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.mocMessageFilter);
-            this.groupBox1.Controls.Add(this.callDropFilterMessage);
-            this.groupBox1.Controls.Add(this.mtcMessageFilter);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(414, 10);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 162);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Message Filters";
+            this.updateMessageBackup.Location = new System.Drawing.Point(87, 146);
+            this.updateMessageBackup.Name = "updateMessageBackup";
+            this.updateMessageBackup.Size = new System.Drawing.Size(77, 23);
+            this.updateMessageBackup.TabIndex = 20;
+            this.updateMessageBackup.Text = "Update";
+            this.updateMessageBackup.UseVisualStyleBackColor = true;
+            this.updateMessageBackup.Click += new System.EventHandler(this.updateMessageBackup_Click);
             // 
             // Form1
             // 
@@ -2075,7 +2073,6 @@ namespace TracerV1
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             this.MapTab.ResumeLayout(false);
             this.MapPage.ResumeLayout(false);
             this.MapPage.PerformLayout();
@@ -2113,6 +2110,8 @@ namespace TracerV1
             this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.IMSI_GroupBox.ResumeLayout(false);
             this.IMSI_GroupBox.PerformLayout();
             this.splitContainer4.Panel1.ResumeLayout(false);
@@ -2150,8 +2149,6 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2282,7 +2279,6 @@ namespace TracerV1
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraCharts.UI.ChartBarController chartBarController1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox unknownCells;
         private System.Windows.Forms.Button GoTOCoord;
@@ -2310,6 +2306,8 @@ namespace TracerV1
         private System.Windows.Forms.TextBox callDropFilterMessage;
         private System.Windows.Forms.TextBox mtcMessageFilter;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button updateMessageBackup;
     }
 }
 

@@ -142,6 +142,10 @@ namespace TracerV1
             barDockControlTop.Visible = false;
             barDockControlRight.Visible = false;
             //      ribbonControl1.Visible = false;
+            MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
+            mocMessageFilter.Text = TracerV1.Properties.Settings.Default.mocStringOfficial;
+            mtcMessageFilter.Text = TracerV1.Properties.Settings.Default.mtcStringOfficial;
+            callDropFilterMessage.Text = TracerV1.Properties.Settings.Default.drcStringOfficial;
 
 
         }
@@ -454,7 +458,7 @@ namespace TracerV1
             List<string> IMSI = new List<string>();
             try
             {
-                
+
 
                 foreach (string s in ueIDs)
                 {
@@ -610,22 +614,22 @@ namespace TracerV1
             listBox1.Items.Clear();
             listBox2.Items.Clear();
             resetMap();
-            
+
             try
             {
 
                 int i = 1;
-            toolStripProgressBar1.ProgressBar.Value = 0;
-            unknownCellsFlag = false;
-            foreach (string s in IMSIChkList.CheckedItems)
-            {
-                img1 = Image.FromFile(string.Format("{0}/TrackingDot{1}.png", mainDir, i));
-                plotMarkers2(getIMSIFromUserName(s), img1);
-                i++;
-                toolStripProgressBar1.ProgressBar.Value = toolStripProgressBar1.ProgressBar.Value + (100 / IMSIChkList.CheckedItems.Count);
-            }
-            if (unknownCellsFlag)
-                MsgBox("Some Cell Coordinates were not available and cant be plotted. Please see the Alien Cells in Tool Config Tab for Cell Ids");
+                toolStripProgressBar1.ProgressBar.Value = 0;
+                unknownCellsFlag = false;
+                foreach (string s in IMSIChkList.CheckedItems)
+                {
+                    img1 = Image.FromFile(string.Format("{0}/TrackingDot{1}.png", mainDir, i));
+                    plotMarkers2(getIMSIFromUserName(s), img1);
+                    i++;
+                    toolStripProgressBar1.ProgressBar.Value = toolStripProgressBar1.ProgressBar.Value + (100 / IMSIChkList.CheckedItems.Count);
+                }
+                if (unknownCellsFlag)
+                    MsgBox("Some Cell Coordinates were not available and cant be plotted. Please see the Alien Cells in Tool Config Tab for Cell Ids");
                 //PointLatLng p = new PointLatLng(33.7294, 73.0931);
                 // MainMap.Position = new PointLatLng(33.7294, 73.0931);
                 //   img.Dispose();
@@ -1229,7 +1233,130 @@ namespace TracerV1
 
         private void MainMap_Scroll(object sender, ScrollEventArgs e)
         {
-           
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+
+            UserMessageFilter umf = new UserMessageFilter(traceDataTable, "rrcConnectionRequest", "rrcConnectionSetup", "RAB_AssignmentResponseMsg");
+            DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
+            graphData.Clear();
+            DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("MOC", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("MTC", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("CallDrop", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("TotalCalls", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+
+            List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
+
+            dataList = umf.getResult("rrcConnectionRequest", "rrcConnectionSetup", "AFTER_REQ");
+            foreach (UserMessageFilter.countDate s in dataList)
+            {
+                object[] str = { s.date, s.countMOC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
+
+                graphData.Rows.Add(str);
+            }
+
+
+            //object[] str = { DateTime.Today, umf.countMOC, umf.countMTC, umf.countDropCalls };
+
+            // graphData.Rows.Add(str);
+
+            dataGridView5.DataSource = graphData;
+            //MsgBox(umf.errorMessage);
+            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+
+            DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series("MOC", ViewType.Bar);
+            chartControl1.Series.Add(seriesMOC);
+            seriesMOC.DataSource = graphData;
+            dataGridView5.DataSource = graphData;
+            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            seriesMOC.ArgumentScaleType = ScaleType.Auto;
+            seriesMOC.ArgumentDataMember = "Date";
+            seriesMOC.ValueScaleType = ScaleType.Numerical;
+            string[] STR = new string[1];
+            STR[0] = "MOC";
+            //      STR[1] = "MTC";
+            //      STR[2] = "CallDrop";
+            seriesMOC.ValueDataMembers.AddRange(STR);
+
+            DevExpress.XtraCharts.Series seriesMTC = new DevExpress.XtraCharts.Series("MTC", ViewType.Bar);
+            chartControl1.Series.Add(seriesMTC);
+            seriesMTC.DataSource = graphData;
+            dataGridView5.DataSource = graphData;
+            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            seriesMTC.ArgumentScaleType = ScaleType.Auto;
+            seriesMTC.ArgumentDataMember = "Date";
+            seriesMTC.ValueScaleType = ScaleType.Numerical;
+            STR = new string[1];
+            STR[0] = "MTC";
+            //      STR[1] = "MTC";
+            //      STR[2] = "CallDrop";
+            seriesMTC.ValueDataMembers.AddRange(STR);
+
+            DevExpress.XtraCharts.Series seriesTotalCalls = new DevExpress.XtraCharts.Series("Total Calls", ViewType.Bar);
+            chartControl1.Series.Add(seriesTotalCalls);
+            seriesTotalCalls.DataSource = graphData;
+            dataGridView5.DataSource = graphData;
+            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            seriesTotalCalls.ArgumentScaleType = ScaleType.Auto;
+            seriesTotalCalls.ArgumentDataMember = "Date";
+            seriesTotalCalls.ValueScaleType = ScaleType.Numerical;
+            STR = new string[1];
+            STR[0] = "TotalCalls";
+            //      STR[1] = "MTC";
+            //      STR[2] = "CallDrop";
+            seriesTotalCalls.ValueDataMembers.AddRange(STR);
+
+
+
+
+            DevExpress.XtraCharts.Series seriesCallDrop = new DevExpress.XtraCharts.Series("Call Drop", ViewType.Bar);
+            chartControl1.Series.Add(seriesCallDrop);
+            seriesCallDrop.DataSource = graphData;
+            dataGridView5.DataSource = graphData;
+            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            seriesCallDrop.ArgumentScaleType = ScaleType.Auto;
+            seriesCallDrop.ArgumentDataMember = "Date";
+            seriesCallDrop.ValueScaleType = ScaleType.Numerical;
+            STR = new string[1];
+            STR[0] = "CallDrop";
+            //      STR[1] = "MTC";
+            //      STR[2] = "CallDrop";
+            seriesCallDrop.ValueDataMembers.AddRange(STR);
+
+
+            //.AddRange(new string[] { "Value" });
+
+            // Set some properties to get a nice-looking chart.
+            //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
+            //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            chartControl1.Refresh();
+            chartControl1.RefreshData();
+
+
+
+        }
+
+        private void updateMessageBackup_Click(object sender, EventArgs e)
+        {
+            TracerV1.Properties.Settings.Default.mocStringOfficial = mocMessageFilter.Text;
+            TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
+            TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
         }
     }
 
