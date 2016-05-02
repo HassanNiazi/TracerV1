@@ -203,6 +203,7 @@ namespace TracerV1
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.updateMessageBackup = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.mocMessageFilter = new System.Windows.Forms.TextBox();
@@ -303,7 +304,6 @@ namespace TracerV1
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.chartPrintExportBar1 = new DevExpress.XtraCharts.UI.ChartPrintExportBar();
-            this.updateMessageBackup = new System.Windows.Forms.Button();
             this.MapTab.SuspendLayout();
             this.MapPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -954,6 +954,16 @@ namespace TracerV1
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Message Filters";
+            // 
+            // updateMessageBackup
+            // 
+            this.updateMessageBackup.Location = new System.Drawing.Point(87, 146);
+            this.updateMessageBackup.Name = "updateMessageBackup";
+            this.updateMessageBackup.Size = new System.Drawing.Size(77, 23);
+            this.updateMessageBackup.TabIndex = 20;
+            this.updateMessageBackup.Text = "Update";
+            this.updateMessageBackup.UseVisualStyleBackColor = true;
+            this.updateMessageBackup.Click += new System.EventHandler(this.updateMessageBackup_Click);
             // 
             // label13
             // 
@@ -2044,16 +2054,6 @@ namespace TracerV1
             this.chartPrintExportBar1.Offset = 287;
             this.chartPrintExportBar1.Text = "";
             // 
-            // updateMessageBackup
-            // 
-            this.updateMessageBackup.Location = new System.Drawing.Point(87, 146);
-            this.updateMessageBackup.Name = "updateMessageBackup";
-            this.updateMessageBackup.Size = new System.Drawing.Size(77, 23);
-            this.updateMessageBackup.TabIndex = 20;
-            this.updateMessageBackup.Text = "Update";
-            this.updateMessageBackup.UseVisualStyleBackColor = true;
-            this.updateMessageBackup.Click += new System.EventHandler(this.updateMessageBackup_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2073,6 +2073,7 @@ namespace TracerV1
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.MapTab.ResumeLayout(false);
             this.MapPage.ResumeLayout(false);
             this.MapPage.PerformLayout();

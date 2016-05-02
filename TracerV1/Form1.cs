@@ -142,7 +142,7 @@ namespace TracerV1
             barDockControlTop.Visible = false;
             barDockControlRight.Visible = false;
             //      ribbonControl1.Visible = false;
-            MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
+          //  MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
             mocMessageFilter.Text = TracerV1.Properties.Settings.Default.mocStringOfficial;
             mtcMessageFilter.Text = TracerV1.Properties.Settings.Default.mtcStringOfficial;
             callDropFilterMessage.Text = TracerV1.Properties.Settings.Default.drcStringOfficial;
@@ -1240,7 +1240,7 @@ namespace TracerV1
         {
 
 
-            UserMessageFilter umf = new UserMessageFilter(traceDataTable, "rrcConnectionRequest", "rrcConnectionSetup", "RAB_AssignmentResponseMsg");
+            UserMessageFilter umf = new UserMessageFilter(traceDataTable, mocMessageFilter.Text , mtcMessageFilter.Text , callDropFilterMessage.Text );
             DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
             graphData.Clear();
             DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
@@ -1256,7 +1256,7 @@ namespace TracerV1
 
             List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
 
-            dataList = umf.getResult("rrcConnectionRequest", "rrcConnectionSetup", "AFTER_REQ");
+            dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
             foreach (UserMessageFilter.countDate s in dataList)
             {
                 object[] str = { s.date, s.countMOC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
@@ -1357,6 +1357,25 @@ namespace TracerV1
             TracerV1.Properties.Settings.Default.mocStringOfficial = mocMessageFilter.Text;
             TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
             TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
+            TracerV1.Properties.Settings.Default.Save();
+        }
+
+      
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            if (MapTab.SelectedIndex == 4)
+            {
+                barDockControlTop.Visible = true;
+                barDockControlRight.Visible = true;
+                //    ribbonControl1.Visible = true;
+            }
+            else
+            {
+                barDockControlTop.Visible = false;
+                //    ribbonControl1.Visible = false;
+                barDockControlRight.Visible = false;
+            }
         }
     }
 
