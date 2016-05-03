@@ -66,14 +66,16 @@ namespace TracerV1
             try
             {
                 System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
-
+                toolStatus.Text = "Connected!  ";
+                MainMap.Manager.Mode = AccessMode.ServerAndCache;
             }
             catch
             {
                 MainMap.Manager.Mode = AccessMode.CacheOnly;
-                MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
-                      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
-                      MessageBoxIcon.Warning);
+                //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
+                ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
+                //   MessageBoxIcon.Warning);
+                toolStatus.Text = "Offline - Cache Mode Only";
             }
 
             // config map
@@ -141,12 +143,22 @@ namespace TracerV1
             refetchData();
             barDockControlTop.Visible = false;
             barDockControlRight.Visible = false;
+
+
             //      ribbonControl1.Visible = false;
-          //  MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
+            //  MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
+
+
             mocMessageFilter.Text = TracerV1.Properties.Settings.Default.mocStringOfficial;
             mtcMessageFilter.Text = TracerV1.Properties.Settings.Default.mtcStringOfficial;
             callDropFilterMessage.Text = TracerV1.Properties.Settings.Default.drcStringOfficial;
+            graphLabel1TB.Text = TracerV1.Properties.Settings.Default.graphLabel1;
+            graphLabel2TB.Text = TracerV1.Properties.Settings.Default.graphLabel2;
+            graphLabel3TB.Text = TracerV1.Properties.Settings.Default.graphLabel3;
 
+
+            //     MapTab.SelectedIndex = 2;
+            //    MapTab.SelectedIndex = 0;
 
         }
 
@@ -156,11 +168,15 @@ namespace TracerV1
             {
                 _cellDataUpload_FromFile();
                 _traceDataUpload();
+                //updateUserList_DataVisualizer();
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
                 UpdateRRCMsgsList();
                 updateUserList_DataVisualizer();
                 started = true;
+
+                UpdateIMSIChkList(); // From IMSI DB to Control
+
             }
             catch (Exception ex)
             {
@@ -853,6 +869,20 @@ namespace TracerV1
         private void toolStripSplitButton3_ButtonClick(object sender, EventArgs e)
         {
 
+            try
+            {
+                System.Net.IPHostEntry elf = System.Net.Dns.GetHostEntry("www.google.com");
+                toolStatus.Text = "Connected!  ";
+                MainMap.Manager.Mode = AccessMode.ServerAndCache;
+            }
+            catch
+            {
+                MainMap.Manager.Mode = AccessMode.CacheOnly;
+                //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
+                ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
+                //   MessageBoxIcon.Warning);
+                toolStatus.Text = "Offline - Cache Mode Only";
+            }
         }
 
         private void Capture_Click(object sender, EventArgs e)
@@ -1238,9 +1268,210 @@ namespace TracerV1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            plotGraphCalls(chartControl1, dataGridView5);
 
 
-            UserMessageFilter umf = new UserMessageFilter(traceDataTable, mocMessageFilter.Text , mtcMessageFilter.Text , callDropFilterMessage.Text );
+            /*
+            chartControl1.Series.Clear();
+            chartControl1.Titles.Clear();
+            chartControl1.DataSource = null;
+            
+          
+                UserMessageFilter umf = new UserMessageFilter(traceDataTable, mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
+                DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
+                graphData.Clear();
+                DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
+                graphData.Columns.Add(dcGraph);
+                dcGraph = new DataColumn("MOC", System.Type.GetType("System.Int32"));
+                graphData.Columns.Add(dcGraph);
+                dcGraph = new DataColumn("MTC", System.Type.GetType("System.Int32"));
+                graphData.Columns.Add(dcGraph);
+                dcGraph = new DataColumn("CallDrop", System.Type.GetType("System.Int32"));
+                graphData.Columns.Add(dcGraph);
+                dcGraph = new DataColumn("TotalCalls", System.Type.GetType("System.Int32"));
+                graphData.Columns.Add(dcGraph);
+
+                List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
+
+                dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
+                foreach (UserMessageFilter.countDate s in dataList)
+                {
+                    object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
+
+                    graphData.Rows.Add(str);
+                }
+
+
+                //object[] str = { DateTime.Today, umf.countMOC, umf.countMTC, umf.countDropCalls };
+
+                // graphData.Rows.Add(str);
+
+                dataGridView5.DataSource = graphData;
+                //MsgBox(umf.errorMessage);
+                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+
+                DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series("MOC", ViewType.Bar);
+                chartControl1.Series.Add(seriesMOC);
+
+                ChartTitle myTitle = new ChartTitle();
+
+
+                myTitle.Text = graphLabel1TB.Text;
+                chartControl1.Titles.Add(myTitle);
+                seriesMOC.DataSource = graphData;
+                dataGridView5.DataSource = graphData;
+                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                seriesMOC.ArgumentScaleType = ScaleType.Auto;
+                seriesMOC.ArgumentDataMember = "Date";
+                seriesMOC.ValueScaleType = ScaleType.Numerical;
+                string[] STR = new string[1];
+                STR[0] = "MOC";
+                //      STR[1] = "MTC";
+                //      STR[2] = "CallDrop";
+                seriesMOC.ValueDataMembers.AddRange(STR);
+
+                DevExpress.XtraCharts.Series seriesMTC = new DevExpress.XtraCharts.Series("MTC", ViewType.Bar);
+                chartControl1.Series.Add(seriesMTC);
+                seriesMTC.DataSource = graphData;
+                dataGridView5.DataSource = graphData;
+                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                seriesMTC.ArgumentScaleType = ScaleType.Auto;
+                seriesMTC.ArgumentDataMember = "Date";
+                seriesMTC.ValueScaleType = ScaleType.Numerical;
+                STR = new string[1];
+                STR[0] = "MTC";
+                //      STR[1] = "MTC";
+                //      STR[2] = "CallDrop";
+                seriesMTC.ValueDataMembers.AddRange(STR);
+
+                DevExpress.XtraCharts.Series seriesTotalCalls = new DevExpress.XtraCharts.Series("Total Calls", ViewType.Bar);
+                chartControl1.Series.Add(seriesTotalCalls);
+                seriesTotalCalls.DataSource = graphData;
+                dataGridView5.DataSource = graphData;
+                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                seriesTotalCalls.ArgumentScaleType = ScaleType.Auto;
+                seriesTotalCalls.ArgumentDataMember = "Date";
+                seriesTotalCalls.ValueScaleType = ScaleType.Numerical;
+                STR = new string[1];
+                STR[0] = "TotalCalls";
+                //      STR[1] = "MTC";
+                //      STR[2] = "CallDrop";
+                seriesTotalCalls.ValueDataMembers.AddRange(STR);
+
+
+
+
+                DevExpress.XtraCharts.Series seriesCallDrop = new DevExpress.XtraCharts.Series("Call Drop", ViewType.Bar);
+                chartControl1.Series.Add(seriesCallDrop);
+                seriesCallDrop.DataSource = graphData;
+                dataGridView5.DataSource = graphData;
+                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                seriesCallDrop.ArgumentScaleType = ScaleType.Auto;
+                seriesCallDrop.ArgumentDataMember = "Date";
+                seriesCallDrop.ValueScaleType = ScaleType.Numerical;
+                STR = new string[1];
+                STR[0] = "CallDrop";
+                //      STR[1] = "MTC";
+                //      STR[2] = "CallDrop";
+                seriesCallDrop.ValueDataMembers.AddRange(STR);
+
+
+                //.AddRange(new string[] { "Value" });
+
+                // Set some properties to get a nice-looking chart.
+                //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
+                //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
+                //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+
+          
+            chartControl1.Refresh();
+            chartControl1.RefreshData();
+
+    */
+
+        }
+
+        private void updateMessageBackup_Click(object sender, EventArgs e)
+        {
+            TracerV1.Properties.Settings.Default.mocStringOfficial = mocMessageFilter.Text;
+            TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
+            TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
+            TracerV1.Properties.Settings.Default.Save();
+        }
+
+
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            if (MapTab.SelectedIndex == 4)
+            {
+                barDockControlTop.Visible = true;
+                barDockControlRight.Visible = true;
+                //    ribbonControl1.Visible = true;
+            }
+            else
+            {
+                barDockControlTop.Visible = false;
+                //    ribbonControl1.Visible = false;
+                barDockControlRight.Visible = false;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string clipData = null;
+            foreach(var s in unknownCells.Items)
+            {
+                clipData = clipData + " " + s;
+            }
+
+            Clipboard.SetText(clipData);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            TracerV1.Properties.Settings.Default.graphLabel1 = graphLabel1TB.Text;
+        //    TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
+         //   TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
+            TracerV1.Properties.Settings.Default.Save();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer5_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void plotcc1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void plotGraphCalls(ChartControl ch,DataGridView _dgv)
+        {
+            
+            ch.Series.Clear();
+            ch.Titles.Clear();
+            ch.DataSource = null;
+
+
+            UserMessageFilter umf = new UserMessageFilter(traceDataTable, mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
             DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
             graphData.Clear();
             DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
@@ -1259,7 +1490,7 @@ namespace TracerV1
             dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
             foreach (UserMessageFilter.countDate s in dataList)
             {
-                object[] str = { s.date, s.countMOC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
+                object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
 
                 graphData.Rows.Add(str);
             }
@@ -1269,18 +1500,24 @@ namespace TracerV1
 
             // graphData.Rows.Add(str);
 
-            dataGridView5.DataSource = graphData;
+            _dgv.DataSource = graphData;
             //MsgBox(umf.errorMessage);
-            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
 
 
             DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series("MOC", ViewType.Bar);
-            chartControl1.Series.Add(seriesMOC);
+            ch.Series.Add(seriesMOC);
+
+            ChartTitle myTitle = new ChartTitle();
+
+
+            myTitle.Text = graphLabel1TB.Text;
+            ch.Titles.Add(myTitle);
             seriesMOC.DataSource = graphData;
-            dataGridView5.DataSource = graphData;
-            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            _dgv.DataSource = graphData;
+            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             seriesMOC.ArgumentScaleType = ScaleType.Auto;
             seriesMOC.ArgumentDataMember = "Date";
             seriesMOC.ValueScaleType = ScaleType.Numerical;
@@ -1291,11 +1528,11 @@ namespace TracerV1
             seriesMOC.ValueDataMembers.AddRange(STR);
 
             DevExpress.XtraCharts.Series seriesMTC = new DevExpress.XtraCharts.Series("MTC", ViewType.Bar);
-            chartControl1.Series.Add(seriesMTC);
+            ch.Series.Add(seriesMTC);
             seriesMTC.DataSource = graphData;
-            dataGridView5.DataSource = graphData;
-            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            _dgv.DataSource = graphData;
+            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             seriesMTC.ArgumentScaleType = ScaleType.Auto;
             seriesMTC.ArgumentDataMember = "Date";
             seriesMTC.ValueScaleType = ScaleType.Numerical;
@@ -1306,11 +1543,11 @@ namespace TracerV1
             seriesMTC.ValueDataMembers.AddRange(STR);
 
             DevExpress.XtraCharts.Series seriesTotalCalls = new DevExpress.XtraCharts.Series("Total Calls", ViewType.Bar);
-            chartControl1.Series.Add(seriesTotalCalls);
+            ch.Series.Add(seriesTotalCalls);
             seriesTotalCalls.DataSource = graphData;
-            dataGridView5.DataSource = graphData;
-            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            _dgv.DataSource = graphData;
+            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             seriesTotalCalls.ArgumentScaleType = ScaleType.Auto;
             seriesTotalCalls.ArgumentDataMember = "Date";
             seriesTotalCalls.ValueScaleType = ScaleType.Numerical;
@@ -1324,11 +1561,11 @@ namespace TracerV1
 
 
             DevExpress.XtraCharts.Series seriesCallDrop = new DevExpress.XtraCharts.Series("Call Drop", ViewType.Bar);
-            chartControl1.Series.Add(seriesCallDrop);
+            ch.Series.Add(seriesCallDrop);
             seriesCallDrop.DataSource = graphData;
-            dataGridView5.DataSource = graphData;
-            //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            _dgv.DataSource = graphData;
+            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             seriesCallDrop.ArgumentScaleType = ScaleType.Auto;
             seriesCallDrop.ArgumentDataMember = "Date";
             seriesCallDrop.ValueScaleType = ScaleType.Numerical;
@@ -1343,39 +1580,14 @@ namespace TracerV1
 
             // Set some properties to get a nice-looking chart.
             //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
-            //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            chartControl1.Refresh();
-            chartControl1.RefreshData();
+            //((XYDiagram)ch.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            //ch.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
 
+            ch.Refresh();
+            ch.RefreshData();
 
-        }
 
-        private void updateMessageBackup_Click(object sender, EventArgs e)
-        {
-            TracerV1.Properties.Settings.Default.mocStringOfficial = mocMessageFilter.Text;
-            TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
-            TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
-            TracerV1.Properties.Settings.Default.Save();
-        }
-
-      
-
-        private void Form1_SizeChanged(object sender, EventArgs e)
-        {
-            if (MapTab.SelectedIndex == 4)
-            {
-                barDockControlTop.Visible = true;
-                barDockControlRight.Visible = true;
-                //    ribbonControl1.Visible = true;
-            }
-            else
-            {
-                barDockControlTop.Visible = false;
-                //    ribbonControl1.Visible = false;
-                barDockControlRight.Visible = false;
-            }
         }
     }
 

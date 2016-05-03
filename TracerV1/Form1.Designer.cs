@@ -178,8 +178,10 @@ namespace TracerV1
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.mapStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.ZoomStatusStrip = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentCoords = new System.Windows.Forms.ToolStripStatusLabel();
             this.DataPage = new System.Windows.Forms.TabPage();
@@ -202,6 +204,16 @@ namespace TracerV1
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.graphLabel1TB = new System.Windows.Forms.TextBox();
+            this.graphLabel3TB = new System.Windows.Forms.TextBox();
+            this.graphLabel2TB = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.updateMessageBackup = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -304,6 +316,15 @@ namespace TracerV1
             this.chartBarController1 = new DevExpress.XtraCharts.UI.ChartBarController();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.chartPrintExportBar1 = new DevExpress.XtraCharts.UI.ChartPrintExportBar();
+            this.dataVisuallizer2 = new System.Windows.Forms.TabPage();
+            this.splitContainer8 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer9 = new System.Windows.Forms.SplitContainer();
+            this.cc1 = new DevExpress.XtraCharts.ChartControl();
+            this.cc2 = new DevExpress.XtraCharts.ChartControl();
+            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.plotcc1 = new System.Windows.Forms.Button();
+            this.plotcc2 = new System.Windows.Forms.Button();
             this.MapTab.SuspendLayout();
             this.MapPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -330,6 +351,7 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.IMSI_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
@@ -364,6 +386,22 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            this.dataVisuallizer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
+            this.splitContainer8.Panel1.SuspendLayout();
+            this.splitContainer8.Panel2.SuspendLayout();
+            this.splitContainer8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).BeginInit();
+            this.splitContainer9.Panel1.SuspendLayout();
+            this.splitContainer9.Panel2.SuspendLayout();
+            this.splitContainer9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cc1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cc2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
+            this.splitContainer10.Panel1.SuspendLayout();
+            this.splitContainer10.Panel2.SuspendLayout();
+            this.splitContainer10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMap
@@ -400,6 +438,7 @@ namespace TracerV1
             this.MapTab.Controls.Add(this.tabPage1);
             this.MapTab.Controls.Add(this.tabPage2);
             this.MapTab.Controls.Add(this.DataVisualization);
+            this.MapTab.Controls.Add(this.dataVisuallizer2);
             this.MapTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MapTab.Location = new System.Drawing.Point(0, 24);
             this.MapTab.Name = "MapTab";
@@ -659,8 +698,10 @@ namespace TracerV1
             // mapStatusStrip
             // 
             this.mapStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
             this.toolStripSplitButton3,
             this.toolStripProgressBar1,
+            this.toolStatus,
             this.ZoomStatusStrip,
             this.currentCoords});
             this.mapStatusStrip.Location = new System.Drawing.Point(3, 631);
@@ -668,6 +709,12 @@ namespace TracerV1
             this.mapStatusStrip.Size = new System.Drawing.Size(1082, 22);
             this.mapStatusStrip.TabIndex = 1;
             this.mapStatusStrip.Text = "mapStatusStrip";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(61, 17);
+            this.toolStripStatusLabel1.Text = "Connect : ";
             // 
             // toolStripSplitButton3
             // 
@@ -683,6 +730,12 @@ namespace TracerV1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(150, 16);
+            // 
+            // toolStatus
+            // 
+            this.toolStatus.Name = "toolStatus";
+            this.toolStatus.Size = new System.Drawing.Size(54, 17);
+            this.toolStatus.Text = "Status     ";
             // 
             // ZoomStatusStrip
             // 
@@ -907,7 +960,7 @@ namespace TracerV1
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(8, 239);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(167, 433);
+            this.listBox2.Size = new System.Drawing.Size(167, 407);
             this.listBox2.TabIndex = 1;
             // 
             // listBox1
@@ -917,7 +970,7 @@ namespace TracerV1
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(8, 28);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(167, 212);
+            this.listBox1.Size = new System.Drawing.Size(167, 186);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -930,14 +983,118 @@ namespace TracerV1
             // 
             // splitContainer5.Panel2
             // 
+            this.splitContainer5.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer5.Panel2.Controls.Add(this.button6);
+            this.splitContainer5.Panel2.Controls.Add(this.label16);
             this.splitContainer5.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer5.Panel2.Controls.Add(this.button4);
             this.splitContainer5.Panel2.Controls.Add(this.label10);
             this.splitContainer5.Panel2.Controls.Add(this.unknownCells);
             this.splitContainer5.Panel2.Controls.Add(this.IMSI_GroupBox);
+            this.splitContainer5.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer5_Panel2_Paint);
             this.splitContainer5.Size = new System.Drawing.Size(1082, 650);
             this.splitContainer5.SplitterDistance = 178;
             this.splitContainer5.TabIndex = 12;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.graphLabel1TB);
+            this.groupBox2.Controls.Add(this.graphLabel3TB);
+            this.groupBox2.Controls.Add(this.graphLabel2TB);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Location = new System.Drawing.Point(259, 452);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(186, 174);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chart Tiltles";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // button7
+            // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(6, 142);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(174, 23);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "Update";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 22);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Data Visualizer";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 100);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(45, 13);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Graph 3";
+            // 
+            // graphLabel1TB
+            // 
+            this.graphLabel1TB.Location = new System.Drawing.Point(6, 38);
+            this.graphLabel1TB.Name = "graphLabel1TB";
+            this.graphLabel1TB.Size = new System.Drawing.Size(174, 20);
+            this.graphLabel1TB.TabIndex = 15;
+            this.graphLabel1TB.Text = "VIP  ZTE Tracker";
+            // 
+            // graphLabel3TB
+            // 
+            this.graphLabel3TB.Location = new System.Drawing.Point(6, 116);
+            this.graphLabel3TB.Name = "graphLabel3TB";
+            this.graphLabel3TB.Size = new System.Drawing.Size(174, 20);
+            this.graphLabel3TB.TabIndex = 19;
+            // 
+            // graphLabel2TB
+            // 
+            this.graphLabel2TB.Location = new System.Drawing.Point(6, 77);
+            this.graphLabel2TB.Name = "graphLabel2TB";
+            this.graphLabel2TB.Size = new System.Drawing.Size(174, 20);
+            this.graphLabel2TB.TabIndex = 17;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 61);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 13);
+            this.label19.TabIndex = 16;
+            this.label19.Text = "Graph 2";
+            // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(355, 238);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(90, 30);
+            this.button6.TabIndex = 22;
+            this.button6.Text = "Copy";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label16.Location = new System.Drawing.Point(413, 3);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(484, 19);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Warning!!! Changes Made Here will affect the Working of the tool.";
             // 
             // groupBox1
             // 
@@ -948,18 +1105,19 @@ namespace TracerV1
             this.groupBox1.Controls.Add(this.callDropFilterMessage);
             this.groupBox1.Controls.Add(this.mtcMessageFilter);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(414, 10);
+            this.groupBox1.Location = new System.Drawing.Point(259, 272);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(183, 191);
+            this.groupBox1.Size = new System.Drawing.Size(186, 174);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Message Filters";
             // 
             // updateMessageBackup
             // 
-            this.updateMessageBackup.Location = new System.Drawing.Point(87, 146);
+            this.updateMessageBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateMessageBackup.Location = new System.Drawing.Point(6, 142);
             this.updateMessageBackup.Name = "updateMessageBackup";
-            this.updateMessageBackup.Size = new System.Drawing.Size(77, 23);
+            this.updateMessageBackup.Size = new System.Drawing.Size(174, 23);
             this.updateMessageBackup.TabIndex = 20;
             this.updateMessageBackup.Text = "Update";
             this.updateMessageBackup.UseVisualStyleBackColor = true;
@@ -968,7 +1126,7 @@ namespace TracerV1
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 26);
+            this.label13.Location = new System.Drawing.Point(6, 22);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(105, 13);
             this.label13.TabIndex = 13;
@@ -977,7 +1135,7 @@ namespace TracerV1
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 104);
+            this.label15.Location = new System.Drawing.Point(6, 100);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(121, 13);
             this.label15.TabIndex = 18;
@@ -985,31 +1143,31 @@ namespace TracerV1
             // 
             // mocMessageFilter
             // 
-            this.mocMessageFilter.Location = new System.Drawing.Point(15, 42);
+            this.mocMessageFilter.Location = new System.Drawing.Point(6, 38);
             this.mocMessageFilter.Name = "mocMessageFilter";
-            this.mocMessageFilter.Size = new System.Drawing.Size(149, 20);
+            this.mocMessageFilter.Size = new System.Drawing.Size(174, 20);
             this.mocMessageFilter.TabIndex = 15;
             this.mocMessageFilter.Text = "radioBearerSetupComplete";
             // 
             // callDropFilterMessage
             // 
-            this.callDropFilterMessage.Location = new System.Drawing.Point(15, 120);
+            this.callDropFilterMessage.Location = new System.Drawing.Point(6, 116);
             this.callDropFilterMessage.Name = "callDropFilterMessage";
-            this.callDropFilterMessage.Size = new System.Drawing.Size(149, 20);
+            this.callDropFilterMessage.Size = new System.Drawing.Size(174, 20);
             this.callDropFilterMessage.TabIndex = 19;
             this.callDropFilterMessage.Text = "signallingConnectionRelease";
             // 
             // mtcMessageFilter
             // 
-            this.mtcMessageFilter.Location = new System.Drawing.Point(15, 81);
+            this.mtcMessageFilter.Location = new System.Drawing.Point(6, 77);
             this.mtcMessageFilter.Name = "mtcMessageFilter";
-            this.mtcMessageFilter.Size = new System.Drawing.Size(149, 20);
+            this.mtcMessageFilter.Size = new System.Drawing.Size(174, 20);
             this.mtcMessageFilter.TabIndex = 17;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 65);
+            this.label14.Location = new System.Drawing.Point(6, 61);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(104, 13);
             this.label14.TabIndex = 16;
@@ -1017,9 +1175,10 @@ namespace TracerV1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(331, 243);
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(259, 238);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 23);
+            this.button4.Size = new System.Drawing.Size(90, 30);
             this.button4.TabIndex = 14;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
@@ -1028,7 +1187,7 @@ namespace TracerV1
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(259, 10);
+            this.label10.Location = new System.Drawing.Point(259, 3);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 13;
@@ -1039,9 +1198,10 @@ namespace TracerV1
             this.unknownCells.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.unknownCells.FormattingEnabled = true;
-            this.unknownCells.Location = new System.Drawing.Point(259, 25);
+            this.unknownCells.Location = new System.Drawing.Point(259, 18);
+            this.unknownCells.MultiColumn = true;
             this.unknownCells.Name = "unknownCells";
-            this.unknownCells.Size = new System.Drawing.Size(149, 212);
+            this.unknownCells.Size = new System.Drawing.Size(186, 225);
             this.unknownCells.TabIndex = 13;
             // 
             // IMSI_GroupBox
@@ -1071,6 +1231,7 @@ namespace TracerV1
             // 
             // UpdateIMSI
             // 
+            this.UpdateIMSI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateIMSI.Location = new System.Drawing.Point(169, 97);
             this.UpdateIMSI.Name = "UpdateIMSI";
             this.UpdateIMSI.Size = new System.Drawing.Size(75, 23);
@@ -1091,6 +1252,7 @@ namespace TracerV1
             // 
             // SearchIMSI
             // 
+            this.SearchIMSI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchIMSI.Location = new System.Drawing.Point(6, 97);
             this.SearchIMSI.Name = "SearchIMSI";
             this.SearchIMSI.Size = new System.Drawing.Size(75, 23);
@@ -1135,6 +1297,7 @@ namespace TracerV1
             // 
             // RstButton
             // 
+            this.RstButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RstButton.Location = new System.Drawing.Point(84, 81);
             this.RstButton.Name = "RstButton";
             this.RstButton.Size = new System.Drawing.Size(76, 23);
@@ -1322,6 +1485,7 @@ namespace TracerV1
             this.menuStrip1.Size = new System.Drawing.Size(1096, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -2054,6 +2218,117 @@ namespace TracerV1
             this.chartPrintExportBar1.Offset = 287;
             this.chartPrintExportBar1.Text = "";
             // 
+            // dataVisuallizer2
+            // 
+            this.dataVisuallizer2.Controls.Add(this.splitContainer8);
+            this.dataVisuallizer2.Location = new System.Drawing.Point(4, 22);
+            this.dataVisuallizer2.Name = "dataVisuallizer2";
+            this.dataVisuallizer2.Padding = new System.Windows.Forms.Padding(3);
+            this.dataVisuallizer2.Size = new System.Drawing.Size(1088, 656);
+            this.dataVisuallizer2.TabIndex = 5;
+            this.dataVisuallizer2.Text = "Data Visualizer II";
+            this.dataVisuallizer2.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer8
+            // 
+            this.splitContainer8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer8.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer8.Name = "splitContainer8";
+            // 
+            // splitContainer8.Panel1
+            // 
+            this.splitContainer8.Panel1.Controls.Add(this.splitContainer9);
+            // 
+            // splitContainer8.Panel2
+            // 
+            this.splitContainer8.Panel2.Controls.Add(this.splitContainer10);
+            this.splitContainer8.Size = new System.Drawing.Size(1082, 650);
+            this.splitContainer8.SplitterDistance = 743;
+            this.splitContainer8.TabIndex = 0;
+            // 
+            // splitContainer9
+            // 
+            this.splitContainer9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer9.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer9.Name = "splitContainer9";
+            this.splitContainer9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer9.Panel1
+            // 
+            this.splitContainer9.Panel1.Controls.Add(this.cc1);
+            // 
+            // splitContainer9.Panel2
+            // 
+            this.splitContainer9.Panel2.Controls.Add(this.cc2);
+            this.splitContainer9.Size = new System.Drawing.Size(743, 650);
+            this.splitContainer9.SplitterDistance = 333;
+            this.splitContainer9.TabIndex = 1;
+            // 
+            // cc1
+            // 
+            this.cc1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cc1.Location = new System.Drawing.Point(0, 0);
+            this.cc1.Name = "cc1";
+            this.cc1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.cc1.Size = new System.Drawing.Size(743, 333);
+            this.cc1.TabIndex = 0;
+            // 
+            // cc2
+            // 
+            this.cc2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cc2.Location = new System.Drawing.Point(0, 0);
+            this.cc2.Name = "cc2";
+            this.cc2.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.cc2.Size = new System.Drawing.Size(743, 313);
+            this.cc2.TabIndex = 1;
+            // 
+            // splitContainer10
+            // 
+            this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer10.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer10.Name = "splitContainer10";
+            this.splitContainer10.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer10.Panel1
+            // 
+            this.splitContainer10.Panel1.Controls.Add(this.plotcc2);
+            this.splitContainer10.Panel1.Controls.Add(this.plotcc1);
+            // 
+            // splitContainer10.Panel2
+            // 
+            this.splitContainer10.Panel2.Controls.Add(this.dataGridView4);
+            this.splitContainer10.Size = new System.Drawing.Size(335, 650);
+            this.splitContainer10.SplitterDistance = 30;
+            this.splitContainer10.TabIndex = 0;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(335, 616);
+            this.dataGridView4.TabIndex = 0;
+            // 
+            // plotcc1
+            // 
+            this.plotcc1.Location = new System.Drawing.Point(3, 4);
+            this.plotcc1.Name = "plotcc1";
+            this.plotcc1.Size = new System.Drawing.Size(75, 23);
+            this.plotcc1.TabIndex = 0;
+            this.plotcc1.Text = "Plot Graph 1";
+            this.plotcc1.UseVisualStyleBackColor = true;
+            this.plotcc1.Click += new System.EventHandler(this.plotcc1_Click);
+            // 
+            // plotcc2
+            // 
+            this.plotcc2.Location = new System.Drawing.Point(84, 4);
+            this.plotcc2.Name = "plotcc2";
+            this.plotcc2.Size = new System.Drawing.Size(75, 23);
+            this.plotcc2.TabIndex = 1;
+            this.plotcc2.Text = "Plot Graph 2";
+            this.plotcc2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2111,6 +2386,8 @@ namespace TracerV1
             this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.IMSI_GroupBox.ResumeLayout(false);
@@ -2150,6 +2427,22 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            this.dataVisuallizer2.ResumeLayout(false);
+            this.splitContainer8.Panel1.ResumeLayout(false);
+            this.splitContainer8.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).EndInit();
+            this.splitContainer8.ResumeLayout(false);
+            this.splitContainer9.Panel1.ResumeLayout(false);
+            this.splitContainer9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer9)).EndInit();
+            this.splitContainer9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cc1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cc2)).EndInit();
+            this.splitContainer10.Panel1.ResumeLayout(false);
+            this.splitContainer10.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
+            this.splitContainer10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2309,6 +2602,27 @@ namespace TracerV1
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button updateMessageBackup;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolStripStatusLabel toolStatus;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox graphLabel1TB;
+        private System.Windows.Forms.TextBox graphLabel3TB;
+        private System.Windows.Forms.TextBox graphLabel2TB;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TabPage dataVisuallizer2;
+        private System.Windows.Forms.SplitContainer splitContainer8;
+        private System.Windows.Forms.SplitContainer splitContainer9;
+        private DevExpress.XtraCharts.ChartControl cc1;
+        private DevExpress.XtraCharts.ChartControl cc2;
+        private System.Windows.Forms.SplitContainer splitContainer10;
+        private System.Windows.Forms.Button plotcc2;
+        private System.Windows.Forms.Button plotcc1;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
 

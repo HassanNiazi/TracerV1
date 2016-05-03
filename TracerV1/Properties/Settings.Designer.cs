@@ -79,5 +79,41 @@ namespace TracerV1.Properties {
                 this["drcStringOfficial"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string graphLabel1 {
+            get {
+                return ((string)(this["graphLabel1"]));
+            }
+            set {
+                this["graphLabel1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string graphLabel2 {
+            get {
+                return ((string)(this["graphLabel2"]));
+            }
+            set {
+                this["graphLabel2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string graphLabel3 {
+            get {
+                return ((string)(this["graphLabel3"]));
+            }
+            set {
+                this["graphLabel3"] = value;
+            }
+        }
     }
 }
