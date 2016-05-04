@@ -52,29 +52,36 @@ namespace TracerV1
 
         public List<countDate> getResult(string messageMOC, string messageMTC, string messageDropCalls)
         {
-            List<countDate> count = new List<countDate>();
-            countDate cdLocal = new countDate();
-            DataView view = new DataView(localDataTable);
-            DataTable distinctValue = view.ToTable(true, "time");
-            DataRow[] timeRows = distinctValue.Select();
-            foreach (DataRow r in timeRows)
+
+            try
             {
-                cdLocal = new countDate();
-                errorMessage = r[0].ToString();
-                //    string[] formats = {"DD/MM/YYYY"};
-                // cdLocal.date = DateTime.ParseExact(r[0].ToString(), formats, new CultureInfo("en-US"), DateTimeStyles.None);
-                cdLocal.date = DateTime.Parse(r[0].ToString());
-                DataRow[] dataRowsMOC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMOC, r[0].ToString()));
-                DataRow[] dataRowsMTC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMTC, r[0].ToString()));
-                DataRow[] dataRowsDropCalls = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageDropCalls, r[0].ToString()));
-
-                cdLocal.countMOC = dataRowsMOC.Length;
-                cdLocal.countMTC = dataRowsMTC.Length;
-                cdLocal.countDropCalls = dataRowsDropCalls.Length;
-                count.Add(cdLocal);
+                List<countDate> count = new List<countDate>();
+                countDate cdLocal = new countDate();
+                DataView view = new DataView(localDataTable);
+                DataTable distinctValue = view.ToTable(true, "time");
+                DataRow[] timeRows = distinctValue.Select();
+                foreach (DataRow r in timeRows)
+                {
+                    cdLocal = new countDate();
+                    errorMessage = r[0].ToString();
+                    cdLocal.date = DateTime.Parse(r[0].ToString());
+                    DataRow[] dataRowsMOC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMOC, r[0].ToString()));
+                    DataRow[] dataRowsMTC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMTC, r[0].ToString()));
+                    DataRow[] dataRowsDropCalls = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageDropCalls, r[0].ToString()));
+                    cdLocal.countMOC = dataRowsMOC.Length;
+                    cdLocal.countMTC = dataRowsMTC.Length;
+                    cdLocal.countDropCalls = dataRowsDropCalls.Length;
+                    count.Add(cdLocal);
+                    
+                }
+                return count;
             }
-
-            return count;
+            catch(Exception ex)
+            {
+                errorMessage = ex.Message;
+                return null;
+            }
+            
         }
 
         /// <summary>

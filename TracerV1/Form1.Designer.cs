@@ -204,14 +204,8 @@ namespace TracerV1
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.rrcMessageLookUpGrid = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -221,7 +215,6 @@ namespace TracerV1
             this.graphLabel2TB = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.updateMessageBackup = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -335,6 +328,7 @@ namespace TracerV1
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateDailyRCTTraceReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.database1DataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.backstageViewTabItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
@@ -376,7 +370,7 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rrcMessageLookUpGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.IMSI_GroupBox.SuspendLayout();
@@ -634,9 +628,9 @@ namespace TracerV1
             this.Capture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Capture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Capture.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Capture.Location = new System.Drawing.Point(119, 591);
+            this.Capture.Location = new System.Drawing.Point(119, 583);
             this.Capture.Name = "Capture";
-            this.Capture.Size = new System.Drawing.Size(91, 30);
+            this.Capture.Size = new System.Drawing.Size(91, 38);
             this.Capture.TabIndex = 10;
             this.Capture.UseVisualStyleBackColor = false;
             this.Capture.Click += new System.EventHandler(this.Capture_Click);
@@ -1018,10 +1012,10 @@ namespace TracerV1
             // 
             // splitContainer5.Panel2
             // 
-            this.splitContainer5.Panel2.Controls.Add(this.groupBox3);
+            this.splitContainer5.Panel2.Controls.Add(this.label20);
+            this.splitContainer5.Panel2.Controls.Add(this.rrcMessageLookUpGrid);
             this.splitContainer5.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer5.Panel2.Controls.Add(this.button6);
-            this.splitContainer5.Panel2.Controls.Add(this.label16);
             this.splitContainer5.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer5.Panel2.Controls.Add(this.button4);
             this.splitContainer5.Panel2.Controls.Add(this.label10);
@@ -1032,81 +1026,27 @@ namespace TracerV1
             this.splitContainer5.SplitterDistance = 178;
             this.splitContainer5.TabIndex = 12;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Location = new System.Drawing.Point(451, 25);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(186, 174);
-            this.groupBox3.TabIndex = 23;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Message Filters VIP Trace";
-            // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(6, 142);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(174, 23);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Update";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 22);
+            this.label20.Location = new System.Drawing.Point(448, 3);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 13);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "Message 1";
+            this.label20.Size = new System.Drawing.Size(150, 13);
+            this.label20.TabIndex = 24;
+            this.label20.Text = "RRC Messages Lookup Table";
             // 
-            // label21
+            // rrcMessageLookUpGrid
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 100);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(59, 13);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "Message 3";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "radioBearerSetupComplete";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(6, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 19;
-            this.textBox2.Text = "signallingConnectionRelease";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(6, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 20);
-            this.textBox3.TabIndex = 17;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 61);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(59, 13);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Message 2";
+            this.rrcMessageLookUpGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rrcMessageLookUpGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rrcMessageLookUpGrid.Location = new System.Drawing.Point(451, 18);
+            this.rrcMessageLookUpGrid.Name = "rrcMessageLookUpGrid";
+            this.rrcMessageLookUpGrid.Size = new System.Drawing.Size(446, 622);
+            this.rrcMessageLookUpGrid.TabIndex = 23;
+            this.rrcMessageLookUpGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.rrcMessageLookUpGrid_CellValueChanged);
+            this.rrcMessageLookUpGrid.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.rrcMessageLookUpGrid_RowLeave);
             // 
             // groupBox2
             // 
@@ -1117,7 +1057,7 @@ namespace TracerV1
             this.groupBox2.Controls.Add(this.graphLabel3TB);
             this.groupBox2.Controls.Add(this.graphLabel2TB);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(259, 452);
+            this.groupBox2.Location = new System.Drawing.Point(259, 465);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(186, 174);
             this.groupBox2.TabIndex = 21;
@@ -1196,18 +1136,6 @@ namespace TracerV1
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label16.Location = new System.Drawing.Point(413, 3);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(484, 19);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Warning!!! Changes Made Here will affect the Working of the tool.";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.updateMessageBackup);
@@ -1217,7 +1145,7 @@ namespace TracerV1
             this.groupBox1.Controls.Add(this.callDropFilterMessage);
             this.groupBox1.Controls.Add(this.mtcMessageFilter);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(259, 272);
+            this.groupBox1.Location = new System.Drawing.Point(259, 283);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(186, 174);
             this.groupBox1.TabIndex = 20;
@@ -2479,6 +2407,7 @@ namespace TracerV1
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
+            this.generateDailyRCTTraceReportToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -2487,14 +2416,21 @@ namespace TracerV1
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // generateDailyRCTTraceReportToolStripMenuItem
+            // 
+            this.generateDailyRCTTraceReportToolStripMenuItem.Name = "generateDailyRCTTraceReportToolStripMenuItem";
+            this.generateDailyRCTTraceReportToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
+            this.generateDailyRCTTraceReportToolStripMenuItem.Text = "Generate Daily RCT Trace Report";
+            this.generateDailyRCTTraceReportToolStripMenuItem.Click += new System.EventHandler(this.generateDailyRCTTraceReportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -2697,8 +2633,7 @@ namespace TracerV1
             this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rrcMessageLookUpGrid)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2926,7 +2861,6 @@ namespace TracerV1
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button updateMessageBackup;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ToolStripStatusLabel toolStatus;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -2944,14 +2878,6 @@ namespace TracerV1
         private DevExpress.XtraCharts.ChartControl cc1;
         private DevExpress.XtraCharts.ChartControl cc2;
         private System.Windows.Forms.SplitContainer splitContainer10;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage5;
@@ -2972,6 +2898,9 @@ namespace TracerV1
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridView rrcMessageLookUpGrid;
+        private System.Windows.Forms.ToolStripMenuItem generateDailyRCTTraceReportToolStripMenuItem;
     }
 }
 

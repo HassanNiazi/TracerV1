@@ -60,15 +60,7 @@ namespace TracerV1
             mapProviderList.DataSource = GMapProviders.List;
 
 
-            //SaveFileDialog svff = new SaveFileDialog();
-            //svff.ShowDialog();
-            //Excel_Com xlC = new Excel_Com(svff.FileName);
-            //OpenFileDialog opf = new OpenFileDialog();
-            //opf.ShowDialog();
-            //Excel_Com ex = new Excel_Com();
-            //ex.openExcelBook(opf.FileName);
-            //DataTable dt = ex.getWorkSheetData(1);
-            //dataGridView4.DataSource = dt;
+
 
 
             try
@@ -179,9 +171,11 @@ namespace TracerV1
                 //updateUserList_DataVisualizer();
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
-                UpdateRRCMsgsList();
+                                     // UpdateRRCMsgsList();
+                insertToRRCMessageLookUpDatabase();
                 updateUserList_DataVisualizer();
                 started = true;
+                UpdateDataRrcMessageLookUpGridView();
 
                 UpdateIMSIChkList(); // From IMSI DB to Control
 
@@ -214,6 +208,156 @@ namespace TracerV1
             {
 
                 MsgBox(ex.Message);
+            }
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void insertToRRCMessageLookUpDatabase()
+        {
+            try
+            {
+                UpdateRRCMsgsList();
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+                con.Open();
+
+                foreach (var item in rrcItems)
+                {
+                    try
+                    {
+
+                        cmd.CommandText = string.Format("INSERT INTO rrcMessageLookUp (rrcMessage,lookUpValue) VALUES ('{0}','{0}');", item);
+                        sda.SelectCommand = cmd;
+                        cmd.ExecuteNonQuery();
+
+                    }
+                    catch
+                    {
+
+                    }
+                }
+
+            }
+            catch
+            {
+
+            }
+
+            finally
+            {
+                sqlConClose();
+            }
+
+        }
+
+        private void _updateRRCMessageLookUpDatabase()
+        {
+            try
+            {
+                DataTable data = (DataTable)(rrcMessageLookUpGrid.DataSource);
+
+                foreach (DataRow item in data.Rows)
+                {
+                    _updateRRCMessageLookUpDB(item.ItemArray[0].ToString(), item.ItemArray[1].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
+        }
+
+        private void _updateRRCMessageLookUpDB(string rrcMessage, string lookupVal)
+        {
+            try
+            {
+
+                //   string[] rrc = extractRRCMsgs(traceDataTable);
+
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                if (lookupVal == "")
+                    lookupVal = "Null";
+
+                cmd.CommandText = string.Format("UPDATE rrcMessageLookUp Set lookUpValue = '{0}' Where rrcMessage = '{1}'", lookupVal, rrcMessage);
+                sda.SelectCommand = cmd;
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+
+            }
+            finally
+            {
+                sqlConClose();
+            }
+        }
+
+        private void UpdateDataRrcMessageLookUpGridView()
+        {
+            try
+            {
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = "SELECT * FROM rrcMessageLookUp";
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                rrcMessageLookUpGrid.DataSource = dt;
+                rrcMessageLookUpGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+                sqlConClose();
+            }
+
+        }
+
+
+        private string LookupRRCMessageName(string message)
+        {
+            try
+            {
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = string.Format("SELECT * FROM rrcMessageLookUp WHERE rrcMessage = '{0}';", message);
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                con.Close();
+
+
+                return dt.Rows[0][1].ToString();
+
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+                sqlConClose();
+                return null;
             }
 
         }
@@ -959,6 +1103,65 @@ namespace TracerV1
             }
         }
 
+        private Image getMapImage()
+        {
+            try
+            {
+                Image img = MainMap.ToImage();
+                Image pxl = null;
+                // SaveFileDialog svf = new SaveFileDialog();
+
+                //if (JPG.Checked)
+                //    svf.DefaultExt = "jpg";
+                //else
+                //    svf.DefaultExt = "png";
+                if (addLegend.Checked)
+                {
+                    Graphics g = Graphics.FromImage(img);
+                    Pen blackPen = new Pen(Color.FromArgb(255, 0, 0, 0), 1);
+
+                    RectangleF rectf = new RectangleF(10, 10, 180, 300);
+
+                    g.SmoothingMode = SmoothingMode.AntiAlias;
+                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                    g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                    int Textsize = 9;
+                    int totalEle = IMSIChkList.CheckedItems.Count;
+                    g.DrawRectangle(blackPen, 10, 10, 180, (totalEle * 30) + 20);
+                    for (int i = 1; i <= IMSIChkList.CheckedItems.Count; i++)
+                    {
+                        pxl = Image.FromFile(mainDir + "/TrackingDot" + (i).ToString() + ".png");
+                        g.DrawString(IMSIChkList.CheckedItems[i - 1].ToString(), new Font("Tahoma", Textsize, FontStyle.Bold), Brushes.CadetBlue, new RectangleF(20, 30 * i, 180, (totalEle * 30) + 20));
+                        g.DrawImage(pxl, new Point(150, (30 * i) - 5));
+                        pxl.Dispose();
+                    }
+
+                    g.Flush();
+
+
+                    // svf.AutoUpgradeEnabled = false;
+                    // svf.ShowDialog();
+
+                    g.Save();
+
+                    //  img.Save(svf.FileName);
+                    g.Dispose();
+                    return img;
+                }
+                else
+                {
+                    return img;
+                    // img.Save(svf.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgBox("There is an error exporting file, Please restart the application \n " + ex.Message);
+                return null;
+            }
+        }
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             sqlConClose();
@@ -973,6 +1176,8 @@ namespace TracerV1
         private void rmvData_Click(object sender, EventArgs e)
         {
             traceDataTable.Clear();
+            File.Delete(mainDir + "/CTO Trace.csv");
+            File.Create(mainDir + "/CTO Trace.csv");
             dataGridView1.Refresh();
         }
 
@@ -1375,7 +1580,6 @@ namespace TracerV1
             plotGraph2(cc1, dgvV2, messagesListBox, graphLabel2TB.Text);
         }
 
-
         private void plotGraphCalls(ChartControl ch, DataGridView _dgv)
         {
 
@@ -1401,6 +1605,12 @@ namespace TracerV1
             List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
 
             dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
+            if (dataList == null)
+            {
+                MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
+                return;
+            }
+
             foreach (UserMessageFilter.countDate s in dataList)
             {
                 object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
@@ -1503,7 +1713,6 @@ namespace TracerV1
 
         }
 
-
         /// <summary>
         /// Graph With Rab Setup Failures and Call Drop For Each User
         /// </summary>
@@ -1538,14 +1747,20 @@ namespace TracerV1
             List<UserMessageFilter.genericDataContainer> count = new List<UserMessageFilter.genericDataContainer>();
             List<string> str = getIMSIs();
             count = umf.getResult(chkMessages, str);
+            if (count == null)
+            {
+                MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
+                return;
+            }
 
+           
             DataColumn dcGraph;
             dcGraph = new DataColumn("User", System.Type.GetType("System.String"));
             graphData.Columns.Add(dcGraph);
 
             foreach (var item in chkMessages)
             {
-                dcGraph = new DataColumn(item, System.Type.GetType("System.Int32"));
+                dcGraph = new DataColumn(LookupRRCMessageName(item), System.Type.GetType("System.Int32"));
                 graphData.Columns.Add(dcGraph);
             }
 
@@ -1574,7 +1789,7 @@ namespace TracerV1
 
             foreach (var item in chkMessages)
             {
-                string str1 = item;
+                string str1 = LookupRRCMessageName(item);
                 DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series(str1, ViewType.Bar);
                 ch.Series.Add(seriesMOC);
                 seriesMOC.DataSource = graphData;
@@ -1640,6 +1855,52 @@ namespace TracerV1
             svf.ShowDialog();
             cc2.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            // _updateRRCMessageLookUpDatabase();
+        }
+
+        private void rrcMessageLookUpGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+            //     MsgBox(" Cell Value Changed " + e.RowIndex.ToString() + "  -  " + e.ColumnIndex.ToString() + ":::::::::::" + rrcMessageLookUpGrid[e.ColumnIndex,e.RowIndex].Value.ToString());
+
+            _updateRRCMessageLookUpDB(rrcMessageLookUpGrid[0, e.RowIndex].Value.ToString(), rrcMessageLookUpGrid[1, e.RowIndex].Value.ToString());
+            rrcMessageLookUpGrid[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.FromArgb(77, 255, 100);
+        }
+
+        private void rrcMessageLookUpGrid_RowLeave(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void generateDailyRCTTraceReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PlotMarkers_Click(null, null);
+                Image imgMap = getMapImage();
+                //  MapTab.SelectedIndex = 
+                plotGraphCalls(chartControl1, dataGridView5);
+                Image imgChart1;
+                chartControl1.ExportToImage(mainDir + "/chart1" + ".jpg", ImageFormat.Jpeg);
+                imgChart1 = Image.FromFile(mainDir + "/chart1" + ".jpg");
+                
+                Excel_Com exc = new Excel_Com()
+                
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
         }
     }
 
