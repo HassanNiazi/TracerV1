@@ -13,6 +13,8 @@ using System.Data.SqlServerCe;
 
 using DevExpress.XtraCharts;
 using System.Drawing.Imaging;
+using DevExpress.XtraGrid;
+
 namespace TracerV1
 {
     public partial class Form1 : Form
@@ -30,6 +32,7 @@ namespace TracerV1
         Image img1 = null;
         string mainDir = Environment.CurrentDirectory;
         SqlCeConnection con;
+        List<string> rrcItems = new List<string>();
         class _point
         {
 
@@ -43,6 +46,11 @@ namespace TracerV1
                 lng = _lng;
             }
 
+        }
+        public struct genericDataContainer
+        {
+            public string imsi;
+            public List<int> count;
         }
 
         public Form1()
@@ -607,11 +615,14 @@ namespace TracerV1
         private void UpdateRRCMsgsList()
         {
             RRCMessages.Items.Clear();
-
+            rrcItems.Clear();
             string[] rrc = extractRRCMsgs(traceDataTable);
             foreach (string s in rrc)
             {
                 RRCMessages.Items.Add(s);
+                messagesListBox.Items.Add(s);
+                rrcChkListGrap2.Items.Add(s);
+                rrcItems.Add(s);
             }
         }
 
@@ -1034,6 +1045,33 @@ namespace TracerV1
             }
         }
 
+        private string getUserNameFromIMSI(string imsi)
+        {
+            try
+            {
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = "SELECT * FROM ImsiUsers Where IMSI LIKE '%" + imsi + "%'";
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                // dataGridView3.DataSource = dt;
+                con.Close();
+
+                return dt.Rows[0][1].ToString();
+
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+                return "User Not Found";
+            }
+        }
+
         private void RstButton_Click(object sender, EventArgs e)
         {
             try
@@ -1270,131 +1308,6 @@ namespace TracerV1
         {
             plotGraphCalls(chartControl1, dataGridView5);
 
-
-            /*
-            chartControl1.Series.Clear();
-            chartControl1.Titles.Clear();
-            chartControl1.DataSource = null;
-            
-          
-                UserMessageFilter umf = new UserMessageFilter(traceDataTable, mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
-                DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
-                graphData.Clear();
-                DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
-                graphData.Columns.Add(dcGraph);
-                dcGraph = new DataColumn("MOC", System.Type.GetType("System.Int32"));
-                graphData.Columns.Add(dcGraph);
-                dcGraph = new DataColumn("MTC", System.Type.GetType("System.Int32"));
-                graphData.Columns.Add(dcGraph);
-                dcGraph = new DataColumn("CallDrop", System.Type.GetType("System.Int32"));
-                graphData.Columns.Add(dcGraph);
-                dcGraph = new DataColumn("TotalCalls", System.Type.GetType("System.Int32"));
-                graphData.Columns.Add(dcGraph);
-
-                List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
-
-                dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
-                foreach (UserMessageFilter.countDate s in dataList)
-                {
-                    object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
-
-                    graphData.Rows.Add(str);
-                }
-
-
-                //object[] str = { DateTime.Today, umf.countMOC, umf.countMTC, umf.countDropCalls };
-
-                // graphData.Rows.Add(str);
-
-                dataGridView5.DataSource = graphData;
-                //MsgBox(umf.errorMessage);
-                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-
-                DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series("MOC", ViewType.Bar);
-                chartControl1.Series.Add(seriesMOC);
-
-                ChartTitle myTitle = new ChartTitle();
-
-
-                myTitle.Text = graphLabel1TB.Text;
-                chartControl1.Titles.Add(myTitle);
-                seriesMOC.DataSource = graphData;
-                dataGridView5.DataSource = graphData;
-                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                seriesMOC.ArgumentScaleType = ScaleType.Auto;
-                seriesMOC.ArgumentDataMember = "Date";
-                seriesMOC.ValueScaleType = ScaleType.Numerical;
-                string[] STR = new string[1];
-                STR[0] = "MOC";
-                //      STR[1] = "MTC";
-                //      STR[2] = "CallDrop";
-                seriesMOC.ValueDataMembers.AddRange(STR);
-
-                DevExpress.XtraCharts.Series seriesMTC = new DevExpress.XtraCharts.Series("MTC", ViewType.Bar);
-                chartControl1.Series.Add(seriesMTC);
-                seriesMTC.DataSource = graphData;
-                dataGridView5.DataSource = graphData;
-                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                seriesMTC.ArgumentScaleType = ScaleType.Auto;
-                seriesMTC.ArgumentDataMember = "Date";
-                seriesMTC.ValueScaleType = ScaleType.Numerical;
-                STR = new string[1];
-                STR[0] = "MTC";
-                //      STR[1] = "MTC";
-                //      STR[2] = "CallDrop";
-                seriesMTC.ValueDataMembers.AddRange(STR);
-
-                DevExpress.XtraCharts.Series seriesTotalCalls = new DevExpress.XtraCharts.Series("Total Calls", ViewType.Bar);
-                chartControl1.Series.Add(seriesTotalCalls);
-                seriesTotalCalls.DataSource = graphData;
-                dataGridView5.DataSource = graphData;
-                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                seriesTotalCalls.ArgumentScaleType = ScaleType.Auto;
-                seriesTotalCalls.ArgumentDataMember = "Date";
-                seriesTotalCalls.ValueScaleType = ScaleType.Numerical;
-                STR = new string[1];
-                STR[0] = "TotalCalls";
-                //      STR[1] = "MTC";
-                //      STR[2] = "CallDrop";
-                seriesTotalCalls.ValueDataMembers.AddRange(STR);
-
-
-
-
-                DevExpress.XtraCharts.Series seriesCallDrop = new DevExpress.XtraCharts.Series("Call Drop", ViewType.Bar);
-                chartControl1.Series.Add(seriesCallDrop);
-                seriesCallDrop.DataSource = graphData;
-                dataGridView5.DataSource = graphData;
-                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                seriesCallDrop.ArgumentScaleType = ScaleType.Auto;
-                seriesCallDrop.ArgumentDataMember = "Date";
-                seriesCallDrop.ValueScaleType = ScaleType.Numerical;
-                STR = new string[1];
-                STR[0] = "CallDrop";
-                //      STR[1] = "MTC";
-                //      STR[2] = "CallDrop";
-                seriesCallDrop.ValueDataMembers.AddRange(STR);
-
-
-                //.AddRange(new string[] { "Value" });
-
-                // Set some properties to get a nice-looking chart.
-                //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
-                //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
-                //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-
-          
-            chartControl1.Refresh();
-            chartControl1.RefreshData();
-
-    */
-
         }
 
         private void updateMessageBackup_Click(object sender, EventArgs e)
@@ -1426,7 +1339,7 @@ namespace TracerV1
         private void button6_Click(object sender, EventArgs e)
         {
             string clipData = null;
-            foreach(var s in unknownCells.Items)
+            foreach (var s in unknownCells.Items)
             {
                 clipData = clipData + " " + s;
             }
@@ -1442,8 +1355,8 @@ namespace TracerV1
         private void button7_Click(object sender, EventArgs e)
         {
             TracerV1.Properties.Settings.Default.graphLabel1 = graphLabel1TB.Text;
-        //    TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
-         //   TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
+            //    TracerV1.Properties.Settings.Default.mtcStringOfficial = mtcMessageFilter.Text;
+            //   TracerV1.Properties.Settings.Default.drcStringOfficial = callDropFilterMessage.Text;
             TracerV1.Properties.Settings.Default.Save();
         }
 
@@ -1459,13 +1372,13 @@ namespace TracerV1
 
         private void plotcc1_Click(object sender, EventArgs e)
         {
-
+            plotGraph2(cc1, dgvV2, messagesListBox, graphLabel2TB.Text);
         }
 
 
-        private void plotGraphCalls(ChartControl ch,DataGridView _dgv)
+        private void plotGraphCalls(ChartControl ch, DataGridView _dgv)
         {
-            
+
             ch.Series.Clear();
             ch.Titles.Clear();
             ch.DataSource = null;
@@ -1587,6 +1500,145 @@ namespace TracerV1
             ch.Refresh();
             ch.RefreshData();
 
+
+        }
+
+
+        /// <summary>
+        /// Graph With Rab Setup Failures and Call Drop For Each User
+        /// </summary>
+        /// <param name="ch"></param>
+        /// <param name="_dgv"></param>
+        private void plotGraph2(ChartControl ch, DataGridView _dgv, CheckedListBox chkList, string chartTitle)
+        {
+            _dgv.ScrollBars = ScrollBars.Both;
+
+            ch.Series.Clear();
+            ch.Titles.Clear();
+            ch.DataSource = null;
+
+            //// Chart Title Add
+
+            ChartTitle myTitle = new ChartTitle();
+            myTitle.Text = chartTitle;
+            ch.Titles.Add(myTitle);
+            /////
+
+            UserMessageFilter umf = new UserMessageFilter(traceDataTable);
+            DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
+            graphData.Clear();
+
+            List<string> chkMessages = new List<string>();
+
+            foreach (var r in chkList.CheckedItems)
+            {
+                chkMessages.Add(r.ToString());
+            }
+
+            List<UserMessageFilter.genericDataContainer> count = new List<UserMessageFilter.genericDataContainer>();
+            List<string> str = getIMSIs();
+            count = umf.getResult(chkMessages, str);
+
+            DataColumn dcGraph;
+            dcGraph = new DataColumn("User", System.Type.GetType("System.String"));
+            graphData.Columns.Add(dcGraph);
+
+            foreach (var item in chkMessages)
+            {
+                dcGraph = new DataColumn(item, System.Type.GetType("System.Int32"));
+                graphData.Columns.Add(dcGraph);
+            }
+
+            List<object> rowList = new List<object>();
+
+            foreach (var s in count)
+            {
+
+                rowList.Add(getUserNameFromIMSI(s.imsi));
+
+                foreach (var item in s.count)
+                {
+                    rowList.Add(item);
+                }
+            }
+
+            object[] rowArray = rowList.ToArray();
+
+            graphData.Rows.Add(rowArray); // Adding Row to datatable graphData
+
+            _dgv.DataSource = graphData;
+
+            //   _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            string[] STR = new string[1];
+
+            foreach (var item in chkMessages)
+            {
+                string str1 = item;
+                DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series(str1, ViewType.Bar);
+                ch.Series.Add(seriesMOC);
+                seriesMOC.DataSource = graphData;
+                _dgv.DataSource = graphData;
+                //  _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                seriesMOC.ArgumentScaleType = ScaleType.Auto;
+                seriesMOC.ArgumentDataMember = "User";
+                seriesMOC.ValueScaleType = ScaleType.Numerical;
+                STR[0] = str1;
+                seriesMOC.ValueDataMembers.AddRange(STR);
+            }
+            ch.Refresh();
+            ch.RefreshData();
+            _dgv.Refresh();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            ListBox L = messagesListBox;
+            TextBox T = textBox4;
+            L.Items.Clear();
+
+            foreach (string str in rrcItems)
+            {
+                if (str.StartsWith(T.Text, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    L.Items.Add(str);
+                }
+            }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            ListBox L = rrcChkListGrap2;
+            TextBox T = textBox5;
+            L.Items.Clear();
+
+            foreach (string str in rrcItems)
+            {
+                if (str.StartsWith(T.Text, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    L.Items.Add(str);
+                }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            plotGraph2(cc2, dgvv2g2, rrcChkListGrap2, graphLabel3TB.Text);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog svf = new SaveFileDialog();
+            svf.ShowDialog();
+            cc1.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog svf = new SaveFileDialog();
+            svf.ShowDialog();
+            cc2.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
 
         }
     }

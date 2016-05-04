@@ -23,7 +23,11 @@ namespace TracerV1
             public int countDropCalls;
             public DateTime date;
         }
-
+        public struct genericDataContainer
+        {
+            public string imsi;
+            public List<int> count;
+        }
         //public List<countDate> countMOC = new List<countDate>();
 
         //public List<countDate> countMTC = new List<countDate>();
@@ -57,11 +61,11 @@ namespace TracerV1
             {
                 cdLocal = new countDate();
                 errorMessage = r[0].ToString();
-            //    string[] formats = { "DD/MM/YYYY" };
+                //    string[] formats = {"DD/MM/YYYY"};
                 // cdLocal.date = DateTime.ParseExact(r[0].ToString(), formats, new CultureInfo("en-US"), DateTimeStyles.None);
-                cdLocal.date =DateTime.Parse( r[0].ToString());
-                DataRow[] dataRowsMOC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMOC, r[0].ToString() ));
-                DataRow[] dataRowsMTC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMTC , r[0].ToString()));
+                cdLocal.date = DateTime.Parse(r[0].ToString());
+                DataRow[] dataRowsMOC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMOC, r[0].ToString()));
+                DataRow[] dataRowsMTC = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageMTC, r[0].ToString()));
                 DataRow[] dataRowsDropCalls = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}'", messageDropCalls, r[0].ToString()));
 
                 cdLocal.countMOC = dataRowsMOC.Length;
@@ -71,6 +75,61 @@ namespace TracerV1
             }
 
             return count;
+        }
+
+        /// <summary>
+        /// Get Count of the message for the specific date
+        /// </summary>
+        /// <param name="messages"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public List<genericDataContainer> getResult(List<string> messages, string date,List<string> IMSI)
+        {
+            List<genericDataContainer> container = new List<genericDataContainer>();
+            //List<int> count = new List<int>();
+            genericDataContainer localContainer;
+            foreach (var im in IMSI)
+            {
+                localContainer = new genericDataContainer();
+                localContainer.imsi = im;
+                foreach (var mess in messages)
+                {
+                    DataRow[] data = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND time = '{1}' AND ueId Like '%{1}%'", mess,date, im));
+                    //count.Add(data.Length);
+                    localContainer.count.Add(data.Length);
+                }
+
+                container.Add(localContainer);
+            }
+            return container;
+        }
+
+        /// <summary>
+        /// Get Count for this message for all the data independent of the time.
+        /// </summary>
+        /// <param name="messages"></param>
+        /// <returns></returns>
+        public List<genericDataContainer> getResult(List<string> messages, List<string> IMSI)
+        {
+
+            List<genericDataContainer> container = new List<genericDataContainer>();
+            //List<int> count = new List<int>();
+            genericDataContainer localContainer;
+            foreach (var im in IMSI)
+            {
+                localContainer = new genericDataContainer();
+                localContainer.imsi = im;
+                localContainer.count = new List<int>();
+                foreach (var mess in messages)
+                {
+                    DataRow[] data = localDataTable.Select(string.Format("rrcMsgName = '{0}' AND ueId Like '%{1}%'", mess, im));
+                    //count.Add(data.Length);
+                    localContainer.count.Add(data.Length);
+                }
+
+                container.Add(localContainer);
+            }
+            return container;
         }
 
         /// <summary>
@@ -96,6 +155,12 @@ namespace TracerV1
                 errorMessage = ex.Message;
             }
 
+        }
+
+        public UserMessageFilter(DataTable dt)
+        {
+            localDataTable = dt;
+            localDataTable.DefaultView.Sort = "time ASC";
         }
 
         public void reassginDataTable(DataTable dt)
