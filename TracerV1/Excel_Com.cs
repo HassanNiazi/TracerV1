@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
+using Microsoft.Office.Core;
+
 namespace TracerV1
 {
     class Excel_Com
@@ -44,9 +46,11 @@ namespace TracerV1
 
                 xlWorkBook = xlApp.Workbooks.Add(misValue);
 
+
+
                 xlWorkBook.SaveAs(excelSheetNameAndPath + ".xlsx");
 
-                closeExcelBook(excelSheetNameAndPath);
+                closeExcelBook();
 
             }
             catch (Exception ex)
@@ -70,6 +74,8 @@ namespace TracerV1
                 xlWorkBook = xlApp.Workbooks.Add(misValue);
 
                 xlWorkBook.SaveAs(excelSheetNameAndPath + ".xlsx");
+
+                ChangeWorkSheet(1);
 
                 return true;
             }
@@ -98,7 +104,7 @@ namespace TracerV1
             }
         }
 
-        public void closeExcelBook(string excelSheetName)
+        public void closeExcelBook()
         {
 
             try
@@ -128,6 +134,15 @@ namespace TracerV1
 
                 errorMessage = ex.Message;
             }
+        }
+
+        public void addPicture(int left,int top, int width, int height,string FilePath)
+        {
+            ChangeWorkSheet(1);
+            
+            xlWorkSheet.Activate();
+
+            xlWorkSheet.Shapes.AddPicture(FilePath, MsoTriState.msoFalse, MsoTriState.msoCTrue, left, top, width, height);
         }
 
         public Excel.Worksheet GetWorkSheet(int sheetNumber)

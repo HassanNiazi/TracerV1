@@ -10,10 +10,10 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Data.SqlServerCe;
-
+using Excel = Microsoft.Office.Interop.Excel;
 using DevExpress.XtraCharts;
 using System.Drawing.Imaging;
-using DevExpress.XtraGrid;
+using Microsoft.Office.Core;
 
 namespace TracerV1
 {
@@ -27,12 +27,14 @@ namespace TracerV1
         bool started = false;
         bool unknownCellsFlag = false;
         List<string[]> rows;
+      
         DataTable traceDataTable = new DataTable();
         DataTable dt = new DataTable();
         Image img1 = null;
         string mainDir = Environment.CurrentDirectory;
         SqlCeConnection con;
         List<string> rrcItems = new List<string>();
+        object misValue = System.Reflection.Missing.Value;
         class _point
         {
 
@@ -141,8 +143,8 @@ namespace TracerV1
             //  MsgBox(mainDir);
             sqlConOpen();
             refetchData();
-            barDockControlTop.Visible = false;
-            barDockControlRight.Visible = false;
+            //barDockControlTop.Visible = false;
+            //barDockControlRight.Visible = false;
 
 
             //      ribbonControl1.Visible = false;
@@ -156,6 +158,14 @@ namespace TracerV1
             graphLabel2TB.Text = TracerV1.Properties.Settings.Default.graphLabel2;
             graphLabel3TB.Text = TracerV1.Properties.Settings.Default.graphLabel3;
 
+            
+            //imgListBox.ImageList = imageList1;
+            //imageSlider1.ImageList = imageList1;
+
+
+            //imageSlider1.AnimationTime = 1200;
+            //Display images at the center of ImageSlider in their original size
+            imageSlider1.LayoutMode = DevExpress.Utils.Drawing.ImageLayoutMode.Stretch;
 
             //     MapTab.SelectedIndex = 2;
             //    MapTab.SelectedIndex = 0;
@@ -1044,6 +1054,7 @@ namespace TracerV1
         {
             //  MsgBox(Environment.CurrentDirectory.ToString());
             CaptureGraph();
+
         }
 
         private void CaptureGraph()
@@ -1089,11 +1100,13 @@ namespace TracerV1
                     g.Save();
 
                     img.Save(svf.FileName);
+                    _addImagesToImageControls(img,svf.FileName);
                     g.Dispose();
                     img.Dispose();
                 }
                 else
                 {
+                    _addImagesToImageControls(img,svf.FileName);
                     img.Save(svf.FileName);
                 }
             }
@@ -1374,15 +1387,15 @@ namespace TracerV1
             }
             if (MapTab.SelectedIndex == 4)
             {
-                barDockControlTop.Visible = true;
-                barDockControlRight.Visible = true;
-                //    ribbonControl1.Visible = true;
+                //barDockControlTop.Visible = true;
+                //barDockControlRight.Visible = true;
+                ////    ribbonControl1.Visible = true;
             }
             else
             {
-                barDockControlTop.Visible = false;
-                //    ribbonControl1.Visible = false;
-                barDockControlRight.Visible = false;
+                //    barDockControlTop.Visible = false;
+                //    //    ribbonControl1.Visible = false;
+                //    barDockControlRight.Visible = false;
             }
         }
 
@@ -1402,7 +1415,7 @@ namespace TracerV1
                 DataTable dt = exc.getWorkSheetData(1);
 
                 //    dataGridView5.DataSource = dt;
-                exc.closeExcelBook(opf.FileName);
+                exc.closeExcelBook();
 
                 /**
                  * 
@@ -1753,7 +1766,7 @@ namespace TracerV1
                 return;
             }
 
-           
+
             DataColumn dcGraph;
             dcGraph = new DataColumn("User", System.Type.GetType("System.String"));
             graphData.Columns.Add(dcGraph);
@@ -1886,21 +1899,117 @@ namespace TracerV1
         {
             try
             {
+                SaveFileDialog svf = new SaveFileDialog();
+                svf.Filter = "Excel Files | *.xlsx";
+                svf.ShowDialog();
                 PlotMarkers_Click(null, null);
+
                 Image imgMap = getMapImage();
-                //  MapTab.SelectedIndex = 
+
+                string mapPath = string.Format("{0}/map.jpg", mainDir);
+
+                imgMap.Save(mapPath);
+
                 plotGraphCalls(chartControl1, dataGridView5);
+
                 Image imgChart1;
-                chartControl1.ExportToImage(mainDir + "/chart1" + ".jpg", ImageFormat.Jpeg);
-                imgChart1 = Image.FromFile(mainDir + "/chart1" + ".jpg");
-                
-                Excel_Com exc = new Excel_Com()
-                
+
+                string chartPath = string.Format("{0}/chart1.jpg", mainDir);
+
+                chartControl1.ExportToImage(chartPath, ImageFormat.Jpeg);
+
+                imgChart1 = Image.FromFile(chartPath);
+
+
+                Excel.Application xlApp = new Excel.Application();
+
+                Excel.Workbook xlWorkBook = new Excel.Workbook();
+
+                Excel.Worksheet xlWorksheet = new Excel.Worksheet();
+
+                xlApp = new Excel.Application();
+
+                xlWorkBook = xlApp.Application.Workbooks.Add(misValue);
+
+                xlWorksheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                xlWorksheet.Shapes.AddPicture(mapPath, MsoTriState.msoFalse, MsoTriState.msoTrue, 25, 25, imgMap.Width, imgMap.Height);
+
+                xlWorkBook.SaveAs(svf.FileName);
+
+                closeExcelBook(xlWorkBook, xlApp, xlWorksheet);
+
+                //Excel_Com exc = new Excel_Com(svf.FileName);
+
+                //exc.ChangeWorkSheet(1);
+
+                //exc.addPicture(25, 25, imgMap.Width, imgMap.Height, string.Format("{0}/map.jpg", mainDir));
+
+                //exc.addPicture(25, 50 + imgMap.Height, imgChart1.Width, imgChart1.Height, string.Format("{0}/chart1.jpg", mainDir));
+
+                //exc.closeExcelBook();
+
             }
             catch (Exception ex)
             {
                 MsgBox(ex.Message);
             }
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+
+
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+        public void closeExcelBook(Excel.Workbook xlWorkBook, Excel.Application xlApp, Excel.Worksheet xlWorkSheet)
+        {
+
+            try
+            {
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlApp);
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+            }
+        }
+
+        private void _addImagesToImageControls(Image img,string FileName)
+        {
+
+            Image IMGlOCAL = Image.FromFile(FileName);
+            snapControl1.Document.Images.Insert(snapControl1.Document.CaretPosition, IMGlOCAL);
+         
+        }
+
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            imageSlider1.SetCurrentImageIndex(imgListBox.SelectedIndex);
         }
     }
 
