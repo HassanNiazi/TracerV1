@@ -143,6 +143,16 @@ namespace TracerV1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logistics {
+            get {
+                object obj = ResourceManager.GetObject("Logistics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap messiupdate_hi {
             get {
                 object obj = ResourceManager.GetObject("messiupdate-hi", resourceCulture);

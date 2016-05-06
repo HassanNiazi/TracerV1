@@ -14,6 +14,11 @@ using Excel = Microsoft.Office.Interop.Excel;
 using DevExpress.XtraCharts;
 using System.Drawing.Imaging;
 using Microsoft.Office.Core;
+using System.Text;
+using System.Security.Cryptography;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Net.Cache;
 
 namespace TracerV1
 {
@@ -27,7 +32,9 @@ namespace TracerV1
         bool started = false;
         bool unknownCellsFlag = false;
         List<string[]> rows;
-      
+        static readonly string PasswordHash = "P@@SwAAA";
+        static readonly string SaltKey = "S@LT&ZZZ";
+        static readonly string VIKey = "HR$2pIjHR$2pIj12";
         DataTable traceDataTable = new DataTable();
         DataTable dt = new DataTable();
         Image img1 = null;
@@ -62,7 +69,13 @@ namespace TracerV1
             mapProviderList.DataSource = GMapProviders.List;
 
 
+            if (TracerV1.Properties.Settings.Default.expired)
+            {
+                MessageBox.Show("Dear User! Your Licencse has expired. ");
+                LoadLicensceFile();
+                Application.Exit();
 
+            }
 
 
             try
@@ -70,6 +83,16 @@ namespace TracerV1
                 System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
                 toolStatus.Text = "Connected!  ";
                 MainMap.Manager.Mode = AccessMode.ServerAndCache;
+
+                if ( TracerV1.Properties.Settings.Default.licenseLastDate <  GetNistTime() )
+                {
+                    TracerV1.Properties.Settings.Default.expired = true;
+                    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                    LoadLicensceFile();
+                    Application.Exit();
+
+                }
+
             }
             catch
             {
@@ -78,6 +101,17 @@ namespace TracerV1
                 ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
                 //   MessageBoxIcon.Warning);
                 toolStatus.Text = "Offline - Cache Mode Only";
+
+
+                if (TracerV1.Properties.Settings.Default.licenseLastDate < DateTime.Today)
+                {
+                    TracerV1.Properties.Settings.Default.expired = true;
+                    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                    LoadLicensceFile();
+                    Application.Exit();
+
+                }
+
             }
 
             // config map
@@ -151,6 +185,8 @@ namespace TracerV1
             //  MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
 
 
+        
+
             mocMessageFilter.Text = TracerV1.Properties.Settings.Default.mocStringOfficial;
             mtcMessageFilter.Text = TracerV1.Properties.Settings.Default.mtcStringOfficial;
             callDropFilterMessage.Text = TracerV1.Properties.Settings.Default.drcStringOfficial;
@@ -158,7 +194,7 @@ namespace TracerV1
             graphLabel2TB.Text = TracerV1.Properties.Settings.Default.graphLabel2;
             graphLabel3TB.Text = TracerV1.Properties.Settings.Default.graphLabel3;
 
-            
+
             //imgListBox.ImageList = imageList1;
             //imageSlider1.ImageList = imageList1;
 
@@ -195,7 +231,28 @@ namespace TracerV1
                 MsgBox(ex.Message);
             }
         }
+        public static DateTime GetNistTime()
+        {
+            DateTime dateTime = DateTime.MinValue;
 
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://nist.time.gov/actualtime.cgi?lzbc=siqm9b");
+            request.Method = "GET";
+            request.Accept = "text/html, application/xhtml+xml, */*";
+            request.UserAgent = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore); //No caching
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                StreamReader stream = new StreamReader(response.GetResponseStream());
+                string html = stream.ReadToEnd();//<timestamp time=\"1395772696469995\" delay=\"1395772696469995\"/>
+                string time = Regex.Match(html, @"(?<=\btime="")[^""]*").Value;
+                double milliseconds = Convert.ToInt64(time) / 1000.0;
+                dateTime = new DateTime(1970, 1, 1).AddMilliseconds(milliseconds).ToLocalTime();
+            }
+
+            return dateTime;
+        }
         private void sqlConOpen()
         {
             try
@@ -1100,13 +1157,13 @@ namespace TracerV1
                     g.Save();
 
                     img.Save(svf.FileName);
-                    _addImagesToImageControls(img,svf.FileName);
+                    //_addImagesToImageControls(svf.FileName);
                     g.Dispose();
                     img.Dispose();
                 }
                 else
                 {
-                    _addImagesToImageControls(img,svf.FileName);
+                    //_addImagesToImageControls(svf.FileName);
                     img.Save(svf.FileName);
                 }
             }
@@ -1542,15 +1599,15 @@ namespace TracerV1
         {
             if (MapTab.SelectedIndex == 4)
             {
-                barDockControlTop.Visible = true;
-                barDockControlRight.Visible = true;
-                //    ribbonControl1.Visible = true;
+                //barDockControlTop.Visible = true;
+                //barDockControlRight.Visible = true;
+                ////    ribbonControl1.Visible = true;
             }
             else
             {
-                barDockControlTop.Visible = false;
-                //    ribbonControl1.Visible = false;
-                barDockControlRight.Visible = false;
+                //barDockControlTop.Visible = false;
+                ////    ribbonControl1.Visible = false;
+                //barDockControlRight.Visible = false;
             }
         }
 
@@ -1856,17 +1913,25 @@ namespace TracerV1
 
         private void button10_Click(object sender, EventArgs e)
         {
-            SaveFileDialog svf = new SaveFileDialog();
-            svf.ShowDialog();
-            cc1.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
+            //SaveFileDialog svf = new SaveFileDialog();
+            //svf.ShowDialog();
+            //cc1.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
+            cc1.ExportToImage(string.Format("{0}/chart2dv2.jpg", mainDir), ImageFormat.Jpeg); ;
+
+            _addImagesToImageControls(string.Format("{0}/chart2dv2.jpg", mainDir), graphLabel2TB.Text);
 
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            SaveFileDialog svf = new SaveFileDialog();
-            svf.ShowDialog();
-            cc2.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
+            //SaveFileDialog svf = new SaveFileDialog();
+            //svf.ShowDialog();
+            //cc2.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
+
+
+            cc2.ExportToImage(string.Format("{0}/chart3dv2.jpg", mainDir), ImageFormat.Jpeg); 
+
+            _addImagesToImageControls(string.Format("{0}/chart3dv2.jpg", mainDir), graphLabel3TB.Text);
 
         }
 
@@ -1993,15 +2058,52 @@ namespace TracerV1
             }
         }
 
-        private void _addImagesToImageControls(Image img,string FileName)
+        private void _addImagesToImageControls(string FileName, string header)
         {
-
+            snapControl1.Document.InsertHtmlText(snapControl1.Document.CaretPosition, string.Format("<b><font size=3>{0}</font></b>", header));
             Image IMGlOCAL = Image.FromFile(FileName);
-            snapControl1.Document.Images.Insert(snapControl1.Document.CaretPosition, IMGlOCAL);
-         
+            string tempFile = Path.GetTempFileName();
+            IMGlOCAL.Save(tempFile);
+            Image imgTemp = Image.FromFile(tempFile);
+            int width = 0, height = 0;
+            if (!((widthImage == null) || (heightImage == null)))
+                if (!((widthImage.EditValue == null) || (heightImage.EditValue == null)))
+            {
+                bool validWidth = int.TryParse(widthImage.EditValue.ToString(), out width);
+                bool validHeight = int.TryParse(heightImage.EditValue.ToString(), out height);
+
+                if (!(validWidth && validHeight))
+                {
+                    width = imgTemp.Width;
+                    height = imgTemp.Height;
+                }
+            }
+            else
+            {
+
+                    width = imgTemp.Width;
+                    height = imgTemp.Height;
+                }
+            snapControl1.Document.Images.Insert(snapControl1.Document.CaretPosition, ScaleImage(imgTemp, width, height));
+            IMGlOCAL.Dispose();
         }
 
+        public static Image ScaleImage(Image image, int maxWidth, int maxHeight)
+        {
+            var ratioX = (double)maxWidth / image.Width;
+            var ratioY = (double)maxHeight / image.Height;
+            var ratio = Math.Min(ratioX, ratioY);
 
+            var newWidth = (int)(image.Width * ratio);
+            var newHeight = (int)(image.Height * ratio);
+
+            var newImage = new Bitmap(newWidth, newHeight);
+
+            using (var graphics = Graphics.FromImage(newImage))
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+
+            return newImage;
+        }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
@@ -2010,6 +2112,113 @@ namespace TracerV1
         private void imgListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             imageSlider1.SetCurrentImageIndex(imgListBox.SelectedIndex);
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                //SaveFileDialog svf = new SaveFileDialog() { Filter = "Excel Files | *.xlsx" };
+                //svf.ShowDialog();
+                PlotMarkers_Click(null, null);
+
+                Image imgMap = getMapImage();
+
+                string mapPath = string.Format("{0}/map.jpg", mainDir);
+
+                imgMap.Save(mapPath);
+
+                imgMap.Dispose();
+
+                plotGraphCalls(chartControl1, dataGridView5);
+
+                // Image imgChart1;
+
+                string chartPath = string.Format("{0}/chart1.jpg", mainDir);
+
+                chartControl1.ExportToImage(chartPath, ImageFormat.Jpeg);
+
+                //  imgChart1 = Image.FromFile(chartPath);
+
+                _addImagesToImageControls(mapPath, "Map : ");
+                _addImagesToImageControls(chartPath, "CTO Trace : ");
+            }
+            catch (Exception ex) { MsgBox(ex.Message); }
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            LoadLicensceFile();
+
+        }
+
+        private void LoadLicensceFile()
+        {
+            try
+            {
+
+
+                OpenFileDialog opf = new OpenFileDialog();
+                opf.ShowDialog();
+                string lic = File.ReadAllText(opf.FileName);
+                string licD = Decrypt(lic);
+                //MsgBox(lic + " : " + licD);
+                //MsgBox(DateTime.Today.ToString());
+                TracerV1.Properties.Settings.Default.licenseLastDate = DateTime.Parse(licD);
+                MsgBox("Prodcut Licensce Extended Till : " + TracerV1.Properties.Settings.Default.licenseLastDate.Date.ToString());
+            }
+            catch (Exception ex)
+            {
+                MsgBox("Please select a valid Licensce File.");
+            }
+
+        }
+
+        public static string Encrypt(string plainText)
+        {
+            byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+
+            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.Zeros };
+            var encryptor = symmetricKey.CreateEncryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
+
+            byte[] cipherTextBytes;
+   
+            using (var memoryStream = new MemoryStream())
+            {
+                using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                    cryptoStream.FlushFinalBlock();
+                    cipherTextBytes = memoryStream.ToArray();
+                    cryptoStream.Close();
+                }
+                memoryStream.Close();
+            }
+            return Convert.ToBase64String(cipherTextBytes);
+        }
+
+        public static string Decrypt(string encryptedText)
+        {
+            byte[] cipherTextBytes = Convert.FromBase64String(encryptedText);
+            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.None };
+
+            var decryptor = symmetricKey.CreateDecryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
+            var memoryStream = new MemoryStream(cipherTextBytes);
+            var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
+            byte[] plainTextBytes = new byte[cipherTextBytes.Length];
+
+            int decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
+            memoryStream.Close();
+            cryptoStream.Close();
+            return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
         }
     }
 

@@ -121,6 +121,9 @@
   <data name="660236" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\660236.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="messiupdate-hi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\messiupdate-hi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background_gray_abstract_bright_95691_3840x2160" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background_gray_abstract_bright_95691_3840x2160.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,7 +151,7 @@
   <data name="660236 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\660236 (3).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="messiupdate-hi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\messiupdate-hi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logistics" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logistics.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -115,5 +115,28 @@ namespace TracerV1.Properties {
                 this["graphLabel3"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime licenseLastDate {
+            get {
+                return ((global::System.DateTime)(this["licenseLastDate"]));
+            }
+            set {
+                this["licenseLastDate"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool expired {
+            get {
+                return ((bool)(this["expired"]));
+            }
+            set {
+                this["expired"] = value;
+            }
+        }
     }
 }
