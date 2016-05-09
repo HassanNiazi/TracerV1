@@ -138,5 +138,17 @@ namespace TracerV1.Properties {
                 this["expired"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool loadStatus {
+            get {
+                return ((bool)(this["loadStatus"]));
+            }
+            set {
+                this["loadStatus"] = value;
+            }
+        }
     }
 }

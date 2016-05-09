@@ -12,8 +12,10 @@ namespace TracerV1
 {
     public partial class Form2 : Form
     {
+       
         public Form2()
         {
+
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
         }
@@ -22,8 +24,10 @@ namespace TracerV1
         {
             Thread t1 = new Thread(doWork);
             t1.Start();
-
+          
         }
+
+     
 
         private void doWork()
         {
@@ -48,9 +52,6 @@ namespace TracerV1
             Thread.Sleep(700);
             label1.Text = "Application Started";
             this.Close();
-            Form1 f1 = new Form1();
-            f1.ShowDialog();
-            
             
         }
     }

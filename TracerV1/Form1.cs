@@ -65,56 +65,73 @@ namespace TracerV1
         public Form1()
         {
             InitializeComponent();
-
+            //this.Visible = false;
+//this.Hide();
             mapProviderList.DataSource = GMapProviders.List;
+          
+            //  MsgBox(mainDir);
+            //this.Visible = ;
+       
 
 
-            if (TracerV1.Properties.Settings.Default.expired)
-            {
-                MessageBox.Show("Dear User! Your Licencse has expired. ");
-                LoadLicensceFile();
-                Application.Exit();
+            #region Licenscing
+            //while (Properties.Settings.Default.expired)
+            //{
+            // this.Visible = false;
+            //if (Properties.Settings.Default.expired)
+            //{
+            //    MessageBox.Show("Dear User! Your Licencse has expired. ");
+            //    LoadLicensceFile();
+            //    Environment.Exit(Environment.ExitCode);
+            //    //Application.Exit();
 
-            }
+            //}
 
 
             try
             {
-                System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
-                toolStatus.Text = "Connected!  ";
-                MainMap.Manager.Mode = AccessMode.ServerAndCache;
+                    System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
+                    toolStatus.Text = "Connected!  ";
+                    MainMap.Manager.Mode = AccessMode.ServerAndCache;
 
-                if ( TracerV1.Properties.Settings.Default.licenseLastDate <  GetNistTime() )
-                {
-                    TracerV1.Properties.Settings.Default.expired = true;
-                    MessageBox.Show("Dear User! Your Licencse has expired. ");
-                    LoadLicensceFile();
-                    Application.Exit();
+                    //if (Properties.Settings.Default.licenseLastDate < GetNistTime())
+                    //{
+                    //    Properties.Settings.Default.expired = true;
+                    //    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                    //    LoadLicensceFile();
 
-                }
+                    //    Environment.Exit(Environment.ExitCode);
 
-            }
-            catch
-            {
-                MainMap.Manager.Mode = AccessMode.CacheOnly;
-                //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
-                ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
-                //   MessageBoxIcon.Warning);
-                toolStatus.Text = "Offline - Cache Mode Only";
-
-
-                if (TracerV1.Properties.Settings.Default.licenseLastDate < DateTime.Today)
-                {
-                    TracerV1.Properties.Settings.Default.expired = true;
-                    MessageBox.Show("Dear User! Your Licencse has expired. ");
-                    LoadLicensceFile();
-                    Application.Exit();
+                    //}
 
                 }
+                catch
+                {
+                    MainMap.Manager.Mode = AccessMode.CacheOnly;
+                    //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
+                    ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
+                    //   MessageBoxIcon.Warning);
+                    toolStatus.Text = "Offline - Cache Mode Only";
 
-            }
 
+                    //if (Properties.Settings.Default.licenseLastDate < DateTime.Today)
+                    //{
+                    //    Properties.Settings.Default.expired = true;
+                    //    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                    //    LoadLicensceFile();
+                    //    //Application.Exit();
+                    //    Environment.Exit(Environment.ExitCode);
+                    //}
+                    //this.Visible = !this.Visible;
+                }
+            //}
             // config map
+
+            //  this.Visible = Properties.Settings.Default.loadStatus;
+            #endregion
+
+
+
             MainMap.MapProvider = GMapProviders.GoogleMap;
             MainMap.Position = new PointLatLng(33.7294, 73.0931);
             MainMap.MinZoom = 0;
@@ -168,13 +185,83 @@ namespace TracerV1
 
 
 
-
-
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //  MsgBox(mainDir);
+
+            this.WindowState = FormWindowState.Minimized;
+            this.Hide();
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
+            //#region Licenscing
+            while (Properties.Settings.Default.expired)
+            {
+                // this.Visible = false;
+                if (Properties.Settings.Default.expired)
+                {
+                    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                    LoadLicensceFile();
+                    Environment.Exit(Environment.ExitCode);
+                    //Application.Exit();
+
+                }
+
+
+                try
+                {
+                    System.Net.IPHostEntry el = System.Net.Dns.GetHostEntry("www.google.com");
+                    toolStatus.Text = "Connected!  ";
+                    MainMap.Manager.Mode = AccessMode.ServerAndCache;
+
+                    if (Properties.Settings.Default.licenseLastDate < GetNistTime())
+                    {
+                        Properties.Settings.Default.expired = true;
+                        MessageBox.Show("Dear User! Your Licencse has expired. ");
+                        LoadLicensceFile();
+
+                        Environment.Exit(Environment.ExitCode);
+
+                    }
+
+                }
+                catch
+                {
+                    MainMap.Manager.Mode = AccessMode.CacheOnly;
+                    //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
+                    ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
+                    //   MessageBoxIcon.Warning);
+                    toolStatus.Text = "Offline - Cache Mode Only";
+
+
+                    try
+                    {
+                        if (Properties.Settings.Default.licenseLastDate < DateTime.Today)
+                        {
+                            Properties.Settings.Default.expired = true;
+                            MessageBox.Show("Dear User! Your Licencse has expired. ");
+                            LoadLicensceFile();
+                            //Application.Exit();
+                            Environment.Exit(Environment.ExitCode);
+                        }
+                        //this.Visible = !this.Visible;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MsgBox(ex.Message);
+                    }
+                }
+            }
+            //// config map
+
+            ////  this.Visible = Properties.Settings.Default.loadStatus;
+            //#endregion
+            if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
+                expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+            else
+                expiryLic.Caption = "Licensce Expired";
             sqlConOpen();
             refetchData();
             //barDockControlTop.Visible = false;
@@ -187,24 +274,16 @@ namespace TracerV1
 
         
 
-            mocMessageFilter.Text = TracerV1.Properties.Settings.Default.mocStringOfficial;
-            mtcMessageFilter.Text = TracerV1.Properties.Settings.Default.mtcStringOfficial;
-            callDropFilterMessage.Text = TracerV1.Properties.Settings.Default.drcStringOfficial;
-            graphLabel1TB.Text = TracerV1.Properties.Settings.Default.graphLabel1;
-            graphLabel2TB.Text = TracerV1.Properties.Settings.Default.graphLabel2;
-            graphLabel3TB.Text = TracerV1.Properties.Settings.Default.graphLabel3;
-
-
-            //imgListBox.ImageList = imageList1;
-            //imageSlider1.ImageList = imageList1;
-
-
-            //imageSlider1.AnimationTime = 1200;
-            //Display images at the center of ImageSlider in their original size
-            imageSlider1.LayoutMode = DevExpress.Utils.Drawing.ImageLayoutMode.Stretch;
-
-            //     MapTab.SelectedIndex = 2;
-            //    MapTab.SelectedIndex = 0;
+            mocMessageFilter.Text = Properties.Settings.Default.mocStringOfficial;
+            mtcMessageFilter.Text = Properties.Settings.Default.mtcStringOfficial;
+            callDropFilterMessage.Text = Properties.Settings.Default.drcStringOfficial;
+            graphLabel1TB.Text = Properties.Settings.Default.graphLabel1;
+            graphLabel2TB.Text = Properties.Settings.Default.graphLabel2;
+            graphLabel3TB.Text = Properties.Settings.Default.graphLabel3;
+            this.Show();
+            this.WindowState = FormWindowState.Maximized;
+            f2.Dispose();
+            snapControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
 
         }
 
@@ -219,7 +298,7 @@ namespace TracerV1
                 UpdateIMSIChkList(); // From IMSI DB to Control
                                      // UpdateRRCMsgsList();
                 insertToRRCMessageLookUpDatabase();
-                updateUserList_DataVisualizer();
+                //updateUserList_DataVisualizer();
                 started = true;
                 UpdateDataRrcMessageLookUpGridView();
 
@@ -506,23 +585,23 @@ namespace TracerV1
             }
         }
 
-        private void updateUserList_DataVisualizer()
-        {
-            try
-            {
+        //private void updateUserList_DataVisualizer()
+        //{
+        //    try
+        //    {
 
-                List<string> lis = SelectAllUserFromDB();
-                foreach (string s in lis)
-                {
-                    UserNames_DataVisualizer.Items.Add(s);
-                }
+        //        List<string> lis = SelectAllUserFromDB();
+        //        foreach (string s in lis)
+        //        {
+        //            UserNames_DataVisualizer.Items.Add(s);
+        //        }
 
-            }
-            catch (Exception ex)
-            {
-                MsgBox(ex.Message);
-            }
-        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MsgBox(ex.Message);
+        //    }
+        //}
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -1550,11 +1629,12 @@ namespace TracerV1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
+
+            SaveFileDialog svf = new SaveFileDialog();
+            svf.ShowDialog();
             DevExpress.XtraPrinting.XlsExportOptions dxo = new DevExpress.XtraPrinting.XlsExportOptions();
             dxo.ExportMode = DevExpress.XtraPrinting.XlsExportMode.SingleFile;
-
-            chartControl1.ExportToXlsx(openFileDialog1.FileName);
+            chartControl1.ExportToXlsx(svf.FileName + ".xlsx");
         }
 
         private void GoTOCoord_Click(object sender, EventArgs e)
@@ -1862,6 +1942,7 @@ namespace TracerV1
                 string str1 = LookupRRCMessageName(item);
                 DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series(str1, ViewType.Bar);
                 ch.Series.Add(seriesMOC);
+                seriesMOC.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
                 seriesMOC.DataSource = graphData;
                 _dgv.DataSource = graphData;
                 //  _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -1871,6 +1952,7 @@ namespace TracerV1
                 STR[0] = str1;
                 seriesMOC.ValueDataMembers.AddRange(STR);
             }
+            dgv4.DataSource = graphData;
             ch.Refresh();
             ch.RefreshData();
             _dgv.Refresh();
@@ -1918,7 +2000,40 @@ namespace TracerV1
             //cc1.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
             cc1.ExportToImage(string.Format("{0}/chart2dv2.jpg", mainDir), ImageFormat.Jpeg); ;
 
+            dgv4.DataSource = dgvV2.DataSource;
             _addImagesToImageControls(string.Format("{0}/chart2dv2.jpg", mainDir), graphLabel2TB.Text);
+            gridToImage(dgv4,cc1.Width,"");
+        }
+
+        private void gridToImage( DataGridView __dgv,int widthToSync,string label)
+        {
+            //Resize DataGridView to full height.
+            int height = __dgv.Height;
+            __dgv.Height = __dgv.RowCount * __dgv.RowTemplate.Height;
+
+            if(checkBox1.Checked)
+            {
+                __dgv.Width = widthToSync;
+            }
+
+            __dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //int width = __dgv.Width;
+            ////int a = __dgv.DisplayedColumnCount(true);
+            //int b = __dgv.Columns.GetColumnsWidth(DataGridViewElementStates.Displayed);
+            //__dgv.Width = __dgv.Columns.GetColumnCount(DataGridViewElementStates.None) * __dgv.RowHeadersWidth;
+
+
+            //Create a Bitmap and draw the DataGridView on it.
+            Bitmap bitmap = new Bitmap(__dgv.Width, __dgv.Height); // Replace with this referece
+            __dgv.DrawToBitmap(bitmap, new Rectangle(0, 0, __dgv.Width, __dgv.Height));
+
+            //Resize DataGridView back to original height.
+            __dgv.Height = height;
+            string path = mainDir + "/dgv.png";
+            //Save the Bitmap to folder.
+
+            bitmap.Save(path);
+            _addImagesToImageControls(path,label);
 
         }
 
@@ -1929,10 +2044,11 @@ namespace TracerV1
             //cc2.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
 
 
-            cc2.ExportToImage(string.Format("{0}/chart3dv2.jpg", mainDir), ImageFormat.Jpeg); 
+            cc2.ExportToImage(string.Format("{0}/chart3dv2.jpg", mainDir), ImageFormat.Jpeg);
 
+            dgv4.DataSource = dgvv2g2.DataSource;
             _addImagesToImageControls(string.Format("{0}/chart3dv2.jpg", mainDir), graphLabel3TB.Text);
-
+            gridToImage(dgv4, cc2.Width ,"");
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -2060,7 +2176,7 @@ namespace TracerV1
 
         private void _addImagesToImageControls(string FileName, string header)
         {
-            snapControl1.Document.InsertHtmlText(snapControl1.Document.CaretPosition, string.Format("<b><font size=3>{0}</font></b>", header));
+            snapControl1.Document.InsertHtmlText(snapControl1.Document.CaretPosition, string.Format("<br><b><font size=3>{0}</font></b><br>", header));
             Image IMGlOCAL = Image.FromFile(FileName);
             string tempFile = Path.GetTempFileName();
             IMGlOCAL.Save(tempFile);
@@ -2109,10 +2225,7 @@ namespace TracerV1
 
         }
 
-        private void imgListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            imageSlider1.SetCurrentImageIndex(imgListBox.SelectedIndex);
-        }
+     
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -2147,6 +2260,9 @@ namespace TracerV1
 
                 _addImagesToImageControls(mapPath, "Map : ");
                 _addImagesToImageControls(chartPath, "CTO Trace : ");
+
+                dgv4.DataSource = dataGridView5.DataSource;
+                gridToImage(dgv4, chartControl1.Width, "");
             }
             catch (Exception ex) { MsgBox(ex.Message); }
         }
@@ -2162,7 +2278,7 @@ namespace TracerV1
         {
             try
             {
-
+               
 
                 OpenFileDialog opf = new OpenFileDialog();
                 opf.ShowDialog();
@@ -2170,12 +2286,21 @@ namespace TracerV1
                 string licD = Decrypt(lic);
                 //MsgBox(lic + " : " + licD);
                 //MsgBox(DateTime.Today.ToString());
-                TracerV1.Properties.Settings.Default.licenseLastDate = DateTime.Parse(licD);
-                MsgBox("Prodcut Licensce Extended Till : " + TracerV1.Properties.Settings.Default.licenseLastDate.Date.ToString());
+                Properties.Settings.Default.licenseLastDate = DateTime.Parse(licD);
+                Properties.Settings.Default.Save();                
+                MsgBox(string.Format("Prodcut Licensce Extended Till : {0}", Properties.Settings.Default.licenseLastDate.Date));
+                if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
+                    expiryLic.Caption = "Licensced Till : " +  Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                else
+                    expiryLic.Caption = "Licensce Expired";
             }
             catch (Exception ex)
             {
                 MsgBox("Please select a valid Licensce File.");
+                if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
+                    expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                else
+                    expiryLic.Caption = "Licensce Expired";
             }
 
         }
@@ -2219,6 +2344,36 @@ namespace TracerV1
             memoryStream.Close();
             cryptoStream.Close();
             return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
+        }
+
+        private void splitContainer6_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void RRCMessages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PlotMarkers_Click(sender, e);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            listBox2.Items.Clear();
+            resetMap();
+        }
+
+        private void button8_Click_2(object sender, EventArgs e)
+        { 
+            chartControl1.ExportToImage(string.Format("{0}/chartcon1.png", mainDir), ImageFormat.Png);
+            dgv4.DataSource = dataGridView5.DataSource;
+            _addImagesToImageControls(string.Format("{0}/chartcon1.png", mainDir), graphLabel2TB.Text);
+            gridToImage(dgv4,chartControl1.Width ,"");
         }
     }
 

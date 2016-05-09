@@ -137,11 +137,8 @@
         QoAW8dFoW/SaKJE+Y+d/wQmE/AKBDjr+l9XQfgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="mapStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>583, 17</value>
-  </metadata>
-  <metadata name="statusStrip_CellLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>315, 17</value>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>759, 95</value>
   </metadata>
   <data name="snapBarToolbarsListItem1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -312,6 +309,270 @@ This option allows you to save time when working with large data sources. It doe
         iWBC+fl5TgQTyp8GuLw94OW9gVXic506burvh2jlaS99AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="tableAlignmentRibbonPageGroup1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAllJREFUOE+l
+        k2dPU3EUxq8UCsbtp3DGQZzBL+FLYxBSNYJoFSUaDYlGxYFVozGOYEyMM5VhNTigrQOlQB2AlC5Bhgjd
+        vXSC5vGcf29r0FfGkzxpcnOf33PuOafS+cduiSqLpCJlK8pRpFaUqyiPNF0RP2eflKV75DATCGnpDG6c
+        bXDiTL0Dp2rtqNL34tj9Hhy5243KO104dOsT9l9rbSEvQyUVm/61Km5YQd4ZDMhOA2LJn4gkfgjJsUmE
+        ohMIRibgG0/CE05gNBjHSCAG20AQ5dfbGTBrCiCaJHN8EjIpZU7CJyeEeSyUMg/7ovhMAO0VSwaQc87g
+        EoC0eUO5GQV7TVi/pxlrd7/A6rJnyC9tFOYBbxRd/QGUXX7HgNkCwAPjSrcdoGS/rLQtkuMZc78ngs4+
+        P0ovtjBgDgPUPG2ugn2casQ6bRPW7HqOVTufYuWOJ1i+zYClmgYsLq7Dwi0P8dHtw/YLr38DeFVcARrY
+        1OTUNw9S8texCPpGx+H+LuO9ywuN7hUD5jIgt0pvEwC/Mu38kkasoORllLxEU49FRbVYUKiHa0SG81sY
+        HU4viqpfMmCeABx/0CMAf05bJNM3f+FkxWwfCqPN4UXhaVMGkHf0XrcA/GVOt502D4dhGwzBQoDNJ40M
+        mC8Albc7BcA+FBJHwnvmVfG0eWBWUgeZ2klsbu31YNOJpkwH6gM1baaDNz+gosYqLkx71SL2XHLpLU37
+        DbbSwIqrzdS2kZKbhXnj4Tr+L8xkwDSGkPiu+QFfF4uPhNfE4mlzGovb5l9+VyVR5/8hSL8AD12XokrY
+        FC0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="textRibbonPageGroup1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAvRJREFUOE9N
+        0klME1EYB/B3NjFGhXjw4MGT3jQmxhg9mGiMF5cL0QsHECFCCCAUKHtRCrWUtUAQEUUELmyGoEF2BCyr
+        F42yGLa2FLpMl5l2pv37zbQYX+aXNy8z+b7vfe8xY8fSWGPnd8gaOlfCPqzA2LGsqJe9ly2hrp28W0Qt
+        qSH6lplJZqSfD0coFIIkSZCCQQSDIWVNT2QOIXiIvskMrSawWooqj4AoYXXThnMPtLj08AXcXj+8vgB8
+        gggD/WN4u4RKWduiIiAGoXv1Day6bQGUBF5/AE1d47iT3ICzt3Mxu7wKl1uAlxdhtftgsfMwy/MBD7tL
+        gBAIQts0C6Z/Y1LK5Nw8YjLqUFjbgxtxBpQ29ODA4YHbJ0HXOg9tyzzKW0yKsmYTeL+E0vopsIrmOWU/
+        2xY7zt8vRd/wPNJ0XbgZq4HF6oLLK2Jn30e82Lb5FDYHT1uTUFQzAVbW8BWiKKJraA5RlxMQfSUJZ26p
+        cfpqMn6sbcPhCUBDpWoaZ1FinEWxcQbF9TNUmQi1fgyspG4KvCAgsagV12NysL5lwfTCT5y6loLX3cM4
+        cPuxafXgj4WYw8xUjVyZSvsFrLBqHD6ex4V7WUjVtMB84MaO1YmLd9MQm1kFm9OPgupp5NdMIY/mvOpJ
+        qKumlMoynn8Gy9WNKEdotnHYJTYnT532YdPiJA5YnQLWd91Yk21zWCVbVJGdKkvVDIFllg3TxQkhn6Lm
+        GcLRZbn0nlM5gWySo6dZPw7Vy7As3Rj2XX6kFAyCpZd+giiFsGGmDDsyLpLJrWT7vcnhl8L1z8auB3sU
+        ICn/I1hq8SCdQhAqyqLSUfRIhswKUj6GZ+WjYdpRZGhHkB5htfuRkNsP9rRwULmWHrpxHB0NR911eQPU
+        JFHZp53zY58LUG8E7FFDrXQHLA4Bu3YB8dm9YHFZ3eOJeQN4oh5AgrpfiRqf3Y/HOX1hqj7Ekfis3oge
+        WpPMHjxKaZ9mNI6QY+R4xImIk/+Jioj+D63Z0b/vmQaFiPFiqAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="createPieChartItem2.Description" xml:space="preserve">
+    <value>Insert a pie chart.
+
+Pie charts display the contribution of each value to a total.
+
+Use it when values can be added together or when you have only one data series and all values are positive.
+    </value>
+  </data>
+  <data name="createPieChartItem2.Hint" xml:space="preserve">
+    <value>Insert a pie chart.
+
+Pie charts display the contribution of each value to a total.
+
+Use it when values can be added together or when you have only one data series and all values are positive.
+    </value>
+  </data>
+  <data name="createRotatedFullStackedBarChartItem2.Description" xml:space="preserve">
+    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
+
+Use it when the values on the chart represent durations or when the category text is very long.
+    </value>
+  </data>
+  <data name="createRotatedFullStackedBarChartItem2.Hint" xml:space="preserve">
+    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
+
+Use it when the values on the chart represent durations or when the category text is very long.
+    </value>
+  </data>
+  <data name="createArea3DChartItem2.Description" xml:space="preserve">
+    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
+  </data>
+  <data name="createArea3DChartItem2.Hint" xml:space="preserve">
+    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
+  </data>
+  <data name="createFullStackedArea3DChartItem2.Description" xml:space="preserve">
+    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
+
+Use it for comparing the percentage values of several series for the same point arguments.
+    </value>
+  </data>
+  <data name="createFullStackedArea3DChartItem2.Hint" xml:space="preserve">
+    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
+
+Use it for comparing the percentage values of several series for the same point arguments.
+    </value>
+  </data>
+  <data name="createFunnelChartItem2.Description" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createFunnelChartItem2.Hint" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createFunnel3DChartItem2.Description" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createFunnel3DChartItem2.Hint" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createStockChartItem2.Description" xml:space="preserve">
+    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createStockChartItem2.Hint" xml:space="preserve">
+    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createCandleStickChartItem2.Description" xml:space="preserve">
+    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createCandleStickChartItem2.Hint" xml:space="preserve">
+    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createScatterRadarLineChartItem2.Description" xml:space="preserve">
+    <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
+  </data>
+  <data name="createScatterRadarLineChartItem2.Hint" xml:space="preserve">
+    <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
+  </data>
+  <data name="createScatterPolarLineChartItem2.Description" xml:space="preserve">
+    <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
+  </data>
+  <data name="createScatterPolarLineChartItem2.Hint" xml:space="preserve">
+    <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
+  </data>
+  <data name="createSideBySideGanttChartItem2.Description" xml:space="preserve">
+    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
+
+Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
+    </value>
+  </data>
+  <data name="createSideBySideGanttChartItem2.Hint" xml:space="preserve">
+    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
+
+Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
+    </value>
+  </data>
+  <metadata name="galleryDropDown1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>607, 56</value>
+  </metadata>
+  <metadata name="galleryDropDown2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>761, 56</value>
+  </metadata>
+  <metadata name="galleryDropDown3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>915, 56</value>
+  </metadata>
+  <data name="createPieChartItem3.Description" xml:space="preserve">
+    <value>Insert a pie chart.
+
+Pie charts display the contribution of each value to a total.
+
+Use it when values can be added together or when you have only one data series and all values are positive.
+    </value>
+  </data>
+  <data name="createPieChartItem3.Hint" xml:space="preserve">
+    <value>Insert a pie chart.
+
+Pie charts display the contribution of each value to a total.
+
+Use it when values can be added together or when you have only one data series and all values are positive.
+    </value>
+  </data>
+  <metadata name="galleryDropDown4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1069, 56</value>
+  </metadata>
+  <data name="createRotatedFullStackedBarChartItem3.Description" xml:space="preserve">
+    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
+
+Use it when the values on the chart represent durations or when the category text is very long.
+    </value>
+  </data>
+  <data name="createRotatedFullStackedBarChartItem3.Hint" xml:space="preserve">
+    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
+
+Use it when the values on the chart represent durations or when the category text is very long.
+    </value>
+  </data>
+  <metadata name="galleryDropDown5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="createArea3DChartItem3.Description" xml:space="preserve">
+    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
+  </data>
+  <data name="createArea3DChartItem3.Hint" xml:space="preserve">
+    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
+  </data>
+  <data name="createFullStackedArea3DChartItem3.Description" xml:space="preserve">
+    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
+
+Use it for comparing the percentage values of several series for the same point arguments.
+    </value>
+  </data>
+  <data name="createFullStackedArea3DChartItem3.Hint" xml:space="preserve">
+    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
+
+Use it for comparing the percentage values of several series for the same point arguments.
+    </value>
+  </data>
+  <metadata name="galleryDropDown6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>171, 95</value>
+  </metadata>
+  <data name="createFunnelChartItem3.Description" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createFunnelChartItem3.Hint" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createFunnel3DChartItem3.Description" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createFunnel3DChartItem3.Hint" xml:space="preserve">
+    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
+
+Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
+    </value>
+  </data>
+  <data name="createStockChartItem3.Description" xml:space="preserve">
+    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createStockChartItem3.Hint" xml:space="preserve">
+    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createCandleStickChartItem3.Description" xml:space="preserve">
+    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createCandleStickChartItem3.Hint" xml:space="preserve">
+    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
+  </data>
+  <data name="createSideBySideGanttChartItem3.Description" xml:space="preserve">
+    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
+
+Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
+    </value>
+  </data>
+  <data name="createSideBySideGanttChartItem3.Hint" xml:space="preserve">
+    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
+
+Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
+    </value>
+  </data>
+  <metadata name="galleryDropDown7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 95</value>
+  </metadata>
+  <metadata name="galleryDropDown8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>481, 99</value>
+  </metadata>
+  <metadata name="snapDockManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>869, 95</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>71</value>
+  </metadata>
   <data name="Capture.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACI
@@ -1852,276 +2113,6 @@ This option allows you to save time when working with large data sources. It doe
   </data>
   <metadata name="statusStrip_CellLoc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>315, 17</value>
-  </metadata>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>759, 95</value>
-  </metadata>
-  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>759, 95</value>
-  </metadata>
-  <data name="tableAlignmentRibbonPageGroup1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAllJREFUOE+l
-        k2dPU3EUxq8UCsbtp3DGQZzBL+FLYxBSNYJoFSUaDYlGxYFVozGOYEyMM5VhNTigrQOlQB2AlC5Bhgjd
-        vXSC5vGcf29r0FfGkzxpcnOf33PuOafS+cduiSqLpCJlK8pRpFaUqyiPNF0RP2eflKV75DATCGnpDG6c
-        bXDiTL0Dp2rtqNL34tj9Hhy5243KO104dOsT9l9rbSEvQyUVm/61Km5YQd4ZDMhOA2LJn4gkfgjJsUmE
-        ohMIRibgG0/CE05gNBjHSCAG20AQ5dfbGTBrCiCaJHN8EjIpZU7CJyeEeSyUMg/7ovhMAO0VSwaQc87g
-        EoC0eUO5GQV7TVi/pxlrd7/A6rJnyC9tFOYBbxRd/QGUXX7HgNkCwAPjSrcdoGS/rLQtkuMZc78ngs4+
-        P0ovtjBgDgPUPG2ugn2casQ6bRPW7HqOVTufYuWOJ1i+zYClmgYsLq7Dwi0P8dHtw/YLr38DeFVcARrY
-        1OTUNw9S8texCPpGx+H+LuO9ywuN7hUD5jIgt0pvEwC/Mu38kkasoORllLxEU49FRbVYUKiHa0SG81sY
-        HU4viqpfMmCeABx/0CMAf05bJNM3f+FkxWwfCqPN4UXhaVMGkHf0XrcA/GVOt502D4dhGwzBQoDNJ40M
-        mC8Albc7BcA+FBJHwnvmVfG0eWBWUgeZ2klsbu31YNOJpkwH6gM1baaDNz+gosYqLkx71SL2XHLpLU37
-        DbbSwIqrzdS2kZKbhXnj4Tr+L8xkwDSGkPiu+QFfF4uPhNfE4mlzGovb5l9+VyVR5/8hSL8AD12XokrY
-        FC0AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="textRibbonPageGroup1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAvRJREFUOE9N
-        0klME1EYB/B3NjFGhXjw4MGT3jQmxhg9mGiMF5cL0QsHECFCCCAUKHtRCrWUtUAQEUUELmyGoEF2BCyr
-        F42yGLa2FLpMl5l2pv37zbQYX+aXNy8z+b7vfe8xY8fSWGPnd8gaOlfCPqzA2LGsqJe9ly2hrp28W0Qt
-        qSH6lplJZqSfD0coFIIkSZCCQQSDIWVNT2QOIXiIvskMrSawWooqj4AoYXXThnMPtLj08AXcXj+8vgB8
-        gggD/WN4u4RKWduiIiAGoXv1Day6bQGUBF5/AE1d47iT3ICzt3Mxu7wKl1uAlxdhtftgsfMwy/MBD7tL
-        gBAIQts0C6Z/Y1LK5Nw8YjLqUFjbgxtxBpQ29ODA4YHbJ0HXOg9tyzzKW0yKsmYTeL+E0vopsIrmOWU/
-        2xY7zt8vRd/wPNJ0XbgZq4HF6oLLK2Jn30e82Lb5FDYHT1uTUFQzAVbW8BWiKKJraA5RlxMQfSUJZ26p
-        cfpqMn6sbcPhCUBDpWoaZ1FinEWxcQbF9TNUmQi1fgyspG4KvCAgsagV12NysL5lwfTCT5y6loLX3cM4
-        cPuxafXgj4WYw8xUjVyZSvsFrLBqHD6ex4V7WUjVtMB84MaO1YmLd9MQm1kFm9OPgupp5NdMIY/mvOpJ
-        qKumlMoynn8Gy9WNKEdotnHYJTYnT532YdPiJA5YnQLWd91Yk21zWCVbVJGdKkvVDIFllg3TxQkhn6Lm
-        GcLRZbn0nlM5gWySo6dZPw7Vy7As3Rj2XX6kFAyCpZd+giiFsGGmDDsyLpLJrWT7vcnhl8L1z8auB3sU
-        ICn/I1hq8SCdQhAqyqLSUfRIhswKUj6GZ+WjYdpRZGhHkB5htfuRkNsP9rRwULmWHrpxHB0NR911eQPU
-        JFHZp53zY58LUG8E7FFDrXQHLA4Bu3YB8dm9YHFZ3eOJeQN4oh5AgrpfiRqf3Y/HOX1hqj7Ekfis3oge
-        WpPMHjxKaZ9mNI6QY+R4xImIk/+Jioj+D63Z0b/vmQaFiPFiqAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="createPieChartItem7.Description" xml:space="preserve">
-    <value>Insert a pie chart.
-
-Pie charts display the contribution of each value to a total.
-
-Use it when values can be added together or when you have only one data series and all values are positive.
-    </value>
-  </data>
-  <data name="createPieChartItem7.Hint" xml:space="preserve">
-    <value>Insert a pie chart.
-
-Pie charts display the contribution of each value to a total.
-
-Use it when values can be added together or when you have only one data series and all values are positive.
-    </value>
-  </data>
-  <data name="createRotatedFullStackedBarChartItem7.Description" xml:space="preserve">
-    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
-
-Use it when the values on the chart represent durations or when the category text is very long.
-    </value>
-  </data>
-  <data name="createRotatedFullStackedBarChartItem7.Hint" xml:space="preserve">
-    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
-
-Use it when the values on the chart represent durations or when the category text is very long.
-    </value>
-  </data>
-  <data name="createArea3DChartItem7.Description" xml:space="preserve">
-    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
-  </data>
-  <data name="createArea3DChartItem7.Hint" xml:space="preserve">
-    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
-  </data>
-  <data name="createFullStackedArea3DChartItem7.Description" xml:space="preserve">
-    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
-
-Use it for comparing the percentage values of several series for the same point arguments.
-    </value>
-  </data>
-  <data name="createFullStackedArea3DChartItem7.Hint" xml:space="preserve">
-    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
-
-Use it for comparing the percentage values of several series for the same point arguments.
-    </value>
-  </data>
-  <data name="createFunnelChartItem7.Description" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createFunnelChartItem7.Hint" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createFunnel3DChartItem7.Description" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createFunnel3DChartItem7.Hint" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createStockChartItem7.Description" xml:space="preserve">
-    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createStockChartItem7.Hint" xml:space="preserve">
-    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createCandleStickChartItem7.Description" xml:space="preserve">
-    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createCandleStickChartItem7.Hint" xml:space="preserve">
-    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createScatterRadarLineChartItem6.Description" xml:space="preserve">
-    <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
-  </data>
-  <data name="createScatterRadarLineChartItem6.Hint" xml:space="preserve">
-    <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
-  </data>
-  <data name="createScatterPolarLineChartItem6.Description" xml:space="preserve">
-    <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
-  </data>
-  <data name="createScatterPolarLineChartItem6.Hint" xml:space="preserve">
-    <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
-  </data>
-  <data name="createSideBySideGanttChartItem7.Description" xml:space="preserve">
-    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
-
-Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
-    </value>
-  </data>
-  <data name="createSideBySideGanttChartItem7.Hint" xml:space="preserve">
-    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
-
-Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
-    </value>
-  </data>
-  <metadata name="galleryDropDown1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>607, 56</value>
-  </metadata>
-  <metadata name="galleryDropDown2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>761, 56</value>
-  </metadata>
-  <metadata name="galleryDropDown3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>915, 56</value>
-  </metadata>
-  <data name="createPieChartItem8.Description" xml:space="preserve">
-    <value>Insert a pie chart.
-
-Pie charts display the contribution of each value to a total.
-
-Use it when values can be added together or when you have only one data series and all values are positive.
-    </value>
-  </data>
-  <data name="createPieChartItem8.Hint" xml:space="preserve">
-    <value>Insert a pie chart.
-
-Pie charts display the contribution of each value to a total.
-
-Use it when values can be added together or when you have only one data series and all values are positive.
-    </value>
-  </data>
-  <metadata name="galleryDropDown4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1069, 56</value>
-  </metadata>
-  <data name="createRotatedFullStackedBarChartItem8.Description" xml:space="preserve">
-    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
-
-Use it when the values on the chart represent durations or when the category text is very long.
-    </value>
-  </data>
-  <data name="createRotatedFullStackedBarChartItem8.Hint" xml:space="preserve">
-    <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
-
-Use it when the values on the chart represent durations or when the category text is very long.
-    </value>
-  </data>
-  <metadata name="galleryDropDown5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <data name="createArea3DChartItem8.Description" xml:space="preserve">
-    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
-  </data>
-  <data name="createArea3DChartItem8.Hint" xml:space="preserve">
-    <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
-  </data>
-  <data name="createFullStackedArea3DChartItem8.Description" xml:space="preserve">
-    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
-
-Use it for comparing the percentage values of several series for the same point arguments.
-    </value>
-  </data>
-  <data name="createFullStackedArea3DChartItem8.Hint" xml:space="preserve">
-    <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
-
-Use it for comparing the percentage values of several series for the same point arguments.
-    </value>
-  </data>
-  <metadata name="galleryDropDown6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>171, 95</value>
-  </metadata>
-  <data name="createFunnelChartItem8.Description" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createFunnelChartItem8.Hint" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createFunnel3DChartItem8.Description" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createFunnel3DChartItem8.Hint" xml:space="preserve">
-    <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
-
-Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
-    </value>
-  </data>
-  <data name="createStockChartItem8.Description" xml:space="preserve">
-    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createStockChartItem8.Hint" xml:space="preserve">
-    <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createCandleStickChartItem8.Description" xml:space="preserve">
-    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createCandleStickChartItem8.Hint" xml:space="preserve">
-    <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
-  </data>
-  <data name="createSideBySideGanttChartItem8.Description" xml:space="preserve">
-    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
-
-Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
-    </value>
-  </data>
-  <data name="createSideBySideGanttChartItem8.Hint" xml:space="preserve">
-    <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
-
-Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
-    </value>
-  </data>
-  <metadata name="galleryDropDown7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 95</value>
-  </metadata>
-  <metadata name="galleryDropDown8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>481, 99</value>
-  </metadata>
-  <metadata name="snapDockManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>869, 95</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>71</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -8310,10 +8301,7 @@ Use it when it's necessary to show activity bars from different series one above
   <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>633, 95</value>
   </metadata>
-  <metadata name="snapDocumentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
-  </metadata>
-  <data name="createPieChartItem9.Description" xml:space="preserve">
+  <data name="createPieChartItem4.Description" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -8321,7 +8309,7 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createPieChartItem9.Hint" xml:space="preserve">
+  <data name="createPieChartItem4.Hint" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -8329,91 +8317,91 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem9.Description" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem4.Description" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem9.Hint" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem4.Hint" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createArea3DChartItem9.Description" xml:space="preserve">
+  <data name="createArea3DChartItem4.Description" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createArea3DChartItem9.Hint" xml:space="preserve">
+  <data name="createArea3DChartItem4.Hint" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createFullStackedArea3DChartItem9.Description" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem4.Description" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFullStackedArea3DChartItem9.Hint" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem4.Hint" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFunnelChartItem9.Description" xml:space="preserve">
+  <data name="createFunnelChartItem4.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnelChartItem9.Hint" xml:space="preserve">
+  <data name="createFunnelChartItem4.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem9.Description" xml:space="preserve">
+  <data name="createFunnel3DChartItem4.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem9.Hint" xml:space="preserve">
+  <data name="createFunnel3DChartItem4.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createStockChartItem9.Description" xml:space="preserve">
+  <data name="createStockChartItem4.Description" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createStockChartItem9.Hint" xml:space="preserve">
+  <data name="createStockChartItem4.Hint" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem9.Description" xml:space="preserve">
+  <data name="createCandleStickChartItem4.Description" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem9.Hint" xml:space="preserve">
+  <data name="createCandleStickChartItem4.Hint" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createScatterRadarLineChartItem7.Description" xml:space="preserve">
+  <data name="createScatterRadarLineChartItem3.Description" xml:space="preserve">
     <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterRadarLineChartItem7.Hint" xml:space="preserve">
+  <data name="createScatterRadarLineChartItem3.Hint" xml:space="preserve">
     <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterPolarLineChartItem7.Description" xml:space="preserve">
+  <data name="createScatterPolarLineChartItem3.Description" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterPolarLineChartItem7.Hint" xml:space="preserve">
+  <data name="createScatterPolarLineChartItem3.Hint" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createSideBySideGanttChartItem9.Description" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem4.Description" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
     </value>
   </data>
-  <data name="createSideBySideGanttChartItem9.Hint" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem4.Hint" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
@@ -8424,5 +8412,8 @@ Use it when it's necessary to show activity bars from different series one above
   </metadata>
   <metadata name="snapBarController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>365, 134</value>
+  </metadata>
+  <metadata name="snapDocumentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
   </metadata>
 </root>
