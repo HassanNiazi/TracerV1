@@ -37,6 +37,7 @@ namespace TracerV1
         static readonly string VIKey = "HR$2pIjHR$2pIj12";
         DataTable traceDataTable = new DataTable();
         DataTable dt = new DataTable();
+        DataTable cellNames = new DataTable();
         Image img1 = null;
         string mainDir = Environment.CurrentDirectory;
         SqlCeConnection con;
@@ -56,6 +57,13 @@ namespace TracerV1
             }
 
         }
+        public struct cell
+        {
+            public string cellID;
+            public string siteName;
+            public string cellName;
+        }
+
         public struct genericDataContainer
         {
             public string imsi;
@@ -66,12 +74,12 @@ namespace TracerV1
         {
             InitializeComponent();
             //this.Visible = false;
-//this.Hide();
+            //this.Hide();
             mapProviderList.DataSource = GMapProviders.List;
-          
+
             //  MsgBox(mainDir);
             //this.Visible = ;
-       
+
 
 
             #region Licenscing
@@ -90,40 +98,40 @@ namespace TracerV1
 
             try
             {
-                    System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
-                    toolStatus.Text = "Connected!  ";
-                    MainMap.Manager.Mode = AccessMode.ServerAndCache;
+                System.Net.IPHostEntry e = System.Net.Dns.GetHostEntry("www.google.com");
+                toolStatus.Text = "Connected!  ";
+                MainMap.Manager.Mode = AccessMode.ServerAndCache;
 
-                    //if (Properties.Settings.Default.licenseLastDate < GetNistTime())
-                    //{
-                    //    Properties.Settings.Default.expired = true;
-                    //    MessageBox.Show("Dear User! Your Licencse has expired. ");
-                    //    LoadLicensceFile();
+                //if (Properties.Settings.Default.licenseLastDate < GetNistTime())
+                //{
+                //    Properties.Settings.Default.expired = true;
+                //    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                //    LoadLicensceFile();
 
-                    //    Environment.Exit(Environment.ExitCode);
+                //    Environment.Exit(Environment.ExitCode);
 
-                    //}
+                //}
 
-                }
-                catch
-                {
-                    MainMap.Manager.Mode = AccessMode.CacheOnly;
-                    //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
-                    ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
-                    //   MessageBoxIcon.Warning);
-                    toolStatus.Text = "Offline - Cache Mode Only";
+            }
+            catch
+            {
+                MainMap.Manager.Mode = AccessMode.CacheOnly;
+                //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
+                ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
+                //   MessageBoxIcon.Warning);
+                toolStatus.Text = "Offline - Cache Mode Only";
 
 
-                    //if (Properties.Settings.Default.licenseLastDate < DateTime.Today)
-                    //{
-                    //    Properties.Settings.Default.expired = true;
-                    //    MessageBox.Show("Dear User! Your Licencse has expired. ");
-                    //    LoadLicensceFile();
-                    //    //Application.Exit();
-                    //    Environment.Exit(Environment.ExitCode);
-                    //}
-                    //this.Visible = !this.Visible;
-                }
+                //if (Properties.Settings.Default.licenseLastDate < DateTime.Today)
+                //{
+                //    Properties.Settings.Default.expired = true;
+                //    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                //    LoadLicensceFile();
+                //    //Application.Exit();
+                //    Environment.Exit(Environment.ExitCode);
+                //}
+                //this.Visible = !this.Visible;
+            }
             //}
             // config map
 
@@ -185,7 +193,7 @@ namespace TracerV1
 
 
 
-          
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -196,6 +204,7 @@ namespace TracerV1
             Form2 f2 = new Form2();
             f2.ShowDialog();
             //#region Licenscing
+            //    MsgBox(Properties.Settings.Default.expired.ToString());
             while (Properties.Settings.Default.expired)
             {
                 // this.Visible = false;
@@ -219,6 +228,7 @@ namespace TracerV1
                     {
                         Properties.Settings.Default.expired = true;
                         MessageBox.Show("Dear User! Your Licencse has expired. ");
+                        Properties.Settings.Default.Save();
                         LoadLicensceFile();
 
                         Environment.Exit(Environment.ExitCode);
@@ -234,12 +244,12 @@ namespace TracerV1
                     //   MessageBoxIcon.Warning);
                     toolStatus.Text = "Offline - Cache Mode Only";
 
-
                     try
                     {
                         if (Properties.Settings.Default.licenseLastDate < DateTime.Today)
                         {
                             Properties.Settings.Default.expired = true;
+                            Properties.Settings.Default.Save();
                             MessageBox.Show("Dear User! Your Licencse has expired. ");
                             LoadLicensceFile();
                             //Application.Exit();
@@ -272,7 +282,7 @@ namespace TracerV1
             //  MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
 
 
-        
+
 
             mocMessageFilter.Text = Properties.Settings.Default.mocStringOfficial;
             mtcMessageFilter.Text = Properties.Settings.Default.mtcStringOfficial;
@@ -292,6 +302,7 @@ namespace TracerV1
             try
             {
                 _cellDataUpload_FromFile();
+                _cellNamesDataUpload();
                 _traceDataUpload();
                 //updateUserList_DataVisualizer();
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
@@ -301,8 +312,14 @@ namespace TracerV1
                 //updateUserList_DataVisualizer();
                 started = true;
                 UpdateDataRrcMessageLookUpGridView();
-
                 UpdateIMSIChkList(); // From IMSI DB to Control
+
+                //// Disable Cell Highlight because it looks unprofessional in Snapshots
+                dataGridView5.DefaultCellStyle.SelectionBackColor = dataGridView5.DefaultCellStyle.BackColor;
+                dataGridView5.DefaultCellStyle.SelectionForeColor = dataGridView5.DefaultCellStyle.ForeColor;
+
+                dgv4.DefaultCellStyle.SelectionBackColor = dgv4.DefaultCellStyle.BackColor;
+                dgv4.DefaultCellStyle.SelectionForeColor = dgv4.DefaultCellStyle.ForeColor;
 
             }
             catch (Exception ex)
@@ -310,6 +327,7 @@ namespace TracerV1
                 MsgBox(ex.Message);
             }
         }
+
         public static DateTime GetNistTime()
         {
             DateTime dateTime = DateTime.MinValue;
@@ -332,6 +350,7 @@ namespace TracerV1
 
             return dateTime;
         }
+
         private void sqlConOpen()
         {
             try
@@ -533,49 +552,65 @@ namespace TracerV1
 
             try
             {
-
-
+                openFileDialog1.Multiselect = true;
                 openFileDialog1.ShowDialog();
                 // MessageBox.Show( openFileDialog1.FileName.ToString());
 
-                string FilePath = openFileDialog1.FileName;
-                path.Text = FilePath;
 
-                //File.Copy(FilePath, "CTO Trace.csv", true);
-                //File.AppendAllLines()
-                if (traceDataTable.Columns.Count > 0)
+                foreach (var item in openFileDialog1.FileNames)
                 {
-                    string[] fileReadAllLines = File.ReadAllLines(FilePath);
-                    string[] fileData = new string[fileReadAllLines.Length - 1];
-                    for (int i = 1; i < (fileReadAllLines.Length); i++)
+
+                    string FilePath = item;
+                    path.Text = FilePath;
+
+                    //File.Copy(FilePath, "CTO Trace.csv", true);
+                    //File.AppendAllLines()
+
+                    if (traceDataTable.Columns.Count > 0)
                     {
-                        fileData[i - 1] = fileReadAllLines[i];
+                        string[] fileReadAllLines = File.ReadAllLines(FilePath);
+                        string[] fileData = new string[fileReadAllLines.Length - 1];
+                        for (int i = 1; i < (fileReadAllLines.Length); i++)
+                        {
+                            fileData[i - 1] = fileReadAllLines[i];
+                        }
+                        File.AppendAllLines("CTO Trace.csv", fileData);
                     }
-                    File.AppendAllLines("CTO Trace.csv", fileData);
-                }
-                else
-                {
-                    File.Copy(FilePath, "CTO Trace.csv", true);
-                }
-
-                rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
-                //   traceDataTable = new DataTable();
-                string[] headers = rows[0];
-                rows.RemoveAt(0);
-                if (!(traceDataTable.Columns.Count > 0))
-                    for (int i = 0; i <= 26; i++)
+                    else
                     {
-                        // dt.Columns.Add(i.ToString());
-                        traceDataTable.Columns.Add(headers[i]);
+                        File.Copy(FilePath, "CTO Trace.csv", true);
                     }
 
-                rows.ForEach(x =>
-                {
-                    traceDataTable.Rows.Add(x);
-                });
+                    rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                    //   traceDataTable = new DataTable();
+                    string[] headers = rows[0];
+                    rows.RemoveAt(0);
+                    MsgBox(headers.Length.ToString());
+                    if (!(traceDataTable.Columns.Count > 0))
+                        for (int i = 0; i < headers.Length; i++)
+                        {
 
+                            // dt.Columns.Add(i.ToString());
+                            traceDataTable.Columns.Add(headers[i]);
+                        }
 
-                dataGridView1.DataSource = traceDataTable;
+                    //rows.ForEach(x =>
+                    //{
+                    //    traceDataTable.Rows.Add(x);
+                    //});
+                    for (int x = 0; x < rows.Count; x++)
+                    {
+                        traceDataTable.Rows.Add(rows[x]);
+                    }
+                }
+                //try
+                //{
+                //    dataGridView1.DataSource = traceDataTable;
+                //}
+                //catch (Exception ex)
+                //{
+                //    MsgBox(ex.Message+ " -_-");
+                //}
 
             }
 
@@ -616,13 +651,15 @@ namespace TracerV1
             {
 
                 openFileDialog1.ShowDialog();
-                MessageBox.Show(openFileDialog1.FileName);
+                //    MessageBox.Show(openFileDialog1.FileName);
 
                 string FilePath = openFileDialog1.FileName.ToString();
                 fpCell.Text = FilePath;
                 // FilePath = "Cells Lat Longs.csv";
                 File.Copy(FilePath, "Cells Lat Longs.csv", true);
+
                 rows = File.ReadAllLines(FilePath).Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+
                 dt = new DataTable();
 
                 string[] headers = rows[0];
@@ -642,6 +679,49 @@ namespace TracerV1
 
 
                 dataGridView2.DataSource = dt;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void _cellNamesDataUpload()
+        {
+
+
+            try
+            {
+
+                //    openFileDialog1.ShowDialog();
+                //       MessageBox.Show(openFileDialog1.FileName);
+
+                //     string FilePath = openFileDialog1.FileName.ToString();
+                //     fpCell.Text = FilePath;
+                // FilePath = "Cells Lat Longs.csv";
+                //   File.Copy(FilePath, "CellNames.csv", true);
+                List<string[]> fileData = new List<string[]>();
+                fileData = File.ReadAllLines(mainDir + "/CellNames.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                cellNames = new DataTable();
+
+                string[] headers = fileData[0];
+                fileData.RemoveAt(0);
+
+                if (cellNames.Columns.Count == 0)
+                    for (int i = 0; i < headers.Length; i++)
+                    {
+                        // dt.Columns.Add(i.ToString());
+                        cellNames.Columns.Add(headers[i].ToString());
+                    }
+
+                fileData.ForEach(x =>
+                {
+                    cellNames.Rows.Add(x);
+                });
+
+
             }
 
             catch (Exception ex)
@@ -1280,7 +1360,7 @@ namespace TracerV1
                     g.DrawRectangle(blackPen, 10, 10, 180, (totalEle * 30) + 20);
                     for (int i = 1; i <= IMSIChkList.CheckedItems.Count; i++)
                     {
-                        pxl = Image.FromFile(mainDir + "/TrackingDot" + (i).ToString() + ".png");
+                        pxl = Image.FromFile(string.Format("{0}/TrackingDot{1}.png", mainDir, i));
                         g.DrawString(IMSIChkList.CheckedItems[i - 1].ToString(), new Font("Tahoma", Textsize, FontStyle.Bold), Brushes.CadetBlue, new RectangleF(20, 30 * i, 180, (totalEle * 30) + 20));
                         g.DrawImage(pxl, new Point(150, (30 * i) - 5));
                         pxl.Dispose();
@@ -1324,9 +1404,12 @@ namespace TracerV1
 
         private void rmvData_Click(object sender, EventArgs e)
         {
-            traceDataTable.Clear();
+            traceDataTable.Columns.Clear();
+            traceDataTable = new DataTable();
+            DeleteImsiDB();
             File.Delete(mainDir + "/CTO Trace.csv");
-            File.Create(mainDir + "/CTO Trace.csv");
+            File.Create(mainDir + "/CTO Trace.csv").Dispose();
+
             dataGridView1.Refresh();
         }
 
@@ -1447,6 +1530,29 @@ namespace TracerV1
 
                 con.Open();
                 cmd.CommandText = "INSERT INTO ImsiUsers (IMSI,UserName) VALUES ('" + imsi + "','" + userName + "');";
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView3.DataSource = dt;
+                con.Close();
+            }
+            catch// (Exception ex)
+            {
+                con.Close();
+                //  MsgBox(ex.Message);
+            }
+        }
+
+        private void DeleteImsiDB()
+        {
+            try
+            {
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = "DELETE FROM ImsiUsers;";
                 sda.SelectCommand = cmd;
 
                 DataTable dt = new DataTable();
@@ -1747,9 +1853,9 @@ namespace TracerV1
             graphData.Columns.Add(dcGraph);
             dcGraph = new DataColumn("MTC", System.Type.GetType("System.Int32"));
             graphData.Columns.Add(dcGraph);
-            dcGraph = new DataColumn("CallDrop", System.Type.GetType("System.Int32"));
-            graphData.Columns.Add(dcGraph);
             dcGraph = new DataColumn("TotalCalls", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("CallDrop", System.Type.GetType("System.Int32"));
             graphData.Columns.Add(dcGraph);
 
             List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
@@ -1763,7 +1869,7 @@ namespace TracerV1
 
             foreach (UserMessageFilter.countDate s in dataList)
             {
-                object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countDropCalls, s.countMOC + s.countMTC };
+                object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countMOC + s.countMTC, s.countDropCalls };
 
                 graphData.Rows.Add(str);
             }
@@ -1777,6 +1883,22 @@ namespace TracerV1
             //MsgBox(umf.errorMessage);
             _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+
+
+            DevExpress.XtraCharts.Series seriesCallDrop = new DevExpress.XtraCharts.Series("Call Drop", ViewType.Line);
+            ch.Series.Add(seriesCallDrop);
+            seriesCallDrop.DataSource = graphData;
+            _dgv.DataSource = graphData;
+            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            seriesCallDrop.ArgumentScaleType = ScaleType.Auto;
+            seriesCallDrop.ArgumentDataMember = "Date";
+            seriesCallDrop.ValueScaleType = ScaleType.Numerical;
+            string[] STR = new string[1];
+            STR[0] = "CallDrop";
+            //      STR[1] = "MTC";
+            //      STR[2] = "CallDrop";
+            seriesCallDrop.ValueDataMembers.AddRange(STR);
 
 
             DevExpress.XtraCharts.Series seriesMOC = new DevExpress.XtraCharts.Series("MOC", ViewType.Bar);
@@ -1794,7 +1916,7 @@ namespace TracerV1
             seriesMOC.ArgumentScaleType = ScaleType.Auto;
             seriesMOC.ArgumentDataMember = "Date";
             seriesMOC.ValueScaleType = ScaleType.Numerical;
-            string[] STR = new string[1];
+            STR = new string[1];
             STR[0] = "MOC";
             //      STR[1] = "MTC";
             //      STR[2] = "CallDrop";
@@ -1833,20 +1955,7 @@ namespace TracerV1
 
 
 
-            DevExpress.XtraCharts.Series seriesCallDrop = new DevExpress.XtraCharts.Series("Call Drop", ViewType.Bar);
-            ch.Series.Add(seriesCallDrop);
-            seriesCallDrop.DataSource = graphData;
-            _dgv.DataSource = graphData;
-            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            seriesCallDrop.ArgumentScaleType = ScaleType.Auto;
-            seriesCallDrop.ArgumentDataMember = "Date";
-            seriesCallDrop.ValueScaleType = ScaleType.Numerical;
-            STR = new string[1];
-            STR[0] = "CallDrop";
-            //      STR[1] = "MTC";
-            //      STR[2] = "CallDrop";
-            seriesCallDrop.ValueDataMembers.AddRange(STR);
+
 
 
             //.AddRange(new string[] { "Value" });
@@ -1918,18 +2027,20 @@ namespace TracerV1
 
             foreach (var s in count)
             {
-
+                rowList.Clear();
                 rowList.Add(getUserNameFromIMSI(s.imsi));
 
                 foreach (var item in s.count)
                 {
                     rowList.Add(item);
                 }
+
+                graphData.Rows.Add(rowList.ToArray());
             }
 
-            object[] rowArray = rowList.ToArray();
+            //object[] rowArray = rowList.ToArray();
 
-            graphData.Rows.Add(rowArray); // Adding Row to datatable graphData
+            //graphData.Rows.Add(rowArray); // Adding Row to datatable graphData
 
             _dgv.DataSource = graphData;
 
@@ -2002,16 +2113,16 @@ namespace TracerV1
 
             dgv4.DataSource = dgvV2.DataSource;
             _addImagesToImageControls(string.Format("{0}/chart2dv2.jpg", mainDir), graphLabel2TB.Text);
-            gridToImage(dgv4,cc1.Width,"");
+            gridToImage(dgv4, cc1.Width, "");
         }
 
-        private void gridToImage( DataGridView __dgv,int widthToSync,string label)
+        private void gridToImage(DataGridView __dgv, int widthToSync, string label)
         {
             //Resize DataGridView to full height.
             int height = __dgv.Height;
             __dgv.Height = __dgv.RowCount * __dgv.RowTemplate.Height;
 
-            if(checkBox1.Checked)
+            if (checkBox1.Checked)
             {
                 __dgv.Width = widthToSync;
             }
@@ -2033,7 +2144,7 @@ namespace TracerV1
             //Save the Bitmap to folder.
 
             bitmap.Save(path);
-            _addImagesToImageControls(path,label);
+            _addImagesToImageControls(path, label);
 
         }
 
@@ -2048,7 +2159,7 @@ namespace TracerV1
 
             dgv4.DataSource = dgvv2g2.DataSource;
             _addImagesToImageControls(string.Format("{0}/chart3dv2.jpg", mainDir), graphLabel3TB.Text);
-            gridToImage(dgv4, cc2.Width ,"");
+            gridToImage(dgv4, cc2.Width, "");
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -2184,18 +2295,18 @@ namespace TracerV1
             int width = 0, height = 0;
             if (!((widthImage == null) || (heightImage == null)))
                 if (!((widthImage.EditValue == null) || (heightImage.EditValue == null)))
-            {
-                bool validWidth = int.TryParse(widthImage.EditValue.ToString(), out width);
-                bool validHeight = int.TryParse(heightImage.EditValue.ToString(), out height);
-
-                if (!(validWidth && validHeight))
                 {
-                    width = imgTemp.Width;
-                    height = imgTemp.Height;
+                    bool validWidth = int.TryParse(widthImage.EditValue.ToString(), out width);
+                    bool validHeight = int.TryParse(heightImage.EditValue.ToString(), out height);
+
+                    if (!(validWidth && validHeight))
+                    {
+                        width = imgTemp.Width;
+                        height = imgTemp.Height;
+                    }
                 }
-            }
-            else
-            {
+                else
+                {
 
                     width = imgTemp.Width;
                     height = imgTemp.Height;
@@ -2225,7 +2336,7 @@ namespace TracerV1
 
         }
 
-     
+
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -2278,7 +2389,7 @@ namespace TracerV1
         {
             try
             {
-               
+
 
                 OpenFileDialog opf = new OpenFileDialog();
                 opf.ShowDialog();
@@ -2287,20 +2398,36 @@ namespace TracerV1
                 //MsgBox(lic + " : " + licD);
                 //MsgBox(DateTime.Today.ToString());
                 Properties.Settings.Default.licenseLastDate = DateTime.Parse(licD);
-                Properties.Settings.Default.Save();                
+                Properties.Settings.Default.Save();
                 MsgBox(string.Format("Prodcut Licensce Extended Till : {0}", Properties.Settings.Default.licenseLastDate.Date));
                 if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
-                    expiryLic.Caption = "Licensced Till : " +  Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                {
+                    Properties.Settings.Default.expired = false;
+                    Properties.Settings.Default.Save();
+                    expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                }
                 else
+                {
+                    Properties.Settings.Default.expired = true;
+                    Properties.Settings.Default.Save();
                     expiryLic.Caption = "Licensce Expired";
+                }
             }
             catch (Exception ex)
             {
                 MsgBox("Please select a valid Licensce File.");
                 if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
+                {
+                    Properties.Settings.Default.expired = false;
+                    Properties.Settings.Default.Save();
                     expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                }
                 else
+                {
+                    Properties.Settings.Default.expired = true;
+                    Properties.Settings.Default.Save();
                     expiryLic.Caption = "Licensce Expired";
+                }
             }
 
         }
@@ -2314,7 +2441,7 @@ namespace TracerV1
             var encryptor = symmetricKey.CreateEncryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
 
             byte[] cipherTextBytes;
-   
+
             using (var memoryStream = new MemoryStream())
             {
                 using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
@@ -2369,11 +2496,78 @@ namespace TracerV1
         }
 
         private void button8_Click_2(object sender, EventArgs e)
-        { 
+        {
             chartControl1.ExportToImage(string.Format("{0}/chartcon1.png", mainDir), ImageFormat.Png);
             dgv4.DataSource = dataGridView5.DataSource;
             _addImagesToImageControls(string.Format("{0}/chartcon1.png", mainDir), graphLabel2TB.Text);
-            gridToImage(dgv4,chartControl1.Width ,"");
+            gridToImage(dgv4, chartControl1.Width, "");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            List<cell> siteAndCells = new List<cell>();
+            siteAndCells = getSiteNameFormCellID();
+            listBox3.Items.Clear();
+            foreach (cell item in siteAndCells)
+            {
+                listBox3.Items.Add("Site : " + item.siteName + " ; Cell ID : " + item.cellID + " ; " + " Cell Name : " + item.cellName);
+            }
+        }
+
+        //private void 
+
+        private List<cell> getSiteNameFormCellID()
+        {
+            List<cell> output = new List<cell>();
+            try
+            {
+
+                List<string> Cells = getAllActiveCells();
+                cell c = new cell();
+                foreach (var _cell in Cells)
+                {
+                    c.cellID = _cell;
+                    DataRow[] _r = dt.Select("[Cell ID] = " + _cell.ToString());
+                    DataRow[] _c = cellNames.Select("[Cell ID] = " + _cell.ToString());
+                    c.siteName = _r[0][0].ToString();
+                    c.cellName = _c[0][1].ToString();
+                    output.Add(c);
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+            }
+
+            return output;
+        }
+
+
+
+        private List<string> getAllActiveCells()
+        {
+            List<string> cells = new List<string>();
+            DataView view = new DataView(traceDataTable);
+            DataTable distinctValues = view.ToTable(true, "CellId");
+            foreach (DataRow row in distinctValues.Rows)
+            {
+                cells.Add(row[0].ToString());
+            }
+            return cells;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            string clipData = null;
+            foreach (var s in listBox3.Items)
+            {
+                clipData = clipData + " \n" + s;
+            }
+
+            Clipboard.SetText(clipData);
+            MsgBox("Data Copied To Clipboard.");
         }
     }
 

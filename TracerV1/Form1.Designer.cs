@@ -1095,6 +1095,9 @@ namespace TracerV1
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.rrcMessageLookUpGrid = new System.Windows.Forms.DataGridView();
@@ -1175,6 +1178,7 @@ namespace TracerV1
             this.MapTab = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dgv4 = new System.Windows.Forms.DataGridView();
+            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown17)).BeginInit();
@@ -7776,7 +7780,7 @@ namespace TracerV1
             this.listBox2.FormattingEnabled = true;
             this.listBox2.Location = new System.Drawing.Point(8, 239);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(167, 368);
+            this.listBox2.Size = new System.Drawing.Size(167, 173);
             this.listBox2.TabIndex = 1;
             // 
             // listBox1
@@ -7799,6 +7803,10 @@ namespace TracerV1
             // 
             // splitContainer5.Panel1
             // 
+            this.splitContainer5.Panel1.Controls.Add(this.button14);
+            this.splitContainer5.Panel1.Controls.Add(this.button13);
+            this.splitContainer5.Panel1.Controls.Add(this.label8);
+            this.splitContainer5.Panel1.Controls.Add(this.listBox3);
             this.splitContainer5.Panel1.Controls.Add(this.label4);
             // 
             // splitContainer5.Panel2
@@ -7816,6 +7824,38 @@ namespace TracerV1
             this.splitContainer5.Size = new System.Drawing.Size(1128, 621);
             this.splitContainer5.SplitterDistance = 178;
             this.splitContainer5.TabIndex = 12;
+            // 
+            // button13
+            // 
+            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Location = new System.Drawing.Point(82, 594);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(90, 24);
+            this.button13.TabIndex = 25;
+            this.button13.Text = "Refresh";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 415);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Active Cells";
+            // 
+            // listBox3
+            // 
+            this.listBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(5, 431);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(167, 160);
+            this.listBox3.TabIndex = 5;
             // 
             // label4
             // 
@@ -8697,6 +8737,19 @@ namespace TracerV1
             this.dgv4.Size = new System.Drawing.Size(1125, 618);
             this.dgv4.TabIndex = 0;
             // 
+            // button14
+            // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(5, 594);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 24);
+            this.button14.TabIndex = 26;
+            this.button14.Text = "Copy";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -9465,6 +9518,10 @@ namespace TracerV1
         private System.Windows.Forms.DataGridView dgv4;
         private System.Windows.Forms.CheckBox checkBox1;
         private DevExpress.Snap.Extensions.UI.DataToolsRibbonPageCategory dataToolsRibbonPageCategory1;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Button button14;
     }
 }
 
