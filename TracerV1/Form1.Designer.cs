@@ -1095,6 +1095,7 @@ namespace TracerV1
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
@@ -1178,7 +1179,8 @@ namespace TracerV1
             this.MapTab = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dgv4 = new System.Windows.Forms.DataGridView();
-            this.button14 = new System.Windows.Forms.Button();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown17)).BeginInit();
@@ -1668,9 +1670,10 @@ namespace TracerV1
             this.heightImage,
             this.widthImage,
             this.barButtonItem2,
-            this.expiryLic});
+            this.expiryLic,
+            this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 330;
+            this.ribbonControl1.MaxItemId = 331;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.chartRibbonPageCategory1,
@@ -4091,7 +4094,8 @@ namespace TracerV1
             this.chartTemplatesRibbonPageGroup1,
             this.chartPrintExportRibbonPageGroup1,
             this.ribbonPageGroup2,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4});
             this.createChartOtherRibbonPage1.Name = "createChartOtherRibbonPage1";
             // 
             // chartWizardRibbonPageGroup1
@@ -7825,6 +7829,19 @@ namespace TracerV1
             this.splitContainer5.SplitterDistance = 178;
             this.splitContainer5.TabIndex = 12;
             // 
+            // button14
+            // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Location = new System.Drawing.Point(5, 594);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 24);
+            this.button14.TabIndex = 26;
+            this.button14.Text = "Copy";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // button13
             // 
             this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -8737,18 +8754,18 @@ namespace TracerV1
             this.dgv4.Size = new System.Drawing.Size(1125, 618);
             this.dgv4.TabIndex = 0;
             // 
-            // button14
+            // ribbonPageGroup4
             // 
-            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Location = new System.Drawing.Point(5, 594);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 24);
-            this.button14.TabIndex = 26;
-            this.button14.Text = "Copy";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "About";
+            this.barButtonItem3.Id = 330;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // Form1
             // 
@@ -9522,6 +9539,8 @@ namespace TracerV1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button button14;
+        private BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
 

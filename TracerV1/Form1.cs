@@ -2569,6 +2569,11 @@ namespace TracerV1
             Clipboard.SetText(clipData);
             MsgBox("Data Copied To Clipboard.");
         }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            MessageBox.Show("Developed By Muhammad Hassan Niazi\nHassanniazi93@gmail.com\nRF ZTE Pakistan","About",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 
 
