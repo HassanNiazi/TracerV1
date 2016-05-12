@@ -38,6 +38,7 @@ namespace TracerV1
         //DataTable traceDataTable = new DataTable();
         DataTable dt = new DataTable();
         DataTable cellNames = new DataTable();
+        DataTable _tempTable = new DataTable();
         Image img1 = null;
         string mainDir = Environment.CurrentDirectory;
         SqlCeConnection con;
@@ -197,9 +198,9 @@ namespace TracerV1
         private void LicensceLoadAndOtherStartUpCode()
         {
             this.WindowState = FormWindowState.Minimized;
-            this.Hide();
             Form2 f2 = new Form2();
             f2.ShowDialog();
+            this.Hide();
             #region Licenscing
 
             while (Properties.Settings.Default.expired)
@@ -274,6 +275,8 @@ namespace TracerV1
             this.WindowState = FormWindowState.Maximized;
             f2.Dispose();
             snapControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void refetchData()
@@ -363,12 +366,12 @@ namespace TracerV1
         {
             try
             {
-                UpdateRRCMsgsList();
+                
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
-
-                foreach (var item in rrcItems)
+                List<string> rrcMsgs = tracerDatabaseComObject.ReturnAllRRCMessages();
+                foreach (var item in rrcMsgs)
                 {
                     try
                     {
@@ -383,7 +386,8 @@ namespace TracerV1
 
                     }
                 }
-
+                UpdateDataRrcMessageLookUpGridView();
+                UpdateRRCMsgsList();
             }
             catch
             {
@@ -427,7 +431,7 @@ namespace TracerV1
 
                 con.Open();
                 if (lookupVal == "")
-                    lookupVal = "Null";
+                    lookupVal = rrcMessage;
 
                 cmd.CommandText = string.Format("UPDATE rrcMessageLookUp Set lookUpValue = '{0}' Where rrcMessage = '{1}'", lookupVal, rrcMessage);
                 sda.SelectCommand = cmd;
@@ -474,6 +478,36 @@ namespace TracerV1
 
         }
 
+        private string LookupRRCMessageNameFromCustomValue(string message)
+        {
+            try
+            {
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = string.Format("SELECT * FROM rrcMessageLookUp WHERE lookUpValue = '{0}';", message);
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                con.Close();
+
+
+                return dt.Rows[0][0].ToString();
+
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+                sqlConClose();
+                return null;
+            }
+
+        }
 
         private string LookupRRCMessageName(string message)
         {
@@ -1064,11 +1098,14 @@ namespace TracerV1
             string[] rrc = rrcMessages.ToArray();
             foreach (string s in rrc)
             {
-                RRCMessages.Items.Add(s);
-                messagesListBox.Items.Add(s);
-                rrcChkListGrap2.Items.Add(s);
-                rrcItems.Add(s);
+                string s2 = LookupRRCMessageName(s);
+                RRCMessages.Items.Add(s2);
+                messagesListBox.Items.Add(s2);
+                rrcChkListGrap2.Items.Add(s2);
+                rrcItems.Add(s2);
+
             }
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -1312,7 +1349,7 @@ namespace TracerV1
 
 
                 //   DataRow[] dr = traceDataTable.Select(string.Format("ueId LIKE '%{0}%' And rrcMsgName = '{1}'", imsi, RRCMessages.SelectedItem));
-                DataTable resultQueryDataTable = tracerDatabaseComObject.queryByIMSIandRRCMessage(imsi, RRCMessages.SelectedItem.ToString());
+                DataTable resultQueryDataTable = tracerDatabaseComObject.queryByIMSIandRRCMessage(imsi, LookupRRCMessageNameFromCustomValue(RRCMessages.SelectedItem.ToString()));
                 PointLatLng p = new PointLatLng(33.7294, 73.0931);
                 //   MainMap.Position = new PointLatLng(33.7294, 73.0931);
                 GMapOverlay markersOverlay = new GMapOverlay("markers");
@@ -1614,6 +1651,9 @@ namespace TracerV1
             }
         }
 
+
+
+
         private void SearchIMSI_Click(object sender, EventArgs e)
         {
             try
@@ -1775,24 +1815,19 @@ namespace TracerV1
         {
             if (MapTab.SelectedIndex == 0)
             {
-                //   _cellDataUpload_FromFile();
-                //   _traceDataUpload();
+                
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
                 UpdateRRCMsgsList();
-                //    started = true;
+              
             }
             if (MapTab.SelectedIndex == 4)
             {
-                //barDockControlTop.Visible = true;
-                //barDockControlRight.Visible = true;
-                ////    ribbonControl1.Visible = true;
+             
             }
             else
             {
-                //    barDockControlTop.Visible = false;
-                //    //    ribbonControl1.Visible = false;
-                //    barDockControlRight.Visible = false;
+              
             }
         }
 
@@ -2144,7 +2179,7 @@ namespace TracerV1
 
             foreach (var r in chkList.CheckedItems)
             {
-                chkMessages.Add(r.ToString());
+                chkMessages.Add(LookupRRCMessageNameFromCustomValue(r.ToString()));
             }
 
             List<UserMessageFilter.genericDataContainer> count = new List<UserMessageFilter.genericDataContainer>();
@@ -2321,9 +2356,13 @@ namespace TracerV1
 
 
             //     MsgBox(" Cell Value Changed " + e.RowIndex.ToString() + "  -  " + e.ColumnIndex.ToString() + ":::::::::::" + rrcMessageLookUpGrid[e.ColumnIndex,e.RowIndex].Value.ToString());
-
-            _updateRRCMessageLookUpDB(rrcMessageLookUpGrid[0, e.RowIndex].Value.ToString(), rrcMessageLookUpGrid[1, e.RowIndex].Value.ToString());
-            rrcMessageLookUpGrid[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.FromArgb(77, 255, 100);
+            if (e.ColumnIndex == 0)
+            { MsgBox("RRC Message Name Should not be changed as it is auto generated from input reports."); }
+            else
+            {
+                _updateRRCMessageLookUpDB(rrcMessageLookUpGrid[0, e.RowIndex].Value.ToString(), rrcMessageLookUpGrid[1, e.RowIndex].Value.ToString());
+                rrcMessageLookUpGrid[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.FromArgb(77, 255, 100);
+            }
         }
 
         private void rrcMessageLookUpGrid_RowLeave(object sender, DataGridViewCellEventArgs e)
@@ -2719,6 +2758,45 @@ namespace TracerV1
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             MessageBox.Show("Developed By Muhammad Hassan Niazi\nHassanniazi93@gmail.com\nRF ZTE Pakistan", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dataGridView3_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+                UserNameTB.Text = dataGridView3[e.ColumnIndex, e.RowIndex].Value.ToString();
+                IMSITB.Text = dataGridView3[0, e.RowIndex].Value.ToString();
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+                con.Open();
+                cmd.CommandText = "UPDATE ImsiUsers Set UserName = '" + UserNameTB.Text + "' Where IMSI = '" + IMSITB.Text + "'";
+                sda.SelectCommand = cmd;
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                //dataGridView3.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+            }
+
+            dataGridView3[e.ColumnIndex, e.RowIndex].Style.BackColor = Color.FromArgb(77, 255, 100);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You are about to load a large Amount of data to the Grid.","Be Carefull!!!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+           _tempTable = tracerDatabaseComObject.customQuery("SELECT * FROM TraceDB");
+            dataGridView1.DataSource = _tempTable;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            _tempTable.Clear();
+            _tempTable.Dispose();
         }
     }
 

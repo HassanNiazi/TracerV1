@@ -32,556 +32,556 @@ namespace TracerV1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
-            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem1 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
-            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem1 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
-            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem1 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
-            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem1 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
-            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem1 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem1 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
-            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem1 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem1 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem1 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem1 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
-            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem1 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem1 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem1 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
-            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem1 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem1 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
-            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem1 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
-            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem1 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem1 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
-            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
-            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
-            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
-            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem1 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
-            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem1 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
-            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem1 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
-            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem1 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
-            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem1 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
-            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem1 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
-            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem1 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem1 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem1 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
-            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem1 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem1 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem1 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem1 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
-            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem1 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem1 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem1 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt1 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
-            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem1 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem1 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges1 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges2 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup19 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
+            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem31 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
+            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem31 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
+            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem31 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
+            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem31 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
+            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem31 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem31 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
+            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem31 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem31 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem31 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem31 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
+            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem31 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem31 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem31 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
+            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem31 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem31 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
+            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem25 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
+            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem31 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem31 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
+            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem31 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
+            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
+            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
+            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem31 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
+            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem31 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
+            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem31 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
+            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem31 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
+            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem31 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
+            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem31 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
+            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem31 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem31 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem25 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
+            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem31 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem31 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem31 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem25 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
+            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem31 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem31 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem31 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem31 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt31 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
+            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem31 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem31 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges61 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges62 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup20 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup21 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraRichEdit.Model.BorderInfo borderInfo1 = new DevExpress.XtraRichEdit.Model.BorderInfo();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
-            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem2 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
-            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem2 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
-            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem2 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
-            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem2 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
-            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem2 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem2 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
-            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem2 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem2 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem2 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem2 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
-            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem2 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem2 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem2 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
-            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem2 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem2 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
-            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem2 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
-            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem2 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem2 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
-            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem2 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
-            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
-            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
-            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem2 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
-            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem2 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
-            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem2 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
-            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem2 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
-            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem2 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
-            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem2 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
-            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem2 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem2 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem2 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
-            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem2 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem2 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem2 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem2 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
-            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem2 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem2 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem2 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt2 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
-            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem2 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem2 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges3 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges4 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
-            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem3 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
-            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem3 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
-            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem3 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
-            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem3 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
-            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem3 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem3 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
-            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem3 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem3 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem3 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem3 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
-            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem3 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem3 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem3 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
-            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem3 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem3 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
-            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem3 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem3 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
-            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem3 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
-            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
-            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
-            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem3 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
-            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem3 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
-            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem3 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
-            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem3 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
-            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem3 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
-            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem3 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
-            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem3 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem3 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
-            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem3 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem3 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem3 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
-            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem3 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem3 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem3 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem3 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt3 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
-            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem3 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem3 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges5 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges6 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
-            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem4 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
-            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem4 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
-            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem4 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
-            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem4 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
-            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem4 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem4 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
-            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem4 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem4 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem4 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem4 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
-            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem4 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem4 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem4 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
-            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem4 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem4 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
-            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem3 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
-            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem4 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem4 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
-            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem4 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
-            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
-            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
-            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem4 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
-            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem4 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
-            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem4 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
-            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem4 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
-            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem4 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
-            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem4 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
-            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem4 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem4 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem3 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
-            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem4 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem4 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem4 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem3 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
-            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem4 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem4 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem4 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem4 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt4 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
-            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem4 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem4 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges7 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges8 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
-            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem5 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
-            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem5 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
-            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem5 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
-            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem5 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
-            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem5 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem5 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
-            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem5 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem5 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem5 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem5 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
-            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem5 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem5 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem5 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
-            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem5 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem5 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
-            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem4 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
-            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem5 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
-            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem5 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
-            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem5 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
-            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
-            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
-            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
-            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem5 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
-            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem5 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
-            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem5 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
-            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem5 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
-            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem5 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
-            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem5 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
-            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem5 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem5 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
-            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem4 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
-            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem5 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem5 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
-            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem5 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem4 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
-            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem5 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem5 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem5 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
-            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem5 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
-            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt5 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
-            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem5 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
-            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem5 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges9 = new DevExpress.Skins.SkinPaddingEdges();
-            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges10 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject25 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject26 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject27 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject28 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation7 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
+            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem32 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
+            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem32 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
+            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem32 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
+            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem32 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
+            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem32 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem32 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
+            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem32 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem32 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem32 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem32 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
+            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem32 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem32 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem32 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
+            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem32 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem32 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
+            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem26 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
+            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem32 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem32 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
+            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem32 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
+            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
+            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
+            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem32 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
+            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem32 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
+            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem32 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
+            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem32 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
+            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem32 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
+            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem32 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
+            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem32 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem32 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem26 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
+            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem32 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem32 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem32 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem26 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
+            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem32 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem32 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem32 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem32 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt32 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
+            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem32 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem32 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges63 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges64 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
+            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem33 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
+            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem33 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
+            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem33 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
+            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem33 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
+            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem33 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem33 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
+            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem33 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem33 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem33 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem33 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
+            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem33 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem33 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem33 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
+            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem33 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem33 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
+            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem33 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem33 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
+            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem33 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
+            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
+            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
+            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem33 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
+            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem33 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
+            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem33 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
+            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem33 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
+            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem33 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
+            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem33 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
+            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem33 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem33 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
+            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem33 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem33 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem33 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
+            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem33 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem33 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem33 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem33 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt33 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
+            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem33 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem33 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges65 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges66 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Utils.SuperToolTip superToolTip37 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem37 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem37 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip38 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem38 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem38 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip39 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem39 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem39 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip40 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem40 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem40 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip41 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem41 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem41 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip42 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem42 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem42 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel7 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
+            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem34 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
+            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem34 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
+            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem34 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
+            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem34 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
+            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem34 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem34 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
+            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem34 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem34 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem34 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem34 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
+            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem34 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem34 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem34 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
+            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem34 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem34 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
+            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem27 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
+            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem34 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem34 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
+            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem34 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
+            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
+            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
+            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem34 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
+            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem34 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
+            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem34 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
+            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem34 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
+            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem34 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
+            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem34 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
+            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem34 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem34 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem27 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
+            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem34 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem34 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem34 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem27 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
+            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem34 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem34 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem34 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem34 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt34 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
+            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem34 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem34 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges67 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges68 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn chartControlCommandGalleryItemGroup2DColumn35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DColumn();
+            DevExpress.XtraCharts.UI.CreateBarChartItem createBarChartItem35 = new DevExpress.XtraCharts.UI.CreateBarChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem createFullStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem createSideBySideFullStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem createSideBySideStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBarChartItem createStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn chartControlCommandGalleryItemGroup3DColumn35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DColumn();
+            DevExpress.XtraCharts.UI.CreateBar3DChartItem createBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem createFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateManhattanBarChartItem createManhattanBarChartItem35 = new DevExpress.XtraCharts.UI.CreateManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem createSideBySideFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem createSideBySideStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem createStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn chartControlCommandGalleryItemGroupCylinderColumn35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupCylinderColumn();
+            DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem createCylinderBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateCylinderBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem createCylinderFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateCylinderFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem createCylinderManhattanBarChartItem35 = new DevExpress.XtraCharts.UI.CreateCylinderManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem createCylinderSideBySideFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem createCylinderSideBySideStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateCylinderSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem createCylinderStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateCylinderStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn chartControlCommandGalleryItemGroupConeColumn35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupConeColumn();
+            DevExpress.XtraCharts.UI.CreateConeBar3DChartItem createConeBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateConeBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem createConeFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateConeFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem createConeManhattanBarChartItem35 = new DevExpress.XtraCharts.UI.CreateConeManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem createConeSideBySideFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateConeSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem createConeSideBySideStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateConeSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem createConeStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreateConeStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn chartControlCommandGalleryItemGroupPyramidColumn35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPyramidColumn();
+            DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem createPyramidBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreatePyramidBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem createPyramidFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreatePyramidFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem createPyramidManhattanBarChartItem35 = new DevExpress.XtraCharts.UI.CreatePyramidManhattanBarChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem createPyramidSideBySideFullStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideFullStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem createPyramidSideBySideStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreatePyramidSideBySideStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem createPyramidStackedBar3DChartItem35 = new DevExpress.XtraCharts.UI.CreatePyramidStackedBar3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine chartControlCommandGalleryItemGroup2DLine35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DLine();
+            DevExpress.XtraCharts.UI.CreateLineChartItem createLineChartItem35 = new DevExpress.XtraCharts.UI.CreateLineChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem createFullStackedLineChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterLineChartItem createScatterLineChartItem35 = new DevExpress.XtraCharts.UI.CreateScatterLineChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineChartItem createSplineChartItem35 = new DevExpress.XtraCharts.UI.CreateSplineChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLineChartItem createStackedLineChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedLineChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLineChartItem createStepLineChartItem35 = new DevExpress.XtraCharts.UI.CreateStepLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine chartControlCommandGalleryItemGroup3DLine35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DLine();
+            DevExpress.XtraCharts.UI.CreateLine3DChartItem createLine3DChartItem35 = new DevExpress.XtraCharts.UI.CreateLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem createFullStackedLine3DChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSpline3DChartItem createSpline3DChartItem35 = new DevExpress.XtraCharts.UI.CreateSpline3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem createStackedLine3DChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedLine3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepLine3DChartItem createStepLine3DChartItem35 = new DevExpress.XtraCharts.UI.CreateStepLine3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie chartControlCommandGalleryItemGroup2DPie35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DPie();
+            DevExpress.XtraCharts.UI.CreatePieChartItem createPieChartItem35 = new DevExpress.XtraCharts.UI.CreatePieChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnutChartItem createDoughnutChartItem35 = new DevExpress.XtraCharts.UI.CreateDoughnutChartItem();
+            DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem createNestedDoughnutChartItem28 = new DevExpress.XtraCharts.UI.CreateNestedDoughnutChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie chartControlCommandGalleryItemGroup3DPie35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DPie();
+            DevExpress.XtraCharts.UI.CreatePie3DChartItem createPie3DChartItem35 = new DevExpress.XtraCharts.UI.CreatePie3DChartItem();
+            DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem createDoughnut3DChartItem35 = new DevExpress.XtraCharts.UI.CreateDoughnut3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar chartControlCommandGalleryItemGroup2DBar35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DBar();
+            DevExpress.XtraCharts.UI.CreateRotatedBarChartItem createRotatedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateRotatedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem createRotatedFullStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateRotatedFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem createRotatedSideBySideFullStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideFullStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem createRotatedSideBySideStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateRotatedSideBySideStackedBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem createRotatedStackedBarChartItem35 = new DevExpress.XtraCharts.UI.CreateRotatedStackedBarChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea chartControlCommandGalleryItemGroup2DArea35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup2DArea();
+            DevExpress.XtraCharts.UI.CreateAreaChartItem createAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem createFullStackedAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem createFullStackedSplineAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineAreaChartItem createSplineAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedAreaChartItem createStackedAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem createStackedSplineAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedSplineAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateStepAreaChartItem createStepAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateStepAreaChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea chartControlCommandGalleryItemGroup3DArea35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroup3DArea();
+            DevExpress.XtraCharts.UI.CreateArea3DChartItem createArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem createFullStackedArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem createFullStackedSplineArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateFullStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem createSplineArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem createStackedArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem createStackedSplineArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateStackedSplineArea3DChartItem();
+            DevExpress.XtraCharts.UI.CreateStepArea3DChartItem createStepArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateStepArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint chartControlCommandGalleryItemGroupPoint35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPoint();
+            DevExpress.XtraCharts.UI.CreatePointChartItem createPointChartItem35 = new DevExpress.XtraCharts.UI.CreatePointChartItem();
+            DevExpress.XtraCharts.UI.CreateBubbleChartItem createBubbleChartItem35 = new DevExpress.XtraCharts.UI.CreateBubbleChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel chartControlCommandGalleryItemGroupFunnel35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFunnel();
+            DevExpress.XtraCharts.UI.CreateFunnelChartItem createFunnelChartItem35 = new DevExpress.XtraCharts.UI.CreateFunnelChartItem();
+            DevExpress.XtraCharts.UI.CreateFunnel3DChartItem createFunnel3DChartItem35 = new DevExpress.XtraCharts.UI.CreateFunnel3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial chartControlCommandGalleryItemGroupFinancial35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupFinancial();
+            DevExpress.XtraCharts.UI.CreateStockChartItem createStockChartItem35 = new DevExpress.XtraCharts.UI.CreateStockChartItem();
+            DevExpress.XtraCharts.UI.CreateCandleStickChartItem createCandleStickChartItem35 = new DevExpress.XtraCharts.UI.CreateCandleStickChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar chartControlCommandGalleryItemGroupRadar35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRadar();
+            DevExpress.XtraCharts.UI.CreateRadarPointChartItem createRadarPointChartItem35 = new DevExpress.XtraCharts.UI.CreateRadarPointChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarLineChartItem createRadarLineChartItem35 = new DevExpress.XtraCharts.UI.CreateRadarLineChartItem();
+            DevExpress.XtraCharts.UI.CreateRadarAreaChartItem createRadarAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateRadarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem createScatterRadarLineChartItem28 = new DevExpress.XtraCharts.UI.CreateScatterRadarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar chartControlCommandGalleryItemGroupPolar35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupPolar();
+            DevExpress.XtraCharts.UI.CreatePolarPointChartItem createPolarPointChartItem35 = new DevExpress.XtraCharts.UI.CreatePolarPointChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarLineChartItem createPolarLineChartItem35 = new DevExpress.XtraCharts.UI.CreatePolarLineChartItem();
+            DevExpress.XtraCharts.UI.CreatePolarAreaChartItem createPolarAreaChartItem35 = new DevExpress.XtraCharts.UI.CreatePolarAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem createScatterPolarLineChartItem28 = new DevExpress.XtraCharts.UI.CreateScatterPolarLineChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange chartControlCommandGalleryItemGroupRange35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupRange();
+            DevExpress.XtraCharts.UI.CreateRangeBarChartItem createRangeBarChartItem35 = new DevExpress.XtraCharts.UI.CreateRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem createSideBySideRangeBarChartItem35 = new DevExpress.XtraCharts.UI.CreateSideBySideRangeBarChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeAreaChartItem createRangeAreaChartItem35 = new DevExpress.XtraCharts.UI.CreateRangeAreaChartItem();
+            DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem createRangeArea3DChartItem35 = new DevExpress.XtraCharts.UI.CreateRangeArea3DChartItem();
+            DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt chartControlCommandGalleryItemGroupGantt35 = new DevExpress.XtraCharts.UI.ChartControlCommandGalleryItemGroupGantt();
+            DevExpress.XtraCharts.UI.CreateGanttChartItem createGanttChartItem35 = new DevExpress.XtraCharts.UI.CreateGanttChartItem();
+            DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem createSideBySideGanttChartItem35 = new DevExpress.XtraCharts.UI.CreateSideBySideGanttChartItem();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges69 = new DevExpress.Skins.SkinPaddingEdges();
+            DevExpress.Skins.SkinPaddingEdges skinPaddingEdges70 = new DevExpress.Skins.SkinPaddingEdges();
             this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -926,6 +926,7 @@ namespace TracerV1
             this.repositoryItemTextEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.expiryLic = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.chartRibbonPageCategory1 = new DevExpress.XtraCharts.UI.ChartRibbonPageCategory();
             this.cc1 = new DevExpress.XtraCharts.ChartControl();
             this.createChartRibbonPage1 = new DevExpress.XtraCharts.UI.CreateChartRibbonPage();
@@ -937,6 +938,7 @@ namespace TracerV1
             this.chartPrintExportRibbonPageGroup1 = new DevExpress.XtraCharts.UI.ChartPrintExportRibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.headerFooterToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsRibbonPageCategory();
             this.headerFooterToolsDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsDesignRibbonPage();
             this.headerFooterToolsDesignNavigationRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsDesignNavigationRibbonPageGroup();
@@ -1133,7 +1135,6 @@ namespace TracerV1
             this.RstButton = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.statusStrip_CellLoc = new System.Windows.Forms.StatusStrip();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.fpCell = new System.Windows.Forms.TextBox();
             this.BrowseCell = new System.Windows.Forms.Button();
@@ -1143,8 +1144,6 @@ namespace TracerV1
             this.rmvData = new System.Windows.Forms.Button();
             this.path = new System.Windows.Forms.TextBox();
             this.Browse = new System.Windows.Forms.Button();
-            this.DataStatusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MapPage = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -1179,8 +1178,8 @@ namespace TracerV1
             this.MapTab = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dgv4 = new System.Windows.Forms.DataGridView();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown17)).BeginInit();
@@ -1223,7 +1222,7 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown3)).BeginInit();
@@ -1303,7 +1302,6 @@ namespace TracerV1
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.DataStatusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MapPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -1331,7 +1329,7 @@ namespace TracerV1
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup19});
             this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeStyleItem1.Id = 89;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
@@ -1718,46 +1716,46 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown16.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown16.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DColumn1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBarChartItem1,
-            createFullStackedBarChartItem1,
-            createSideBySideFullStackedBarChartItem1,
-            createSideBySideStackedBarChartItem1,
-            createStackedBarChartItem1});
-            chartControlCommandGalleryItemGroup3DColumn1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBar3DChartItem1,
-            createFullStackedBar3DChartItem1,
-            createManhattanBarChartItem1,
-            createSideBySideFullStackedBar3DChartItem1,
-            createSideBySideStackedBar3DChartItem1,
-            createStackedBar3DChartItem1});
-            chartControlCommandGalleryItemGroupCylinderColumn1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createCylinderBar3DChartItem1,
-            createCylinderFullStackedBar3DChartItem1,
-            createCylinderManhattanBarChartItem1,
-            createCylinderSideBySideFullStackedBar3DChartItem1,
-            createCylinderSideBySideStackedBar3DChartItem1,
-            createCylinderStackedBar3DChartItem1});
-            chartControlCommandGalleryItemGroupConeColumn1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createConeBar3DChartItem1,
-            createConeFullStackedBar3DChartItem1,
-            createConeManhattanBarChartItem1,
-            createConeSideBySideFullStackedBar3DChartItem1,
-            createConeSideBySideStackedBar3DChartItem1,
-            createConeStackedBar3DChartItem1});
-            chartControlCommandGalleryItemGroupPyramidColumn1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPyramidBar3DChartItem1,
-            createPyramidFullStackedBar3DChartItem1,
-            createPyramidManhattanBarChartItem1,
-            createPyramidSideBySideFullStackedBar3DChartItem1,
-            createPyramidSideBySideStackedBar3DChartItem1,
-            createPyramidStackedBar3DChartItem1});
+            chartControlCommandGalleryItemGroup2DColumn31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBarChartItem31,
+            createFullStackedBarChartItem31,
+            createSideBySideFullStackedBarChartItem31,
+            createSideBySideStackedBarChartItem31,
+            createStackedBarChartItem31});
+            chartControlCommandGalleryItemGroup3DColumn31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBar3DChartItem31,
+            createFullStackedBar3DChartItem31,
+            createManhattanBarChartItem31,
+            createSideBySideFullStackedBar3DChartItem31,
+            createSideBySideStackedBar3DChartItem31,
+            createStackedBar3DChartItem31});
+            chartControlCommandGalleryItemGroupCylinderColumn31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createCylinderBar3DChartItem31,
+            createCylinderFullStackedBar3DChartItem31,
+            createCylinderManhattanBarChartItem31,
+            createCylinderSideBySideFullStackedBar3DChartItem31,
+            createCylinderSideBySideStackedBar3DChartItem31,
+            createCylinderStackedBar3DChartItem31});
+            chartControlCommandGalleryItemGroupConeColumn31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createConeBar3DChartItem31,
+            createConeFullStackedBar3DChartItem31,
+            createConeManhattanBarChartItem31,
+            createConeSideBySideFullStackedBar3DChartItem31,
+            createConeSideBySideStackedBar3DChartItem31,
+            createConeStackedBar3DChartItem31});
+            chartControlCommandGalleryItemGroupPyramidColumn31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPyramidBar3DChartItem31,
+            createPyramidFullStackedBar3DChartItem31,
+            createPyramidManhattanBarChartItem31,
+            createPyramidSideBySideFullStackedBar3DChartItem31,
+            createPyramidSideBySideStackedBar3DChartItem31,
+            createPyramidStackedBar3DChartItem31});
             this.commandBarGalleryDropDown16.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DColumn1,
-            chartControlCommandGalleryItemGroup3DColumn1,
-            chartControlCommandGalleryItemGroupCylinderColumn1,
-            chartControlCommandGalleryItemGroupConeColumn1,
-            chartControlCommandGalleryItemGroupPyramidColumn1});
+            chartControlCommandGalleryItemGroup2DColumn31,
+            chartControlCommandGalleryItemGroup3DColumn31,
+            chartControlCommandGalleryItemGroupCylinderColumn31,
+            chartControlCommandGalleryItemGroupConeColumn31,
+            chartControlCommandGalleryItemGroupPyramidColumn31});
             this.commandBarGalleryDropDown16.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown16.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown16.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -1777,22 +1775,22 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown17.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown17.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DLine1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLineChartItem1,
-            createFullStackedLineChartItem1,
-            createScatterLineChartItem1,
-            createSplineChartItem1,
-            createStackedLineChartItem1,
-            createStepLineChartItem1});
-            chartControlCommandGalleryItemGroup3DLine1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLine3DChartItem1,
-            createFullStackedLine3DChartItem1,
-            createSpline3DChartItem1,
-            createStackedLine3DChartItem1,
-            createStepLine3DChartItem1});
+            chartControlCommandGalleryItemGroup2DLine31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLineChartItem31,
+            createFullStackedLineChartItem31,
+            createScatterLineChartItem31,
+            createSplineChartItem31,
+            createStackedLineChartItem31,
+            createStepLineChartItem31});
+            chartControlCommandGalleryItemGroup3DLine31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLine3DChartItem31,
+            createFullStackedLine3DChartItem31,
+            createSpline3DChartItem31,
+            createStackedLine3DChartItem31,
+            createStepLine3DChartItem31});
             this.commandBarGalleryDropDown17.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DLine1,
-            chartControlCommandGalleryItemGroup3DLine1});
+            chartControlCommandGalleryItemGroup2DLine31,
+            chartControlCommandGalleryItemGroup3DLine31});
             this.commandBarGalleryDropDown17.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown17.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown17.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -1812,16 +1810,16 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown18.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown18.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DPie1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPieChartItem1,
-            createDoughnutChartItem1,
-            createNestedDoughnutChartItem1});
-            chartControlCommandGalleryItemGroup3DPie1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPie3DChartItem1,
-            createDoughnut3DChartItem1});
+            chartControlCommandGalleryItemGroup2DPie31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPieChartItem31,
+            createDoughnutChartItem31,
+            createNestedDoughnutChartItem25});
+            chartControlCommandGalleryItemGroup3DPie31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPie3DChartItem31,
+            createDoughnut3DChartItem31});
             this.commandBarGalleryDropDown18.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DPie1,
-            chartControlCommandGalleryItemGroup3DPie1});
+            chartControlCommandGalleryItemGroup2DPie31,
+            chartControlCommandGalleryItemGroup3DPie31});
             this.commandBarGalleryDropDown18.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown18.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown18.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -1841,14 +1839,14 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown19.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown19.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DBar1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRotatedBarChartItem1,
-            createRotatedFullStackedBarChartItem1,
-            createRotatedSideBySideFullStackedBarChartItem1,
-            createRotatedSideBySideStackedBarChartItem1,
-            createRotatedStackedBarChartItem1});
+            chartControlCommandGalleryItemGroup2DBar31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRotatedBarChartItem31,
+            createRotatedFullStackedBarChartItem31,
+            createRotatedSideBySideFullStackedBarChartItem31,
+            createRotatedSideBySideStackedBarChartItem31,
+            createRotatedStackedBarChartItem31});
             this.commandBarGalleryDropDown19.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DBar1});
+            chartControlCommandGalleryItemGroup2DBar31});
             this.commandBarGalleryDropDown19.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown19.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown19.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -1868,25 +1866,25 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown20.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown20.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DArea1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createAreaChartItem1,
-            createFullStackedAreaChartItem1,
-            createFullStackedSplineAreaChartItem1,
-            createSplineAreaChartItem1,
-            createStackedAreaChartItem1,
-            createStackedSplineAreaChartItem1,
-            createStepAreaChartItem1});
-            chartControlCommandGalleryItemGroup3DArea1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createArea3DChartItem1,
-            createFullStackedArea3DChartItem1,
-            createFullStackedSplineArea3DChartItem1,
-            createSplineArea3DChartItem1,
-            createStackedArea3DChartItem1,
-            createStackedSplineArea3DChartItem1,
-            createStepArea3DChartItem1});
+            chartControlCommandGalleryItemGroup2DArea31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createAreaChartItem31,
+            createFullStackedAreaChartItem31,
+            createFullStackedSplineAreaChartItem31,
+            createSplineAreaChartItem31,
+            createStackedAreaChartItem31,
+            createStackedSplineAreaChartItem31,
+            createStepAreaChartItem31});
+            chartControlCommandGalleryItemGroup3DArea31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createArea3DChartItem31,
+            createFullStackedArea3DChartItem31,
+            createFullStackedSplineArea3DChartItem31,
+            createSplineArea3DChartItem31,
+            createStackedArea3DChartItem31,
+            createStackedSplineArea3DChartItem31,
+            createStepArea3DChartItem31});
             this.commandBarGalleryDropDown20.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DArea1,
-            chartControlCommandGalleryItemGroup3DArea1});
+            chartControlCommandGalleryItemGroup2DArea31,
+            chartControlCommandGalleryItemGroup3DArea31});
             this.commandBarGalleryDropDown20.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown20.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown20.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -1906,41 +1904,41 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown21.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown21.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroupPoint1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPointChartItem1,
-            createBubbleChartItem1});
-            chartControlCommandGalleryItemGroupFunnel1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createFunnelChartItem1,
-            createFunnel3DChartItem1});
-            chartControlCommandGalleryItemGroupFinancial1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createStockChartItem1,
-            createCandleStickChartItem1});
-            chartControlCommandGalleryItemGroupRadar1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRadarPointChartItem1,
-            createRadarLineChartItem1,
-            createRadarAreaChartItem1,
-            createScatterRadarLineChartItem1});
-            chartControlCommandGalleryItemGroupPolar1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPolarPointChartItem1,
-            createPolarLineChartItem1,
-            createPolarAreaChartItem1,
-            createScatterPolarLineChartItem1});
-            chartControlCommandGalleryItemGroupRange1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRangeBarChartItem1,
-            createSideBySideRangeBarChartItem1,
-            createRangeAreaChartItem1,
-            createRangeArea3DChartItem1});
-            chartControlCommandGalleryItemGroupGantt1.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createGanttChartItem1,
-            createSideBySideGanttChartItem1});
+            chartControlCommandGalleryItemGroupPoint31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPointChartItem31,
+            createBubbleChartItem31});
+            chartControlCommandGalleryItemGroupFunnel31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createFunnelChartItem31,
+            createFunnel3DChartItem31});
+            chartControlCommandGalleryItemGroupFinancial31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createStockChartItem31,
+            createCandleStickChartItem31});
+            chartControlCommandGalleryItemGroupRadar31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRadarPointChartItem31,
+            createRadarLineChartItem31,
+            createRadarAreaChartItem31,
+            createScatterRadarLineChartItem25});
+            chartControlCommandGalleryItemGroupPolar31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPolarPointChartItem31,
+            createPolarLineChartItem31,
+            createPolarAreaChartItem31,
+            createScatterPolarLineChartItem25});
+            chartControlCommandGalleryItemGroupRange31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRangeBarChartItem31,
+            createSideBySideRangeBarChartItem31,
+            createRangeAreaChartItem31,
+            createRangeArea3DChartItem31});
+            chartControlCommandGalleryItemGroupGantt31.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createGanttChartItem31,
+            createSideBySideGanttChartItem31});
             this.commandBarGalleryDropDown21.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroupPoint1,
-            chartControlCommandGalleryItemGroupFunnel1,
-            chartControlCommandGalleryItemGroupFinancial1,
-            chartControlCommandGalleryItemGroupRadar1,
-            chartControlCommandGalleryItemGroupPolar1,
-            chartControlCommandGalleryItemGroupRange1,
-            chartControlCommandGalleryItemGroupGantt1});
+            chartControlCommandGalleryItemGroupPoint31,
+            chartControlCommandGalleryItemGroupFunnel31,
+            chartControlCommandGalleryItemGroupFinancial31,
+            chartControlCommandGalleryItemGroupRadar31,
+            chartControlCommandGalleryItemGroupPolar31,
+            chartControlCommandGalleryItemGroupRange31,
+            chartControlCommandGalleryItemGroupGantt31});
             this.commandBarGalleryDropDown21.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown21.Gallery.RowCount = 7;
             this.commandBarGalleryDropDown21.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -1981,12 +1979,12 @@ namespace TracerV1
             this.commandBarGalleryDropDown22.Gallery.ImageSize = new System.Drawing.Size(160, 10);
             this.commandBarGalleryDropDown22.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown22.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right;
-            skinPaddingEdges1.Bottom = -3;
-            skinPaddingEdges1.Top = -3;
-            this.commandBarGalleryDropDown22.Gallery.ItemImagePadding = skinPaddingEdges1;
-            skinPaddingEdges2.Bottom = -3;
-            skinPaddingEdges2.Top = -3;
-            this.commandBarGalleryDropDown22.Gallery.ItemTextPadding = skinPaddingEdges2;
+            skinPaddingEdges61.Bottom = -3;
+            skinPaddingEdges61.Top = -3;
+            this.commandBarGalleryDropDown22.Gallery.ItemImagePadding = skinPaddingEdges61;
+            skinPaddingEdges62.Bottom = -3;
+            skinPaddingEdges62.Top = -3;
+            this.commandBarGalleryDropDown22.Gallery.ItemTextPadding = skinPaddingEdges62;
             this.commandBarGalleryDropDown22.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown22.Gallery.ShowGroupCaption = false;
             this.commandBarGalleryDropDown22.Gallery.ShowItemText = true;
@@ -2957,7 +2955,7 @@ namespace TracerV1
             // 
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup20});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeTableStyleItem1.Id = 164;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
@@ -2976,7 +2974,7 @@ namespace TracerV1
             // 
             this.galleryChangeTableCellStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableCellStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup21});
             this.galleryChangeTableCellStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeTableCellStyleItem1.Id = 165;
             this.galleryChangeTableCellStyleItem1.ModifyItemLink = null;
@@ -3964,10 +3962,10 @@ namespace TracerV1
             // 
             this.repositoryItemMailMergeCurrentRecordEdit1.AutoHeight = false;
             this.repositoryItemMailMergeCurrentRecordEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleLeft, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "Previous", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Prev, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleRight, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons1"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "Next", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Next, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleLeft, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons2"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "First", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.First, null, true),
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleRight, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons3"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "Last", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Last, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleLeft, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject25, "Previous", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Prev, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleRight, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons1"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject26, "Next", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Next, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, true, DevExpress.XtraEditors.ImageLocation.MiddleLeft, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons2"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject27, "First", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.First, null, true),
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleRight, ((System.Drawing.Image)(resources.GetObject("repositoryItemMailMergeCurrentRecordEdit1.Buttons3"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject28, "Last", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Last, null, true)});
             this.repositoryItemMailMergeCurrentRecordEdit1.Name = "repositoryItemMailMergeCurrentRecordEdit1";
             // 
             // commandBarSubItem8
@@ -4046,6 +4044,13 @@ namespace TracerV1
             this.expiryLic.Id = 329;
             this.expiryLic.Name = "expiryLic";
             this.expiryLic.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "About";
+            this.barButtonItem3.Id = 330;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // chartRibbonPageCategory1
             // 
@@ -4127,6 +4132,12 @@ namespace TracerV1
             this.ribbonPageGroup3.ItemLinks.Add(this.expiryLic);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Licensce Valid Till :";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // headerFooterToolsRibbonPageCategory1
             // 
@@ -4339,12 +4350,12 @@ namespace TracerV1
             this.stylesRibbonPageGroup1,
             this.editingRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
-            reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation1.Group = this.stylesRibbonPageGroup1;
-            reduceOperation1.ItemLinkIndex = 0;
-            reduceOperation1.ItemLinksCount = 0;
-            reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation1);
+            reduceOperation7.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation7.Group = this.stylesRibbonPageGroup1;
+            reduceOperation7.ItemLinkIndex = 0;
+            reduceOperation7.ItemLinksCount = 0;
+            reduceOperation7.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation7);
             // 
             // clipboardRibbonPageGroup1
             // 
@@ -4562,202 +4573,202 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown9.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown9.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DColumn2.Caption = "2-D Column";
-            createBarChartItem2.Caption = "Clustered Column";
-            createBarChartItem2.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            chartControlCommandGalleryItemGroup2DColumn32.Caption = "2-D Column";
+            createBarChartItem32.Caption = "Clustered Column";
+            createBarChartItem32.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.\r\n    ";
-            createBarChartItem2.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            createBarChartItem32.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.\r\n    ";
-            createFullStackedBarChartItem2.Caption = "100% Stacked Column";
-            createFullStackedBarChartItem2.Description = "Compare the percentage that each value contributes to a total across categories b" +
+            createFullStackedBarChartItem32.Caption = "100% Stacked Column";
+            createFullStackedBarChartItem32.Description = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse it to emphasize the proportion of each data " +
     "series.\r\n    ";
-            createFullStackedBarChartItem2.Hint = "Compare the percentage that each value contributes to a total across categories b" +
+            createFullStackedBarChartItem32.Hint = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse it to emphasize the proportion of each data " +
     "series.\r\n    ";
-            createSideBySideFullStackedBarChartItem2.Caption = "Clustered 100% Stacked Column";
-            createSideBySideFullStackedBarChartItem2.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBarChartItem32.Caption = "Clustered 100% Stacked Column";
+            createSideBySideFullStackedBarChartItem32.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types, so that you can stack different columns, and combine them into groups ac" +
     "ross the same axis value.";
-            createSideBySideFullStackedBarChartItem2.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBarChartItem32.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types, so that you can stack different columns, and combine them into groups ac" +
     "ross the same axis value.";
-            createSideBySideStackedBarChartItem2.Caption = "Clustered Stacked Column";
-            createSideBySideStackedBarChartItem2.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBarChartItem32.Caption = "Clustered Stacked Column";
+            createSideBySideStackedBarChartItem32.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s, so that you can stack different columns, and combine them into groups across " +
     "the same axis value.";
-            createSideBySideStackedBarChartItem2.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBarChartItem32.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s, so that you can stack different columns, and combine them into groups across " +
     "the same axis value.";
-            createStackedBarChartItem2.Caption = "Stacked Column";
-            createStackedBarChartItem2.Description = "Compare the contribution of each value to a total across categories by using vert" +
+            createStackedBarChartItem32.Caption = "Stacked Column";
+            createStackedBarChartItem32.Description = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".\r\n    ";
-            createStackedBarChartItem2.Hint = "Compare the contribution of each value to a total across categories by using vert" +
+            createStackedBarChartItem32.Hint = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".\r\n    ";
-            chartControlCommandGalleryItemGroup2DColumn2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBarChartItem2,
-            createFullStackedBarChartItem2,
-            createSideBySideFullStackedBarChartItem2,
-            createSideBySideStackedBarChartItem2,
-            createStackedBarChartItem2});
-            chartControlCommandGalleryItemGroup3DColumn2.Caption = "3-D Column";
-            createBar3DChartItem2.Caption = "3-D Clustered Column";
-            createBar3DChartItem2.Description = "Compare values across categories and display clustered columns in 3-D format.";
-            createBar3DChartItem2.Hint = "Compare values across categories and display clustered columns in 3-D format.";
-            createFullStackedBar3DChartItem2.Caption = "100% Stacked Column in 3-D";
-            createFullStackedBar3DChartItem2.Description = "Compare the percentage each value contributes to a total across categories and di" +
+            chartControlCommandGalleryItemGroup2DColumn32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBarChartItem32,
+            createFullStackedBarChartItem32,
+            createSideBySideFullStackedBarChartItem32,
+            createSideBySideStackedBarChartItem32,
+            createStackedBarChartItem32});
+            chartControlCommandGalleryItemGroup3DColumn32.Caption = "3-D Column";
+            createBar3DChartItem32.Caption = "3-D Clustered Column";
+            createBar3DChartItem32.Description = "Compare values across categories and display clustered columns in 3-D format.";
+            createBar3DChartItem32.Hint = "Compare values across categories and display clustered columns in 3-D format.";
+            createFullStackedBar3DChartItem32.Caption = "100% Stacked Column in 3-D";
+            createFullStackedBar3DChartItem32.Description = "Compare the percentage each value contributes to a total across categories and di" +
     "splay 100% stacked columns in 3-D format.";
-            createFullStackedBar3DChartItem2.Hint = "Compare the percentage each value contributes to a total across categories and di" +
+            createFullStackedBar3DChartItem32.Hint = "Compare the percentage each value contributes to a total across categories and di" +
     "splay 100% stacked columns in 3-D format.";
-            createManhattanBarChartItem2.Caption = "3-D Column";
-            createManhattanBarChartItem2.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            createManhattanBarChartItem32.Caption = "3-D Column";
+            createManhattanBarChartItem32.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.\r\n    ";
-            createManhattanBarChartItem2.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            createManhattanBarChartItem32.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.\r\n    ";
-            createSideBySideFullStackedBar3DChartItem2.Caption = "Clustered 100% Stacked Column in 3-D";
-            createSideBySideFullStackedBar3DChartItem2.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBar3DChartItem32.Caption = "Clustered 100% Stacked Column in 3-D";
+            createSideBySideFullStackedBar3DChartItem32.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types in 3-D format, so that you can stack different columns, and combine them " +
     "into groups across the same axis value.";
-            createSideBySideFullStackedBar3DChartItem2.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBar3DChartItem32.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types in 3-D format, so that you can stack different columns, and combine them " +
     "into groups across the same axis value.";
-            createSideBySideStackedBar3DChartItem2.Caption = "Clustered Stacked Column in 3-D";
-            createSideBySideStackedBar3DChartItem2.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBar3DChartItem32.Caption = "Clustered Stacked Column in 3-D";
+            createSideBySideStackedBar3DChartItem32.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s in 3-D format, so that you can stack different columns, and combine them into " +
     "groups across the same axis value.";
-            createSideBySideStackedBar3DChartItem2.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBar3DChartItem32.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s in 3-D format, so that you can stack different columns, and combine them into " +
     "groups across the same axis value.";
-            createStackedBar3DChartItem2.Caption = "Stacked Column in 3-D";
-            createStackedBar3DChartItem2.Description = "Compare the contribution of each value to a total across categories and display s" +
+            createStackedBar3DChartItem32.Caption = "Stacked Column in 3-D";
+            createStackedBar3DChartItem32.Description = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            createStackedBar3DChartItem2.Hint = "Compare the contribution of each value to a total across categories and display s" +
+            createStackedBar3DChartItem32.Hint = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            chartControlCommandGalleryItemGroup3DColumn2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBar3DChartItem2,
-            createFullStackedBar3DChartItem2,
-            createManhattanBarChartItem2,
-            createSideBySideFullStackedBar3DChartItem2,
-            createSideBySideStackedBar3DChartItem2,
-            createStackedBar3DChartItem2});
-            chartControlCommandGalleryItemGroupCylinderColumn2.Caption = "Cylinder";
-            createCylinderBar3DChartItem2.Caption = "Clustered Cylinder";
-            createCylinderBar3DChartItem2.Description = "Compare values across categories.";
-            createCylinderBar3DChartItem2.Hint = "Compare values across categories.";
-            createCylinderFullStackedBar3DChartItem2.Caption = "100% Stacked Cylinder";
-            createCylinderFullStackedBar3DChartItem2.Description = "Compare the percentage each value contributes to a total across categories.";
-            createCylinderFullStackedBar3DChartItem2.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createCylinderManhattanBarChartItem2.Caption = "3-D Cylinder";
-            createCylinderManhattanBarChartItem2.Description = "Compare values across categories and across series and display a cylinder chart o" +
+            chartControlCommandGalleryItemGroup3DColumn32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBar3DChartItem32,
+            createFullStackedBar3DChartItem32,
+            createManhattanBarChartItem32,
+            createSideBySideFullStackedBar3DChartItem32,
+            createSideBySideStackedBar3DChartItem32,
+            createStackedBar3DChartItem32});
+            chartControlCommandGalleryItemGroupCylinderColumn32.Caption = "Cylinder";
+            createCylinderBar3DChartItem32.Caption = "Clustered Cylinder";
+            createCylinderBar3DChartItem32.Description = "Compare values across categories.";
+            createCylinderBar3DChartItem32.Hint = "Compare values across categories.";
+            createCylinderFullStackedBar3DChartItem32.Caption = "100% Stacked Cylinder";
+            createCylinderFullStackedBar3DChartItem32.Description = "Compare the percentage each value contributes to a total across categories.";
+            createCylinderFullStackedBar3DChartItem32.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createCylinderManhattanBarChartItem32.Caption = "3-D Cylinder";
+            createCylinderManhattanBarChartItem32.Description = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            createCylinderManhattanBarChartItem2.Hint = "Compare values across categories and across series and display a cylinder chart o" +
+            createCylinderManhattanBarChartItem32.Hint = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            createCylinderSideBySideFullStackedBar3DChartItem2.Caption = "Clustered 100% Stacked Cylinder";
-            createCylinderSideBySideFullStackedBar3DChartItem2.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
+            createCylinderSideBySideFullStackedBar3DChartItem32.Caption = "Clustered 100% Stacked Cylinder";
+            createCylinderSideBySideFullStackedBar3DChartItem32.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
     "hart types, so that you can stack different cylinders, and combine them into gro" +
     "ups across the same axis value.";
-            createCylinderSideBySideFullStackedBar3DChartItem2.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
+            createCylinderSideBySideFullStackedBar3DChartItem32.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
     "hart types, so that you can stack different cylinders, and combine them into gro" +
     "ups across the same axis value.";
-            createCylinderSideBySideStackedBar3DChartItem2.Caption = "Clustered Stacked Cylinder";
-            createCylinderSideBySideStackedBar3DChartItem2.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
+            createCylinderSideBySideStackedBar3DChartItem32.Caption = "Clustered Stacked Cylinder";
+            createCylinderSideBySideStackedBar3DChartItem32.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
     "types, so that you can stack different cylinders, and combine them into groups a" +
     "cross the same axis value.";
-            createCylinderSideBySideStackedBar3DChartItem2.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
+            createCylinderSideBySideStackedBar3DChartItem32.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
     "types, so that you can stack different cylinders, and combine them into groups a" +
     "cross the same axis value.";
-            createCylinderStackedBar3DChartItem2.Caption = "Stacked Cylinder";
-            createCylinderStackedBar3DChartItem2.Description = "Compare the contribution of each value to a total across categories.";
-            createCylinderStackedBar3DChartItem2.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupCylinderColumn2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createCylinderBar3DChartItem2,
-            createCylinderFullStackedBar3DChartItem2,
-            createCylinderManhattanBarChartItem2,
-            createCylinderSideBySideFullStackedBar3DChartItem2,
-            createCylinderSideBySideStackedBar3DChartItem2,
-            createCylinderStackedBar3DChartItem2});
-            chartControlCommandGalleryItemGroupConeColumn2.Caption = "Cone";
-            createConeBar3DChartItem2.Caption = "Clustered Cone";
-            createConeBar3DChartItem2.Description = "Compare values across categories.";
-            createConeBar3DChartItem2.Hint = "Compare values across categories.";
-            createConeFullStackedBar3DChartItem2.Caption = "100% Stacked Cone";
-            createConeFullStackedBar3DChartItem2.Description = "Compare the percentage each value contributes to a total across categories.";
-            createConeFullStackedBar3DChartItem2.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createConeManhattanBarChartItem2.Caption = "3-D Cone";
-            createConeManhattanBarChartItem2.Description = "Compare values across categories and across series and display a cone chart on th" +
+            createCylinderStackedBar3DChartItem32.Caption = "Stacked Cylinder";
+            createCylinderStackedBar3DChartItem32.Description = "Compare the contribution of each value to a total across categories.";
+            createCylinderStackedBar3DChartItem32.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupCylinderColumn32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createCylinderBar3DChartItem32,
+            createCylinderFullStackedBar3DChartItem32,
+            createCylinderManhattanBarChartItem32,
+            createCylinderSideBySideFullStackedBar3DChartItem32,
+            createCylinderSideBySideStackedBar3DChartItem32,
+            createCylinderStackedBar3DChartItem32});
+            chartControlCommandGalleryItemGroupConeColumn32.Caption = "Cone";
+            createConeBar3DChartItem32.Caption = "Clustered Cone";
+            createConeBar3DChartItem32.Description = "Compare values across categories.";
+            createConeBar3DChartItem32.Hint = "Compare values across categories.";
+            createConeFullStackedBar3DChartItem32.Caption = "100% Stacked Cone";
+            createConeFullStackedBar3DChartItem32.Description = "Compare the percentage each value contributes to a total across categories.";
+            createConeFullStackedBar3DChartItem32.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createConeManhattanBarChartItem32.Caption = "3-D Cone";
+            createConeManhattanBarChartItem32.Description = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            createConeManhattanBarChartItem2.Hint = "Compare values across categories and across series and display a cone chart on th" +
+            createConeManhattanBarChartItem32.Hint = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            createConeSideBySideFullStackedBar3DChartItem2.Caption = "Clustered 100% Stacked Cone";
-            createConeSideBySideFullStackedBar3DChartItem2.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
+            createConeSideBySideFullStackedBar3DChartItem32.Caption = "Clustered 100% Stacked Cone";
+            createConeSideBySideFullStackedBar3DChartItem32.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
     "es, so that you can stack different cones, and combine them into groups across t" +
     "he same axis value.";
-            createConeSideBySideFullStackedBar3DChartItem2.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
+            createConeSideBySideFullStackedBar3DChartItem32.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
     "es, so that you can stack different cones, and combine them into groups across t" +
     "he same axis value.";
-            createConeSideBySideStackedBar3DChartItem2.Caption = "Clustered Stacked Cone";
-            createConeSideBySideStackedBar3DChartItem2.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
+            createConeSideBySideStackedBar3DChartItem32.Caption = "Clustered Stacked Cone";
+            createConeSideBySideStackedBar3DChartItem32.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
     "o that you can stack different cones, and combine them into groups across the sa" +
     "me axis value.";
-            createConeSideBySideStackedBar3DChartItem2.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
+            createConeSideBySideStackedBar3DChartItem32.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
     "o that you can stack different cones, and combine them into groups across the sa" +
     "me axis value.";
-            createConeStackedBar3DChartItem2.Caption = "Stacked Cone";
-            createConeStackedBar3DChartItem2.Description = "Compare the contribution of each value to a total across categories.";
-            createConeStackedBar3DChartItem2.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupConeColumn2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createConeBar3DChartItem2,
-            createConeFullStackedBar3DChartItem2,
-            createConeManhattanBarChartItem2,
-            createConeSideBySideFullStackedBar3DChartItem2,
-            createConeSideBySideStackedBar3DChartItem2,
-            createConeStackedBar3DChartItem2});
-            chartControlCommandGalleryItemGroupPyramidColumn2.Caption = "Pyramid";
-            createPyramidBar3DChartItem2.Caption = "Clustered Pyramid";
-            createPyramidBar3DChartItem2.Description = "Compare values across categories.";
-            createPyramidBar3DChartItem2.Hint = "Compare values across categories.";
-            createPyramidFullStackedBar3DChartItem2.Caption = "100% Stacked Pyramid";
-            createPyramidFullStackedBar3DChartItem2.Description = "Compare the percentage each value contributes to a total across categories.";
-            createPyramidFullStackedBar3DChartItem2.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createPyramidManhattanBarChartItem2.Caption = "3-D Pyramid";
-            createPyramidManhattanBarChartItem2.Description = "Compare values across categories and across series and display a pyramid chart on" +
+            createConeStackedBar3DChartItem32.Caption = "Stacked Cone";
+            createConeStackedBar3DChartItem32.Description = "Compare the contribution of each value to a total across categories.";
+            createConeStackedBar3DChartItem32.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupConeColumn32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createConeBar3DChartItem32,
+            createConeFullStackedBar3DChartItem32,
+            createConeManhattanBarChartItem32,
+            createConeSideBySideFullStackedBar3DChartItem32,
+            createConeSideBySideStackedBar3DChartItem32,
+            createConeStackedBar3DChartItem32});
+            chartControlCommandGalleryItemGroupPyramidColumn32.Caption = "Pyramid";
+            createPyramidBar3DChartItem32.Caption = "Clustered Pyramid";
+            createPyramidBar3DChartItem32.Description = "Compare values across categories.";
+            createPyramidBar3DChartItem32.Hint = "Compare values across categories.";
+            createPyramidFullStackedBar3DChartItem32.Caption = "100% Stacked Pyramid";
+            createPyramidFullStackedBar3DChartItem32.Description = "Compare the percentage each value contributes to a total across categories.";
+            createPyramidFullStackedBar3DChartItem32.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createPyramidManhattanBarChartItem32.Caption = "3-D Pyramid";
+            createPyramidManhattanBarChartItem32.Description = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            createPyramidManhattanBarChartItem2.Hint = "Compare values across categories and across series and display a pyramid chart on" +
+            createPyramidManhattanBarChartItem32.Hint = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            createPyramidSideBySideFullStackedBar3DChartItem2.Caption = "Clustered 100% Stacked Pyramid";
-            createPyramidSideBySideFullStackedBar3DChartItem2.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
+            createPyramidSideBySideFullStackedBar3DChartItem32.Caption = "Clustered 100% Stacked Pyramid";
+            createPyramidSideBySideFullStackedBar3DChartItem32.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
     "rt types, so that you can stack different pyramids, and combine them into groups" +
     " across the same axis value.";
-            createPyramidSideBySideFullStackedBar3DChartItem2.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
+            createPyramidSideBySideFullStackedBar3DChartItem32.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
     "rt types, so that you can stack different pyramids, and combine them into groups" +
     " across the same axis value.";
-            createPyramidSideBySideStackedBar3DChartItem2.Caption = "Clustered Stacked Pyramid";
-            createPyramidSideBySideStackedBar3DChartItem2.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
+            createPyramidSideBySideStackedBar3DChartItem32.Caption = "Clustered Stacked Pyramid";
+            createPyramidSideBySideStackedBar3DChartItem32.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
     "pes, so that you can stack different pyramids, and combine them into groups acro" +
     "ss the same axis value.";
-            createPyramidSideBySideStackedBar3DChartItem2.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
+            createPyramidSideBySideStackedBar3DChartItem32.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
     "pes, so that you can stack different pyramids, and combine them into groups acro" +
     "ss the same axis value.";
-            createPyramidStackedBar3DChartItem2.Caption = "Stacked Pyramid";
-            createPyramidStackedBar3DChartItem2.Description = "Compare the contribution of each value to a total across categories.";
-            createPyramidStackedBar3DChartItem2.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupPyramidColumn2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPyramidBar3DChartItem2,
-            createPyramidFullStackedBar3DChartItem2,
-            createPyramidManhattanBarChartItem2,
-            createPyramidSideBySideFullStackedBar3DChartItem2,
-            createPyramidSideBySideStackedBar3DChartItem2,
-            createPyramidStackedBar3DChartItem2});
+            createPyramidStackedBar3DChartItem32.Caption = "Stacked Pyramid";
+            createPyramidStackedBar3DChartItem32.Description = "Compare the contribution of each value to a total across categories.";
+            createPyramidStackedBar3DChartItem32.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupPyramidColumn32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPyramidBar3DChartItem32,
+            createPyramidFullStackedBar3DChartItem32,
+            createPyramidManhattanBarChartItem32,
+            createPyramidSideBySideFullStackedBar3DChartItem32,
+            createPyramidSideBySideStackedBar3DChartItem32,
+            createPyramidStackedBar3DChartItem32});
             this.commandBarGalleryDropDown9.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DColumn2,
-            chartControlCommandGalleryItemGroup3DColumn2,
-            chartControlCommandGalleryItemGroupCylinderColumn2,
-            chartControlCommandGalleryItemGroupConeColumn2,
-            chartControlCommandGalleryItemGroupPyramidColumn2});
+            chartControlCommandGalleryItemGroup2DColumn32,
+            chartControlCommandGalleryItemGroup3DColumn32,
+            chartControlCommandGalleryItemGroupCylinderColumn32,
+            chartControlCommandGalleryItemGroupConeColumn32,
+            chartControlCommandGalleryItemGroupPyramidColumn32});
             this.commandBarGalleryDropDown9.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown9.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown9.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -4771,71 +4782,71 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown10.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown10.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DLine2.Caption = "2-D Line";
-            createLineChartItem2.Caption = "Line";
-            createLineChartItem2.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
+            chartControlCommandGalleryItemGroup2DLine32.Caption = "2-D Line";
+            createLineChartItem32.Caption = "Line";
+            createLineChartItem32.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
-            createLineChartItem2.Hint = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
+            createLineChartItem32.Hint = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
-            createFullStackedLineChartItem2.Caption = "100% Stacked Line";
-            createFullStackedLineChartItem2.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
+            createFullStackedLineChartItem32.Caption = "100% Stacked Line";
+            createFullStackedLineChartItem32.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.";
-            createFullStackedLineChartItem2.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
+            createFullStackedLineChartItem32.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.";
-            createScatterLineChartItem2.Caption = "Scatter Line";
-            createScatterLineChartItem2.Description = "Represent series points in the same order that they have in the collection.";
-            createScatterLineChartItem2.Hint = "Represent series points in the same order that they have in the collection.";
-            createSplineChartItem2.Caption = "Spline";
-            createSplineChartItem2.Description = "Plot a fitted curve through each data point in a series.";
-            createSplineChartItem2.Hint = "Plot a fitted curve through each data point in a series.";
-            createStackedLineChartItem2.Caption = "Stacked Line";
-            createStackedLineChartItem2.Description = "Display the trend of the contribution of each value over time or ordered categori" +
+            createScatterLineChartItem32.Caption = "Scatter Line";
+            createScatterLineChartItem32.Description = "Represent series points in the same order that they have in the collection.";
+            createScatterLineChartItem32.Hint = "Represent series points in the same order that they have in the collection.";
+            createSplineChartItem32.Caption = "Spline";
+            createSplineChartItem32.Description = "Plot a fitted curve through each data point in a series.";
+            createSplineChartItem32.Hint = "Plot a fitted curve through each data point in a series.";
+            createStackedLineChartItem32.Caption = "Stacked Line";
+            createStackedLineChartItem32.Description = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.";
-            createStackedLineChartItem2.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
+            createStackedLineChartItem32.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.";
-            createStepLineChartItem2.Caption = "Step Line";
-            createStepLineChartItem2.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepLineChartItem2.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup2DLine2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLineChartItem2,
-            createFullStackedLineChartItem2,
-            createScatterLineChartItem2,
-            createSplineChartItem2,
-            createStackedLineChartItem2,
-            createStepLineChartItem2});
-            chartControlCommandGalleryItemGroup3DLine2.Caption = "3-D Line";
-            createLine3DChartItem2.Caption = "3-D Line";
-            createLine3DChartItem2.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
-            createLine3DChartItem2.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
-            createFullStackedLine3DChartItem2.Caption = "100% Stacked Line in 3-D";
-            createFullStackedLine3DChartItem2.Description = "Display all series stacked and is useful when it is necessary to compare how much" +
+            createStepLineChartItem32.Caption = "Step Line";
+            createStepLineChartItem32.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepLineChartItem32.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup2DLine32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLineChartItem32,
+            createFullStackedLineChartItem32,
+            createScatterLineChartItem32,
+            createSplineChartItem32,
+            createStackedLineChartItem32,
+            createStepLineChartItem32});
+            chartControlCommandGalleryItemGroup3DLine32.Caption = "3-D Line";
+            createLine3DChartItem32.Caption = "3-D Line";
+            createLine3DChartItem32.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
+            createLine3DChartItem32.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
+            createFullStackedLine3DChartItem32.Caption = "100% Stacked Line in 3-D";
+            createFullStackedLine3DChartItem32.Description = "Display all series stacked and is useful when it is necessary to compare how much" +
     " each series adds to the total aggregate value for specific arguments (as percen" +
     "ts).";
-            createFullStackedLine3DChartItem2.Hint = "Display all series stacked and is useful when it is necessary to compare how much" +
+            createFullStackedLine3DChartItem32.Hint = "Display all series stacked and is useful when it is necessary to compare how much" +
     " each series adds to the total aggregate value for specific arguments (as percen" +
     "ts).";
-            createSpline3DChartItem2.Caption = "3-D Spline";
-            createSpline3DChartItem2.Description = "Plot a fitted curve through each data point in a series.";
-            createSpline3DChartItem2.Hint = "Plot a fitted curve through each data point in a series.";
-            createStackedLine3DChartItem2.Caption = "Stacked Line in 3-D";
-            createStackedLine3DChartItem2.Description = "Display all points from different series in a stacked manner and is useful when i" +
+            createSpline3DChartItem32.Caption = "3-D Spline";
+            createSpline3DChartItem32.Description = "Plot a fitted curve through each data point in a series.";
+            createSpline3DChartItem32.Hint = "Plot a fitted curve through each data point in a series.";
+            createStackedLine3DChartItem32.Caption = "Stacked Line in 3-D";
+            createStackedLine3DChartItem32.Description = "Display all points from different series in a stacked manner and is useful when i" +
     "t is necessary to compare how much each series adds to the total aggregate value" +
     " for specific arguments.";
-            createStackedLine3DChartItem2.Hint = "Display all points from different series in a stacked manner and is useful when i" +
+            createStackedLine3DChartItem32.Hint = "Display all points from different series in a stacked manner and is useful when i" +
     "t is necessary to compare how much each series adds to the total aggregate value" +
     " for specific arguments.";
-            createStepLine3DChartItem2.Caption = "Step Line in 3-D";
-            createStepLine3DChartItem2.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepLine3DChartItem2.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup3DLine2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLine3DChartItem2,
-            createFullStackedLine3DChartItem2,
-            createSpline3DChartItem2,
-            createStackedLine3DChartItem2,
-            createStepLine3DChartItem2});
+            createStepLine3DChartItem32.Caption = "Step Line in 3-D";
+            createStepLine3DChartItem32.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepLine3DChartItem32.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup3DLine32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLine3DChartItem32,
+            createFullStackedLine3DChartItem32,
+            createSpline3DChartItem32,
+            createStackedLine3DChartItem32,
+            createStepLine3DChartItem32});
             this.commandBarGalleryDropDown10.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DLine2,
-            chartControlCommandGalleryItemGroup3DLine2});
+            chartControlCommandGalleryItemGroup2DLine32,
+            chartControlCommandGalleryItemGroup3DLine32});
             this.commandBarGalleryDropDown10.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown10.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown10.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -4849,41 +4860,41 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown11.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown11.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DPie2.Caption = "2-D Pie";
-            createPieChartItem2.Caption = "Pie";
-            createPieChartItem2.Description = resources.GetString("createPieChartItem2.Description");
-            createPieChartItem2.Hint = resources.GetString("createPieChartItem2.Hint");
-            createDoughnutChartItem2.Caption = "Doughnut";
-            createDoughnutChartItem2.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            chartControlCommandGalleryItemGroup2DPie32.Caption = "2-D Pie";
+            createPieChartItem32.Caption = "Pie";
+            createPieChartItem32.Description = resources.GetString("createPieChartItem32.Description");
+            createPieChartItem32.Hint = resources.GetString("createPieChartItem32.Hint");
+            createDoughnutChartItem32.Caption = "Doughnut";
+            createDoughnutChartItem32.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            createDoughnutChartItem2.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            createDoughnutChartItem32.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            createNestedDoughnutChartItem2.Caption = "Nested Doughnut";
-            createNestedDoughnutChartItem2.Description = "Display the contribution of each value to a total while comparing series with one" +
+            createNestedDoughnutChartItem26.Caption = "Nested Doughnut";
+            createNestedDoughnutChartItem26.Description = "Display the contribution of each value to a total while comparing series with one" +
     " doughnut nested in another one.";
-            createNestedDoughnutChartItem2.Hint = "Display the contribution of each value to a total while comparing series with one" +
+            createNestedDoughnutChartItem26.Hint = "Display the contribution of each value to a total while comparing series with one" +
     " doughnut nested in another one.";
-            chartControlCommandGalleryItemGroup2DPie2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPieChartItem2,
-            createDoughnutChartItem2,
-            createNestedDoughnutChartItem2});
-            chartControlCommandGalleryItemGroup3DPie2.Caption = "3-D Pie";
-            createPie3DChartItem2.Caption = "Pie in 3-D";
-            createPie3DChartItem2.Description = "Display the contribution of each value to a total.";
-            createPie3DChartItem2.Hint = "Display the contribution of each value to a total.";
-            createDoughnut3DChartItem2.Caption = "Doughnut in 3-D";
-            createDoughnut3DChartItem2.Description = "Compare the percentage values of different point arguments in the same series, an" +
+            chartControlCommandGalleryItemGroup2DPie32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPieChartItem32,
+            createDoughnutChartItem32,
+            createNestedDoughnutChartItem26});
+            chartControlCommandGalleryItemGroup3DPie32.Caption = "3-D Pie";
+            createPie3DChartItem32.Caption = "Pie in 3-D";
+            createPie3DChartItem32.Description = "Display the contribution of each value to a total.";
+            createPie3DChartItem32.Hint = "Display the contribution of each value to a total.";
+            createDoughnut3DChartItem32.Caption = "Doughnut in 3-D";
+            createDoughnut3DChartItem32.Description = "Compare the percentage values of different point arguments in the same series, an" +
     "d illustrate these values as easy to understand pie slices, but with a hole in i" +
     "ts center.";
-            createDoughnut3DChartItem2.Hint = "Compare the percentage values of different point arguments in the same series, an" +
+            createDoughnut3DChartItem32.Hint = "Compare the percentage values of different point arguments in the same series, an" +
     "d illustrate these values as easy to understand pie slices, but with a hole in i" +
     "ts center.";
-            chartControlCommandGalleryItemGroup3DPie2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPie3DChartItem2,
-            createDoughnut3DChartItem2});
+            chartControlCommandGalleryItemGroup3DPie32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPie3DChartItem32,
+            createDoughnut3DChartItem32});
             this.commandBarGalleryDropDown11.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DPie2,
-            chartControlCommandGalleryItemGroup3DPie2});
+            chartControlCommandGalleryItemGroup2DPie32,
+            chartControlCommandGalleryItemGroup3DPie32});
             this.commandBarGalleryDropDown11.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown11.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown11.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -4897,42 +4908,42 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown12.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown12.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DBar2.Caption = "2-D Bar";
-            createRotatedBarChartItem2.Caption = "Bar";
-            createRotatedBarChartItem2.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
+            chartControlCommandGalleryItemGroup2DBar32.Caption = "2-D Bar";
+            createRotatedBarChartItem32.Caption = "Bar";
+            createRotatedBarChartItem32.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
-            createRotatedBarChartItem2.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
+            createRotatedBarChartItem32.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
-            createRotatedFullStackedBarChartItem2.Caption = "100% Stacked Bar";
-            createRotatedFullStackedBarChartItem2.Description = resources.GetString("createRotatedFullStackedBarChartItem2.Description");
-            createRotatedFullStackedBarChartItem2.Hint = resources.GetString("createRotatedFullStackedBarChartItem2.Hint");
-            createRotatedSideBySideFullStackedBarChartItem2.Caption = "Clustered 100% Stacked Bar";
-            createRotatedSideBySideFullStackedBarChartItem2.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
+            createRotatedFullStackedBarChartItem32.Caption = "100% Stacked Bar";
+            createRotatedFullStackedBarChartItem32.Description = resources.GetString("createRotatedFullStackedBarChartItem32.Description");
+            createRotatedFullStackedBarChartItem32.Hint = resources.GetString("createRotatedFullStackedBarChartItem32.Hint");
+            createRotatedSideBySideFullStackedBarChartItem32.Caption = "Clustered 100% Stacked Bar";
+            createRotatedSideBySideFullStackedBarChartItem32.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideFullStackedBarChartItem2.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
+            createRotatedSideBySideFullStackedBarChartItem32.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideStackedBarChartItem2.Caption = "Clustered Stacked Bar";
-            createRotatedSideBySideStackedBarChartItem2.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
+            createRotatedSideBySideStackedBarChartItem32.Caption = "Clustered Stacked Bar";
+            createRotatedSideBySideStackedBarChartItem32.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
     "that you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideStackedBarChartItem2.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
+            createRotatedSideBySideStackedBarChartItem32.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
     "that you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedStackedBarChartItem2.Caption = "Stacked Bar";
-            createRotatedStackedBarChartItem2.Description = "Compare the contribution of each value to a total across categories by using hori" +
+            createRotatedStackedBarChartItem32.Caption = "Stacked Bar";
+            createRotatedStackedBarChartItem32.Description = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.";
-            createRotatedStackedBarChartItem2.Hint = "Compare the contribution of each value to a total across categories by using hori" +
+            createRotatedStackedBarChartItem32.Hint = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.";
-            chartControlCommandGalleryItemGroup2DBar2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRotatedBarChartItem2,
-            createRotatedFullStackedBarChartItem2,
-            createRotatedSideBySideFullStackedBarChartItem2,
-            createRotatedSideBySideStackedBarChartItem2,
-            createRotatedStackedBarChartItem2});
+            chartControlCommandGalleryItemGroup2DBar32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRotatedBarChartItem32,
+            createRotatedFullStackedBarChartItem32,
+            createRotatedSideBySideFullStackedBarChartItem32,
+            createRotatedSideBySideStackedBarChartItem32,
+            createRotatedStackedBarChartItem32});
             this.commandBarGalleryDropDown12.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DBar2});
+            chartControlCommandGalleryItemGroup2DBar32});
             this.commandBarGalleryDropDown12.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown12.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown12.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -4946,89 +4957,89 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown13.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown13.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DArea2.Caption = "2-D Area";
-            createAreaChartItem2.Caption = "Area";
-            createAreaChartItem2.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
+            chartControlCommandGalleryItemGroup2DArea32.Caption = "2-D Area";
+            createAreaChartItem32.Caption = "Area";
+            createAreaChartItem32.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
-            createAreaChartItem2.Hint = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
+            createAreaChartItem32.Hint = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
-            createFullStackedAreaChartItem2.Caption = "100% Stacked Area";
-            createFullStackedAreaChartItem2.Description = "Display the trend of the percentage each value contributes over time or categorie" +
+            createFullStackedAreaChartItem32.Caption = "100% Stacked Area";
+            createFullStackedAreaChartItem32.Description = "Display the trend of the percentage each value contributes over time or categorie" +
     "s.\r\n\r\nUse it to emphasize the trend in the proportion of each series.\r\n    ";
-            createFullStackedAreaChartItem2.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
+            createFullStackedAreaChartItem32.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
     "s.\r\n\r\nUse it to emphasize the trend in the proportion of each series.\r\n    ";
-            createFullStackedSplineAreaChartItem2.Caption = "100% Stacked Spline Area";
-            createFullStackedSplineAreaChartItem2.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
+            createFullStackedSplineAreaChartItem32.Caption = "100% Stacked Spline Area";
+            createFullStackedSplineAreaChartItem32.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
     "int in a series.";
-            createFullStackedSplineAreaChartItem2.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
+            createFullStackedSplineAreaChartItem32.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
     "int in a series.";
-            createSplineAreaChartItem2.Caption = "Spline Area";
-            createSplineAreaChartItem2.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
+            createSplineAreaChartItem32.Caption = "Spline Area";
+            createSplineAreaChartItem32.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
     " series.";
-            createSplineAreaChartItem2.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
+            createSplineAreaChartItem32.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
     " series.";
-            createStackedAreaChartItem2.Caption = "Stacked Area";
-            createStackedAreaChartItem2.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            createStackedAreaChartItem32.Caption = "Stacked Area";
+            createStackedAreaChartItem32.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.\r\n    ";
-            createStackedAreaChartItem2.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            createStackedAreaChartItem32.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.\r\n    ";
-            createStackedSplineAreaChartItem2.Caption = "Stacked Spline Area";
-            createStackedSplineAreaChartItem2.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
+            createStackedSplineAreaChartItem32.Caption = "Stacked Spline Area";
+            createStackedSplineAreaChartItem32.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
     "int in a series.";
-            createStackedSplineAreaChartItem2.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
+            createStackedSplineAreaChartItem32.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
     "int in a series.";
-            createStepAreaChartItem2.Caption = "Step Area";
-            createStepAreaChartItem2.Description = "Show how much values have changed for different points of the same series.";
-            createStepAreaChartItem2.Hint = "Show how much values have changed for different points of the same series.";
-            chartControlCommandGalleryItemGroup2DArea2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createAreaChartItem2,
-            createFullStackedAreaChartItem2,
-            createFullStackedSplineAreaChartItem2,
-            createSplineAreaChartItem2,
-            createStackedAreaChartItem2,
-            createStackedSplineAreaChartItem2,
-            createStepAreaChartItem2});
-            chartControlCommandGalleryItemGroup3DArea2.Caption = "3-D Area";
-            createArea3DChartItem2.Caption = "3-D Area";
-            createArea3DChartItem2.Description = resources.GetString("createArea3DChartItem2.Description");
-            createArea3DChartItem2.Hint = resources.GetString("createArea3DChartItem2.Hint");
-            createFullStackedArea3DChartItem2.Caption = "100% Stacked Area in 3-D";
-            createFullStackedArea3DChartItem2.Description = resources.GetString("createFullStackedArea3DChartItem2.Description");
-            createFullStackedArea3DChartItem2.Hint = resources.GetString("createFullStackedArea3DChartItem2.Hint");
-            createFullStackedSplineArea3DChartItem2.Caption = "100% Stacked Spline Area in 3-D";
-            createFullStackedSplineArea3DChartItem2.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
+            createStepAreaChartItem32.Caption = "Step Area";
+            createStepAreaChartItem32.Description = "Show how much values have changed for different points of the same series.";
+            createStepAreaChartItem32.Hint = "Show how much values have changed for different points of the same series.";
+            chartControlCommandGalleryItemGroup2DArea32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createAreaChartItem32,
+            createFullStackedAreaChartItem32,
+            createFullStackedSplineAreaChartItem32,
+            createSplineAreaChartItem32,
+            createStackedAreaChartItem32,
+            createStackedSplineAreaChartItem32,
+            createStepAreaChartItem32});
+            chartControlCommandGalleryItemGroup3DArea32.Caption = "3-D Area";
+            createArea3DChartItem32.Caption = "3-D Area";
+            createArea3DChartItem32.Description = resources.GetString("createArea3DChartItem32.Description");
+            createArea3DChartItem32.Hint = resources.GetString("createArea3DChartItem32.Hint");
+            createFullStackedArea3DChartItem32.Caption = "100% Stacked Area in 3-D";
+            createFullStackedArea3DChartItem32.Description = resources.GetString("createFullStackedArea3DChartItem32.Description");
+            createFullStackedArea3DChartItem32.Hint = resources.GetString("createFullStackedArea3DChartItem32.Hint");
+            createFullStackedSplineArea3DChartItem32.Caption = "100% Stacked Spline Area in 3-D";
+            createFullStackedSplineArea3DChartItem32.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
     "each data point in a series.";
-            createFullStackedSplineArea3DChartItem2.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
+            createFullStackedSplineArea3DChartItem32.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
     "each data point in a series.";
-            createSplineArea3DChartItem2.Caption = "Spline Area in 3-D";
-            createSplineArea3DChartItem2.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
+            createSplineArea3DChartItem32.Caption = "Spline Area in 3-D";
+            createSplineArea3DChartItem32.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
     "in a series.";
-            createSplineArea3DChartItem2.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
+            createSplineArea3DChartItem32.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
     "in a series.";
-            createStackedArea3DChartItem2.Caption = "Stacked Area in 3-D";
-            createStackedArea3DChartItem2.Description = "Display series as areas on a diagram, so that the value of each data point is agg" +
+            createStackedArea3DChartItem32.Caption = "Stacked Area in 3-D";
+            createStackedArea3DChartItem32.Description = "Display series as areas on a diagram, so that the value of each data point is agg" +
     "regated with the underlying data points\' values.";
-            createStackedArea3DChartItem2.Hint = "Display series as areas on a diagram, so that the value of each data point is agg" +
+            createStackedArea3DChartItem32.Hint = "Display series as areas on a diagram, so that the value of each data point is agg" +
     "regated with the underlying data points\' values.";
-            createStackedSplineArea3DChartItem2.Caption = "Stacked Spline Area in 3-D";
-            createStackedSplineArea3DChartItem2.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
+            createStackedSplineArea3DChartItem32.Caption = "Stacked Spline Area in 3-D";
+            createStackedSplineArea3DChartItem32.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
     "data point in a series.";
-            createStackedSplineArea3DChartItem2.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
+            createStackedSplineArea3DChartItem32.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
     "data point in a series.";
-            createStepArea3DChartItem2.Caption = "Step Area in 3-D";
-            createStepArea3DChartItem2.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepArea3DChartItem2.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup3DArea2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createArea3DChartItem2,
-            createFullStackedArea3DChartItem2,
-            createFullStackedSplineArea3DChartItem2,
-            createSplineArea3DChartItem2,
-            createStackedArea3DChartItem2,
-            createStackedSplineArea3DChartItem2,
-            createStepArea3DChartItem2});
+            createStepArea3DChartItem32.Caption = "Step Area in 3-D";
+            createStepArea3DChartItem32.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepArea3DChartItem32.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup3DArea32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createArea3DChartItem32,
+            createFullStackedArea3DChartItem32,
+            createFullStackedSplineArea3DChartItem32,
+            createSplineArea3DChartItem32,
+            createStackedArea3DChartItem32,
+            createStackedSplineArea3DChartItem32,
+            createStepArea3DChartItem32});
             this.commandBarGalleryDropDown13.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DArea2,
-            chartControlCommandGalleryItemGroup3DArea2});
+            chartControlCommandGalleryItemGroup2DArea32,
+            chartControlCommandGalleryItemGroup3DArea32});
             this.commandBarGalleryDropDown13.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown13.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown13.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5042,134 +5053,134 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown14.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown14.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroupPoint2.Caption = "Point";
-            createPointChartItem2.Caption = "Point";
-            createPointChartItem2.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
+            chartControlCommandGalleryItemGroupPoint32.Caption = "Point";
+            createPointChartItem32.Caption = "Point";
+            createPointChartItem32.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
-            createPointChartItem2.Hint = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
+            createPointChartItem32.Hint = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
-            createBubbleChartItem2.Caption = "Bubble";
-            createBubbleChartItem2.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
+            createBubbleChartItem32.Caption = "Bubble";
+            createBubbleChartItem32.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
     "ird value determines the size of the bubble marker.";
-            createBubbleChartItem2.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
+            createBubbleChartItem32.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
     "ird value determines the size of the bubble marker.";
-            chartControlCommandGalleryItemGroupPoint2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPointChartItem2,
-            createBubbleChartItem2});
-            chartControlCommandGalleryItemGroupFunnel2.Caption = "Funnel";
-            createFunnelChartItem2.Caption = "Funnel";
-            createFunnelChartItem2.Description = resources.GetString("createFunnelChartItem2.Description");
-            createFunnelChartItem2.Hint = resources.GetString("createFunnelChartItem2.Hint");
-            createFunnel3DChartItem2.Caption = "3-D Funnel";
-            createFunnel3DChartItem2.Description = resources.GetString("createFunnel3DChartItem2.Description");
-            createFunnel3DChartItem2.Hint = resources.GetString("createFunnel3DChartItem2.Hint");
-            chartControlCommandGalleryItemGroupFunnel2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createFunnelChartItem2,
-            createFunnel3DChartItem2});
-            chartControlCommandGalleryItemGroupFinancial2.Caption = "Financial";
-            createStockChartItem2.Caption = "Stock";
-            createStockChartItem2.Description = resources.GetString("createStockChartItem2.Description");
-            createStockChartItem2.Hint = resources.GetString("createStockChartItem2.Hint");
-            createCandleStickChartItem2.Caption = "Candle Stick";
-            createCandleStickChartItem2.Description = resources.GetString("createCandleStickChartItem2.Description");
-            createCandleStickChartItem2.Hint = resources.GetString("createCandleStickChartItem2.Hint");
-            chartControlCommandGalleryItemGroupFinancial2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createStockChartItem2,
-            createCandleStickChartItem2});
-            chartControlCommandGalleryItemGroupRadar2.Caption = "Radar";
-            createRadarPointChartItem2.Caption = "Radar Point";
-            createRadarPointChartItem2.Description = "Show points from two or more different series on the same points arguments on a c" +
+            chartControlCommandGalleryItemGroupPoint32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPointChartItem32,
+            createBubbleChartItem32});
+            chartControlCommandGalleryItemGroupFunnel32.Caption = "Funnel";
+            createFunnelChartItem32.Caption = "Funnel";
+            createFunnelChartItem32.Description = resources.GetString("createFunnelChartItem32.Description");
+            createFunnelChartItem32.Hint = resources.GetString("createFunnelChartItem32.Hint");
+            createFunnel3DChartItem32.Caption = "3-D Funnel";
+            createFunnel3DChartItem32.Description = resources.GetString("createFunnel3DChartItem32.Description");
+            createFunnel3DChartItem32.Hint = resources.GetString("createFunnel3DChartItem32.Hint");
+            chartControlCommandGalleryItemGroupFunnel32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createFunnelChartItem32,
+            createFunnel3DChartItem32});
+            chartControlCommandGalleryItemGroupFinancial32.Caption = "Financial";
+            createStockChartItem32.Caption = "Stock";
+            createStockChartItem32.Description = resources.GetString("createStockChartItem32.Description");
+            createStockChartItem32.Hint = resources.GetString("createStockChartItem32.Hint");
+            createCandleStickChartItem32.Caption = "Candle Stick";
+            createCandleStickChartItem32.Description = resources.GetString("createCandleStickChartItem32.Description");
+            createCandleStickChartItem32.Hint = resources.GetString("createCandleStickChartItem32.Hint");
+            chartControlCommandGalleryItemGroupFinancial32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createStockChartItem32,
+            createCandleStickChartItem32});
+            chartControlCommandGalleryItemGroupRadar32.Caption = "Radar";
+            createRadarPointChartItem32.Caption = "Radar Point";
+            createRadarPointChartItem32.Description = "Show points from two or more different series on the same points arguments on a c" +
     "ircular grid that has multiple axes along which data can be plotted.";
-            createRadarPointChartItem2.Hint = "Show points from two or more different series on the same points arguments on a c" +
+            createRadarPointChartItem32.Hint = "Show points from two or more different series on the same points arguments on a c" +
     "ircular grid that has multiple axes along which data can be plotted.";
-            createRadarLineChartItem2.Caption = "Radar Line";
-            createRadarLineChartItem2.Description = "Show trends for several series and compare their values for the same points argum" +
+            createRadarLineChartItem32.Caption = "Radar Line";
+            createRadarLineChartItem32.Description = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular grid that has multiple axes along which data can be plotted.";
-            createRadarLineChartItem2.Hint = "Show trends for several series and compare their values for the same points argum" +
+            createRadarLineChartItem32.Hint = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular grid that has multiple axes along which data can be plotted.";
-            createRadarAreaChartItem2.Caption = "Radar Area";
-            createRadarAreaChartItem2.Description = "Display series as filled area on a circular grid that has multiple axes along whi" +
+            createRadarAreaChartItem32.Caption = "Radar Area";
+            createRadarAreaChartItem32.Description = "Display series as filled area on a circular grid that has multiple axes along whi" +
     "ch data can be plotted.";
-            createRadarAreaChartItem2.Hint = "Display series as filled area on a circular grid that has multiple axes along whi" +
+            createRadarAreaChartItem32.Hint = "Display series as filled area on a circular grid that has multiple axes along whi" +
     "ch data can be plotted.";
-            createScatterRadarLineChartItem2.Caption = "Scatter Radar Line";
-            createScatterRadarLineChartItem2.Description = resources.GetString("createScatterRadarLineChartItem2.Description");
-            createScatterRadarLineChartItem2.Hint = resources.GetString("createScatterRadarLineChartItem2.Hint");
-            chartControlCommandGalleryItemGroupRadar2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRadarPointChartItem2,
-            createRadarLineChartItem2,
-            createRadarAreaChartItem2,
-            createScatterRadarLineChartItem2});
-            chartControlCommandGalleryItemGroupPolar2.Caption = "Polar";
-            createPolarPointChartItem2.Caption = "Polar Point";
-            createPolarPointChartItem2.Description = "Show points from two or more different series on the same circular diagram on the" +
+            createScatterRadarLineChartItem26.Caption = "Scatter Radar Line";
+            createScatterRadarLineChartItem26.Description = resources.GetString("createScatterRadarLineChartItem26.Description");
+            createScatterRadarLineChartItem26.Hint = resources.GetString("createScatterRadarLineChartItem26.Hint");
+            chartControlCommandGalleryItemGroupRadar32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRadarPointChartItem32,
+            createRadarLineChartItem32,
+            createRadarAreaChartItem32,
+            createScatterRadarLineChartItem26});
+            chartControlCommandGalleryItemGroupPolar32.Caption = "Polar";
+            createPolarPointChartItem32.Caption = "Polar Point";
+            createPolarPointChartItem32.Description = "Show points from two or more different series on the same circular diagram on the" +
     " basis of angles.";
-            createPolarPointChartItem2.Hint = "Show points from two or more different series on the same circular diagram on the" +
+            createPolarPointChartItem32.Hint = "Show points from two or more different series on the same circular diagram on the" +
     " basis of angles.";
-            createPolarLineChartItem2.Caption = "Polar Line";
-            createPolarLineChartItem2.Description = "Show trends for several series and compare their values for the same points argum" +
+            createPolarLineChartItem32.Caption = "Polar Line";
+            createPolarLineChartItem32.Description = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular diagram on the basis of angles.";
-            createPolarLineChartItem2.Hint = "Show trends for several series and compare their values for the same points argum" +
+            createPolarLineChartItem32.Hint = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular diagram on the basis of angles.";
-            createPolarAreaChartItem2.Caption = "Polar Area";
-            createPolarAreaChartItem2.Description = "Display series as filled area on a circular diagram on the basis of angles.";
-            createPolarAreaChartItem2.Hint = "Display series as filled area on a circular diagram on the basis of angles.";
-            createScatterPolarLineChartItem2.Caption = "Scatter Polar Line";
-            createScatterPolarLineChartItem2.Description = resources.GetString("createScatterPolarLineChartItem2.Description");
-            createScatterPolarLineChartItem2.Hint = resources.GetString("createScatterPolarLineChartItem2.Hint");
-            chartControlCommandGalleryItemGroupPolar2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPolarPointChartItem2,
-            createPolarLineChartItem2,
-            createPolarAreaChartItem2,
-            createScatterPolarLineChartItem2});
-            chartControlCommandGalleryItemGroupRange2.Caption = "Range";
-            createRangeBarChartItem2.Caption = "Range Column";
-            createRangeBarChartItem2.Description = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
+            createPolarAreaChartItem32.Caption = "Polar Area";
+            createPolarAreaChartItem32.Description = "Display series as filled area on a circular diagram on the basis of angles.";
+            createPolarAreaChartItem32.Hint = "Display series as filled area on a circular diagram on the basis of angles.";
+            createScatterPolarLineChartItem26.Caption = "Scatter Polar Line";
+            createScatterPolarLineChartItem26.Description = resources.GetString("createScatterPolarLineChartItem26.Description");
+            createScatterPolarLineChartItem26.Hint = resources.GetString("createScatterPolarLineChartItem26.Hint");
+            chartControlCommandGalleryItemGroupPolar32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPolarPointChartItem32,
+            createPolarLineChartItem32,
+            createPolarAreaChartItem32,
+            createScatterPolarLineChartItem26});
+            chartControlCommandGalleryItemGroupRange32.Caption = "Range";
+            createRangeBarChartItem32.Caption = "Range Column";
+            createRangeBarChartItem32.Description = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
     "sents a range of data for each argument value.";
-            createRangeBarChartItem2.Hint = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
+            createRangeBarChartItem32.Hint = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
     "sents a range of data for each argument value.";
-            createSideBySideRangeBarChartItem2.Caption = "Clustered Range Column";
-            createSideBySideRangeBarChartItem2.Description = "Show activity columns from different series grouped by their arguments. Each colu" +
+            createSideBySideRangeBarChartItem32.Caption = "Clustered Range Column";
+            createSideBySideRangeBarChartItem32.Description = "Show activity columns from different series grouped by their arguments. Each colu" +
     "mn represents a range of data with two values for each argument value.";
-            createSideBySideRangeBarChartItem2.Hint = "Show activity columns from different series grouped by their arguments. Each colu" +
+            createSideBySideRangeBarChartItem32.Hint = "Show activity columns from different series grouped by their arguments. Each colu" +
     "mn represents a range of data with two values for each argument value.";
-            createRangeAreaChartItem2.Caption = "Range Area";
-            createRangeAreaChartItem2.Description = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeAreaChartItem32.Caption = "Range Area";
+            createRangeAreaChartItem32.Description = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeAreaChartItem2.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeAreaChartItem32.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeArea3DChartItem2.Caption = "Range Area in 3-D";
-            createRangeArea3DChartItem2.Description = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeArea3DChartItem32.Caption = "Range Area in 3-D";
+            createRangeArea3DChartItem32.Description = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeArea3DChartItem2.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeArea3DChartItem32.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            chartControlCommandGalleryItemGroupRange2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRangeBarChartItem2,
-            createSideBySideRangeBarChartItem2,
-            createRangeAreaChartItem2,
-            createRangeArea3DChartItem2});
-            chartControlCommandGalleryItemGroupGantt2.Caption = "Gantt";
-            createGanttChartItem2.Caption = "Gantt";
-            createGanttChartItem2.Description = "Track different activities during the time frame.";
-            createGanttChartItem2.Hint = "Track different activities during the time frame.";
-            createSideBySideGanttChartItem2.Caption = "Clustered Gantt";
-            createSideBySideGanttChartItem2.Description = resources.GetString("createSideBySideGanttChartItem2.Description");
-            createSideBySideGanttChartItem2.Hint = resources.GetString("createSideBySideGanttChartItem2.Hint");
-            chartControlCommandGalleryItemGroupGantt2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createGanttChartItem2,
-            createSideBySideGanttChartItem2});
+            chartControlCommandGalleryItemGroupRange32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRangeBarChartItem32,
+            createSideBySideRangeBarChartItem32,
+            createRangeAreaChartItem32,
+            createRangeArea3DChartItem32});
+            chartControlCommandGalleryItemGroupGantt32.Caption = "Gantt";
+            createGanttChartItem32.Caption = "Gantt";
+            createGanttChartItem32.Description = "Track different activities during the time frame.";
+            createGanttChartItem32.Hint = "Track different activities during the time frame.";
+            createSideBySideGanttChartItem32.Caption = "Clustered Gantt";
+            createSideBySideGanttChartItem32.Description = resources.GetString("createSideBySideGanttChartItem32.Description");
+            createSideBySideGanttChartItem32.Hint = resources.GetString("createSideBySideGanttChartItem32.Hint");
+            chartControlCommandGalleryItemGroupGantt32.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createGanttChartItem32,
+            createSideBySideGanttChartItem32});
             this.commandBarGalleryDropDown14.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroupPoint2,
-            chartControlCommandGalleryItemGroupFunnel2,
-            chartControlCommandGalleryItemGroupFinancial2,
-            chartControlCommandGalleryItemGroupRadar2,
-            chartControlCommandGalleryItemGroupPolar2,
-            chartControlCommandGalleryItemGroupRange2,
-            chartControlCommandGalleryItemGroupGantt2});
+            chartControlCommandGalleryItemGroupPoint32,
+            chartControlCommandGalleryItemGroupFunnel32,
+            chartControlCommandGalleryItemGroupFinancial32,
+            chartControlCommandGalleryItemGroupRadar32,
+            chartControlCommandGalleryItemGroupPolar32,
+            chartControlCommandGalleryItemGroupRange32,
+            chartControlCommandGalleryItemGroupGantt32});
             this.commandBarGalleryDropDown14.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown14.Gallery.RowCount = 7;
             this.commandBarGalleryDropDown14.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5204,12 +5215,12 @@ namespace TracerV1
             this.commandBarGalleryDropDown15.Gallery.ImageSize = new System.Drawing.Size(160, 10);
             this.commandBarGalleryDropDown15.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown15.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right;
-            skinPaddingEdges3.Bottom = -3;
-            skinPaddingEdges3.Top = -3;
-            this.commandBarGalleryDropDown15.Gallery.ItemImagePadding = skinPaddingEdges3;
-            skinPaddingEdges4.Bottom = -3;
-            skinPaddingEdges4.Top = -3;
-            this.commandBarGalleryDropDown15.Gallery.ItemTextPadding = skinPaddingEdges4;
+            skinPaddingEdges63.Bottom = -3;
+            skinPaddingEdges63.Top = -3;
+            this.commandBarGalleryDropDown15.Gallery.ItemImagePadding = skinPaddingEdges63;
+            skinPaddingEdges64.Bottom = -3;
+            skinPaddingEdges64.Top = -3;
+            this.commandBarGalleryDropDown15.Gallery.ItemTextPadding = skinPaddingEdges64;
             this.commandBarGalleryDropDown15.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown15.Gallery.ShowGroupCaption = false;
             this.commandBarGalleryDropDown15.Gallery.ShowItemText = true;
@@ -5224,197 +5235,197 @@ namespace TracerV1
             // 
             this.galleryDropDown1.Gallery.AllowFilter = false;
             this.galleryDropDown1.Gallery.ColumnCount = 4;
-            createBarChartItem3.Caption = "Clustered Column";
-            createBarChartItem3.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            createBarChartItem33.Caption = "Clustered Column";
+            createBarChartItem33.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.\r\n    ";
-            createBarChartItem3.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            createBarChartItem33.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.\r\n    ";
-            createFullStackedBarChartItem3.Caption = "100% Stacked Column";
-            createFullStackedBarChartItem3.Description = "Compare the percentage that each value contributes to a total across categories b" +
+            createFullStackedBarChartItem33.Caption = "100% Stacked Column";
+            createFullStackedBarChartItem33.Description = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse it to emphasize the proportion of each data " +
     "series.\r\n    ";
-            createFullStackedBarChartItem3.Hint = "Compare the percentage that each value contributes to a total across categories b" +
+            createFullStackedBarChartItem33.Hint = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse it to emphasize the proportion of each data " +
     "series.\r\n    ";
-            createSideBySideFullStackedBarChartItem3.Caption = "Clustered 100% Stacked Column";
-            createSideBySideFullStackedBarChartItem3.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBarChartItem33.Caption = "Clustered 100% Stacked Column";
+            createSideBySideFullStackedBarChartItem33.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types, so that you can stack different columns, and combine them into groups ac" +
     "ross the same axis value.";
-            createSideBySideFullStackedBarChartItem3.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBarChartItem33.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types, so that you can stack different columns, and combine them into groups ac" +
     "ross the same axis value.";
-            createSideBySideStackedBarChartItem3.Caption = "Clustered Stacked Column";
-            createSideBySideStackedBarChartItem3.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBarChartItem33.Caption = "Clustered Stacked Column";
+            createSideBySideStackedBarChartItem33.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s, so that you can stack different columns, and combine them into groups across " +
     "the same axis value.";
-            createSideBySideStackedBarChartItem3.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBarChartItem33.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s, so that you can stack different columns, and combine them into groups across " +
     "the same axis value.";
-            createStackedBarChartItem3.Caption = "Stacked Column";
-            createStackedBarChartItem3.Description = "Compare the contribution of each value to a total across categories by using vert" +
+            createStackedBarChartItem33.Caption = "Stacked Column";
+            createStackedBarChartItem33.Description = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".\r\n    ";
-            createStackedBarChartItem3.Hint = "Compare the contribution of each value to a total across categories by using vert" +
+            createStackedBarChartItem33.Hint = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".\r\n    ";
-            chartControlCommandGalleryItemGroup2DColumn3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBarChartItem3,
-            createFullStackedBarChartItem3,
-            createSideBySideFullStackedBarChartItem3,
-            createSideBySideStackedBarChartItem3,
-            createStackedBarChartItem3});
-            createBar3DChartItem3.Caption = "3-D Clustered Column";
-            createBar3DChartItem3.Description = "Compare values across categories and display clustered columns in 3-D format.";
-            createBar3DChartItem3.Hint = "Compare values across categories and display clustered columns in 3-D format.";
-            createFullStackedBar3DChartItem3.Caption = "100% Stacked Column in 3-D";
-            createFullStackedBar3DChartItem3.Description = "Compare the percentage each value contributes to a total across categories and di" +
+            chartControlCommandGalleryItemGroup2DColumn33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBarChartItem33,
+            createFullStackedBarChartItem33,
+            createSideBySideFullStackedBarChartItem33,
+            createSideBySideStackedBarChartItem33,
+            createStackedBarChartItem33});
+            createBar3DChartItem33.Caption = "3-D Clustered Column";
+            createBar3DChartItem33.Description = "Compare values across categories and display clustered columns in 3-D format.";
+            createBar3DChartItem33.Hint = "Compare values across categories and display clustered columns in 3-D format.";
+            createFullStackedBar3DChartItem33.Caption = "100% Stacked Column in 3-D";
+            createFullStackedBar3DChartItem33.Description = "Compare the percentage each value contributes to a total across categories and di" +
     "splay 100% stacked columns in 3-D format.";
-            createFullStackedBar3DChartItem3.Hint = "Compare the percentage each value contributes to a total across categories and di" +
+            createFullStackedBar3DChartItem33.Hint = "Compare the percentage each value contributes to a total across categories and di" +
     "splay 100% stacked columns in 3-D format.";
-            createManhattanBarChartItem3.Caption = "3-D Column";
-            createManhattanBarChartItem3.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            createManhattanBarChartItem33.Caption = "3-D Column";
+            createManhattanBarChartItem33.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.\r\n    ";
-            createManhattanBarChartItem3.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            createManhattanBarChartItem33.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.\r\n    ";
-            createSideBySideFullStackedBar3DChartItem3.Caption = "Clustered 100% Stacked Column in 3-D";
-            createSideBySideFullStackedBar3DChartItem3.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBar3DChartItem33.Caption = "Clustered 100% Stacked Column in 3-D";
+            createSideBySideFullStackedBar3DChartItem33.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types in 3-D format, so that you can stack different columns, and combine them " +
     "into groups across the same axis value.";
-            createSideBySideFullStackedBar3DChartItem3.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBar3DChartItem33.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types in 3-D format, so that you can stack different columns, and combine them " +
     "into groups across the same axis value.";
-            createSideBySideStackedBar3DChartItem3.Caption = "Clustered Stacked Column in 3-D";
-            createSideBySideStackedBar3DChartItem3.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBar3DChartItem33.Caption = "Clustered Stacked Column in 3-D";
+            createSideBySideStackedBar3DChartItem33.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s in 3-D format, so that you can stack different columns, and combine them into " +
     "groups across the same axis value.";
-            createSideBySideStackedBar3DChartItem3.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBar3DChartItem33.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s in 3-D format, so that you can stack different columns, and combine them into " +
     "groups across the same axis value.";
-            createStackedBar3DChartItem3.Caption = "Stacked Column in 3-D";
-            createStackedBar3DChartItem3.Description = "Compare the contribution of each value to a total across categories and display s" +
+            createStackedBar3DChartItem33.Caption = "Stacked Column in 3-D";
+            createStackedBar3DChartItem33.Description = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            createStackedBar3DChartItem3.Hint = "Compare the contribution of each value to a total across categories and display s" +
+            createStackedBar3DChartItem33.Hint = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            chartControlCommandGalleryItemGroup3DColumn3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBar3DChartItem3,
-            createFullStackedBar3DChartItem3,
-            createManhattanBarChartItem3,
-            createSideBySideFullStackedBar3DChartItem3,
-            createSideBySideStackedBar3DChartItem3,
-            createStackedBar3DChartItem3});
-            createCylinderBar3DChartItem3.Caption = "Clustered Cylinder";
-            createCylinderBar3DChartItem3.Description = "Compare values across categories.";
-            createCylinderBar3DChartItem3.Hint = "Compare values across categories.";
-            createCylinderFullStackedBar3DChartItem3.Caption = "100% Stacked Cylinder";
-            createCylinderFullStackedBar3DChartItem3.Description = "Compare the percentage each value contributes to a total across categories.";
-            createCylinderFullStackedBar3DChartItem3.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createCylinderManhattanBarChartItem3.Caption = "3-D Cylinder";
-            createCylinderManhattanBarChartItem3.Description = "Compare values across categories and across series and display a cylinder chart o" +
+            chartControlCommandGalleryItemGroup3DColumn33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBar3DChartItem33,
+            createFullStackedBar3DChartItem33,
+            createManhattanBarChartItem33,
+            createSideBySideFullStackedBar3DChartItem33,
+            createSideBySideStackedBar3DChartItem33,
+            createStackedBar3DChartItem33});
+            createCylinderBar3DChartItem33.Caption = "Clustered Cylinder";
+            createCylinderBar3DChartItem33.Description = "Compare values across categories.";
+            createCylinderBar3DChartItem33.Hint = "Compare values across categories.";
+            createCylinderFullStackedBar3DChartItem33.Caption = "100% Stacked Cylinder";
+            createCylinderFullStackedBar3DChartItem33.Description = "Compare the percentage each value contributes to a total across categories.";
+            createCylinderFullStackedBar3DChartItem33.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createCylinderManhattanBarChartItem33.Caption = "3-D Cylinder";
+            createCylinderManhattanBarChartItem33.Description = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            createCylinderManhattanBarChartItem3.Hint = "Compare values across categories and across series and display a cylinder chart o" +
+            createCylinderManhattanBarChartItem33.Hint = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            createCylinderSideBySideFullStackedBar3DChartItem3.Caption = "Clustered 100% Stacked Cylinder";
-            createCylinderSideBySideFullStackedBar3DChartItem3.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
+            createCylinderSideBySideFullStackedBar3DChartItem33.Caption = "Clustered 100% Stacked Cylinder";
+            createCylinderSideBySideFullStackedBar3DChartItem33.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
     "hart types, so that you can stack different cylinders, and combine them into gro" +
     "ups across the same axis value.";
-            createCylinderSideBySideFullStackedBar3DChartItem3.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
+            createCylinderSideBySideFullStackedBar3DChartItem33.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
     "hart types, so that you can stack different cylinders, and combine them into gro" +
     "ups across the same axis value.";
-            createCylinderSideBySideStackedBar3DChartItem3.Caption = "Clustered Stacked Cylinder";
-            createCylinderSideBySideStackedBar3DChartItem3.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
+            createCylinderSideBySideStackedBar3DChartItem33.Caption = "Clustered Stacked Cylinder";
+            createCylinderSideBySideStackedBar3DChartItem33.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
     "types, so that you can stack different cylinders, and combine them into groups a" +
     "cross the same axis value.";
-            createCylinderSideBySideStackedBar3DChartItem3.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
+            createCylinderSideBySideStackedBar3DChartItem33.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
     "types, so that you can stack different cylinders, and combine them into groups a" +
     "cross the same axis value.";
-            createCylinderStackedBar3DChartItem3.Caption = "Stacked Cylinder";
-            createCylinderStackedBar3DChartItem3.Description = "Compare the contribution of each value to a total across categories.";
-            createCylinderStackedBar3DChartItem3.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupCylinderColumn3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createCylinderBar3DChartItem3,
-            createCylinderFullStackedBar3DChartItem3,
-            createCylinderManhattanBarChartItem3,
-            createCylinderSideBySideFullStackedBar3DChartItem3,
-            createCylinderSideBySideStackedBar3DChartItem3,
-            createCylinderStackedBar3DChartItem3});
-            createConeBar3DChartItem3.Caption = "Clustered Cone";
-            createConeBar3DChartItem3.Description = "Compare values across categories.";
-            createConeBar3DChartItem3.Hint = "Compare values across categories.";
-            createConeFullStackedBar3DChartItem3.Caption = "100% Stacked Cone";
-            createConeFullStackedBar3DChartItem3.Description = "Compare the percentage each value contributes to a total across categories.";
-            createConeFullStackedBar3DChartItem3.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createConeManhattanBarChartItem3.Caption = "3-D Cone";
-            createConeManhattanBarChartItem3.Description = "Compare values across categories and across series and display a cone chart on th" +
+            createCylinderStackedBar3DChartItem33.Caption = "Stacked Cylinder";
+            createCylinderStackedBar3DChartItem33.Description = "Compare the contribution of each value to a total across categories.";
+            createCylinderStackedBar3DChartItem33.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupCylinderColumn33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createCylinderBar3DChartItem33,
+            createCylinderFullStackedBar3DChartItem33,
+            createCylinderManhattanBarChartItem33,
+            createCylinderSideBySideFullStackedBar3DChartItem33,
+            createCylinderSideBySideStackedBar3DChartItem33,
+            createCylinderStackedBar3DChartItem33});
+            createConeBar3DChartItem33.Caption = "Clustered Cone";
+            createConeBar3DChartItem33.Description = "Compare values across categories.";
+            createConeBar3DChartItem33.Hint = "Compare values across categories.";
+            createConeFullStackedBar3DChartItem33.Caption = "100% Stacked Cone";
+            createConeFullStackedBar3DChartItem33.Description = "Compare the percentage each value contributes to a total across categories.";
+            createConeFullStackedBar3DChartItem33.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createConeManhattanBarChartItem33.Caption = "3-D Cone";
+            createConeManhattanBarChartItem33.Description = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            createConeManhattanBarChartItem3.Hint = "Compare values across categories and across series and display a cone chart on th" +
+            createConeManhattanBarChartItem33.Hint = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            createConeSideBySideFullStackedBar3DChartItem3.Caption = "Clustered 100% Stacked Cone";
-            createConeSideBySideFullStackedBar3DChartItem3.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
+            createConeSideBySideFullStackedBar3DChartItem33.Caption = "Clustered 100% Stacked Cone";
+            createConeSideBySideFullStackedBar3DChartItem33.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
     "es, so that you can stack different cones, and combine them into groups across t" +
     "he same axis value.";
-            createConeSideBySideFullStackedBar3DChartItem3.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
+            createConeSideBySideFullStackedBar3DChartItem33.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
     "es, so that you can stack different cones, and combine them into groups across t" +
     "he same axis value.";
-            createConeSideBySideStackedBar3DChartItem3.Caption = "Clustered Stacked Cone";
-            createConeSideBySideStackedBar3DChartItem3.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
+            createConeSideBySideStackedBar3DChartItem33.Caption = "Clustered Stacked Cone";
+            createConeSideBySideStackedBar3DChartItem33.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
     "o that you can stack different cones, and combine them into groups across the sa" +
     "me axis value.";
-            createConeSideBySideStackedBar3DChartItem3.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
+            createConeSideBySideStackedBar3DChartItem33.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
     "o that you can stack different cones, and combine them into groups across the sa" +
     "me axis value.";
-            createConeStackedBar3DChartItem3.Caption = "Stacked Cone";
-            createConeStackedBar3DChartItem3.Description = "Compare the contribution of each value to a total across categories.";
-            createConeStackedBar3DChartItem3.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupConeColumn3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createConeBar3DChartItem3,
-            createConeFullStackedBar3DChartItem3,
-            createConeManhattanBarChartItem3,
-            createConeSideBySideFullStackedBar3DChartItem3,
-            createConeSideBySideStackedBar3DChartItem3,
-            createConeStackedBar3DChartItem3});
-            createPyramidBar3DChartItem3.Caption = "Clustered Pyramid";
-            createPyramidBar3DChartItem3.Description = "Compare values across categories.";
-            createPyramidBar3DChartItem3.Hint = "Compare values across categories.";
-            createPyramidFullStackedBar3DChartItem3.Caption = "100% Stacked Pyramid";
-            createPyramidFullStackedBar3DChartItem3.Description = "Compare the percentage each value contributes to a total across categories.";
-            createPyramidFullStackedBar3DChartItem3.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createPyramidManhattanBarChartItem3.Caption = "3-D Pyramid";
-            createPyramidManhattanBarChartItem3.Description = "Compare values across categories and across series and display a pyramid chart on" +
+            createConeStackedBar3DChartItem33.Caption = "Stacked Cone";
+            createConeStackedBar3DChartItem33.Description = "Compare the contribution of each value to a total across categories.";
+            createConeStackedBar3DChartItem33.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupConeColumn33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createConeBar3DChartItem33,
+            createConeFullStackedBar3DChartItem33,
+            createConeManhattanBarChartItem33,
+            createConeSideBySideFullStackedBar3DChartItem33,
+            createConeSideBySideStackedBar3DChartItem33,
+            createConeStackedBar3DChartItem33});
+            createPyramidBar3DChartItem33.Caption = "Clustered Pyramid";
+            createPyramidBar3DChartItem33.Description = "Compare values across categories.";
+            createPyramidBar3DChartItem33.Hint = "Compare values across categories.";
+            createPyramidFullStackedBar3DChartItem33.Caption = "100% Stacked Pyramid";
+            createPyramidFullStackedBar3DChartItem33.Description = "Compare the percentage each value contributes to a total across categories.";
+            createPyramidFullStackedBar3DChartItem33.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createPyramidManhattanBarChartItem33.Caption = "3-D Pyramid";
+            createPyramidManhattanBarChartItem33.Description = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            createPyramidManhattanBarChartItem3.Hint = "Compare values across categories and across series and display a pyramid chart on" +
+            createPyramidManhattanBarChartItem33.Hint = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            createPyramidSideBySideFullStackedBar3DChartItem3.Caption = "Clustered 100% Stacked Pyramid";
-            createPyramidSideBySideFullStackedBar3DChartItem3.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
+            createPyramidSideBySideFullStackedBar3DChartItem33.Caption = "Clustered 100% Stacked Pyramid";
+            createPyramidSideBySideFullStackedBar3DChartItem33.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
     "rt types, so that you can stack different pyramids, and combine them into groups" +
     " across the same axis value.";
-            createPyramidSideBySideFullStackedBar3DChartItem3.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
+            createPyramidSideBySideFullStackedBar3DChartItem33.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
     "rt types, so that you can stack different pyramids, and combine them into groups" +
     " across the same axis value.";
-            createPyramidSideBySideStackedBar3DChartItem3.Caption = "Clustered Stacked Pyramid";
-            createPyramidSideBySideStackedBar3DChartItem3.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
+            createPyramidSideBySideStackedBar3DChartItem33.Caption = "Clustered Stacked Pyramid";
+            createPyramidSideBySideStackedBar3DChartItem33.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
     "pes, so that you can stack different pyramids, and combine them into groups acro" +
     "ss the same axis value.";
-            createPyramidSideBySideStackedBar3DChartItem3.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
+            createPyramidSideBySideStackedBar3DChartItem33.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
     "pes, so that you can stack different pyramids, and combine them into groups acro" +
     "ss the same axis value.";
-            createPyramidStackedBar3DChartItem3.Caption = "Stacked Pyramid";
-            createPyramidStackedBar3DChartItem3.Description = "Compare the contribution of each value to a total across categories.";
-            createPyramidStackedBar3DChartItem3.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupPyramidColumn3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPyramidBar3DChartItem3,
-            createPyramidFullStackedBar3DChartItem3,
-            createPyramidManhattanBarChartItem3,
-            createPyramidSideBySideFullStackedBar3DChartItem3,
-            createPyramidSideBySideStackedBar3DChartItem3,
-            createPyramidStackedBar3DChartItem3});
+            createPyramidStackedBar3DChartItem33.Caption = "Stacked Pyramid";
+            createPyramidStackedBar3DChartItem33.Description = "Compare the contribution of each value to a total across categories.";
+            createPyramidStackedBar3DChartItem33.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupPyramidColumn33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPyramidBar3DChartItem33,
+            createPyramidFullStackedBar3DChartItem33,
+            createPyramidManhattanBarChartItem33,
+            createPyramidSideBySideFullStackedBar3DChartItem33,
+            createPyramidSideBySideStackedBar3DChartItem33,
+            createPyramidStackedBar3DChartItem33});
             this.galleryDropDown1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DColumn3,
-            chartControlCommandGalleryItemGroup3DColumn3,
-            chartControlCommandGalleryItemGroupCylinderColumn3,
-            chartControlCommandGalleryItemGroupConeColumn3,
-            chartControlCommandGalleryItemGroupPyramidColumn3});
+            chartControlCommandGalleryItemGroup2DColumn33,
+            chartControlCommandGalleryItemGroup3DColumn33,
+            chartControlCommandGalleryItemGroupCylinderColumn33,
+            chartControlCommandGalleryItemGroupConeColumn33,
+            chartControlCommandGalleryItemGroupPyramidColumn33});
             this.galleryDropDown1.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.galleryDropDown1.Gallery.RowCount = 10;
             this.galleryDropDown1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5428,69 +5439,69 @@ namespace TracerV1
             // 
             this.galleryDropDown2.Gallery.AllowFilter = false;
             this.galleryDropDown2.Gallery.ColumnCount = 3;
-            createLineChartItem3.Caption = "Line";
-            createLineChartItem3.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
+            createLineChartItem33.Caption = "Line";
+            createLineChartItem33.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
-            createLineChartItem3.Hint = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
+            createLineChartItem33.Hint = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
-            createFullStackedLineChartItem3.Caption = "100% Stacked Line";
-            createFullStackedLineChartItem3.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
+            createFullStackedLineChartItem33.Caption = "100% Stacked Line";
+            createFullStackedLineChartItem33.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.";
-            createFullStackedLineChartItem3.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
+            createFullStackedLineChartItem33.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.";
-            createScatterLineChartItem3.Caption = "Scatter Line";
-            createScatterLineChartItem3.Description = "Represent series points in the same order that they have in the collection.";
-            createScatterLineChartItem3.Hint = "Represent series points in the same order that they have in the collection.";
-            createSplineChartItem3.Caption = "Spline";
-            createSplineChartItem3.Description = "Plot a fitted curve through each data point in a series.";
-            createSplineChartItem3.Hint = "Plot a fitted curve through each data point in a series.";
-            createStackedLineChartItem3.Caption = "Stacked Line";
-            createStackedLineChartItem3.Description = "Display the trend of the contribution of each value over time or ordered categori" +
+            createScatterLineChartItem33.Caption = "Scatter Line";
+            createScatterLineChartItem33.Description = "Represent series points in the same order that they have in the collection.";
+            createScatterLineChartItem33.Hint = "Represent series points in the same order that they have in the collection.";
+            createSplineChartItem33.Caption = "Spline";
+            createSplineChartItem33.Description = "Plot a fitted curve through each data point in a series.";
+            createSplineChartItem33.Hint = "Plot a fitted curve through each data point in a series.";
+            createStackedLineChartItem33.Caption = "Stacked Line";
+            createStackedLineChartItem33.Description = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.";
-            createStackedLineChartItem3.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
+            createStackedLineChartItem33.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.";
-            createStepLineChartItem3.Caption = "Step Line";
-            createStepLineChartItem3.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepLineChartItem3.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup2DLine3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLineChartItem3,
-            createFullStackedLineChartItem3,
-            createScatterLineChartItem3,
-            createSplineChartItem3,
-            createStackedLineChartItem3,
-            createStepLineChartItem3});
-            createLine3DChartItem3.Caption = "3-D Line";
-            createLine3DChartItem3.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
-            createLine3DChartItem3.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
-            createFullStackedLine3DChartItem3.Caption = "100% Stacked Line in 3-D";
-            createFullStackedLine3DChartItem3.Description = "Display all series stacked and is useful when it is necessary to compare how much" +
+            createStepLineChartItem33.Caption = "Step Line";
+            createStepLineChartItem33.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepLineChartItem33.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup2DLine33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLineChartItem33,
+            createFullStackedLineChartItem33,
+            createScatterLineChartItem33,
+            createSplineChartItem33,
+            createStackedLineChartItem33,
+            createStepLineChartItem33});
+            createLine3DChartItem33.Caption = "3-D Line";
+            createLine3DChartItem33.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
+            createLine3DChartItem33.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
+            createFullStackedLine3DChartItem33.Caption = "100% Stacked Line in 3-D";
+            createFullStackedLine3DChartItem33.Description = "Display all series stacked and is useful when it is necessary to compare how much" +
     " each series adds to the total aggregate value for specific arguments (as percen" +
     "ts).";
-            createFullStackedLine3DChartItem3.Hint = "Display all series stacked and is useful when it is necessary to compare how much" +
+            createFullStackedLine3DChartItem33.Hint = "Display all series stacked and is useful when it is necessary to compare how much" +
     " each series adds to the total aggregate value for specific arguments (as percen" +
     "ts).";
-            createSpline3DChartItem3.Caption = "3-D Spline";
-            createSpline3DChartItem3.Description = "Plot a fitted curve through each data point in a series.";
-            createSpline3DChartItem3.Hint = "Plot a fitted curve through each data point in a series.";
-            createStackedLine3DChartItem3.Caption = "Stacked Line in 3-D";
-            createStackedLine3DChartItem3.Description = "Display all points from different series in a stacked manner and is useful when i" +
+            createSpline3DChartItem33.Caption = "3-D Spline";
+            createSpline3DChartItem33.Description = "Plot a fitted curve through each data point in a series.";
+            createSpline3DChartItem33.Hint = "Plot a fitted curve through each data point in a series.";
+            createStackedLine3DChartItem33.Caption = "Stacked Line in 3-D";
+            createStackedLine3DChartItem33.Description = "Display all points from different series in a stacked manner and is useful when i" +
     "t is necessary to compare how much each series adds to the total aggregate value" +
     " for specific arguments.";
-            createStackedLine3DChartItem3.Hint = "Display all points from different series in a stacked manner and is useful when i" +
+            createStackedLine3DChartItem33.Hint = "Display all points from different series in a stacked manner and is useful when i" +
     "t is necessary to compare how much each series adds to the total aggregate value" +
     " for specific arguments.";
-            createStepLine3DChartItem3.Caption = "Step Line in 3-D";
-            createStepLine3DChartItem3.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepLine3DChartItem3.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup3DLine3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLine3DChartItem3,
-            createFullStackedLine3DChartItem3,
-            createSpline3DChartItem3,
-            createStackedLine3DChartItem3,
-            createStepLine3DChartItem3});
+            createStepLine3DChartItem33.Caption = "Step Line in 3-D";
+            createStepLine3DChartItem33.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepLine3DChartItem33.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup3DLine33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLine3DChartItem33,
+            createFullStackedLine3DChartItem33,
+            createSpline3DChartItem33,
+            createStackedLine3DChartItem33,
+            createStepLine3DChartItem33});
             this.galleryDropDown2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DLine3,
-            chartControlCommandGalleryItemGroup3DLine3});
+            chartControlCommandGalleryItemGroup2DLine33,
+            chartControlCommandGalleryItemGroup3DLine33});
             this.galleryDropDown2.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.galleryDropDown2.Gallery.RowCount = 4;
             this.galleryDropDown2.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5504,33 +5515,33 @@ namespace TracerV1
             // 
             this.galleryDropDown3.Gallery.AllowFilter = false;
             this.galleryDropDown3.Gallery.ColumnCount = 3;
-            createPieChartItem3.Caption = "Pie";
-            createPieChartItem3.Description = resources.GetString("createPieChartItem3.Description");
-            createPieChartItem3.Hint = resources.GetString("createPieChartItem3.Hint");
-            createDoughnutChartItem3.Caption = "Doughnut";
-            createDoughnutChartItem3.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            createPieChartItem33.Caption = "Pie";
+            createPieChartItem33.Description = resources.GetString("createPieChartItem33.Description");
+            createPieChartItem33.Hint = resources.GetString("createPieChartItem33.Hint");
+            createDoughnutChartItem33.Caption = "Doughnut";
+            createDoughnutChartItem33.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            createDoughnutChartItem3.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            createDoughnutChartItem33.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            chartControlCommandGalleryItemGroup2DPie3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPieChartItem3,
-            createDoughnutChartItem3});
-            createPie3DChartItem3.Caption = "Pie in 3-D";
-            createPie3DChartItem3.Description = "Display the contribution of each value to a total.";
-            createPie3DChartItem3.Hint = "Display the contribution of each value to a total.";
-            createDoughnut3DChartItem3.Caption = "Doughnut in 3-D";
-            createDoughnut3DChartItem3.Description = "Compare the percentage values of different point arguments in the same series, an" +
+            chartControlCommandGalleryItemGroup2DPie33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPieChartItem33,
+            createDoughnutChartItem33});
+            createPie3DChartItem33.Caption = "Pie in 3-D";
+            createPie3DChartItem33.Description = "Display the contribution of each value to a total.";
+            createPie3DChartItem33.Hint = "Display the contribution of each value to a total.";
+            createDoughnut3DChartItem33.Caption = "Doughnut in 3-D";
+            createDoughnut3DChartItem33.Description = "Compare the percentage values of different point arguments in the same series, an" +
     "d illustrate these values as easy to understand pie slices, but with a hole in i" +
     "ts center.";
-            createDoughnut3DChartItem3.Hint = "Compare the percentage values of different point arguments in the same series, an" +
+            createDoughnut3DChartItem33.Hint = "Compare the percentage values of different point arguments in the same series, an" +
     "d illustrate these values as easy to understand pie slices, but with a hole in i" +
     "ts center.";
-            chartControlCommandGalleryItemGroup3DPie3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPie3DChartItem3,
-            createDoughnut3DChartItem3});
+            chartControlCommandGalleryItemGroup3DPie33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPie3DChartItem33,
+            createDoughnut3DChartItem33});
             this.galleryDropDown3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DPie3,
-            chartControlCommandGalleryItemGroup3DPie3});
+            chartControlCommandGalleryItemGroup2DPie33,
+            chartControlCommandGalleryItemGroup3DPie33});
             this.galleryDropDown3.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.galleryDropDown3.Gallery.RowCount = 2;
             this.galleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5544,41 +5555,41 @@ namespace TracerV1
             // 
             this.galleryDropDown4.Gallery.AllowFilter = false;
             this.galleryDropDown4.Gallery.ColumnCount = 3;
-            createRotatedBarChartItem3.Caption = "Bar";
-            createRotatedBarChartItem3.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
+            createRotatedBarChartItem33.Caption = "Bar";
+            createRotatedBarChartItem33.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
-            createRotatedBarChartItem3.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
+            createRotatedBarChartItem33.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
-            createRotatedFullStackedBarChartItem3.Caption = "100% Stacked Bar";
-            createRotatedFullStackedBarChartItem3.Description = resources.GetString("createRotatedFullStackedBarChartItem3.Description");
-            createRotatedFullStackedBarChartItem3.Hint = resources.GetString("createRotatedFullStackedBarChartItem3.Hint");
-            createRotatedSideBySideFullStackedBarChartItem3.Caption = "Clustered 100% Stacked Bar";
-            createRotatedSideBySideFullStackedBarChartItem3.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
+            createRotatedFullStackedBarChartItem33.Caption = "100% Stacked Bar";
+            createRotatedFullStackedBarChartItem33.Description = resources.GetString("createRotatedFullStackedBarChartItem33.Description");
+            createRotatedFullStackedBarChartItem33.Hint = resources.GetString("createRotatedFullStackedBarChartItem33.Hint");
+            createRotatedSideBySideFullStackedBarChartItem33.Caption = "Clustered 100% Stacked Bar";
+            createRotatedSideBySideFullStackedBarChartItem33.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideFullStackedBarChartItem3.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
+            createRotatedSideBySideFullStackedBarChartItem33.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideStackedBarChartItem3.Caption = "Clustered Stacked Bar";
-            createRotatedSideBySideStackedBarChartItem3.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
+            createRotatedSideBySideStackedBarChartItem33.Caption = "Clustered Stacked Bar";
+            createRotatedSideBySideStackedBarChartItem33.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
     "that you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideStackedBarChartItem3.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
+            createRotatedSideBySideStackedBarChartItem33.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
     "that you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedStackedBarChartItem3.Caption = "Stacked Bar";
-            createRotatedStackedBarChartItem3.Description = "Compare the contribution of each value to a total across categories by using hori" +
+            createRotatedStackedBarChartItem33.Caption = "Stacked Bar";
+            createRotatedStackedBarChartItem33.Description = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.";
-            createRotatedStackedBarChartItem3.Hint = "Compare the contribution of each value to a total across categories by using hori" +
+            createRotatedStackedBarChartItem33.Hint = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.";
-            chartControlCommandGalleryItemGroup2DBar3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRotatedBarChartItem3,
-            createRotatedFullStackedBarChartItem3,
-            createRotatedSideBySideFullStackedBarChartItem3,
-            createRotatedSideBySideStackedBarChartItem3,
-            createRotatedStackedBarChartItem3});
+            chartControlCommandGalleryItemGroup2DBar33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRotatedBarChartItem33,
+            createRotatedFullStackedBarChartItem33,
+            createRotatedSideBySideFullStackedBarChartItem33,
+            createRotatedSideBySideStackedBarChartItem33,
+            createRotatedStackedBarChartItem33});
             this.galleryDropDown4.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DBar3});
+            chartControlCommandGalleryItemGroup2DBar33});
             this.galleryDropDown4.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.galleryDropDown4.Gallery.RowCount = 2;
             this.galleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5592,87 +5603,87 @@ namespace TracerV1
             // 
             this.galleryDropDown5.Gallery.AllowFilter = false;
             this.galleryDropDown5.Gallery.ColumnCount = 4;
-            createAreaChartItem3.Caption = "Area";
-            createAreaChartItem3.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
+            createAreaChartItem33.Caption = "Area";
+            createAreaChartItem33.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
-            createAreaChartItem3.Hint = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
+            createAreaChartItem33.Hint = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
-            createFullStackedAreaChartItem3.Caption = "100% Stacked Area";
-            createFullStackedAreaChartItem3.Description = "Display the trend of the percentage each value contributes over time or categorie" +
+            createFullStackedAreaChartItem33.Caption = "100% Stacked Area";
+            createFullStackedAreaChartItem33.Description = "Display the trend of the percentage each value contributes over time or categorie" +
     "s.\r\n\r\nUse it to emphasize the trend in the proportion of each series.\r\n    ";
-            createFullStackedAreaChartItem3.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
+            createFullStackedAreaChartItem33.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
     "s.\r\n\r\nUse it to emphasize the trend in the proportion of each series.\r\n    ";
-            createFullStackedSplineAreaChartItem3.Caption = "100% Stacked Spline Area";
-            createFullStackedSplineAreaChartItem3.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
+            createFullStackedSplineAreaChartItem33.Caption = "100% Stacked Spline Area";
+            createFullStackedSplineAreaChartItem33.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
     "int in a series.";
-            createFullStackedSplineAreaChartItem3.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
+            createFullStackedSplineAreaChartItem33.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
     "int in a series.";
-            createSplineAreaChartItem3.Caption = "Spline Area";
-            createSplineAreaChartItem3.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
+            createSplineAreaChartItem33.Caption = "Spline Area";
+            createSplineAreaChartItem33.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
     " series.";
-            createSplineAreaChartItem3.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
+            createSplineAreaChartItem33.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
     " series.";
-            createStackedAreaChartItem3.Caption = "Stacked Area";
-            createStackedAreaChartItem3.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            createStackedAreaChartItem33.Caption = "Stacked Area";
+            createStackedAreaChartItem33.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.\r\n    ";
-            createStackedAreaChartItem3.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            createStackedAreaChartItem33.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.\r\n    ";
-            createStackedSplineAreaChartItem3.Caption = "Stacked Spline Area";
-            createStackedSplineAreaChartItem3.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
+            createStackedSplineAreaChartItem33.Caption = "Stacked Spline Area";
+            createStackedSplineAreaChartItem33.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
     "int in a series.";
-            createStackedSplineAreaChartItem3.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
+            createStackedSplineAreaChartItem33.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
     "int in a series.";
-            createStepAreaChartItem3.Caption = "Step Area";
-            createStepAreaChartItem3.Description = "Show how much values have changed for different points of the same series.";
-            createStepAreaChartItem3.Hint = "Show how much values have changed for different points of the same series.";
-            chartControlCommandGalleryItemGroup2DArea3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createAreaChartItem3,
-            createFullStackedAreaChartItem3,
-            createFullStackedSplineAreaChartItem3,
-            createSplineAreaChartItem3,
-            createStackedAreaChartItem3,
-            createStackedSplineAreaChartItem3,
-            createStepAreaChartItem3});
-            createArea3DChartItem3.Caption = "3-D Area";
-            createArea3DChartItem3.Description = resources.GetString("createArea3DChartItem3.Description");
-            createArea3DChartItem3.Hint = resources.GetString("createArea3DChartItem3.Hint");
-            createFullStackedArea3DChartItem3.Caption = "100% Stacked Area in 3-D";
-            createFullStackedArea3DChartItem3.Description = resources.GetString("createFullStackedArea3DChartItem3.Description");
-            createFullStackedArea3DChartItem3.Hint = resources.GetString("createFullStackedArea3DChartItem3.Hint");
-            createFullStackedSplineArea3DChartItem3.Caption = "100% Stacked Spline Area in 3-D";
-            createFullStackedSplineArea3DChartItem3.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
+            createStepAreaChartItem33.Caption = "Step Area";
+            createStepAreaChartItem33.Description = "Show how much values have changed for different points of the same series.";
+            createStepAreaChartItem33.Hint = "Show how much values have changed for different points of the same series.";
+            chartControlCommandGalleryItemGroup2DArea33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createAreaChartItem33,
+            createFullStackedAreaChartItem33,
+            createFullStackedSplineAreaChartItem33,
+            createSplineAreaChartItem33,
+            createStackedAreaChartItem33,
+            createStackedSplineAreaChartItem33,
+            createStepAreaChartItem33});
+            createArea3DChartItem33.Caption = "3-D Area";
+            createArea3DChartItem33.Description = resources.GetString("createArea3DChartItem33.Description");
+            createArea3DChartItem33.Hint = resources.GetString("createArea3DChartItem33.Hint");
+            createFullStackedArea3DChartItem33.Caption = "100% Stacked Area in 3-D";
+            createFullStackedArea3DChartItem33.Description = resources.GetString("createFullStackedArea3DChartItem33.Description");
+            createFullStackedArea3DChartItem33.Hint = resources.GetString("createFullStackedArea3DChartItem33.Hint");
+            createFullStackedSplineArea3DChartItem33.Caption = "100% Stacked Spline Area in 3-D";
+            createFullStackedSplineArea3DChartItem33.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
     "each data point in a series.";
-            createFullStackedSplineArea3DChartItem3.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
+            createFullStackedSplineArea3DChartItem33.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
     "each data point in a series.";
-            createSplineArea3DChartItem3.Caption = "Spline Area in 3-D";
-            createSplineArea3DChartItem3.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
+            createSplineArea3DChartItem33.Caption = "Spline Area in 3-D";
+            createSplineArea3DChartItem33.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
     "in a series.";
-            createSplineArea3DChartItem3.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
+            createSplineArea3DChartItem33.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
     "in a series.";
-            createStackedArea3DChartItem3.Caption = "Stacked Area in 3-D";
-            createStackedArea3DChartItem3.Description = "Display series as areas on a diagram, so that the value of each data point is agg" +
+            createStackedArea3DChartItem33.Caption = "Stacked Area in 3-D";
+            createStackedArea3DChartItem33.Description = "Display series as areas on a diagram, so that the value of each data point is agg" +
     "regated with the underlying data points\' values.";
-            createStackedArea3DChartItem3.Hint = "Display series as areas on a diagram, so that the value of each data point is agg" +
+            createStackedArea3DChartItem33.Hint = "Display series as areas on a diagram, so that the value of each data point is agg" +
     "regated with the underlying data points\' values.";
-            createStackedSplineArea3DChartItem3.Caption = "Stacked Spline Area in 3-D";
-            createStackedSplineArea3DChartItem3.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
+            createStackedSplineArea3DChartItem33.Caption = "Stacked Spline Area in 3-D";
+            createStackedSplineArea3DChartItem33.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
     "data point in a series.";
-            createStackedSplineArea3DChartItem3.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
+            createStackedSplineArea3DChartItem33.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
     "data point in a series.";
-            createStepArea3DChartItem3.Caption = "Step Area in 3-D";
-            createStepArea3DChartItem3.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepArea3DChartItem3.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup3DArea3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createArea3DChartItem3,
-            createFullStackedArea3DChartItem3,
-            createFullStackedSplineArea3DChartItem3,
-            createSplineArea3DChartItem3,
-            createStackedArea3DChartItem3,
-            createStackedSplineArea3DChartItem3,
-            createStepArea3DChartItem3});
+            createStepArea3DChartItem33.Caption = "Step Area in 3-D";
+            createStepArea3DChartItem33.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepArea3DChartItem33.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup3DArea33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createArea3DChartItem33,
+            createFullStackedArea3DChartItem33,
+            createFullStackedSplineArea3DChartItem33,
+            createSplineArea3DChartItem33,
+            createStackedArea3DChartItem33,
+            createStackedSplineArea3DChartItem33,
+            createStepArea3DChartItem33});
             this.galleryDropDown5.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DArea3,
-            chartControlCommandGalleryItemGroup3DArea3});
+            chartControlCommandGalleryItemGroup2DArea33,
+            chartControlCommandGalleryItemGroup3DArea33});
             this.galleryDropDown5.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.galleryDropDown5.Gallery.RowCount = 4;
             this.galleryDropDown5.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5686,119 +5697,119 @@ namespace TracerV1
             // 
             this.galleryDropDown6.Gallery.AllowFilter = false;
             this.galleryDropDown6.Gallery.ColumnCount = 4;
-            createPointChartItem3.Caption = "Point";
-            createPointChartItem3.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
+            createPointChartItem33.Caption = "Point";
+            createPointChartItem33.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
-            createPointChartItem3.Hint = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
+            createPointChartItem33.Hint = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
-            createBubbleChartItem3.Caption = "Bubble";
-            createBubbleChartItem3.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
+            createBubbleChartItem33.Caption = "Bubble";
+            createBubbleChartItem33.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
     "ird value determines the size of the bubble marker.";
-            createBubbleChartItem3.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
+            createBubbleChartItem33.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
     "ird value determines the size of the bubble marker.";
-            chartControlCommandGalleryItemGroupPoint3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPointChartItem3,
-            createBubbleChartItem3});
-            createFunnelChartItem3.Caption = "Funnel";
-            createFunnelChartItem3.Description = resources.GetString("createFunnelChartItem3.Description");
-            createFunnelChartItem3.Hint = resources.GetString("createFunnelChartItem3.Hint");
-            createFunnel3DChartItem3.Caption = "3-D Funnel";
-            createFunnel3DChartItem3.Description = resources.GetString("createFunnel3DChartItem3.Description");
-            createFunnel3DChartItem3.Hint = resources.GetString("createFunnel3DChartItem3.Hint");
-            chartControlCommandGalleryItemGroupFunnel3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createFunnelChartItem3,
-            createFunnel3DChartItem3});
-            createStockChartItem3.Caption = "Stock";
-            createStockChartItem3.Description = resources.GetString("createStockChartItem3.Description");
-            createStockChartItem3.Hint = resources.GetString("createStockChartItem3.Hint");
-            createCandleStickChartItem3.Caption = "Candle Stick";
-            createCandleStickChartItem3.Description = resources.GetString("createCandleStickChartItem3.Description");
-            createCandleStickChartItem3.Hint = resources.GetString("createCandleStickChartItem3.Hint");
-            chartControlCommandGalleryItemGroupFinancial3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createStockChartItem3,
-            createCandleStickChartItem3});
-            createRadarPointChartItem3.Caption = "Radar Point";
-            createRadarPointChartItem3.Description = "Show points from two or more different series on the same points arguments on a c" +
+            chartControlCommandGalleryItemGroupPoint33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPointChartItem33,
+            createBubbleChartItem33});
+            createFunnelChartItem33.Caption = "Funnel";
+            createFunnelChartItem33.Description = resources.GetString("createFunnelChartItem33.Description");
+            createFunnelChartItem33.Hint = resources.GetString("createFunnelChartItem33.Hint");
+            createFunnel3DChartItem33.Caption = "3-D Funnel";
+            createFunnel3DChartItem33.Description = resources.GetString("createFunnel3DChartItem33.Description");
+            createFunnel3DChartItem33.Hint = resources.GetString("createFunnel3DChartItem33.Hint");
+            chartControlCommandGalleryItemGroupFunnel33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createFunnelChartItem33,
+            createFunnel3DChartItem33});
+            createStockChartItem33.Caption = "Stock";
+            createStockChartItem33.Description = resources.GetString("createStockChartItem33.Description");
+            createStockChartItem33.Hint = resources.GetString("createStockChartItem33.Hint");
+            createCandleStickChartItem33.Caption = "Candle Stick";
+            createCandleStickChartItem33.Description = resources.GetString("createCandleStickChartItem33.Description");
+            createCandleStickChartItem33.Hint = resources.GetString("createCandleStickChartItem33.Hint");
+            chartControlCommandGalleryItemGroupFinancial33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createStockChartItem33,
+            createCandleStickChartItem33});
+            createRadarPointChartItem33.Caption = "Radar Point";
+            createRadarPointChartItem33.Description = "Show points from two or more different series on the same points arguments on a c" +
     "ircular grid that has multiple axes along which data can be plotted.";
-            createRadarPointChartItem3.Hint = "Show points from two or more different series on the same points arguments on a c" +
+            createRadarPointChartItem33.Hint = "Show points from two or more different series on the same points arguments on a c" +
     "ircular grid that has multiple axes along which data can be plotted.";
-            createRadarLineChartItem3.Caption = "Radar Line";
-            createRadarLineChartItem3.Description = "Show trends for several series and compare their values for the same points argum" +
+            createRadarLineChartItem33.Caption = "Radar Line";
+            createRadarLineChartItem33.Description = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular grid that has multiple axes along which data can be plotted.";
-            createRadarLineChartItem3.Hint = "Show trends for several series and compare their values for the same points argum" +
+            createRadarLineChartItem33.Hint = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular grid that has multiple axes along which data can be plotted.";
-            createRadarAreaChartItem3.Caption = "Radar Area";
-            createRadarAreaChartItem3.Description = "Display series as filled area on a circular grid that has multiple axes along whi" +
+            createRadarAreaChartItem33.Caption = "Radar Area";
+            createRadarAreaChartItem33.Description = "Display series as filled area on a circular grid that has multiple axes along whi" +
     "ch data can be plotted.";
-            createRadarAreaChartItem3.Hint = "Display series as filled area on a circular grid that has multiple axes along whi" +
+            createRadarAreaChartItem33.Hint = "Display series as filled area on a circular grid that has multiple axes along whi" +
     "ch data can be plotted.";
-            chartControlCommandGalleryItemGroupRadar3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRadarPointChartItem3,
-            createRadarLineChartItem3,
-            createRadarAreaChartItem3});
-            createPolarPointChartItem3.Caption = "Polar Point";
-            createPolarPointChartItem3.Description = "Show points from two or more different series on the same circular diagram on the" +
+            chartControlCommandGalleryItemGroupRadar33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRadarPointChartItem33,
+            createRadarLineChartItem33,
+            createRadarAreaChartItem33});
+            createPolarPointChartItem33.Caption = "Polar Point";
+            createPolarPointChartItem33.Description = "Show points from two or more different series on the same circular diagram on the" +
     " basis of angles.";
-            createPolarPointChartItem3.Hint = "Show points from two or more different series on the same circular diagram on the" +
+            createPolarPointChartItem33.Hint = "Show points from two or more different series on the same circular diagram on the" +
     " basis of angles.";
-            createPolarLineChartItem3.Caption = "Polar Line";
-            createPolarLineChartItem3.Description = "Show trends for several series and compare their values for the same points argum" +
+            createPolarLineChartItem33.Caption = "Polar Line";
+            createPolarLineChartItem33.Description = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular diagram on the basis of angles.";
-            createPolarLineChartItem3.Hint = "Show trends for several series and compare their values for the same points argum" +
+            createPolarLineChartItem33.Hint = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular diagram on the basis of angles.";
-            createPolarAreaChartItem3.Caption = "Polar Area";
-            createPolarAreaChartItem3.Description = "Display series as filled area on a circular diagram on the basis of angles.";
-            createPolarAreaChartItem3.Hint = "Display series as filled area on a circular diagram on the basis of angles.";
-            chartControlCommandGalleryItemGroupPolar3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPolarPointChartItem3,
-            createPolarLineChartItem3,
-            createPolarAreaChartItem3});
-            createRangeBarChartItem3.Caption = "Range Column";
-            createRangeBarChartItem3.Description = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
+            createPolarAreaChartItem33.Caption = "Polar Area";
+            createPolarAreaChartItem33.Description = "Display series as filled area on a circular diagram on the basis of angles.";
+            createPolarAreaChartItem33.Hint = "Display series as filled area on a circular diagram on the basis of angles.";
+            chartControlCommandGalleryItemGroupPolar33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPolarPointChartItem33,
+            createPolarLineChartItem33,
+            createPolarAreaChartItem33});
+            createRangeBarChartItem33.Caption = "Range Column";
+            createRangeBarChartItem33.Description = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
     "sents a range of data for each argument value.";
-            createRangeBarChartItem3.Hint = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
+            createRangeBarChartItem33.Hint = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
     "sents a range of data for each argument value.";
-            createSideBySideRangeBarChartItem3.Caption = "Clustered Range Column";
-            createSideBySideRangeBarChartItem3.Description = "Show activity columns from different series grouped by their arguments. Each colu" +
+            createSideBySideRangeBarChartItem33.Caption = "Clustered Range Column";
+            createSideBySideRangeBarChartItem33.Description = "Show activity columns from different series grouped by their arguments. Each colu" +
     "mn represents a range of data with two values for each argument value.";
-            createSideBySideRangeBarChartItem3.Hint = "Show activity columns from different series grouped by their arguments. Each colu" +
+            createSideBySideRangeBarChartItem33.Hint = "Show activity columns from different series grouped by their arguments. Each colu" +
     "mn represents a range of data with two values for each argument value.";
-            createRangeAreaChartItem3.Caption = "Range Area";
-            createRangeAreaChartItem3.Description = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeAreaChartItem33.Caption = "Range Area";
+            createRangeAreaChartItem33.Description = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeAreaChartItem3.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeAreaChartItem33.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeArea3DChartItem3.Caption = "Range Area in 3-D";
-            createRangeArea3DChartItem3.Description = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeArea3DChartItem33.Caption = "Range Area in 3-D";
+            createRangeArea3DChartItem33.Description = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeArea3DChartItem3.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeArea3DChartItem33.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            chartControlCommandGalleryItemGroupRange3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRangeBarChartItem3,
-            createSideBySideRangeBarChartItem3,
-            createRangeAreaChartItem3,
-            createRangeArea3DChartItem3});
-            createGanttChartItem3.Caption = "Gantt";
-            createGanttChartItem3.Description = "Track different activities during the time frame.";
-            createGanttChartItem3.Hint = "Track different activities during the time frame.";
-            createSideBySideGanttChartItem3.Caption = "Clustered Gantt";
-            createSideBySideGanttChartItem3.Description = resources.GetString("createSideBySideGanttChartItem3.Description");
-            createSideBySideGanttChartItem3.Hint = resources.GetString("createSideBySideGanttChartItem3.Hint");
-            chartControlCommandGalleryItemGroupGantt3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createGanttChartItem3,
-            createSideBySideGanttChartItem3});
+            chartControlCommandGalleryItemGroupRange33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRangeBarChartItem33,
+            createSideBySideRangeBarChartItem33,
+            createRangeAreaChartItem33,
+            createRangeArea3DChartItem33});
+            createGanttChartItem33.Caption = "Gantt";
+            createGanttChartItem33.Description = "Track different activities during the time frame.";
+            createGanttChartItem33.Hint = "Track different activities during the time frame.";
+            createSideBySideGanttChartItem33.Caption = "Clustered Gantt";
+            createSideBySideGanttChartItem33.Description = resources.GetString("createSideBySideGanttChartItem33.Description");
+            createSideBySideGanttChartItem33.Hint = resources.GetString("createSideBySideGanttChartItem33.Hint");
+            chartControlCommandGalleryItemGroupGantt33.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createGanttChartItem33,
+            createSideBySideGanttChartItem33});
             this.galleryDropDown6.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroupPoint3,
-            chartControlCommandGalleryItemGroupFunnel3,
-            chartControlCommandGalleryItemGroupFinancial3,
-            chartControlCommandGalleryItemGroupRadar3,
-            chartControlCommandGalleryItemGroupPolar3,
-            chartControlCommandGalleryItemGroupRange3,
-            chartControlCommandGalleryItemGroupGantt3});
+            chartControlCommandGalleryItemGroupPoint33,
+            chartControlCommandGalleryItemGroupFunnel33,
+            chartControlCommandGalleryItemGroupFinancial33,
+            chartControlCommandGalleryItemGroupRadar33,
+            chartControlCommandGalleryItemGroupPolar33,
+            chartControlCommandGalleryItemGroupRange33,
+            chartControlCommandGalleryItemGroupGantt33});
             this.galleryDropDown6.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.galleryDropDown6.Gallery.RowCount = 7;
             this.galleryDropDown6.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5833,12 +5844,12 @@ namespace TracerV1
             this.galleryDropDown7.Gallery.ImageSize = new System.Drawing.Size(160, 10);
             this.galleryDropDown7.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.galleryDropDown7.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right;
-            skinPaddingEdges5.Bottom = -3;
-            skinPaddingEdges5.Top = -3;
-            this.galleryDropDown7.Gallery.ItemImagePadding = skinPaddingEdges5;
-            skinPaddingEdges6.Bottom = -3;
-            skinPaddingEdges6.Top = -3;
-            this.galleryDropDown7.Gallery.ItemTextPadding = skinPaddingEdges6;
+            skinPaddingEdges65.Bottom = -3;
+            skinPaddingEdges65.Top = -3;
+            this.galleryDropDown7.Gallery.ItemImagePadding = skinPaddingEdges65;
+            skinPaddingEdges66.Bottom = -3;
+            skinPaddingEdges66.Top = -3;
+            this.galleryDropDown7.Gallery.ItemTextPadding = skinPaddingEdges66;
             this.galleryDropDown7.Gallery.RowCount = 10;
             this.galleryDropDown7.Gallery.ShowGroupCaption = false;
             this.galleryDropDown7.Gallery.ShowItemText = true;
@@ -5912,68 +5923,68 @@ namespace TracerV1
             this.createExportBaseItem1.Id = 14;
             this.createExportBaseItem1.MenuDrawMode = DevExpress.XtraBars.MenuDrawMode.SmallImagesText;
             this.createExportBaseItem1.Name = "createExportBaseItem1";
-            toolTipTitleItem1.Text = "Export";
-            toolTipItem1.Text = "Export the current document in one of the available formats, and save it to the f" +
+            toolTipTitleItem37.Text = "Export";
+            toolTipItem37.Text = "Export the current document in one of the available formats, and save it to the f" +
     "ile on a disk.";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.createExportBaseItem1.SuperTip = superToolTip1;
+            superToolTip37.Items.Add(toolTipTitleItem37);
+            superToolTip37.Items.Add(toolTipItem37);
+            this.createExportBaseItem1.SuperTip = superToolTip37;
             // 
             // printChartItem1
             // 
             this.printChartItem1.Caption = "Print";
             this.printChartItem1.Id = 13;
             this.printChartItem1.Name = "printChartItem1";
-            toolTipTitleItem2.Text = "Print";
-            toolTipItem2.Text = "Select a printer, number of copies and other printing options before printing.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.printChartItem1.SuperTip = superToolTip2;
+            toolTipTitleItem38.Text = "Print";
+            toolTipItem38.Text = "Select a printer, number of copies and other printing options before printing.";
+            superToolTip38.Items.Add(toolTipTitleItem38);
+            superToolTip38.Items.Add(toolTipItem38);
+            this.printChartItem1.SuperTip = superToolTip38;
             // 
             // printPreviewChartItem1
             // 
             this.printPreviewChartItem1.Caption = "Print Preview";
             this.printPreviewChartItem1.Id = 12;
             this.printPreviewChartItem1.Name = "printPreviewChartItem1";
-            toolTipTitleItem3.Text = "Print Preview";
-            toolTipItem3.Text = "Preview and make changes to pages before printing.";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.printPreviewChartItem1.SuperTip = superToolTip3;
+            toolTipTitleItem39.Text = "Print Preview";
+            toolTipItem39.Text = "Preview and make changes to pages before printing.";
+            superToolTip39.Items.Add(toolTipTitleItem39);
+            superToolTip39.Items.Add(toolTipItem39);
+            this.printPreviewChartItem1.SuperTip = superToolTip39;
             // 
             // loadTemplateChartItem1
             // 
             this.loadTemplateChartItem1.Caption = "Load\r\nTemplate";
             this.loadTemplateChartItem1.Id = 11;
             this.loadTemplateChartItem1.Name = "loadTemplateChartItem1";
-            toolTipTitleItem4.Text = "Load\r\nTemplate";
-            toolTipItem4.Text = "Load a chart from template";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem4);
-            this.loadTemplateChartItem1.SuperTip = superToolTip4;
+            toolTipTitleItem40.Text = "Load\r\nTemplate";
+            toolTipItem40.Text = "Load a chart from template";
+            superToolTip40.Items.Add(toolTipTitleItem40);
+            superToolTip40.Items.Add(toolTipItem40);
+            this.loadTemplateChartItem1.SuperTip = superToolTip40;
             // 
             // saveAsTemplateChartItem1
             // 
             this.saveAsTemplateChartItem1.Caption = "Save As\r\nTemplate";
             this.saveAsTemplateChartItem1.Id = 10;
             this.saveAsTemplateChartItem1.Name = "saveAsTemplateChartItem1";
-            toolTipTitleItem5.Text = "Save As\r\nTemplate";
-            toolTipItem5.Text = "Create a template with the same setting as the current chart.";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem5);
-            this.saveAsTemplateChartItem1.SuperTip = superToolTip5;
+            toolTipTitleItem41.Text = "Save As\r\nTemplate";
+            toolTipItem41.Text = "Create a template with the same setting as the current chart.";
+            superToolTip41.Items.Add(toolTipTitleItem41);
+            superToolTip41.Items.Add(toolTipItem41);
+            this.saveAsTemplateChartItem1.SuperTip = superToolTip41;
             // 
             // runWizardChartItem1
             // 
             this.runWizardChartItem1.Caption = "Run Chart Wizard...";
             this.runWizardChartItem1.Id = 9;
             this.runWizardChartItem1.Name = "runWizardChartItem1";
-            toolTipTitleItem6.Text = "Run Chart Wizard...";
-            toolTipItem6.Text = "The Chart Wizard is invoked to help you adjust the main chart settings in one pla" +
+            toolTipTitleItem42.Text = "Run Chart Wizard...";
+            toolTipItem42.Text = "The Chart Wizard is invoked to help you adjust the main chart settings in one pla" +
     "ce.";
-            superToolTip6.Items.Add(toolTipTitleItem6);
-            superToolTip6.Items.Add(toolTipItem6);
-            this.runWizardChartItem1.SuperTip = superToolTip6;
+            superToolTip42.Items.Add(toolTipTitleItem42);
+            superToolTip42.Items.Add(toolTipItem42);
+            this.runWizardChartItem1.SuperTip = superToolTip42;
             // 
             // popupMenu1
             // 
@@ -5997,9 +6008,9 @@ namespace TracerV1
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SelectionMode = DevExpress.XtraCharts.ElementSelectionMode.Single;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            sideBySideBarSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
-            sideBySideBarSeriesLabel1.TextPattern = "{V:G}";
-            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
+            sideBySideBarSeriesLabel7.LineVisibility = DevExpress.Utils.DefaultBoolean.True;
+            sideBySideBarSeriesLabel7.TextPattern = "{V:G}";
+            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel7;
             this.chartControl1.Size = new System.Drawing.Size(1128, 441);
             this.chartControl1.TabIndex = 0;
             // 
@@ -6010,202 +6021,202 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown1.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown1.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DColumn4.Caption = "2-D Column";
-            createBarChartItem4.Caption = "Clustered Column";
-            createBarChartItem4.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            chartControlCommandGalleryItemGroup2DColumn34.Caption = "2-D Column";
+            createBarChartItem34.Caption = "Clustered Column";
+            createBarChartItem34.Description = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.\r\n    ";
-            createBarChartItem4.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
+            createBarChartItem34.Hint = "Compare values across categories by using vertical rectangles.\r\n\r\nUse it when the" +
     " order of categories is not important or for displaying item counts such as a hi" +
     "stogram.\r\n    ";
-            createFullStackedBarChartItem4.Caption = "100% Stacked Column";
-            createFullStackedBarChartItem4.Description = "Compare the percentage that each value contributes to a total across categories b" +
+            createFullStackedBarChartItem34.Caption = "100% Stacked Column";
+            createFullStackedBarChartItem34.Description = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse it to emphasize the proportion of each data " +
     "series.\r\n    ";
-            createFullStackedBarChartItem4.Hint = "Compare the percentage that each value contributes to a total across categories b" +
+            createFullStackedBarChartItem34.Hint = "Compare the percentage that each value contributes to a total across categories b" +
     "y using vertical rectangles.\r\n\r\nUse it to emphasize the proportion of each data " +
     "series.\r\n    ";
-            createSideBySideFullStackedBarChartItem4.Caption = "Clustered 100% Stacked Column";
-            createSideBySideFullStackedBarChartItem4.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBarChartItem34.Caption = "Clustered 100% Stacked Column";
+            createSideBySideFullStackedBarChartItem34.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types, so that you can stack different columns, and combine them into groups ac" +
     "ross the same axis value.";
-            createSideBySideFullStackedBarChartItem4.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBarChartItem34.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types, so that you can stack different columns, and combine them into groups ac" +
     "ross the same axis value.";
-            createSideBySideStackedBarChartItem4.Caption = "Clustered Stacked Column";
-            createSideBySideStackedBarChartItem4.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBarChartItem34.Caption = "Clustered Stacked Column";
+            createSideBySideStackedBarChartItem34.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s, so that you can stack different columns, and combine them into groups across " +
     "the same axis value.";
-            createSideBySideStackedBarChartItem4.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBarChartItem34.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s, so that you can stack different columns, and combine them into groups across " +
     "the same axis value.";
-            createStackedBarChartItem4.Caption = "Stacked Column";
-            createStackedBarChartItem4.Description = "Compare the contribution of each value to a total across categories by using vert" +
+            createStackedBarChartItem34.Caption = "Stacked Column";
+            createStackedBarChartItem34.Description = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".\r\n    ";
-            createStackedBarChartItem4.Hint = "Compare the contribution of each value to a total across categories by using vert" +
+            createStackedBarChartItem34.Hint = "Compare the contribution of each value to a total across categories by using vert" +
     "ical rectangles.\r\n\r\nUse it to emphasize the total across series for one category" +
     ".\r\n    ";
-            chartControlCommandGalleryItemGroup2DColumn4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBarChartItem4,
-            createFullStackedBarChartItem4,
-            createSideBySideFullStackedBarChartItem4,
-            createSideBySideStackedBarChartItem4,
-            createStackedBarChartItem4});
-            chartControlCommandGalleryItemGroup3DColumn4.Caption = "3-D Column";
-            createBar3DChartItem4.Caption = "3-D Clustered Column";
-            createBar3DChartItem4.Description = "Compare values across categories and display clustered columns in 3-D format.";
-            createBar3DChartItem4.Hint = "Compare values across categories and display clustered columns in 3-D format.";
-            createFullStackedBar3DChartItem4.Caption = "100% Stacked Column in 3-D";
-            createFullStackedBar3DChartItem4.Description = "Compare the percentage each value contributes to a total across categories and di" +
+            chartControlCommandGalleryItemGroup2DColumn34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBarChartItem34,
+            createFullStackedBarChartItem34,
+            createSideBySideFullStackedBarChartItem34,
+            createSideBySideStackedBarChartItem34,
+            createStackedBarChartItem34});
+            chartControlCommandGalleryItemGroup3DColumn34.Caption = "3-D Column";
+            createBar3DChartItem34.Caption = "3-D Clustered Column";
+            createBar3DChartItem34.Description = "Compare values across categories and display clustered columns in 3-D format.";
+            createBar3DChartItem34.Hint = "Compare values across categories and display clustered columns in 3-D format.";
+            createFullStackedBar3DChartItem34.Caption = "100% Stacked Column in 3-D";
+            createFullStackedBar3DChartItem34.Description = "Compare the percentage each value contributes to a total across categories and di" +
     "splay 100% stacked columns in 3-D format.";
-            createFullStackedBar3DChartItem4.Hint = "Compare the percentage each value contributes to a total across categories and di" +
+            createFullStackedBar3DChartItem34.Hint = "Compare the percentage each value contributes to a total across categories and di" +
     "splay 100% stacked columns in 3-D format.";
-            createManhattanBarChartItem4.Caption = "3-D Column";
-            createManhattanBarChartItem4.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            createManhattanBarChartItem34.Caption = "3-D Column";
+            createManhattanBarChartItem34.Description = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.\r\n    ";
-            createManhattanBarChartItem4.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
+            createManhattanBarChartItem34.Hint = "Compare values across categories and across series on three axes.\r\n\r\nUse it when " +
     "the categories and series are equally important.\r\n    ";
-            createSideBySideFullStackedBar3DChartItem4.Caption = "Clustered 100% Stacked Column in 3-D";
-            createSideBySideFullStackedBar3DChartItem4.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBar3DChartItem34.Caption = "Clustered 100% Stacked Column in 3-D";
+            createSideBySideFullStackedBar3DChartItem34.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types in 3-D format, so that you can stack different columns, and combine them " +
     "into groups across the same axis value.";
-            createSideBySideFullStackedBar3DChartItem4.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
+            createSideBySideFullStackedBar3DChartItem34.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" +
     " types in 3-D format, so that you can stack different columns, and combine them " +
     "into groups across the same axis value.";
-            createSideBySideStackedBar3DChartItem4.Caption = "Clustered Stacked Column in 3-D";
-            createSideBySideStackedBar3DChartItem4.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBar3DChartItem34.Caption = "Clustered Stacked Column in 3-D";
+            createSideBySideStackedBar3DChartItem34.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s in 3-D format, so that you can stack different columns, and combine them into " +
     "groups across the same axis value.";
-            createSideBySideStackedBar3DChartItem4.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
+            createSideBySideStackedBar3DChartItem34.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" +
     "s in 3-D format, so that you can stack different columns, and combine them into " +
     "groups across the same axis value.";
-            createStackedBar3DChartItem4.Caption = "Stacked Column in 3-D";
-            createStackedBar3DChartItem4.Description = "Compare the contribution of each value to a total across categories and display s" +
+            createStackedBar3DChartItem34.Caption = "Stacked Column in 3-D";
+            createStackedBar3DChartItem34.Description = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            createStackedBar3DChartItem4.Hint = "Compare the contribution of each value to a total across categories and display s" +
+            createStackedBar3DChartItem34.Hint = "Compare the contribution of each value to a total across categories and display s" +
     "tacked columns in 3-D format.";
-            chartControlCommandGalleryItemGroup3DColumn4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBar3DChartItem4,
-            createFullStackedBar3DChartItem4,
-            createManhattanBarChartItem4,
-            createSideBySideFullStackedBar3DChartItem4,
-            createSideBySideStackedBar3DChartItem4,
-            createStackedBar3DChartItem4});
-            chartControlCommandGalleryItemGroupCylinderColumn4.Caption = "Cylinder";
-            createCylinderBar3DChartItem4.Caption = "Clustered Cylinder";
-            createCylinderBar3DChartItem4.Description = "Compare values across categories.";
-            createCylinderBar3DChartItem4.Hint = "Compare values across categories.";
-            createCylinderFullStackedBar3DChartItem4.Caption = "100% Stacked Cylinder";
-            createCylinderFullStackedBar3DChartItem4.Description = "Compare the percentage each value contributes to a total across categories.";
-            createCylinderFullStackedBar3DChartItem4.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createCylinderManhattanBarChartItem4.Caption = "3-D Cylinder";
-            createCylinderManhattanBarChartItem4.Description = "Compare values across categories and across series and display a cylinder chart o" +
+            chartControlCommandGalleryItemGroup3DColumn34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBar3DChartItem34,
+            createFullStackedBar3DChartItem34,
+            createManhattanBarChartItem34,
+            createSideBySideFullStackedBar3DChartItem34,
+            createSideBySideStackedBar3DChartItem34,
+            createStackedBar3DChartItem34});
+            chartControlCommandGalleryItemGroupCylinderColumn34.Caption = "Cylinder";
+            createCylinderBar3DChartItem34.Caption = "Clustered Cylinder";
+            createCylinderBar3DChartItem34.Description = "Compare values across categories.";
+            createCylinderBar3DChartItem34.Hint = "Compare values across categories.";
+            createCylinderFullStackedBar3DChartItem34.Caption = "100% Stacked Cylinder";
+            createCylinderFullStackedBar3DChartItem34.Description = "Compare the percentage each value contributes to a total across categories.";
+            createCylinderFullStackedBar3DChartItem34.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createCylinderManhattanBarChartItem34.Caption = "3-D Cylinder";
+            createCylinderManhattanBarChartItem34.Description = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            createCylinderManhattanBarChartItem4.Hint = "Compare values across categories and across series and display a cylinder chart o" +
+            createCylinderManhattanBarChartItem34.Hint = "Compare values across categories and across series and display a cylinder chart o" +
     "n three axes.";
-            createCylinderSideBySideFullStackedBar3DChartItem4.Caption = "Clustered 100% Stacked Cylinder";
-            createCylinderSideBySideFullStackedBar3DChartItem4.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
+            createCylinderSideBySideFullStackedBar3DChartItem34.Caption = "Clustered 100% Stacked Cylinder";
+            createCylinderSideBySideFullStackedBar3DChartItem34.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
     "hart types, so that you can stack different cylinders, and combine them into gro" +
     "ups across the same axis value.";
-            createCylinderSideBySideFullStackedBar3DChartItem4.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
+            createCylinderSideBySideFullStackedBar3DChartItem34.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" +
     "hart types, so that you can stack different cylinders, and combine them into gro" +
     "ups across the same axis value.";
-            createCylinderSideBySideStackedBar3DChartItem4.Caption = "Clustered Stacked Cylinder";
-            createCylinderSideBySideStackedBar3DChartItem4.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
+            createCylinderSideBySideStackedBar3DChartItem34.Caption = "Clustered Stacked Cylinder";
+            createCylinderSideBySideStackedBar3DChartItem34.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
     "types, so that you can stack different cylinders, and combine them into groups a" +
     "cross the same axis value.";
-            createCylinderSideBySideStackedBar3DChartItem4.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
+            createCylinderSideBySideStackedBar3DChartItem34.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " +
     "types, so that you can stack different cylinders, and combine them into groups a" +
     "cross the same axis value.";
-            createCylinderStackedBar3DChartItem4.Caption = "Stacked Cylinder";
-            createCylinderStackedBar3DChartItem4.Description = "Compare the contribution of each value to a total across categories.";
-            createCylinderStackedBar3DChartItem4.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupCylinderColumn4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createCylinderBar3DChartItem4,
-            createCylinderFullStackedBar3DChartItem4,
-            createCylinderManhattanBarChartItem4,
-            createCylinderSideBySideFullStackedBar3DChartItem4,
-            createCylinderSideBySideStackedBar3DChartItem4,
-            createCylinderStackedBar3DChartItem4});
-            chartControlCommandGalleryItemGroupConeColumn4.Caption = "Cone";
-            createConeBar3DChartItem4.Caption = "Clustered Cone";
-            createConeBar3DChartItem4.Description = "Compare values across categories.";
-            createConeBar3DChartItem4.Hint = "Compare values across categories.";
-            createConeFullStackedBar3DChartItem4.Caption = "100% Stacked Cone";
-            createConeFullStackedBar3DChartItem4.Description = "Compare the percentage each value contributes to a total across categories.";
-            createConeFullStackedBar3DChartItem4.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createConeManhattanBarChartItem4.Caption = "3-D Cone";
-            createConeManhattanBarChartItem4.Description = "Compare values across categories and across series and display a cone chart on th" +
+            createCylinderStackedBar3DChartItem34.Caption = "Stacked Cylinder";
+            createCylinderStackedBar3DChartItem34.Description = "Compare the contribution of each value to a total across categories.";
+            createCylinderStackedBar3DChartItem34.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupCylinderColumn34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createCylinderBar3DChartItem34,
+            createCylinderFullStackedBar3DChartItem34,
+            createCylinderManhattanBarChartItem34,
+            createCylinderSideBySideFullStackedBar3DChartItem34,
+            createCylinderSideBySideStackedBar3DChartItem34,
+            createCylinderStackedBar3DChartItem34});
+            chartControlCommandGalleryItemGroupConeColumn34.Caption = "Cone";
+            createConeBar3DChartItem34.Caption = "Clustered Cone";
+            createConeBar3DChartItem34.Description = "Compare values across categories.";
+            createConeBar3DChartItem34.Hint = "Compare values across categories.";
+            createConeFullStackedBar3DChartItem34.Caption = "100% Stacked Cone";
+            createConeFullStackedBar3DChartItem34.Description = "Compare the percentage each value contributes to a total across categories.";
+            createConeFullStackedBar3DChartItem34.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createConeManhattanBarChartItem34.Caption = "3-D Cone";
+            createConeManhattanBarChartItem34.Description = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            createConeManhattanBarChartItem4.Hint = "Compare values across categories and across series and display a cone chart on th" +
+            createConeManhattanBarChartItem34.Hint = "Compare values across categories and across series and display a cone chart on th" +
     "ree axes.";
-            createConeSideBySideFullStackedBar3DChartItem4.Caption = "Clustered 100% Stacked Cone";
-            createConeSideBySideFullStackedBar3DChartItem4.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
+            createConeSideBySideFullStackedBar3DChartItem34.Caption = "Clustered 100% Stacked Cone";
+            createConeSideBySideFullStackedBar3DChartItem34.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
     "es, so that you can stack different cones, and combine them into groups across t" +
     "he same axis value.";
-            createConeSideBySideFullStackedBar3DChartItem4.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
+            createConeSideBySideFullStackedBar3DChartItem34.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" +
     "es, so that you can stack different cones, and combine them into groups across t" +
     "he same axis value.";
-            createConeSideBySideStackedBar3DChartItem4.Caption = "Clustered Stacked Cone";
-            createConeSideBySideStackedBar3DChartItem4.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
+            createConeSideBySideStackedBar3DChartItem34.Caption = "Clustered Stacked Cone";
+            createConeSideBySideStackedBar3DChartItem34.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
     "o that you can stack different cones, and combine them into groups across the sa" +
     "me axis value.";
-            createConeSideBySideStackedBar3DChartItem4.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
+            createConeSideBySideStackedBar3DChartItem34.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" +
     "o that you can stack different cones, and combine them into groups across the sa" +
     "me axis value.";
-            createConeStackedBar3DChartItem4.Caption = "Stacked Cone";
-            createConeStackedBar3DChartItem4.Description = "Compare the contribution of each value to a total across categories.";
-            createConeStackedBar3DChartItem4.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupConeColumn4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createConeBar3DChartItem4,
-            createConeFullStackedBar3DChartItem4,
-            createConeManhattanBarChartItem4,
-            createConeSideBySideFullStackedBar3DChartItem4,
-            createConeSideBySideStackedBar3DChartItem4,
-            createConeStackedBar3DChartItem4});
-            chartControlCommandGalleryItemGroupPyramidColumn4.Caption = "Pyramid";
-            createPyramidBar3DChartItem4.Caption = "Clustered Pyramid";
-            createPyramidBar3DChartItem4.Description = "Compare values across categories.";
-            createPyramidBar3DChartItem4.Hint = "Compare values across categories.";
-            createPyramidFullStackedBar3DChartItem4.Caption = "100% Stacked Pyramid";
-            createPyramidFullStackedBar3DChartItem4.Description = "Compare the percentage each value contributes to a total across categories.";
-            createPyramidFullStackedBar3DChartItem4.Hint = "Compare the percentage each value contributes to a total across categories.";
-            createPyramidManhattanBarChartItem4.Caption = "3-D Pyramid";
-            createPyramidManhattanBarChartItem4.Description = "Compare values across categories and across series and display a pyramid chart on" +
+            createConeStackedBar3DChartItem34.Caption = "Stacked Cone";
+            createConeStackedBar3DChartItem34.Description = "Compare the contribution of each value to a total across categories.";
+            createConeStackedBar3DChartItem34.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupConeColumn34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createConeBar3DChartItem34,
+            createConeFullStackedBar3DChartItem34,
+            createConeManhattanBarChartItem34,
+            createConeSideBySideFullStackedBar3DChartItem34,
+            createConeSideBySideStackedBar3DChartItem34,
+            createConeStackedBar3DChartItem34});
+            chartControlCommandGalleryItemGroupPyramidColumn34.Caption = "Pyramid";
+            createPyramidBar3DChartItem34.Caption = "Clustered Pyramid";
+            createPyramidBar3DChartItem34.Description = "Compare values across categories.";
+            createPyramidBar3DChartItem34.Hint = "Compare values across categories.";
+            createPyramidFullStackedBar3DChartItem34.Caption = "100% Stacked Pyramid";
+            createPyramidFullStackedBar3DChartItem34.Description = "Compare the percentage each value contributes to a total across categories.";
+            createPyramidFullStackedBar3DChartItem34.Hint = "Compare the percentage each value contributes to a total across categories.";
+            createPyramidManhattanBarChartItem34.Caption = "3-D Pyramid";
+            createPyramidManhattanBarChartItem34.Description = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            createPyramidManhattanBarChartItem4.Hint = "Compare values across categories and across series and display a pyramid chart on" +
+            createPyramidManhattanBarChartItem34.Hint = "Compare values across categories and across series and display a pyramid chart on" +
     " three axes.";
-            createPyramidSideBySideFullStackedBar3DChartItem4.Caption = "Clustered 100% Stacked Pyramid";
-            createPyramidSideBySideFullStackedBar3DChartItem4.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
+            createPyramidSideBySideFullStackedBar3DChartItem34.Caption = "Clustered 100% Stacked Pyramid";
+            createPyramidSideBySideFullStackedBar3DChartItem34.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
     "rt types, so that you can stack different pyramids, and combine them into groups" +
     " across the same axis value.";
-            createPyramidSideBySideFullStackedBar3DChartItem4.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
+            createPyramidSideBySideFullStackedBar3DChartItem34.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" +
     "rt types, so that you can stack different pyramids, and combine them into groups" +
     " across the same axis value.";
-            createPyramidSideBySideStackedBar3DChartItem4.Caption = "Clustered Stacked Pyramid";
-            createPyramidSideBySideStackedBar3DChartItem4.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
+            createPyramidSideBySideStackedBar3DChartItem34.Caption = "Clustered Stacked Pyramid";
+            createPyramidSideBySideStackedBar3DChartItem34.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
     "pes, so that you can stack different pyramids, and combine them into groups acro" +
     "ss the same axis value.";
-            createPyramidSideBySideStackedBar3DChartItem4.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
+            createPyramidSideBySideStackedBar3DChartItem34.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" +
     "pes, so that you can stack different pyramids, and combine them into groups acro" +
     "ss the same axis value.";
-            createPyramidStackedBar3DChartItem4.Caption = "Stacked Pyramid";
-            createPyramidStackedBar3DChartItem4.Description = "Compare the contribution of each value to a total across categories.";
-            createPyramidStackedBar3DChartItem4.Hint = "Compare the contribution of each value to a total across categories.";
-            chartControlCommandGalleryItemGroupPyramidColumn4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPyramidBar3DChartItem4,
-            createPyramidFullStackedBar3DChartItem4,
-            createPyramidManhattanBarChartItem4,
-            createPyramidSideBySideFullStackedBar3DChartItem4,
-            createPyramidSideBySideStackedBar3DChartItem4,
-            createPyramidStackedBar3DChartItem4});
+            createPyramidStackedBar3DChartItem34.Caption = "Stacked Pyramid";
+            createPyramidStackedBar3DChartItem34.Description = "Compare the contribution of each value to a total across categories.";
+            createPyramidStackedBar3DChartItem34.Hint = "Compare the contribution of each value to a total across categories.";
+            chartControlCommandGalleryItemGroupPyramidColumn34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPyramidBar3DChartItem34,
+            createPyramidFullStackedBar3DChartItem34,
+            createPyramidManhattanBarChartItem34,
+            createPyramidSideBySideFullStackedBar3DChartItem34,
+            createPyramidSideBySideStackedBar3DChartItem34,
+            createPyramidStackedBar3DChartItem34});
             this.commandBarGalleryDropDown1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DColumn4,
-            chartControlCommandGalleryItemGroup3DColumn4,
-            chartControlCommandGalleryItemGroupCylinderColumn4,
-            chartControlCommandGalleryItemGroupConeColumn4,
-            chartControlCommandGalleryItemGroupPyramidColumn4});
+            chartControlCommandGalleryItemGroup2DColumn34,
+            chartControlCommandGalleryItemGroup3DColumn34,
+            chartControlCommandGalleryItemGroupCylinderColumn34,
+            chartControlCommandGalleryItemGroupConeColumn34,
+            chartControlCommandGalleryItemGroupPyramidColumn34});
             this.commandBarGalleryDropDown1.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown1.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown1.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -6219,71 +6230,71 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown2.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown2.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DLine4.Caption = "2-D Line";
-            createLineChartItem4.Caption = "Line";
-            createLineChartItem4.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
+            chartControlCommandGalleryItemGroup2DLine34.Caption = "2-D Line";
+            createLineChartItem34.Caption = "Line";
+            createLineChartItem34.Description = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
-            createLineChartItem4.Hint = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
+            createLineChartItem34.Hint = "Display trend overtime (dates, years) or ordered categories. Useful when there ar" +
     "e many data points and the order is important.";
-            createFullStackedLineChartItem4.Caption = "100% Stacked Line";
-            createFullStackedLineChartItem4.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
+            createFullStackedLineChartItem34.Caption = "100% Stacked Line";
+            createFullStackedLineChartItem34.Description = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.";
-            createFullStackedLineChartItem4.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
+            createFullStackedLineChartItem34.Hint = "Display the trend of the percentage each value contributes over time or ordered c" +
     "ategories.";
-            createScatterLineChartItem4.Caption = "Scatter Line";
-            createScatterLineChartItem4.Description = "Represent series points in the same order that they have in the collection.";
-            createScatterLineChartItem4.Hint = "Represent series points in the same order that they have in the collection.";
-            createSplineChartItem4.Caption = "Spline";
-            createSplineChartItem4.Description = "Plot a fitted curve through each data point in a series.";
-            createSplineChartItem4.Hint = "Plot a fitted curve through each data point in a series.";
-            createStackedLineChartItem4.Caption = "Stacked Line";
-            createStackedLineChartItem4.Description = "Display the trend of the contribution of each value over time or ordered categori" +
+            createScatterLineChartItem34.Caption = "Scatter Line";
+            createScatterLineChartItem34.Description = "Represent series points in the same order that they have in the collection.";
+            createScatterLineChartItem34.Hint = "Represent series points in the same order that they have in the collection.";
+            createSplineChartItem34.Caption = "Spline";
+            createSplineChartItem34.Description = "Plot a fitted curve through each data point in a series.";
+            createSplineChartItem34.Hint = "Plot a fitted curve through each data point in a series.";
+            createStackedLineChartItem34.Caption = "Stacked Line";
+            createStackedLineChartItem34.Description = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.";
-            createStackedLineChartItem4.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
+            createStackedLineChartItem34.Hint = "Display the trend of the contribution of each value over time or ordered categori" +
     "es.";
-            createStepLineChartItem4.Caption = "Step Line";
-            createStepLineChartItem4.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepLineChartItem4.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup2DLine4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLineChartItem4,
-            createFullStackedLineChartItem4,
-            createScatterLineChartItem4,
-            createSplineChartItem4,
-            createStackedLineChartItem4,
-            createStepLineChartItem4});
-            chartControlCommandGalleryItemGroup3DLine4.Caption = "3-D Line";
-            createLine3DChartItem4.Caption = "3-D Line";
-            createLine3DChartItem4.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
-            createLine3DChartItem4.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
-            createFullStackedLine3DChartItem4.Caption = "100% Stacked Line in 3-D";
-            createFullStackedLine3DChartItem4.Description = "Display all series stacked and is useful when it is necessary to compare how much" +
+            createStepLineChartItem34.Caption = "Step Line";
+            createStepLineChartItem34.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepLineChartItem34.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup2DLine34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLineChartItem34,
+            createFullStackedLineChartItem34,
+            createScatterLineChartItem34,
+            createSplineChartItem34,
+            createStackedLineChartItem34,
+            createStepLineChartItem34});
+            chartControlCommandGalleryItemGroup3DLine34.Caption = "3-D Line";
+            createLine3DChartItem34.Caption = "3-D Line";
+            createLine3DChartItem34.Description = "Display each row or column of data as a 3-D ribbon on three axes.";
+            createLine3DChartItem34.Hint = "Display each row or column of data as a 3-D ribbon on three axes.";
+            createFullStackedLine3DChartItem34.Caption = "100% Stacked Line in 3-D";
+            createFullStackedLine3DChartItem34.Description = "Display all series stacked and is useful when it is necessary to compare how much" +
     " each series adds to the total aggregate value for specific arguments (as percen" +
     "ts).";
-            createFullStackedLine3DChartItem4.Hint = "Display all series stacked and is useful when it is necessary to compare how much" +
+            createFullStackedLine3DChartItem34.Hint = "Display all series stacked and is useful when it is necessary to compare how much" +
     " each series adds to the total aggregate value for specific arguments (as percen" +
     "ts).";
-            createSpline3DChartItem4.Caption = "3-D Spline";
-            createSpline3DChartItem4.Description = "Plot a fitted curve through each data point in a series.";
-            createSpline3DChartItem4.Hint = "Plot a fitted curve through each data point in a series.";
-            createStackedLine3DChartItem4.Caption = "Stacked Line in 3-D";
-            createStackedLine3DChartItem4.Description = "Display all points from different series in a stacked manner and is useful when i" +
+            createSpline3DChartItem34.Caption = "3-D Spline";
+            createSpline3DChartItem34.Description = "Plot a fitted curve through each data point in a series.";
+            createSpline3DChartItem34.Hint = "Plot a fitted curve through each data point in a series.";
+            createStackedLine3DChartItem34.Caption = "Stacked Line in 3-D";
+            createStackedLine3DChartItem34.Description = "Display all points from different series in a stacked manner and is useful when i" +
     "t is necessary to compare how much each series adds to the total aggregate value" +
     " for specific arguments.";
-            createStackedLine3DChartItem4.Hint = "Display all points from different series in a stacked manner and is useful when i" +
+            createStackedLine3DChartItem34.Hint = "Display all points from different series in a stacked manner and is useful when i" +
     "t is necessary to compare how much each series adds to the total aggregate value" +
     " for specific arguments.";
-            createStepLine3DChartItem4.Caption = "Step Line in 3-D";
-            createStepLine3DChartItem4.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepLine3DChartItem4.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup3DLine4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLine3DChartItem4,
-            createFullStackedLine3DChartItem4,
-            createSpline3DChartItem4,
-            createStackedLine3DChartItem4,
-            createStepLine3DChartItem4});
+            createStepLine3DChartItem34.Caption = "Step Line in 3-D";
+            createStepLine3DChartItem34.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepLine3DChartItem34.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup3DLine34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLine3DChartItem34,
+            createFullStackedLine3DChartItem34,
+            createSpline3DChartItem34,
+            createStackedLine3DChartItem34,
+            createStepLine3DChartItem34});
             this.commandBarGalleryDropDown2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DLine4,
-            chartControlCommandGalleryItemGroup3DLine4});
+            chartControlCommandGalleryItemGroup2DLine34,
+            chartControlCommandGalleryItemGroup3DLine34});
             this.commandBarGalleryDropDown2.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown2.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown2.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -6297,41 +6308,41 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown3.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown3.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DPie4.Caption = "2-D Pie";
-            createPieChartItem4.Caption = "Pie";
-            createPieChartItem4.Description = resources.GetString("createPieChartItem4.Description");
-            createPieChartItem4.Hint = resources.GetString("createPieChartItem4.Hint");
-            createDoughnutChartItem4.Caption = "Doughnut";
-            createDoughnutChartItem4.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            chartControlCommandGalleryItemGroup2DPie34.Caption = "2-D Pie";
+            createPieChartItem34.Caption = "Pie";
+            createPieChartItem34.Description = resources.GetString("createPieChartItem34.Description");
+            createPieChartItem34.Hint = resources.GetString("createPieChartItem34.Hint");
+            createDoughnutChartItem34.Caption = "Doughnut";
+            createDoughnutChartItem34.Description = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            createDoughnutChartItem4.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
+            createDoughnutChartItem34.Hint = "Display the contribution of each value to a total like a pie chart, but it can co" +
     "ntain multiple series.";
-            createNestedDoughnutChartItem3.Caption = "Nested Doughnut";
-            createNestedDoughnutChartItem3.Description = "Display the contribution of each value to a total while comparing series with one" +
+            createNestedDoughnutChartItem27.Caption = "Nested Doughnut";
+            createNestedDoughnutChartItem27.Description = "Display the contribution of each value to a total while comparing series with one" +
     " doughnut nested in another one.";
-            createNestedDoughnutChartItem3.Hint = "Display the contribution of each value to a total while comparing series with one" +
+            createNestedDoughnutChartItem27.Hint = "Display the contribution of each value to a total while comparing series with one" +
     " doughnut nested in another one.";
-            chartControlCommandGalleryItemGroup2DPie4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPieChartItem4,
-            createDoughnutChartItem4,
-            createNestedDoughnutChartItem3});
-            chartControlCommandGalleryItemGroup3DPie4.Caption = "3-D Pie";
-            createPie3DChartItem4.Caption = "Pie in 3-D";
-            createPie3DChartItem4.Description = "Display the contribution of each value to a total.";
-            createPie3DChartItem4.Hint = "Display the contribution of each value to a total.";
-            createDoughnut3DChartItem4.Caption = "Doughnut in 3-D";
-            createDoughnut3DChartItem4.Description = "Compare the percentage values of different point arguments in the same series, an" +
+            chartControlCommandGalleryItemGroup2DPie34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPieChartItem34,
+            createDoughnutChartItem34,
+            createNestedDoughnutChartItem27});
+            chartControlCommandGalleryItemGroup3DPie34.Caption = "3-D Pie";
+            createPie3DChartItem34.Caption = "Pie in 3-D";
+            createPie3DChartItem34.Description = "Display the contribution of each value to a total.";
+            createPie3DChartItem34.Hint = "Display the contribution of each value to a total.";
+            createDoughnut3DChartItem34.Caption = "Doughnut in 3-D";
+            createDoughnut3DChartItem34.Description = "Compare the percentage values of different point arguments in the same series, an" +
     "d illustrate these values as easy to understand pie slices, but with a hole in i" +
     "ts center.";
-            createDoughnut3DChartItem4.Hint = "Compare the percentage values of different point arguments in the same series, an" +
+            createDoughnut3DChartItem34.Hint = "Compare the percentage values of different point arguments in the same series, an" +
     "d illustrate these values as easy to understand pie slices, but with a hole in i" +
     "ts center.";
-            chartControlCommandGalleryItemGroup3DPie4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPie3DChartItem4,
-            createDoughnut3DChartItem4});
+            chartControlCommandGalleryItemGroup3DPie34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPie3DChartItem34,
+            createDoughnut3DChartItem34});
             this.commandBarGalleryDropDown3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DPie4,
-            chartControlCommandGalleryItemGroup3DPie4});
+            chartControlCommandGalleryItemGroup2DPie34,
+            chartControlCommandGalleryItemGroup3DPie34});
             this.commandBarGalleryDropDown3.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown3.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -6345,42 +6356,42 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown4.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown4.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DBar4.Caption = "2-D Bar";
-            createRotatedBarChartItem4.Caption = "Bar";
-            createRotatedBarChartItem4.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
+            chartControlCommandGalleryItemGroup2DBar34.Caption = "2-D Bar";
+            createRotatedBarChartItem34.Caption = "Bar";
+            createRotatedBarChartItem34.Description = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
-            createRotatedBarChartItem4.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
+            createRotatedBarChartItem34.Hint = "Insert a bar chart.\r\n\r\nBar charts are the best chart type for comparing multiple " +
     "values.\r\n    ";
-            createRotatedFullStackedBarChartItem4.Caption = "100% Stacked Bar";
-            createRotatedFullStackedBarChartItem4.Description = resources.GetString("createRotatedFullStackedBarChartItem4.Description");
-            createRotatedFullStackedBarChartItem4.Hint = resources.GetString("createRotatedFullStackedBarChartItem4.Hint");
-            createRotatedSideBySideFullStackedBarChartItem4.Caption = "Clustered 100% Stacked Bar";
-            createRotatedSideBySideFullStackedBarChartItem4.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
+            createRotatedFullStackedBarChartItem34.Caption = "100% Stacked Bar";
+            createRotatedFullStackedBarChartItem34.Description = resources.GetString("createRotatedFullStackedBarChartItem34.Description");
+            createRotatedFullStackedBarChartItem34.Hint = resources.GetString("createRotatedFullStackedBarChartItem34.Hint");
+            createRotatedSideBySideFullStackedBarChartItem34.Caption = "Clustered 100% Stacked Bar";
+            createRotatedSideBySideFullStackedBarChartItem34.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideFullStackedBarChartItem4.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
+            createRotatedSideBySideFullStackedBarChartItem34.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" +
     ", so you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideStackedBarChartItem4.Caption = "Clustered Stacked Bar";
-            createRotatedSideBySideStackedBarChartItem4.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
+            createRotatedSideBySideStackedBarChartItem34.Caption = "Clustered Stacked Bar";
+            createRotatedSideBySideStackedBarChartItem34.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
     "that you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedSideBySideStackedBarChartItem4.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
+            createRotatedSideBySideStackedBarChartItem34.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " +
     "that you can stack different bars, and combine them into groups across the same " +
     "axis value.";
-            createRotatedStackedBarChartItem4.Caption = "Stacked Bar";
-            createRotatedStackedBarChartItem4.Description = "Compare the contribution of each value to a total across categories by using hori" +
+            createRotatedStackedBarChartItem34.Caption = "Stacked Bar";
+            createRotatedStackedBarChartItem34.Description = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.";
-            createRotatedStackedBarChartItem4.Hint = "Compare the contribution of each value to a total across categories by using hori" +
+            createRotatedStackedBarChartItem34.Hint = "Compare the contribution of each value to a total across categories by using hori" +
     "zontal rectangles.";
-            chartControlCommandGalleryItemGroup2DBar4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRotatedBarChartItem4,
-            createRotatedFullStackedBarChartItem4,
-            createRotatedSideBySideFullStackedBarChartItem4,
-            createRotatedSideBySideStackedBarChartItem4,
-            createRotatedStackedBarChartItem4});
+            chartControlCommandGalleryItemGroup2DBar34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRotatedBarChartItem34,
+            createRotatedFullStackedBarChartItem34,
+            createRotatedSideBySideFullStackedBarChartItem34,
+            createRotatedSideBySideStackedBarChartItem34,
+            createRotatedStackedBarChartItem34});
             this.commandBarGalleryDropDown4.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DBar4});
+            chartControlCommandGalleryItemGroup2DBar34});
             this.commandBarGalleryDropDown4.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown4.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -6394,89 +6405,89 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown5.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown5.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DArea4.Caption = "2-D Area";
-            createAreaChartItem4.Caption = "Area";
-            createAreaChartItem4.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
+            chartControlCommandGalleryItemGroup2DArea34.Caption = "2-D Area";
+            createAreaChartItem34.Caption = "Area";
+            createAreaChartItem34.Description = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
-            createAreaChartItem4.Hint = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
+            createAreaChartItem34.Hint = "Insert an area chart.\r\n\r\nArea charts emphasize differences between several sets o" +
     "f data over a period of time.\r\n    ";
-            createFullStackedAreaChartItem4.Caption = "100% Stacked Area";
-            createFullStackedAreaChartItem4.Description = "Display the trend of the percentage each value contributes over time or categorie" +
+            createFullStackedAreaChartItem34.Caption = "100% Stacked Area";
+            createFullStackedAreaChartItem34.Description = "Display the trend of the percentage each value contributes over time or categorie" +
     "s.\r\n\r\nUse it to emphasize the trend in the proportion of each series.\r\n    ";
-            createFullStackedAreaChartItem4.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
+            createFullStackedAreaChartItem34.Hint = "Display the trend of the percentage each value contributes over time or categorie" +
     "s.\r\n\r\nUse it to emphasize the trend in the proportion of each series.\r\n    ";
-            createFullStackedSplineAreaChartItem4.Caption = "100% Stacked Spline Area";
-            createFullStackedSplineAreaChartItem4.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
+            createFullStackedSplineAreaChartItem34.Caption = "100% Stacked Spline Area";
+            createFullStackedSplineAreaChartItem34.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
     "int in a series.";
-            createFullStackedSplineAreaChartItem4.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
+            createFullStackedSplineAreaChartItem34.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" +
     "int in a series.";
-            createSplineAreaChartItem4.Caption = "Spline Area";
-            createSplineAreaChartItem4.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
+            createSplineAreaChartItem34.Caption = "Spline Area";
+            createSplineAreaChartItem34.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
     " series.";
-            createSplineAreaChartItem4.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
+            createSplineAreaChartItem34.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" +
     " series.";
-            createStackedAreaChartItem4.Caption = "Stacked Area";
-            createStackedAreaChartItem4.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            createStackedAreaChartItem34.Caption = "Stacked Area";
+            createStackedAreaChartItem34.Description = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.\r\n    ";
-            createStackedAreaChartItem4.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
+            createStackedAreaChartItem34.Hint = "Display the trend of the contribution of each value over time or categories.\r\n\r\nU" +
     "se it to emphasize the trend in the total across series for one category.\r\n    ";
-            createStackedSplineAreaChartItem4.Caption = "Stacked Spline Area";
-            createStackedSplineAreaChartItem4.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
+            createStackedSplineAreaChartItem34.Caption = "Stacked Spline Area";
+            createStackedSplineAreaChartItem34.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
     "int in a series.";
-            createStackedSplineAreaChartItem4.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
+            createStackedSplineAreaChartItem34.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" +
     "int in a series.";
-            createStepAreaChartItem4.Caption = "Step Area";
-            createStepAreaChartItem4.Description = "Show how much values have changed for different points of the same series.";
-            createStepAreaChartItem4.Hint = "Show how much values have changed for different points of the same series.";
-            chartControlCommandGalleryItemGroup2DArea4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createAreaChartItem4,
-            createFullStackedAreaChartItem4,
-            createFullStackedSplineAreaChartItem4,
-            createSplineAreaChartItem4,
-            createStackedAreaChartItem4,
-            createStackedSplineAreaChartItem4,
-            createStepAreaChartItem4});
-            chartControlCommandGalleryItemGroup3DArea4.Caption = "3-D Area";
-            createArea3DChartItem4.Caption = "3-D Area";
-            createArea3DChartItem4.Description = resources.GetString("createArea3DChartItem4.Description");
-            createArea3DChartItem4.Hint = resources.GetString("createArea3DChartItem4.Hint");
-            createFullStackedArea3DChartItem4.Caption = "100% Stacked Area in 3-D";
-            createFullStackedArea3DChartItem4.Description = resources.GetString("createFullStackedArea3DChartItem4.Description");
-            createFullStackedArea3DChartItem4.Hint = resources.GetString("createFullStackedArea3DChartItem4.Hint");
-            createFullStackedSplineArea3DChartItem4.Caption = "100% Stacked Spline Area in 3-D";
-            createFullStackedSplineArea3DChartItem4.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
+            createStepAreaChartItem34.Caption = "Step Area";
+            createStepAreaChartItem34.Description = "Show how much values have changed for different points of the same series.";
+            createStepAreaChartItem34.Hint = "Show how much values have changed for different points of the same series.";
+            chartControlCommandGalleryItemGroup2DArea34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createAreaChartItem34,
+            createFullStackedAreaChartItem34,
+            createFullStackedSplineAreaChartItem34,
+            createSplineAreaChartItem34,
+            createStackedAreaChartItem34,
+            createStackedSplineAreaChartItem34,
+            createStepAreaChartItem34});
+            chartControlCommandGalleryItemGroup3DArea34.Caption = "3-D Area";
+            createArea3DChartItem34.Caption = "3-D Area";
+            createArea3DChartItem34.Description = resources.GetString("createArea3DChartItem34.Description");
+            createArea3DChartItem34.Hint = resources.GetString("createArea3DChartItem34.Hint");
+            createFullStackedArea3DChartItem34.Caption = "100% Stacked Area in 3-D";
+            createFullStackedArea3DChartItem34.Description = resources.GetString("createFullStackedArea3DChartItem34.Description");
+            createFullStackedArea3DChartItem34.Hint = resources.GetString("createFullStackedArea3DChartItem34.Hint");
+            createFullStackedSplineArea3DChartItem34.Caption = "100% Stacked Spline Area in 3-D";
+            createFullStackedSplineArea3DChartItem34.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
     "each data point in a series.";
-            createFullStackedSplineArea3DChartItem4.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
+            createFullStackedSplineArea3DChartItem34.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " +
     "each data point in a series.";
-            createSplineArea3DChartItem4.Caption = "Spline Area in 3-D";
-            createSplineArea3DChartItem4.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
+            createSplineArea3DChartItem34.Caption = "Spline Area in 3-D";
+            createSplineArea3DChartItem34.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
     "in a series.";
-            createSplineArea3DChartItem4.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
+            createSplineArea3DChartItem34.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " +
     "in a series.";
-            createStackedArea3DChartItem4.Caption = "Stacked Area in 3-D";
-            createStackedArea3DChartItem4.Description = "Display series as areas on a diagram, so that the value of each data point is agg" +
+            createStackedArea3DChartItem34.Caption = "Stacked Area in 3-D";
+            createStackedArea3DChartItem34.Description = "Display series as areas on a diagram, so that the value of each data point is agg" +
     "regated with the underlying data points\' values.";
-            createStackedArea3DChartItem4.Hint = "Display series as areas on a diagram, so that the value of each data point is agg" +
+            createStackedArea3DChartItem34.Hint = "Display series as areas on a diagram, so that the value of each data point is agg" +
     "regated with the underlying data points\' values.";
-            createStackedSplineArea3DChartItem4.Caption = "Stacked Spline Area in 3-D";
-            createStackedSplineArea3DChartItem4.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
+            createStackedSplineArea3DChartItem34.Caption = "Stacked Spline Area in 3-D";
+            createStackedSplineArea3DChartItem34.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
     "data point in a series.";
-            createStackedSplineArea3DChartItem4.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
+            createStackedSplineArea3DChartItem34.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " +
     "data point in a series.";
-            createStepArea3DChartItem4.Caption = "Step Area in 3-D";
-            createStepArea3DChartItem4.Description = "Show to what extent values have changed for different points in the same series.";
-            createStepArea3DChartItem4.Hint = "Show to what extent values have changed for different points in the same series.";
-            chartControlCommandGalleryItemGroup3DArea4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createArea3DChartItem4,
-            createFullStackedArea3DChartItem4,
-            createFullStackedSplineArea3DChartItem4,
-            createSplineArea3DChartItem4,
-            createStackedArea3DChartItem4,
-            createStackedSplineArea3DChartItem4,
-            createStepArea3DChartItem4});
+            createStepArea3DChartItem34.Caption = "Step Area in 3-D";
+            createStepArea3DChartItem34.Description = "Show to what extent values have changed for different points in the same series.";
+            createStepArea3DChartItem34.Hint = "Show to what extent values have changed for different points in the same series.";
+            chartControlCommandGalleryItemGroup3DArea34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createArea3DChartItem34,
+            createFullStackedArea3DChartItem34,
+            createFullStackedSplineArea3DChartItem34,
+            createSplineArea3DChartItem34,
+            createStackedArea3DChartItem34,
+            createStackedSplineArea3DChartItem34,
+            createStepArea3DChartItem34});
             this.commandBarGalleryDropDown5.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DArea4,
-            chartControlCommandGalleryItemGroup3DArea4});
+            chartControlCommandGalleryItemGroup2DArea34,
+            chartControlCommandGalleryItemGroup3DArea34});
             this.commandBarGalleryDropDown5.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown5.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown5.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -6490,134 +6501,134 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown6.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown6.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroupPoint4.Caption = "Point";
-            createPointChartItem4.Caption = "Point";
-            createPointChartItem4.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
+            chartControlCommandGalleryItemGroupPoint34.Caption = "Point";
+            createPointChartItem34.Caption = "Point";
+            createPointChartItem34.Description = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
-            createPointChartItem4.Hint = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
+            createPointChartItem34.Hint = "Use it when it\'s necessary to show stand-alone data points on the same chart plot" +
     ".";
-            createBubbleChartItem4.Caption = "Bubble";
-            createBubbleChartItem4.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
+            createBubbleChartItem34.Caption = "Bubble";
+            createBubbleChartItem34.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
     "ird value determines the size of the bubble marker.";
-            createBubbleChartItem4.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
+            createBubbleChartItem34.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" +
     "ird value determines the size of the bubble marker.";
-            chartControlCommandGalleryItemGroupPoint4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPointChartItem4,
-            createBubbleChartItem4});
-            chartControlCommandGalleryItemGroupFunnel4.Caption = "Funnel";
-            createFunnelChartItem4.Caption = "Funnel";
-            createFunnelChartItem4.Description = resources.GetString("createFunnelChartItem4.Description");
-            createFunnelChartItem4.Hint = resources.GetString("createFunnelChartItem4.Hint");
-            createFunnel3DChartItem4.Caption = "3-D Funnel";
-            createFunnel3DChartItem4.Description = resources.GetString("createFunnel3DChartItem4.Description");
-            createFunnel3DChartItem4.Hint = resources.GetString("createFunnel3DChartItem4.Hint");
-            chartControlCommandGalleryItemGroupFunnel4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createFunnelChartItem4,
-            createFunnel3DChartItem4});
-            chartControlCommandGalleryItemGroupFinancial4.Caption = "Financial";
-            createStockChartItem4.Caption = "Stock";
-            createStockChartItem4.Description = resources.GetString("createStockChartItem4.Description");
-            createStockChartItem4.Hint = resources.GetString("createStockChartItem4.Hint");
-            createCandleStickChartItem4.Caption = "Candle Stick";
-            createCandleStickChartItem4.Description = resources.GetString("createCandleStickChartItem4.Description");
-            createCandleStickChartItem4.Hint = resources.GetString("createCandleStickChartItem4.Hint");
-            chartControlCommandGalleryItemGroupFinancial4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createStockChartItem4,
-            createCandleStickChartItem4});
-            chartControlCommandGalleryItemGroupRadar4.Caption = "Radar";
-            createRadarPointChartItem4.Caption = "Radar Point";
-            createRadarPointChartItem4.Description = "Show points from two or more different series on the same points arguments on a c" +
+            chartControlCommandGalleryItemGroupPoint34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPointChartItem34,
+            createBubbleChartItem34});
+            chartControlCommandGalleryItemGroupFunnel34.Caption = "Funnel";
+            createFunnelChartItem34.Caption = "Funnel";
+            createFunnelChartItem34.Description = resources.GetString("createFunnelChartItem34.Description");
+            createFunnelChartItem34.Hint = resources.GetString("createFunnelChartItem34.Hint");
+            createFunnel3DChartItem34.Caption = "3-D Funnel";
+            createFunnel3DChartItem34.Description = resources.GetString("createFunnel3DChartItem34.Description");
+            createFunnel3DChartItem34.Hint = resources.GetString("createFunnel3DChartItem34.Hint");
+            chartControlCommandGalleryItemGroupFunnel34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createFunnelChartItem34,
+            createFunnel3DChartItem34});
+            chartControlCommandGalleryItemGroupFinancial34.Caption = "Financial";
+            createStockChartItem34.Caption = "Stock";
+            createStockChartItem34.Description = resources.GetString("createStockChartItem34.Description");
+            createStockChartItem34.Hint = resources.GetString("createStockChartItem34.Hint");
+            createCandleStickChartItem34.Caption = "Candle Stick";
+            createCandleStickChartItem34.Description = resources.GetString("createCandleStickChartItem34.Description");
+            createCandleStickChartItem34.Hint = resources.GetString("createCandleStickChartItem34.Hint");
+            chartControlCommandGalleryItemGroupFinancial34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createStockChartItem34,
+            createCandleStickChartItem34});
+            chartControlCommandGalleryItemGroupRadar34.Caption = "Radar";
+            createRadarPointChartItem34.Caption = "Radar Point";
+            createRadarPointChartItem34.Description = "Show points from two or more different series on the same points arguments on a c" +
     "ircular grid that has multiple axes along which data can be plotted.";
-            createRadarPointChartItem4.Hint = "Show points from two or more different series on the same points arguments on a c" +
+            createRadarPointChartItem34.Hint = "Show points from two or more different series on the same points arguments on a c" +
     "ircular grid that has multiple axes along which data can be plotted.";
-            createRadarLineChartItem4.Caption = "Radar Line";
-            createRadarLineChartItem4.Description = "Show trends for several series and compare their values for the same points argum" +
+            createRadarLineChartItem34.Caption = "Radar Line";
+            createRadarLineChartItem34.Description = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular grid that has multiple axes along which data can be plotted.";
-            createRadarLineChartItem4.Hint = "Show trends for several series and compare their values for the same points argum" +
+            createRadarLineChartItem34.Hint = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular grid that has multiple axes along which data can be plotted.";
-            createRadarAreaChartItem4.Caption = "Radar Area";
-            createRadarAreaChartItem4.Description = "Display series as filled area on a circular grid that has multiple axes along whi" +
+            createRadarAreaChartItem34.Caption = "Radar Area";
+            createRadarAreaChartItem34.Description = "Display series as filled area on a circular grid that has multiple axes along whi" +
     "ch data can be plotted.";
-            createRadarAreaChartItem4.Hint = "Display series as filled area on a circular grid that has multiple axes along whi" +
+            createRadarAreaChartItem34.Hint = "Display series as filled area on a circular grid that has multiple axes along whi" +
     "ch data can be plotted.";
-            createScatterRadarLineChartItem3.Caption = "Scatter Radar Line";
-            createScatterRadarLineChartItem3.Description = resources.GetString("createScatterRadarLineChartItem3.Description");
-            createScatterRadarLineChartItem3.Hint = resources.GetString("createScatterRadarLineChartItem3.Hint");
-            chartControlCommandGalleryItemGroupRadar4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRadarPointChartItem4,
-            createRadarLineChartItem4,
-            createRadarAreaChartItem4,
-            createScatterRadarLineChartItem3});
-            chartControlCommandGalleryItemGroupPolar4.Caption = "Polar";
-            createPolarPointChartItem4.Caption = "Polar Point";
-            createPolarPointChartItem4.Description = "Show points from two or more different series on the same circular diagram on the" +
+            createScatterRadarLineChartItem27.Caption = "Scatter Radar Line";
+            createScatterRadarLineChartItem27.Description = resources.GetString("createScatterRadarLineChartItem27.Description");
+            createScatterRadarLineChartItem27.Hint = resources.GetString("createScatterRadarLineChartItem27.Hint");
+            chartControlCommandGalleryItemGroupRadar34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRadarPointChartItem34,
+            createRadarLineChartItem34,
+            createRadarAreaChartItem34,
+            createScatterRadarLineChartItem27});
+            chartControlCommandGalleryItemGroupPolar34.Caption = "Polar";
+            createPolarPointChartItem34.Caption = "Polar Point";
+            createPolarPointChartItem34.Description = "Show points from two or more different series on the same circular diagram on the" +
     " basis of angles.";
-            createPolarPointChartItem4.Hint = "Show points from two or more different series on the same circular diagram on the" +
+            createPolarPointChartItem34.Hint = "Show points from two or more different series on the same circular diagram on the" +
     " basis of angles.";
-            createPolarLineChartItem4.Caption = "Polar Line";
-            createPolarLineChartItem4.Description = "Show trends for several series and compare their values for the same points argum" +
+            createPolarLineChartItem34.Caption = "Polar Line";
+            createPolarLineChartItem34.Description = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular diagram on the basis of angles.";
-            createPolarLineChartItem4.Hint = "Show trends for several series and compare their values for the same points argum" +
+            createPolarLineChartItem34.Hint = "Show trends for several series and compare their values for the same points argum" +
     "ents on a circular diagram on the basis of angles.";
-            createPolarAreaChartItem4.Caption = "Polar Area";
-            createPolarAreaChartItem4.Description = "Display series as filled area on a circular diagram on the basis of angles.";
-            createPolarAreaChartItem4.Hint = "Display series as filled area on a circular diagram on the basis of angles.";
-            createScatterPolarLineChartItem3.Caption = "Scatter Polar Line";
-            createScatterPolarLineChartItem3.Description = resources.GetString("createScatterPolarLineChartItem3.Description");
-            createScatterPolarLineChartItem3.Hint = resources.GetString("createScatterPolarLineChartItem3.Hint");
-            chartControlCommandGalleryItemGroupPolar4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPolarPointChartItem4,
-            createPolarLineChartItem4,
-            createPolarAreaChartItem4,
-            createScatterPolarLineChartItem3});
-            chartControlCommandGalleryItemGroupRange4.Caption = "Range";
-            createRangeBarChartItem4.Caption = "Range Column";
-            createRangeBarChartItem4.Description = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
+            createPolarAreaChartItem34.Caption = "Polar Area";
+            createPolarAreaChartItem34.Description = "Display series as filled area on a circular diagram on the basis of angles.";
+            createPolarAreaChartItem34.Hint = "Display series as filled area on a circular diagram on the basis of angles.";
+            createScatterPolarLineChartItem27.Caption = "Scatter Polar Line";
+            createScatterPolarLineChartItem27.Description = resources.GetString("createScatterPolarLineChartItem27.Description");
+            createScatterPolarLineChartItem27.Hint = resources.GetString("createScatterPolarLineChartItem27.Hint");
+            chartControlCommandGalleryItemGroupPolar34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPolarPointChartItem34,
+            createPolarLineChartItem34,
+            createPolarAreaChartItem34,
+            createScatterPolarLineChartItem27});
+            chartControlCommandGalleryItemGroupRange34.Caption = "Range";
+            createRangeBarChartItem34.Caption = "Range Column";
+            createRangeBarChartItem34.Description = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
     "sents a range of data for each argument value.";
-            createRangeBarChartItem4.Hint = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
+            createRangeBarChartItem34.Hint = "Display vertical columns along the Y-axis (the axis of values). Each column repre" +
     "sents a range of data for each argument value.";
-            createSideBySideRangeBarChartItem4.Caption = "Clustered Range Column";
-            createSideBySideRangeBarChartItem4.Description = "Show activity columns from different series grouped by their arguments. Each colu" +
+            createSideBySideRangeBarChartItem34.Caption = "Clustered Range Column";
+            createSideBySideRangeBarChartItem34.Description = "Show activity columns from different series grouped by their arguments. Each colu" +
     "mn represents a range of data with two values for each argument value.";
-            createSideBySideRangeBarChartItem4.Hint = "Show activity columns from different series grouped by their arguments. Each colu" +
+            createSideBySideRangeBarChartItem34.Hint = "Show activity columns from different series grouped by their arguments. Each colu" +
     "mn represents a range of data with two values for each argument value.";
-            createRangeAreaChartItem4.Caption = "Range Area";
-            createRangeAreaChartItem4.Description = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeAreaChartItem34.Caption = "Range Area";
+            createRangeAreaChartItem34.Description = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeAreaChartItem4.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeAreaChartItem34.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeArea3DChartItem4.Caption = "Range Area in 3-D";
-            createRangeArea3DChartItem4.Description = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeArea3DChartItem34.Caption = "Range Area in 3-D";
+            createRangeArea3DChartItem34.Description = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            createRangeArea3DChartItem4.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
+            createRangeArea3DChartItem34.Hint = "Display series as filled areas on a diagram, with two data points that define min" +
     "imum and maximum limits.\r\n\r\nUse it when you need to accentuate the delta between" +
     " start and end values.\r\n    ";
-            chartControlCommandGalleryItemGroupRange4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRangeBarChartItem4,
-            createSideBySideRangeBarChartItem4,
-            createRangeAreaChartItem4,
-            createRangeArea3DChartItem4});
-            chartControlCommandGalleryItemGroupGantt4.Caption = "Gantt";
-            createGanttChartItem4.Caption = "Gantt";
-            createGanttChartItem4.Description = "Track different activities during the time frame.";
-            createGanttChartItem4.Hint = "Track different activities during the time frame.";
-            createSideBySideGanttChartItem4.Caption = "Clustered Gantt";
-            createSideBySideGanttChartItem4.Description = resources.GetString("createSideBySideGanttChartItem4.Description");
-            createSideBySideGanttChartItem4.Hint = resources.GetString("createSideBySideGanttChartItem4.Hint");
-            chartControlCommandGalleryItemGroupGantt4.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createGanttChartItem4,
-            createSideBySideGanttChartItem4});
+            chartControlCommandGalleryItemGroupRange34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRangeBarChartItem34,
+            createSideBySideRangeBarChartItem34,
+            createRangeAreaChartItem34,
+            createRangeArea3DChartItem34});
+            chartControlCommandGalleryItemGroupGantt34.Caption = "Gantt";
+            createGanttChartItem34.Caption = "Gantt";
+            createGanttChartItem34.Description = "Track different activities during the time frame.";
+            createGanttChartItem34.Hint = "Track different activities during the time frame.";
+            createSideBySideGanttChartItem34.Caption = "Clustered Gantt";
+            createSideBySideGanttChartItem34.Description = resources.GetString("createSideBySideGanttChartItem34.Description");
+            createSideBySideGanttChartItem34.Hint = resources.GetString("createSideBySideGanttChartItem34.Hint");
+            chartControlCommandGalleryItemGroupGantt34.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createGanttChartItem34,
+            createSideBySideGanttChartItem34});
             this.commandBarGalleryDropDown6.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroupPoint4,
-            chartControlCommandGalleryItemGroupFunnel4,
-            chartControlCommandGalleryItemGroupFinancial4,
-            chartControlCommandGalleryItemGroupRadar4,
-            chartControlCommandGalleryItemGroupPolar4,
-            chartControlCommandGalleryItemGroupRange4,
-            chartControlCommandGalleryItemGroupGantt4});
+            chartControlCommandGalleryItemGroupPoint34,
+            chartControlCommandGalleryItemGroupFunnel34,
+            chartControlCommandGalleryItemGroupFinancial34,
+            chartControlCommandGalleryItemGroupRadar34,
+            chartControlCommandGalleryItemGroupPolar34,
+            chartControlCommandGalleryItemGroupRange34,
+            chartControlCommandGalleryItemGroupGantt34});
             this.commandBarGalleryDropDown6.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown6.Gallery.RowCount = 7;
             this.commandBarGalleryDropDown6.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -6652,12 +6663,12 @@ namespace TracerV1
             this.commandBarGalleryDropDown7.Gallery.ImageSize = new System.Drawing.Size(160, 10);
             this.commandBarGalleryDropDown7.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown7.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right;
-            skinPaddingEdges7.Bottom = -3;
-            skinPaddingEdges7.Top = -3;
-            this.commandBarGalleryDropDown7.Gallery.ItemImagePadding = skinPaddingEdges7;
-            skinPaddingEdges8.Bottom = -3;
-            skinPaddingEdges8.Top = -3;
-            this.commandBarGalleryDropDown7.Gallery.ItemTextPadding = skinPaddingEdges8;
+            skinPaddingEdges67.Bottom = -3;
+            skinPaddingEdges67.Top = -3;
+            this.commandBarGalleryDropDown7.Gallery.ItemImagePadding = skinPaddingEdges67;
+            skinPaddingEdges68.Bottom = -3;
+            skinPaddingEdges68.Top = -3;
+            this.commandBarGalleryDropDown7.Gallery.ItemTextPadding = skinPaddingEdges68;
             this.commandBarGalleryDropDown7.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown7.Gallery.ShowGroupCaption = false;
             this.commandBarGalleryDropDown7.Gallery.ShowItemText = true;
@@ -7031,46 +7042,46 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown23.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown23.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DColumn5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBarChartItem5,
-            createFullStackedBarChartItem5,
-            createSideBySideFullStackedBarChartItem5,
-            createSideBySideStackedBarChartItem5,
-            createStackedBarChartItem5});
-            chartControlCommandGalleryItemGroup3DColumn5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createBar3DChartItem5,
-            createFullStackedBar3DChartItem5,
-            createManhattanBarChartItem5,
-            createSideBySideFullStackedBar3DChartItem5,
-            createSideBySideStackedBar3DChartItem5,
-            createStackedBar3DChartItem5});
-            chartControlCommandGalleryItemGroupCylinderColumn5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createCylinderBar3DChartItem5,
-            createCylinderFullStackedBar3DChartItem5,
-            createCylinderManhattanBarChartItem5,
-            createCylinderSideBySideFullStackedBar3DChartItem5,
-            createCylinderSideBySideStackedBar3DChartItem5,
-            createCylinderStackedBar3DChartItem5});
-            chartControlCommandGalleryItemGroupConeColumn5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createConeBar3DChartItem5,
-            createConeFullStackedBar3DChartItem5,
-            createConeManhattanBarChartItem5,
-            createConeSideBySideFullStackedBar3DChartItem5,
-            createConeSideBySideStackedBar3DChartItem5,
-            createConeStackedBar3DChartItem5});
-            chartControlCommandGalleryItemGroupPyramidColumn5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPyramidBar3DChartItem5,
-            createPyramidFullStackedBar3DChartItem5,
-            createPyramidManhattanBarChartItem5,
-            createPyramidSideBySideFullStackedBar3DChartItem5,
-            createPyramidSideBySideStackedBar3DChartItem5,
-            createPyramidStackedBar3DChartItem5});
+            chartControlCommandGalleryItemGroup2DColumn35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBarChartItem35,
+            createFullStackedBarChartItem35,
+            createSideBySideFullStackedBarChartItem35,
+            createSideBySideStackedBarChartItem35,
+            createStackedBarChartItem35});
+            chartControlCommandGalleryItemGroup3DColumn35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createBar3DChartItem35,
+            createFullStackedBar3DChartItem35,
+            createManhattanBarChartItem35,
+            createSideBySideFullStackedBar3DChartItem35,
+            createSideBySideStackedBar3DChartItem35,
+            createStackedBar3DChartItem35});
+            chartControlCommandGalleryItemGroupCylinderColumn35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createCylinderBar3DChartItem35,
+            createCylinderFullStackedBar3DChartItem35,
+            createCylinderManhattanBarChartItem35,
+            createCylinderSideBySideFullStackedBar3DChartItem35,
+            createCylinderSideBySideStackedBar3DChartItem35,
+            createCylinderStackedBar3DChartItem35});
+            chartControlCommandGalleryItemGroupConeColumn35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createConeBar3DChartItem35,
+            createConeFullStackedBar3DChartItem35,
+            createConeManhattanBarChartItem35,
+            createConeSideBySideFullStackedBar3DChartItem35,
+            createConeSideBySideStackedBar3DChartItem35,
+            createConeStackedBar3DChartItem35});
+            chartControlCommandGalleryItemGroupPyramidColumn35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPyramidBar3DChartItem35,
+            createPyramidFullStackedBar3DChartItem35,
+            createPyramidManhattanBarChartItem35,
+            createPyramidSideBySideFullStackedBar3DChartItem35,
+            createPyramidSideBySideStackedBar3DChartItem35,
+            createPyramidStackedBar3DChartItem35});
             this.commandBarGalleryDropDown23.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DColumn5,
-            chartControlCommandGalleryItemGroup3DColumn5,
-            chartControlCommandGalleryItemGroupCylinderColumn5,
-            chartControlCommandGalleryItemGroupConeColumn5,
-            chartControlCommandGalleryItemGroupPyramidColumn5});
+            chartControlCommandGalleryItemGroup2DColumn35,
+            chartControlCommandGalleryItemGroup3DColumn35,
+            chartControlCommandGalleryItemGroupCylinderColumn35,
+            chartControlCommandGalleryItemGroupConeColumn35,
+            chartControlCommandGalleryItemGroupPyramidColumn35});
             this.commandBarGalleryDropDown23.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown23.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown23.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -7090,22 +7101,22 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown24.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown24.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DLine5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLineChartItem5,
-            createFullStackedLineChartItem5,
-            createScatterLineChartItem5,
-            createSplineChartItem5,
-            createStackedLineChartItem5,
-            createStepLineChartItem5});
-            chartControlCommandGalleryItemGroup3DLine5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createLine3DChartItem5,
-            createFullStackedLine3DChartItem5,
-            createSpline3DChartItem5,
-            createStackedLine3DChartItem5,
-            createStepLine3DChartItem5});
+            chartControlCommandGalleryItemGroup2DLine35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLineChartItem35,
+            createFullStackedLineChartItem35,
+            createScatterLineChartItem35,
+            createSplineChartItem35,
+            createStackedLineChartItem35,
+            createStepLineChartItem35});
+            chartControlCommandGalleryItemGroup3DLine35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createLine3DChartItem35,
+            createFullStackedLine3DChartItem35,
+            createSpline3DChartItem35,
+            createStackedLine3DChartItem35,
+            createStepLine3DChartItem35});
             this.commandBarGalleryDropDown24.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DLine5,
-            chartControlCommandGalleryItemGroup3DLine5});
+            chartControlCommandGalleryItemGroup2DLine35,
+            chartControlCommandGalleryItemGroup3DLine35});
             this.commandBarGalleryDropDown24.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown24.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown24.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -7125,16 +7136,16 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown25.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown25.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DPie5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPieChartItem5,
-            createDoughnutChartItem5,
-            createNestedDoughnutChartItem4});
-            chartControlCommandGalleryItemGroup3DPie5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPie3DChartItem5,
-            createDoughnut3DChartItem5});
+            chartControlCommandGalleryItemGroup2DPie35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPieChartItem35,
+            createDoughnutChartItem35,
+            createNestedDoughnutChartItem28});
+            chartControlCommandGalleryItemGroup3DPie35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPie3DChartItem35,
+            createDoughnut3DChartItem35});
             this.commandBarGalleryDropDown25.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DPie5,
-            chartControlCommandGalleryItemGroup3DPie5});
+            chartControlCommandGalleryItemGroup2DPie35,
+            chartControlCommandGalleryItemGroup3DPie35});
             this.commandBarGalleryDropDown25.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown25.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown25.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -7154,14 +7165,14 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown26.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown26.Gallery.ColumnCount = 3;
-            chartControlCommandGalleryItemGroup2DBar5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRotatedBarChartItem5,
-            createRotatedFullStackedBarChartItem5,
-            createRotatedSideBySideFullStackedBarChartItem5,
-            createRotatedSideBySideStackedBarChartItem5,
-            createRotatedStackedBarChartItem5});
+            chartControlCommandGalleryItemGroup2DBar35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRotatedBarChartItem35,
+            createRotatedFullStackedBarChartItem35,
+            createRotatedSideBySideFullStackedBarChartItem35,
+            createRotatedSideBySideStackedBarChartItem35,
+            createRotatedStackedBarChartItem35});
             this.commandBarGalleryDropDown26.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DBar5});
+            chartControlCommandGalleryItemGroup2DBar35});
             this.commandBarGalleryDropDown26.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown26.Gallery.RowCount = 2;
             this.commandBarGalleryDropDown26.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -7181,25 +7192,25 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown27.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown27.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroup2DArea5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createAreaChartItem5,
-            createFullStackedAreaChartItem5,
-            createFullStackedSplineAreaChartItem5,
-            createSplineAreaChartItem5,
-            createStackedAreaChartItem5,
-            createStackedSplineAreaChartItem5,
-            createStepAreaChartItem5});
-            chartControlCommandGalleryItemGroup3DArea5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createArea3DChartItem5,
-            createFullStackedArea3DChartItem5,
-            createFullStackedSplineArea3DChartItem5,
-            createSplineArea3DChartItem5,
-            createStackedArea3DChartItem5,
-            createStackedSplineArea3DChartItem5,
-            createStepArea3DChartItem5});
+            chartControlCommandGalleryItemGroup2DArea35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createAreaChartItem35,
+            createFullStackedAreaChartItem35,
+            createFullStackedSplineAreaChartItem35,
+            createSplineAreaChartItem35,
+            createStackedAreaChartItem35,
+            createStackedSplineAreaChartItem35,
+            createStepAreaChartItem35});
+            chartControlCommandGalleryItemGroup3DArea35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createArea3DChartItem35,
+            createFullStackedArea3DChartItem35,
+            createFullStackedSplineArea3DChartItem35,
+            createSplineArea3DChartItem35,
+            createStackedArea3DChartItem35,
+            createStackedSplineArea3DChartItem35,
+            createStepArea3DChartItem35});
             this.commandBarGalleryDropDown27.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroup2DArea5,
-            chartControlCommandGalleryItemGroup3DArea5});
+            chartControlCommandGalleryItemGroup2DArea35,
+            chartControlCommandGalleryItemGroup3DArea35});
             this.commandBarGalleryDropDown27.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown27.Gallery.RowCount = 4;
             this.commandBarGalleryDropDown27.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -7219,41 +7230,41 @@ namespace TracerV1
             // 
             this.commandBarGalleryDropDown28.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown28.Gallery.ColumnCount = 4;
-            chartControlCommandGalleryItemGroupPoint5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPointChartItem5,
-            createBubbleChartItem5});
-            chartControlCommandGalleryItemGroupFunnel5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createFunnelChartItem5,
-            createFunnel3DChartItem5});
-            chartControlCommandGalleryItemGroupFinancial5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createStockChartItem5,
-            createCandleStickChartItem5});
-            chartControlCommandGalleryItemGroupRadar5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRadarPointChartItem5,
-            createRadarLineChartItem5,
-            createRadarAreaChartItem5,
-            createScatterRadarLineChartItem4});
-            chartControlCommandGalleryItemGroupPolar5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createPolarPointChartItem5,
-            createPolarLineChartItem5,
-            createPolarAreaChartItem5,
-            createScatterPolarLineChartItem4});
-            chartControlCommandGalleryItemGroupRange5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createRangeBarChartItem5,
-            createSideBySideRangeBarChartItem5,
-            createRangeAreaChartItem5,
-            createRangeArea3DChartItem5});
-            chartControlCommandGalleryItemGroupGantt5.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            createGanttChartItem5,
-            createSideBySideGanttChartItem5});
+            chartControlCommandGalleryItemGroupPoint35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPointChartItem35,
+            createBubbleChartItem35});
+            chartControlCommandGalleryItemGroupFunnel35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createFunnelChartItem35,
+            createFunnel3DChartItem35});
+            chartControlCommandGalleryItemGroupFinancial35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createStockChartItem35,
+            createCandleStickChartItem35});
+            chartControlCommandGalleryItemGroupRadar35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRadarPointChartItem35,
+            createRadarLineChartItem35,
+            createRadarAreaChartItem35,
+            createScatterRadarLineChartItem28});
+            chartControlCommandGalleryItemGroupPolar35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createPolarPointChartItem35,
+            createPolarLineChartItem35,
+            createPolarAreaChartItem35,
+            createScatterPolarLineChartItem28});
+            chartControlCommandGalleryItemGroupRange35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createRangeBarChartItem35,
+            createSideBySideRangeBarChartItem35,
+            createRangeAreaChartItem35,
+            createRangeArea3DChartItem35});
+            chartControlCommandGalleryItemGroupGantt35.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            createGanttChartItem35,
+            createSideBySideGanttChartItem35});
             this.commandBarGalleryDropDown28.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            chartControlCommandGalleryItemGroupPoint5,
-            chartControlCommandGalleryItemGroupFunnel5,
-            chartControlCommandGalleryItemGroupFinancial5,
-            chartControlCommandGalleryItemGroupRadar5,
-            chartControlCommandGalleryItemGroupPolar5,
-            chartControlCommandGalleryItemGroupRange5,
-            chartControlCommandGalleryItemGroupGantt5});
+            chartControlCommandGalleryItemGroupPoint35,
+            chartControlCommandGalleryItemGroupFunnel35,
+            chartControlCommandGalleryItemGroupFinancial35,
+            chartControlCommandGalleryItemGroupRadar35,
+            chartControlCommandGalleryItemGroupPolar35,
+            chartControlCommandGalleryItemGroupRange35,
+            chartControlCommandGalleryItemGroupGantt35});
             this.commandBarGalleryDropDown28.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown28.Gallery.RowCount = 7;
             this.commandBarGalleryDropDown28.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -7294,12 +7305,12 @@ namespace TracerV1
             this.commandBarGalleryDropDown29.Gallery.ImageSize = new System.Drawing.Size(160, 10);
             this.commandBarGalleryDropDown29.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown29.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Right;
-            skinPaddingEdges9.Bottom = -3;
-            skinPaddingEdges9.Top = -3;
-            this.commandBarGalleryDropDown29.Gallery.ItemImagePadding = skinPaddingEdges9;
-            skinPaddingEdges10.Bottom = -3;
-            skinPaddingEdges10.Top = -3;
-            this.commandBarGalleryDropDown29.Gallery.ItemTextPadding = skinPaddingEdges10;
+            skinPaddingEdges69.Bottom = -3;
+            skinPaddingEdges69.Top = -3;
+            this.commandBarGalleryDropDown29.Gallery.ItemImagePadding = skinPaddingEdges69;
+            skinPaddingEdges70.Bottom = -3;
+            skinPaddingEdges70.Top = -3;
+            this.commandBarGalleryDropDown29.Gallery.ItemTextPadding = skinPaddingEdges70;
             this.commandBarGalleryDropDown29.Gallery.RowCount = 10;
             this.commandBarGalleryDropDown29.Gallery.ShowGroupCaption = false;
             this.commandBarGalleryDropDown29.Gallery.ShowItemText = true;
@@ -7430,6 +7441,9 @@ namespace TracerV1
             // 
             // tabControl2
             // 
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
@@ -7579,6 +7593,9 @@ namespace TracerV1
             // 
             // button11
             // 
+            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button11.Location = new System.Drawing.Point(48, 73);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(234, 39);
@@ -8213,10 +8230,10 @@ namespace TracerV1
             this.dataGridView3.Size = new System.Drawing.Size(244, 482);
             this.dataGridView3.TabIndex = 4;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            this.dataGridView3.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellValueChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.statusStrip_CellLoc);
             this.tabPage1.Controls.Add(this.splitContainer3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -8225,15 +8242,6 @@ namespace TracerV1
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Cell Locations";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // statusStrip_CellLoc
-            // 
-            this.statusStrip_CellLoc.Location = new System.Drawing.Point(3, 602);
-            this.statusStrip_CellLoc.Name = "statusStrip_CellLoc";
-            this.statusStrip_CellLoc.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip_CellLoc.Size = new System.Drawing.Size(1128, 22);
-            this.statusStrip_CellLoc.TabIndex = 1;
-            this.statusStrip_CellLoc.Text = "statusStrip_CellLoc";
             // 
             // splitContainer3
             // 
@@ -8308,13 +8316,14 @@ namespace TracerV1
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button16);
+            this.splitContainer1.Panel1.Controls.Add(this.button15);
             this.splitContainer1.Panel1.Controls.Add(this.rmvData);
             this.splitContainer1.Panel1.Controls.Add(this.path);
             this.splitContainer1.Panel1.Controls.Add(this.Browse);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.DataStatusStrip);
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1128, 621);
@@ -8340,7 +8349,7 @@ namespace TracerV1
             this.path.Location = new System.Drawing.Point(5, 7);
             this.path.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
             this.path.Name = "path";
-            this.path.Size = new System.Drawing.Size(934, 20);
+            this.path.Size = new System.Drawing.Size(727, 20);
             this.path.TabIndex = 1;
             // 
             // Browse
@@ -8354,26 +8363,6 @@ namespace TracerV1
             this.Browse.Text = "Browse";
             this.Browse.UseVisualStyleBackColor = true;
             this.Browse.Click += new System.EventHandler(this.Browse_Click);
-            // 
-            // DataStatusStrip
-            // 
-            this.DataStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton2});
-            this.DataStatusStrip.Location = new System.Drawing.Point(0, 561);
-            this.DataStatusStrip.Name = "DataStatusStrip";
-            this.DataStatusStrip.Size = new System.Drawing.Size(1128, 22);
-            this.DataStatusStrip.TabIndex = 3;
-            this.DataStatusStrip.Text = "DataStatusStrip";
-            // 
-            // toolStripSplitButton2
-            // 
-            this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
-            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton2.Text = "toolStripSplitButton2";
-            this.toolStripSplitButton2.ButtonClick += new System.EventHandler(this.toolStripSplitButton2_ButtonClick);
             // 
             // dataGridView1
             // 
@@ -8682,12 +8671,14 @@ namespace TracerV1
             // 
             // toolStripSplitButton3
             // 
-            this.toolStripSplitButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
+            this.toolStripSplitButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStripSplitButton3.Image = global::TracerV1.Properties.Resources.messiupdate_hi;
+            this.toolStripSplitButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton3.Name = "toolStripSplitButton3";
-            this.toolStripSplitButton3.Size = new System.Drawing.Size(32, 20);
-            this.toolStripSplitButton3.Text = "toolStripSplitButton3";
+            this.toolStripSplitButton3.Size = new System.Drawing.Size(95, 20);
+            this.toolStripSplitButton3.Tag = "Reconnect";
+            this.toolStripSplitButton3.Text = "Reconnect";
             this.toolStripSplitButton3.ButtonClick += new System.EventHandler(this.toolStripSplitButton3_ButtonClick);
             // 
             // toolStripProgressBar1
@@ -8754,18 +8745,29 @@ namespace TracerV1
             this.dgv4.Size = new System.Drawing.Size(1125, 618);
             this.dgv4.TabIndex = 0;
             // 
-            // ribbonPageGroup4
+            // button15
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button15.Location = new System.Drawing.Point(745, 5);
+            this.button15.MaximumSize = new System.Drawing.Size(92, 26);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(92, 22);
+            this.button15.TabIndex = 3;
+            this.button15.Text = "Show Data";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // barButtonItem3
+            // button16
             // 
-            this.barButtonItem3.Caption = "About";
-            this.barButtonItem3.Id = 330;
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button16.Location = new System.Drawing.Point(843, 5);
+            this.button16.MaximumSize = new System.Drawing.Size(92, 26);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(92, 22);
+            this.button16.TabIndex = 4;
+            this.button16.Text = "Clear Grid";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // Form1
             // 
@@ -8823,7 +8825,7 @@ namespace TracerV1
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commandBarGalleryDropDown2)).EndInit();
@@ -8903,7 +8905,6 @@ namespace TracerV1
             this.splitContainer4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -8914,11 +8915,8 @@ namespace TracerV1
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.DataStatusStrip.ResumeLayout(false);
-            this.DataStatusStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.MapPage.ResumeLayout(false);
             this.MapPage.PerformLayout();
@@ -9443,11 +9441,8 @@ namespace TracerV1
         private System.Windows.Forms.Button rmvData;
         private System.Windows.Forms.TextBox path;
         private System.Windows.Forms.Button Browse;
-        private System.Windows.Forms.StatusStrip DataStatusStrip;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.StatusStrip statusStrip_CellLoc;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.TextBox fpCell;
         private System.Windows.Forms.Button BrowseCell;
@@ -9541,6 +9536,8 @@ namespace TracerV1
         private System.Windows.Forms.Button button14;
         private BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button15;
     }
 }
 
