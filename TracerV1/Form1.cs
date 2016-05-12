@@ -31,11 +31,11 @@ namespace TracerV1
         //Add Normal Map Search 
         bool started = false;
         bool unknownCellsFlag = false;
-        List<string[]> rows;
+
         static readonly string PasswordHash = "P@@SwAAA";
         static readonly string SaltKey = "S@LT&ZZZ";
         static readonly string VIKey = "HR$2pIjHR$2pIj12";
-        DataTable traceDataTable = new DataTable();
+        //DataTable traceDataTable = new DataTable();
         DataTable dt = new DataTable();
         DataTable cellNames = new DataTable();
         Image img1 = null;
@@ -43,6 +43,8 @@ namespace TracerV1
         SqlCeConnection con;
         List<string> rrcItems = new List<string>();
         object misValue = System.Reflection.Missing.Value;
+        TracerDatabaseComClass tracerDatabaseComObject = new TracerDatabaseComClass();
+
         class _point
         {
 
@@ -57,6 +59,7 @@ namespace TracerV1
             }
 
         }
+
         public struct cell
         {
             public string cellID;
@@ -73,12 +76,8 @@ namespace TracerV1
         public Form1()
         {
             InitializeComponent();
-            //this.Visible = false;
-            //this.Hide();
-            mapProviderList.DataSource = GMapProviders.List;
 
-            //  MsgBox(mainDir);
-            //this.Visible = ;
+            mapProviderList.DataSource = GMapProviders.List;
 
 
 
@@ -185,12 +184,6 @@ namespace TracerV1
 
             MainMap.MarkersEnabled = true;
 
-            //GMapOverlay markersOverlay = new GMapOverlay("markers");
-            //GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(54.6961334816182, 25.2985095977783),
-            //GMarkerGoogleType.arrow);
-            //markersOverlay.Markers.Add(marker);
-            //MainMap.Overlays.Add(markersOverlay);
-
 
 
 
@@ -198,23 +191,24 @@ namespace TracerV1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LicensceLoadAndOtherStartUpCode();
+        }
 
+        private void LicensceLoadAndOtherStartUpCode()
+        {
             this.WindowState = FormWindowState.Minimized;
             this.Hide();
             Form2 f2 = new Form2();
             f2.ShowDialog();
-            //#region Licenscing
-            //    MsgBox(Properties.Settings.Default.expired.ToString());
+            #region Licenscing
+
             while (Properties.Settings.Default.expired)
             {
-                // this.Visible = false;
                 if (Properties.Settings.Default.expired)
                 {
-                    MessageBox.Show("Dear User! Your Licencse has expired. ");
+                    MessageBox.Show("Dear User! Your Licencse has expired.");
                     LoadLicensceFile();
                     Environment.Exit(Environment.ExitCode);
-                    //Application.Exit();
-
                 }
 
 
@@ -239,9 +233,7 @@ namespace TracerV1
                 catch
                 {
                     MainMap.Manager.Mode = AccessMode.CacheOnly;
-                    //  MessageBox.Show("No internet connection avaible, going to CacheOnly mode.",
-                    ///      "GMap.NET - Demo.WindowsForms", MessageBoxButtons.OK,
-                    //   MessageBoxIcon.Warning);
+
                     toolStatus.Text = "Offline - Cache Mode Only";
 
                     try
@@ -252,10 +244,10 @@ namespace TracerV1
                             Properties.Settings.Default.Save();
                             MessageBox.Show("Dear User! Your Licencse has expired. ");
                             LoadLicensceFile();
-                            //Application.Exit();
+
                             Environment.Exit(Environment.ExitCode);
                         }
-                        //this.Visible = !this.Visible;
+
                     }
                     catch (Exception ex)
                     {
@@ -264,26 +256,14 @@ namespace TracerV1
                     }
                 }
             }
-            //// config map
 
-            ////  this.Visible = Properties.Settings.Default.loadStatus;
-            //#endregion
+            #endregion
             if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
                 expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
             else
                 expiryLic.Caption = "Licensce Expired";
             sqlConOpen();
             refetchData();
-            //barDockControlTop.Visible = false;
-            //barDockControlRight.Visible = false;
-
-
-            //      ribbonControl1.Visible = false;
-            //  MsgBox(TracerV1.Properties.Settings.Default.mocStringOfficial);
-
-
-
-
             mocMessageFilter.Text = Properties.Settings.Default.mocStringOfficial;
             mtcMessageFilter.Text = Properties.Settings.Default.mtcStringOfficial;
             callDropFilterMessage.Text = Properties.Settings.Default.drcStringOfficial;
@@ -294,7 +274,6 @@ namespace TracerV1
             this.WindowState = FormWindowState.Maximized;
             f2.Dispose();
             snapControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
-
         }
 
         private void refetchData()
@@ -303,7 +282,7 @@ namespace TracerV1
             {
                 _cellDataUpload_FromFile();
                 _cellNamesDataUpload();
-                _traceDataUpload();
+                //  _traceDataUpload();
                 //updateUserList_DataVisualizer();
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
@@ -541,6 +520,7 @@ namespace TracerV1
                 MsgBox(ex.Message);
             }
         }
+
         /// <summary>
         /// Trace Data Load
         /// </summary>
@@ -548,77 +528,82 @@ namespace TracerV1
         /// <param name="e"></param>
         private void Browse_Click(object sender, EventArgs e)
         {
-
-
-            try
-            {
-                openFileDialog1.Multiselect = true;
-                openFileDialog1.ShowDialog();
-                // MessageBox.Show( openFileDialog1.FileName.ToString());
-
-
-                foreach (var item in openFileDialog1.FileNames)
-                {
-
-                    string FilePath = item;
-                    path.Text = FilePath;
-
-                    //File.Copy(FilePath, "CTO Trace.csv", true);
-                    //File.AppendAllLines()
-
-                    if (traceDataTable.Columns.Count > 0)
-                    {
-                        string[] fileReadAllLines = File.ReadAllLines(FilePath);
-                        string[] fileData = new string[fileReadAllLines.Length - 1];
-                        for (int i = 1; i < (fileReadAllLines.Length); i++)
-                        {
-                            fileData[i - 1] = fileReadAllLines[i];
-                        }
-                        File.AppendAllLines("CTO Trace.csv", fileData);
-                    }
-                    else
-                    {
-                        File.Copy(FilePath, "CTO Trace.csv", true);
-                    }
-
-                    rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
-                    //   traceDataTable = new DataTable();
-                    string[] headers = rows[0];
-                    rows.RemoveAt(0);
-                    MsgBox(headers.Length.ToString());
-                    if (!(traceDataTable.Columns.Count > 0))
-                        for (int i = 0; i < headers.Length; i++)
-                        {
-
-                            // dt.Columns.Add(i.ToString());
-                            traceDataTable.Columns.Add(headers[i]);
-                        }
-
-                    //rows.ForEach(x =>
-                    //{
-                    //    traceDataTable.Rows.Add(x);
-                    //});
-                    for (int x = 0; x < rows.Count; x++)
-                    {
-                        traceDataTable.Rows.Add(rows[x]);
-                    }
-                }
-                //try
-                //{
-                //    dataGridView1.DataSource = traceDataTable;
-                //}
-                //catch (Exception ex)
-                //{
-                //    MsgBox(ex.Message+ " -_-");
-                //}
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            uploadTraceDataFromFile();
         }
+        #region Old Trace Data Upload From File
+        //private void updateTraceDataFromFile()
+        //{
+
+
+        //    try
+        //    {
+        //        openFileDialog1.Multiselect = true;
+        //        openFileDialog1.ShowDialog();
+        //        // MessageBox.Show( openFileDialog1.FileName.ToString());
+
+
+        //        foreach (var item in openFileDialog1.FileNames)
+        //        {
+
+        //            string FilePath = item;
+        //            path.Text = FilePath;
+
+        //            //File.Copy(FilePath, "CTO Trace.csv", true);
+        //            //File.AppendAllLines()
+
+        //            if (traceDataTable.Columns.Count > 0)
+        //            {
+        //                string[] fileReadAllLines = File.ReadAllLines(FilePath);
+        //                string[] fileData = new string[fileReadAllLines.Length - 1];
+        //                for (int i = 1; i < (fileReadAllLines.Length); i++)
+        //                {
+        //                    fileData[i - 1] = fileReadAllLines[i];
+        //                }
+        //                File.AppendAllLines("CTO Trace.csv", fileData);
+        //            }
+        //            else
+        //            {
+        //                File.Copy(FilePath, "CTO Trace.csv", true);
+        //            }
+
+        //            rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+        //            //   traceDataTable = new DataTable();
+        //            string[] headers = rows[0];
+        //            rows.RemoveAt(0);
+        //            MsgBox(headers.Length.ToString());
+        //            if (!(traceDataTable.Columns.Count > 0))
+        //                for (int i = 0; i < headers.Length; i++)
+        //                {
+
+        //                    // dt.Columns.Add(i.ToString());
+        //                    traceDataTable.Columns.Add(headers[i]);
+        //                }
+
+        //            //rows.ForEach(x =>
+        //            //{
+        //            //    traceDataTable.Rows.Add(x);
+        //            //});
+        //            for (int x = 0; x < rows.Count; x++)
+        //            {
+        //                traceDataTable.Rows.Add(rows[x]);
+        //            }
+        //        }
+        //        //try
+        //        //{
+        //        //    dataGridView1.DataSource = traceDataTable;
+        //        //}
+        //        //catch (Exception ex)
+        //        //{
+        //        //    MsgBox(ex.Message+ " -_-");
+        //        //}
+
+        //    }
+
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
 
         //private void updateUserList_DataVisualizer()
         //{
@@ -637,6 +622,18 @@ namespace TracerV1
         //        MsgBox(ex.Message);
         //    }
         //}
+        #endregion
+
+        private void uploadTraceDataFromFile()
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Multiselect = true;
+            opf.ShowDialog();
+            foreach (string item in opf.FileNames)
+            {
+                _traceDataUpload(item);
+            }
+        }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -645,7 +642,7 @@ namespace TracerV1
 
         private void _cellDataUpload()
         {
-
+            List<string[]> rows = new List<string[]>();
 
             try
             {
@@ -695,13 +692,7 @@ namespace TracerV1
             try
             {
 
-                //    openFileDialog1.ShowDialog();
-                //       MessageBox.Show(openFileDialog1.FileName);
 
-                //     string FilePath = openFileDialog1.FileName.ToString();
-                //     fpCell.Text = FilePath;
-                // FilePath = "Cells Lat Longs.csv";
-                //   File.Copy(FilePath, "CellNames.csv", true);
                 List<string[]> fileData = new List<string[]>();
                 fileData = File.ReadAllLines(mainDir + "/CellNames.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
                 cellNames = new DataTable();
@@ -732,7 +723,7 @@ namespace TracerV1
 
         private void _cellDataUpload_FromFile()
         {
-
+            List<string[]> rows = new List<string[]>();
             try
             {
 
@@ -789,61 +780,86 @@ namespace TracerV1
             Application.Exit();
         }
 
-        private string[] extractUeids(DataTable table)
-        {
-            string[] s1 = null;
+        #region OldextractUeids
+        //private string[] extractUeids(DataTable table)
+        //{
+        //    string[] s1 = null;
 
-            int count = 0;
+        //    int count = 0;
+        //    try
+        //    {
+        //        DataView view = new DataView(table);
+        //        DataTable distinctValues = view.ToTable(true, "ueId");
+        //        DataRow[] result = distinctValues.Select();
+        //        s1 = new string[result.Length];
+        //        foreach (DataRow row in result)
+        //        {
+        //            s1[count] = (string)row.ItemArray[0];
+        //            count++;
+        //        }
+
+        //        return s1;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        return s1;
+        //    }
+        //}
+        #endregion
+
+        private string[] extractUeids()
+        {
             try
             {
-
-
-                //  DataRow[] result = table.Select("ueId = 'IMSI:410018147711211;TMSI:B9A5A66A'");
-                //  DataRow[] result = table.Select("* ueId").Distinct().ToArray() ;
-
-                DataView view = new DataView(table);
-                DataTable distinctValues = view.ToTable(true, "ueId"); //, "CellId","rrcMsgName");
-                DataRow[] result = distinctValues.Select();
-                s1 = new string[result.Length];
-                foreach (DataRow row in result)
-                {
-                    s1[count] = (string)row.ItemArray[0];
-                    count++;
-                }
-
-                return s1;
+                return tracerDatabaseComObject.ReturnAllUeids().ToArray();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return s1;
+                MsgBox(ex.Message);
+                return null;
             }
         }
 
-        private string[] extractRRCMsgs(DataTable table)
-        {
-            string[] s1 = null;
+        #region Old ExtractRRCMessages
+        //private string[] extractRRCMsgs(DataTable table)
+        //{
+        //    string[] s1 = null;
 
-            int count = 0;
+        //    int count = 0;
+        //    try
+        //    {
+
+        //        DataView view = new DataView(table);
+        //        DataTable distinctValues = view.ToTable(true, "rrcMsgName");
+        //        DataRow[] result = distinctValues.Select();
+        //        s1 = new string[result.Length];
+        //        foreach (DataRow row in result)
+        //        {
+        //            s1[count] = (string)row.ItemArray[0];
+        //            count++;
+        //        }
+
+        //        return s1;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        return s1;
+        //    }
+        //}
+        #endregion
+
+        private string[] extractRRCMsgs()
+        {
             try
             {
-
-                DataView view = new DataView(table);
-                DataTable distinctValues = view.ToTable(true, "rrcMsgName");
-                DataRow[] result = distinctValues.Select();
-                s1 = new string[result.Length];
-                foreach (DataRow row in result)
-                {
-                    s1[count] = (string)row.ItemArray[0];
-                    count++;
-                }
-
-                return s1;
+                return tracerDatabaseComObject.ReturnAllRRCMessages().ToArray();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return s1;
+                return null;
             }
         }
 
@@ -884,7 +900,7 @@ namespace TracerV1
 
         private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
         {
-            string[] s = extractUeids(traceDataTable);
+            string[] s = extractUeids();
             if (s != null)
                 foreach (string _s in s)
                 {
@@ -911,29 +927,71 @@ namespace TracerV1
             }
         }
 
-        private void _traceDataUpload()
+        #region OLD TraceDataUpload
+        //private void _traceDataUpload()
+        //{
+        //    try
+        //    {
+
+        //        rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+
+        //        string[] headers = rows[0];
+        //        rows.RemoveAt(0);
+        //        if (traceDataTable.Columns.Count == 0)
+        //            for (int i = 0; i <= 26; i++)
+        //            {
+        //                // dt.Columns.Add(i.ToString());
+        //                traceDataTable.Columns.Add(headers[i].ToString());
+        //            }
+
+        //        rows.ForEach(x =>
+        //        {
+        //            traceDataTable.Rows.Add(x);
+        //        });
+
+
+        //        dataGridView1.DataSource = traceDataTable;
+
+        //    }
+
+        //    catch (Exception ex)
+        //    {
+        //        MsgBox(ex.Message);
+        //    }
+        //}
+        #endregion
+
+        private void _traceDataUpload(string FilePath)
         {
+            DataTable traceDataTable = new DataTable();
             try
             {
-
-                rows = File.ReadAllLines("CTO Trace.csv").Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
-
+                List<string[]> rows = File.ReadAllLines(FilePath).Select(x => x.Split(',')).Where(x => x[0] != "" && x[1] != "").ToList();
+                string[] rowItems = new string[4];
                 string[] headers = rows[0];
                 rows.RemoveAt(0);
                 if (traceDataTable.Columns.Count == 0)
                     for (int i = 0; i <= 26; i++)
                     {
-                        // dt.Columns.Add(i.ToString());
-                        traceDataTable.Columns.Add(headers[i].ToString());
+                        // Indexes of Headers
+                        if (i == 0 || i == 3 || i == 4 || i == 6)
+                            traceDataTable.Columns.Add(headers[i]);
                     }
 
                 rows.ForEach(x =>
                 {
-                    traceDataTable.Rows.Add(x);
+                    rowItems[0] = x[0];
+                    rowItems[1] = x[3];
+                    rowItems[2] = x[4];
+                    rowItems[3] = x[6];
+                    traceDataTable.Rows.Add(rowItems);
                 });
 
 
-                dataGridView1.DataSource = traceDataTable;
+                tracerDatabaseComObject.insertDataTable(traceDataTable);
+                if (tracerDatabaseComObject.errorMessage != null)
+                    MsgBox(tracerDatabaseComObject.errorMessage);
+                //dataGridView1.DataSource = traceDataTable;
 
             }
 
@@ -982,11 +1040,28 @@ namespace TracerV1
             }
         }
 
+        #region old Method RRCMessageUpdate
+        //private void UpdateRRCMsgsList()
+        //{
+        //    RRCMessages.Items.Clear();
+        //    rrcItems.Clear();
+        //    string[] rrc = extractRRCMsgs(traceDataTable);
+        //    foreach (string s in rrc)
+        //    {
+        //        RRCMessages.Items.Add(s);
+        //        messagesListBox.Items.Add(s);
+        //        rrcChkListGrap2.Items.Add(s);
+        //        rrcItems.Add(s);
+        //    }
+        //}
+        #endregion
+
         private void UpdateRRCMsgsList()
         {
             RRCMessages.Items.Clear();
             rrcItems.Clear();
-            string[] rrc = extractRRCMsgs(traceDataTable);
+            List<string> rrcMessages = tracerDatabaseComObject.ReturnAllRRCMessages();
+            string[] rrc = rrcMessages.ToArray();
             foreach (string s in rrc)
             {
                 RRCMessages.Items.Add(s);
@@ -1003,7 +1078,7 @@ namespace TracerV1
 
         private List<String> getIMSIs()
         {
-            return extractIMSI(extractUeids(traceDataTable));
+            return extractIMSI(extractUeids());
         }
 
         private void PlotMarkers_Click(object sender, EventArgs e)
@@ -1086,84 +1161,165 @@ namespace TracerV1
             return hasData;
         }
 
-        private void plotMarkers(string imsi, Image img)
-        {
-            try
-            {
-                DataRow[] dr = traceDataTable.Select("ueId = '" + imsi + "' And rrcMsgName = '" + RRCMessages.SelectedItem.ToString() + "'");
-                PointLatLng p = new PointLatLng(33.7294, 73.0931);
-                //   MainMap.Position = new PointLatLng(33.7294, 73.0931);
-                GMapOverlay markersOverlay = new GMapOverlay("markers");
-                List<_point> coords = new List<_point>();
-                List<_point> allcoords = new List<_point>();
-                _point pLocal = new _point(33.7294, 73.0931);
-                foreach (DataRow d in dr)
-                {
+        /// <summary>
+        /// Depreciated Use PlotMarkers2 Instead
+        /// </summary>
+        /// <param name="imsi"></param>
+        /// <param name="img"></param>
+        //private void plotMarkers(string imsi, Image img)
+        //{
+        //    try
+        //    {
+        //        DataRow[] dr = traceDataTable.Select("ueId = '" + imsi + "' And rrcMsgName = '" + RRCMessages.SelectedItem.ToString() + "'");
+        //        PointLatLng p = new PointLatLng(33.7294, 73.0931);
+        //        //   MainMap.Position = new PointLatLng(33.7294, 73.0931);
+        //        GMapOverlay markersOverlay = new GMapOverlay("markers");
+        //        List<_point> coords = new List<_point>();
+        //        List<_point> allcoords = new List<_point>();
+        //        _point pLocal = new _point(33.7294, 73.0931);
+        //        foreach (DataRow d in dr)
+        //        {
 
-                    DataRow[] cdr = dt.Select("[cell Id] = '" + d["CellId"].ToString() + "'"); // Cell Not Found ; CDR would be Empty;
+        //            DataRow[] cdr = dt.Select("[cell Id] = '" + d["CellId"].ToString() + "'"); // Cell Not Found ; CDR would be Empty;
 
-                    double latCell = double.Parse(cdr[0]["LAT"].ToString());
-                    double lngCell = double.Parse(cdr[0]["LONG"].ToString());
-                    pLocal = new _point(latCell, lngCell);
-                    allcoords.Add(pLocal);
-                    if (!listConatains_point(coords, pLocal))
-                    {
+        //            double latCell = double.Parse(cdr[0]["LAT"].ToString());
+        //            double lngCell = double.Parse(cdr[0]["LONG"].ToString());
+        //            pLocal = new _point(latCell, lngCell);
+        //            allcoords.Add(pLocal);
+        //            if (!listConatains_point(coords, pLocal))
+        //            {
 
-                        //  MainMap.Position = new PointLatLng(latCell, lngCell);
-                        p.Lat = latCell;
-                        p.Lng = lngCell;
-                        //  Image img;
-                        //  img = Image.FromFile("TrackingDot.png");
+        //                //  MainMap.Position = new PointLatLng(latCell, lngCell);
+        //                p.Lat = latCell;
+        //                p.Lng = lngCell;
+        //                //  Image img;
+        //                //  img = Image.FromFile("TrackingDot.png");
 
-                        //  GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
-
-
-                        GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
-
-                        markersOverlay.Markers.Add(cusMarker);
-                        MainMap.Overlays.Add(markersOverlay);
-
-                        coords.Add(pLocal);
-
-                    }
+        //                //  GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
 
 
-                }
+        //                GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
 
-                //    MainMap.Position = new PointLatLng(pLocal.lat, pLocal.lng);
+        //                markersOverlay.Markers.Add(cusMarker);
+        //                MainMap.Overlays.Add(markersOverlay);
 
-                MainMap.ZoomAndCenterMarkers(markersOverlay.Id);
+        //                coords.Add(pLocal);
 
-                //img.Dispose();
-                foreach (var r in coords)
-                {
-                    listBox1.Items.Add(r.lat.ToString() + "      " + r.lng.ToString());
-                }
-                foreach (var r in allcoords)
-                {
-                    listBox2.Items.Add(r.lat.ToString() + "      " + r.lng.ToString());
-                }
-                //listBox1.DataSource = coords;
-            }
-            catch
-            {
-                MsgBox("Please select valid arguments/KPI's to Plot or make sure the You have updated Cell Data");
-            }
-        }
+        //            }
+
+
+        //        }
+
+        //        //    MainMap.Position = new PointLatLng(pLocal.lat, pLocal.lng);
+
+        //        MainMap.ZoomAndCenterMarkers(markersOverlay.Id);
+
+        //        //img.Dispose();
+        //        foreach (var r in coords)
+        //        {
+        //            listBox1.Items.Add(r.lat.ToString() + "      " + r.lng.ToString());
+        //        }
+        //        foreach (var r in allcoords)
+        //        {
+        //            listBox2.Items.Add(r.lat.ToString() + "      " + r.lng.ToString());
+        //        }
+        //        //listBox1.DataSource = coords;
+        //    }
+        //    catch
+        //    {
+        //        MsgBox("Please select valid arguments/KPI's to Plot or make sure the You have updated Cell Data");
+        //    }
+        //}
+
+        #region Old PlotMarkers 2
+        //private void plotMarkers2(string imsi, Image img)
+        //{
+        //    try
+        //    {
+
+        //        DataRow[] dr = traceDataTable.Select(string.Format("ueId LIKE '%{0}%' And rrcMsgName = '{1}'", imsi, RRCMessages.SelectedItem));
+        //        PointLatLng p = new PointLatLng(33.7294, 73.0931);
+        //        //   MainMap.Position = new PointLatLng(33.7294, 73.0931);
+        //        GMapOverlay markersOverlay = new GMapOverlay("markers");
+        //        List<_point> coords = new List<_point>();
+        //        List<_point> allcoords = new List<_point>();
+        //        _point pLocal = new _point(33.7294, 73.0931);
+        //        foreach (DataRow d in dr)
+        //        {
+        //            try
+        //            {
+        //                DataRow[] cdr = dt.Select("[Cell ID] = " + d["CellId"].ToString());
+
+        //                double latCell = double.Parse(cdr[0]["LAT"].ToString());
+        //                double lngCell = double.Parse(cdr[0]["LONG"].ToString());
+        //                pLocal = new _point(latCell, lngCell);
+        //                allcoords.Add(pLocal);
+        //                if (!listConatains_point(coords, pLocal))
+        //                {
+
+        //                    p.Lat = latCell;
+        //                    p.Lng = lngCell;
+
+        //                    GMapMarkerImage cusMarker = new GMapMarkerImage(p, img);
+
+        //                    markersOverlay.Markers.Add(cusMarker);
+        //                    MainMap.Overlays.Add(markersOverlay);
+
+        //                    coords.Add(pLocal);
+
+        //                }
+        //            }
+        //            catch
+        //            {
+        //                //   MsgBox(string.Format("Unable to locate Coordinates for the cell Id : {0} Please update Cell database", d["CellId"]));
+        //                //   coords.Add(pLocal);
+        //                if (!unknownCells.Items.Contains(d["CellId"].ToString()))
+        //                    unknownCells.Items.Add(d["CellId"].ToString());
+
+        //                unknownCellsFlag = true;
+        //            }
+
+        //        }
+
+        //        //    MainMap.Position = new PointLatLng(pLocal.lat, pLocal.lng);
+
+        //        MainMap.ZoomAndCenterMarkers(markersOverlay.Id);
+
+        //        //img.Dispose();
+        //        foreach (var r in coords)
+        //        {
+        //            listBox1.Items.Add(r.lat.ToString() + "      " + r.lng.ToString());
+        //        }
+        //        foreach (var r in allcoords)
+        //        {
+        //            listBox2.Items.Add(r.lat.ToString() + "      " + r.lng.ToString());
+        //        }
+        //        //listBox1.DataSource = coords;
+        //    }
+        //    catch
+        //    {
+        //        MsgBox("Please select valid arguments/KPI's to Plot or make sure the You have updated Cell Location Data");
+        //    }
+        //}
+        #endregion
+
 
         private void plotMarkers2(string imsi, Image img)
         {
             try
             {
 
-                DataRow[] dr = traceDataTable.Select(string.Format("ueId LIKE '%{0}%' And rrcMsgName = '{1}'", imsi, RRCMessages.SelectedItem));
+
+
+                //   DataRow[] dr = traceDataTable.Select(string.Format("ueId LIKE '%{0}%' And rrcMsgName = '{1}'", imsi, RRCMessages.SelectedItem));
+                DataTable resultQueryDataTable = tracerDatabaseComObject.queryByIMSIandRRCMessage(imsi, RRCMessages.SelectedItem.ToString());
                 PointLatLng p = new PointLatLng(33.7294, 73.0931);
                 //   MainMap.Position = new PointLatLng(33.7294, 73.0931);
                 GMapOverlay markersOverlay = new GMapOverlay("markers");
                 List<_point> coords = new List<_point>();
                 List<_point> allcoords = new List<_point>();
                 _point pLocal = new _point(33.7294, 73.0931);
-                foreach (DataRow d in dr)
+                foreach (DataRow d in resultQueryDataTable.Rows)
                 {
                     try
                     {
@@ -1404,11 +1560,10 @@ namespace TracerV1
 
         private void rmvData_Click(object sender, EventArgs e)
         {
-            traceDataTable.Columns.Clear();
-            traceDataTable = new DataTable();
+            tracerDatabaseComObject.DeleteAllDataFromDatabase();
             DeleteImsiDB();
-            File.Delete(mainDir + "/CTO Trace.csv");
-            File.Create(mainDir + "/CTO Trace.csv").Dispose();
+            //File.Delete(mainDir + "/CTO Trace.csv");
+            //File.Create(mainDir + "/CTO Trace.csv").Dispose();
 
             dataGridView1.Refresh();
         }
@@ -1779,8 +1934,6 @@ namespace TracerV1
             TracerV1.Properties.Settings.Default.Save();
         }
 
-
-
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             if (MapTab.SelectedIndex == 4)
@@ -1844,7 +1997,7 @@ namespace TracerV1
             ch.DataSource = null;
 
 
-            UserMessageFilter umf = new UserMessageFilter(traceDataTable, mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
+            UserMessageFilter umf = new UserMessageFilter();
             DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
             graphData.Clear();
             DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
@@ -1911,7 +2064,7 @@ namespace TracerV1
             ch.Titles.Add(myTitle);
             seriesMOC.DataSource = graphData;
             _dgv.DataSource = graphData;
-            //                _dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            //_dgv.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             seriesMOC.ArgumentScaleType = ScaleType.Auto;
             seriesMOC.ArgumentDataMember = "Date";
@@ -1952,12 +2105,6 @@ namespace TracerV1
             //      STR[2] = "CallDrop";
             seriesTotalCalls.ValueDataMembers.AddRange(STR);
 
-
-
-
-
-
-
             //.AddRange(new string[] { "Value" });
 
             // Set some properties to get a nice-looking chart.
@@ -1965,11 +2112,8 @@ namespace TracerV1
             //((XYDiagram)ch.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
             //ch.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
-
             ch.Refresh();
             ch.RefreshData();
-
-
         }
 
         /// <summary>
@@ -1992,7 +2136,7 @@ namespace TracerV1
             ch.Titles.Add(myTitle);
             /////
 
-            UserMessageFilter umf = new UserMessageFilter(traceDataTable);
+            UserMessageFilter umf = new UserMessageFilter();
             DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
             graphData.Clear();
 
@@ -2331,12 +2475,11 @@ namespace TracerV1
 
             return newImage;
         }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
         }
-
-
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -2514,8 +2657,6 @@ namespace TracerV1
             }
         }
 
-        //private void 
-
         private List<cell> getSiteNameFormCellID()
         {
             List<cell> output = new List<cell>();
@@ -2544,18 +2685,23 @@ namespace TracerV1
             return output;
         }
 
-
+        #region old getAllActiveCells
+        //private List<string> getAllActiveCells()
+        //{
+        //    List<string> cells = new List<string>();
+        //    DataView view = new DataView(traceDataTable);
+        //    DataTable distinctValues = view.ToTable(true, "CellId");
+        //    foreach (DataRow row in distinctValues.Rows)
+        //    {
+        //        cells.Add(row[0].ToString());
+        //    }
+        //    return cells;
+        //}
+        #endregion
 
         private List<string> getAllActiveCells()
         {
-            List<string> cells = new List<string>();
-            DataView view = new DataView(traceDataTable);
-            DataTable distinctValues = view.ToTable(true, "CellId");
-            foreach (DataRow row in distinctValues.Rows)
-            {
-                cells.Add(row[0].ToString());
-            }
-            return cells;
+            return tracerDatabaseComObject.ReturnAllCellIDs();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -2572,7 +2718,7 @@ namespace TracerV1
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            MessageBox.Show("Developed By Muhammad Hassan Niazi\nHassanniazi93@gmail.com\nRF ZTE Pakistan","About",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Developed By Muhammad Hassan Niazi\nHassanniazi93@gmail.com\nRF ZTE Pakistan", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

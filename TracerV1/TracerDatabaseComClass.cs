@@ -13,19 +13,22 @@ namespace TracerV1
     {
         public SqlCeConnection con;
         public string errorMessage = null;
+        /// <summary>
+        ///  Returns the name of table.
+        /// </summary>
+        public readonly string TableName = "TraceDB";
 
-      
 
         public struct TraceItem
         {
             public string rrcMessage;
             public string ueid;
-            public int cellID;
+            public string cellID;
             public DateTime time;
         }
 
         //Insert data to Database
-        public void insertRow(string rrcMessage,string ueid, int cellID,DateTime time)
+        public void insertRow(string rrcMessage, string ueid, string cellID, DateTime time)
         {
             try
             {
@@ -35,7 +38,8 @@ namespace TracerV1
                 SqlCeCommand cmd = con.CreateCommand();
 
                 con.Open();
-                cmd.CommandText = String.Format("INSERT INTO TraceDB (rrcMsgName,ueId,CellId,time) VALUES ('{0}','{1}',{2},'{3}');", rrcMessage, ueid, cellID, time);
+                cmd.CommandText = String.Format("INSERT INTO TraceDB (rrcMsgName,ueId,CellId,time) VALUES ('{0}','{1}','{2}','{3}');", rrcMessage, ueid, cellID, time);
+                sda.SelectCommand = cmd;
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
@@ -61,7 +65,8 @@ namespace TracerV1
                 con.Open();
                 foreach (DataRow item in dataTable.Rows)
                 {
-                    cmd.CommandText = String.Format("INSERT INTO TraceDB (rrcMsgName,ueId,CellId,time) VALUES ('{0}','{1}',{2},'{3}');", item[0], item[1], item[2], item[3]);
+                    cmd.CommandText = String.Format("INSERT INTO TraceDB (rrcMsgName,ueId,CellId,time) VALUES ('{0}','{1}','{2}','{3}');", item[0], item[1], item[2], item[3]);
+                    sda.SelectCommand = cmd;
                     cmd.ExecuteNonQuery();
                 }
                 con.Close();
@@ -72,7 +77,27 @@ namespace TracerV1
             }
         }
 
-        private List<TraceItem> selectDataByRRCMessage(string RRCMessage)
+        public void DeleteAllDataFromDatabase()
+        {
+            try
+            {
+               
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+                con.Open();
+
+                cmd.CommandText = "DELETE FROM TraceDB";
+                cmd.ExecuteNonQuery();
+             
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+            }
+        }
+
+        public List<TraceItem> selectDataByRRCMessage(string RRCMessage)
         {
             List<TraceItem> outputList = new List<TraceItem>();
             TraceItem traceItem = new TraceItem();
@@ -94,7 +119,7 @@ namespace TracerV1
                 {
                     traceItem.rrcMessage = (string)r[0];
                     traceItem.ueid = (string)r[1];
-                    traceItem.cellID = (int)r[2];
+                    traceItem.cellID = (string)r[2];
                     traceItem.time = (DateTime)r[3];
                     outputList.Add(traceItem);
                 }
@@ -112,7 +137,7 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<TraceItem> selectDataByUeID(string ueid)
+        public List<TraceItem> selectDataByUeID(string ueid)
         {
             List<TraceItem> outputList = new List<TraceItem>();
             TraceItem traceItem = new TraceItem();
@@ -132,7 +157,7 @@ namespace TracerV1
                 {
                     traceItem.rrcMessage = (string)r[0];
                     traceItem.ueid = (string)r[1];
-                    traceItem.cellID = (int)r[2];
+                    traceItem.cellID = (string)r[2];
                     traceItem.time = (DateTime)r[3];
                     outputList.Add(traceItem);
                 }
@@ -149,7 +174,7 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<TraceItem> selectDataByCellID(int CellID)
+        public List<TraceItem> selectDataByCellID(string cellID)
         {
             List<TraceItem> outputList = new List<TraceItem>();
             TraceItem traceItem = new TraceItem();
@@ -160,7 +185,7 @@ namespace TracerV1
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
-                cmd.CommandText = String.Format("Select * FROM TraceDB WHERE CellId = " + CellID + ";");
+                cmd.CommandText = String.Format("Select * FROM TraceDB WHERE CellId = '" + cellID + "';");
                 sda.SelectCommand = cmd;
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -168,7 +193,7 @@ namespace TracerV1
                 {
                     traceItem.rrcMessage = (string)r[0];
                     traceItem.ueid = (string)r[1];
-                    traceItem.cellID = (int)r[2];
+                    traceItem.cellID = (string)r[2];
                     traceItem.time = (DateTime)r[3];
                     outputList.Add(traceItem);
                 }
@@ -185,7 +210,7 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<TraceItem> selectDataByDate(DateTime date)
+        public List<TraceItem> selectDataByDate(DateTime date)
         {
             List<TraceItem> outputList = new List<TraceItem>();
             TraceItem traceItem = new TraceItem();
@@ -204,7 +229,7 @@ namespace TracerV1
                 {
                     traceItem.rrcMessage = (string)r[0];
                     traceItem.ueid = (string)r[1];
-                    traceItem.cellID = (int)r[2];
+                    traceItem.cellID = (string)r[2];
                     traceItem.time = (DateTime)r[3];
                     outputList.Add(traceItem);
                 }
@@ -221,10 +246,10 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<string> ReturnAllRRCMessages(string RRCMessage)
+        public List<string> ReturnAllRRCMessages()
         {
             List<string> outputList = new List<string>();
-            
+
             try
             {
 
@@ -241,7 +266,7 @@ namespace TracerV1
 
                 foreach (DataRow r in dt.Rows)
                 {
-                    
+
                     outputList.Add(r[0].ToString());
                 }
 
@@ -258,7 +283,7 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<string> ReturnAllUeids(string RRCMessage)
+        public List<string> ReturnAllUeids()
         {
             List<string> outputList = new List<string>();
 
@@ -295,7 +320,7 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<string> ReturnAllCellIDs(string RRCMessage)
+        public List<string> ReturnAllCellIDs()
         {
             List<string> outputList = new List<string>();
 
@@ -332,7 +357,7 @@ namespace TracerV1
             return outputList;
         }
 
-        private List<string> ReturnAlldates(string RRCMessage)
+        public List<string> ReturnAlldates()
         {
             List<string> outputList = new List<string>();
 
@@ -367,6 +392,107 @@ namespace TracerV1
             }
 
             return outputList;
+        }
+
+        public DataTable queryByIMSIandRRCMessage(string imsi, string rrcMessage)
+        {
+           
+            try
+            {
+
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = "Select * FROM TraceDB WHERE ueId LIKE '%" + imsi +  "%' AND rrcMsgName = '" + rrcMessage + "';";
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                con.Close();
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return null;
+            }
+
+           
+        }
+
+        public DataTable queryByRrcMessageAndTime(string rrcMessage, DateTime time)
+        {
+
+            try
+            {
+
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = "Select * FROM TraceDB WHERE rrcMsgName = '" + rrcMessage + "' AND time = '" + time + "';";
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                con.Close();
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+                return null;
+            }
+
+
+        }
+
+        /// <summary>
+        /// Method Implemented Generically. Handle Data Yourself.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public DataTable customQuery(string query)
+        {
+
+
+            DataTable dt = new DataTable();
+            try
+            {
+
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = query;
+                sda.SelectCommand = cmd;
+
+                sda.Fill(dt);
+                con.Close();
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
+
+            return dt;
+
         }
 
     }
