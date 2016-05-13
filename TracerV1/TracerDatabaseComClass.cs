@@ -283,6 +283,44 @@ namespace TracerV1
             return outputList;
         }
 
+
+        public List<string> ReturnAllRRCMessagesFromRRCMsgDatabase()
+        {
+            List<string> outputList = new List<string>();
+
+            try
+            {
+
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+                SqlCeCommand cmd = con.CreateCommand();
+
+                con.Open();
+                cmd.CommandText = String.Format("Select DISTINCT rrcMessage FROM rrcMessageLookUp;");
+                sda.SelectCommand = cmd;
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                foreach (DataRow r in dt.Rows)
+                {
+
+                    outputList.Add(r[0].ToString());
+                }
+
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                if (con.State == ConnectionState.Open)
+                    con.Close();
+            }
+
+            return outputList;
+        }
+
         public List<string> ReturnAllUeids()
         {
             List<string> outputList = new List<string>();

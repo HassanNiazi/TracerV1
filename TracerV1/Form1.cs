@@ -366,7 +366,7 @@ namespace TracerV1
         {
             try
             {
-                
+
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
@@ -897,6 +897,19 @@ namespace TracerV1
             }
         }
 
+        private string[] extractRRCMsgsFromRRCMsgsDB()
+        {
+            try
+            {
+                return tracerDatabaseComObject.ReturnAllRRCMessagesFromRRCMsgDatabase().ToArray();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         private List<string> extractIMSI(string[] ueIDs)
         {
             List<string> IMSI = new List<string>();
@@ -1094,8 +1107,11 @@ namespace TracerV1
         {
             RRCMessages.Items.Clear();
             rrcItems.Clear();
-            List<string> rrcMessages = tracerDatabaseComObject.ReturnAllRRCMessages();
-            string[] rrc = rrcMessages.ToArray();
+            // List<string> rrcMessages = tracerDatabaseComObject.ReturnAllRRCMessages();
+            //List<string> rrcMessages =
+
+
+            string[] rrc = extractRRCMsgsFromRRCMsgsDB();
             foreach (string s in rrc)
             {
                 string s2 = LookupRRCMessageName(s);
@@ -1815,19 +1831,19 @@ namespace TracerV1
         {
             if (MapTab.SelectedIndex == 0)
             {
-                
+
                 updateIMSIDB(); // Fetchs IMSI's From The tracers Database to the IMSI DB
                 UpdateIMSIChkList(); // From IMSI DB to Control
                 UpdateRRCMsgsList();
-              
+
             }
             if (MapTab.SelectedIndex == 4)
             {
-             
+
             }
             else
             {
-              
+
             }
         }
 
@@ -2788,8 +2804,8 @@ namespace TracerV1
 
         private void button15_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You are about to load a large Amount of data to the Grid.","Be Carefull!!!",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-           _tempTable = tracerDatabaseComObject.customQuery("SELECT * FROM TraceDB");
+            MessageBox.Show("You are about to load a large Amount of data to the Grid.", "Be Carefull!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            _tempTable = tracerDatabaseComObject.customQuery("SELECT * FROM TraceDB");
             dataGridView1.DataSource = _tempTable;
         }
 
