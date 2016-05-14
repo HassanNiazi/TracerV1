@@ -85,14 +85,14 @@ namespace TracerV1
         //}
         #endregion
 
-        public List<countDate> getResult(string messageMOC, string messageMTC, string messageDropCalls)
+        public List<countDate> getResult(string messageMOC, string messageMTC, string messageDropCalls,string mainDir)
         {
 
             try
             {
                 List<countDate> count = new List<countDate>();
                 countDate cdLocal = new countDate();
-                TracerDatabaseComClass traceDB = new TracerDatabaseComClass();
+                TracerDatabaseComClass traceDB = new TracerDatabaseComClass(mainDir);
                 string[] timeRows = traceDB.ReturnAlldates().ToArray();
                 foreach (string r in timeRows)
                 {
@@ -126,10 +126,10 @@ namespace TracerV1
         /// <param name="messages"></param>
         /// <param name="date"></param>
         /// <returns></returns>
-        public List<genericDataContainer> getResult(List<string> messages, string date, List<string> IMSI)
+        public List<genericDataContainer> getResult(List<string> messages, string date, List<string> IMSI,string mainDir)
         {
             List<genericDataContainer> container = new List<genericDataContainer>();
-            TracerDatabaseComClass tracDB = new TracerDatabaseComClass();
+            TracerDatabaseComClass tracDB = new TracerDatabaseComClass(mainDir);
             genericDataContainer localContainer;
             foreach (var im in IMSI)
             {
@@ -173,13 +173,13 @@ namespace TracerV1
         /// </summary>
         /// <param name="messages"></param>
         /// <returns></returns>
-        public List<genericDataContainer> getResult(List<string> messages, List<string> IMSI)
+        public List<genericDataContainer> getResult(List<string> messages, List<string> IMSI,string mainDir)
         {
 
             List<genericDataContainer> container = new List<genericDataContainer>();
             //List<int> count = new List<int>();
             genericDataContainer localContainer;
-            TracerDatabaseComClass traceDB = new TracerDatabaseComClass();
+            TracerDatabaseComClass traceDB = new TracerDatabaseComClass(mainDir);
             foreach (var im in IMSI)
             {
                 localContainer = new genericDataContainer();

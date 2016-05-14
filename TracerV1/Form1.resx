@@ -343,7 +343,7 @@ This option allows you to save time when working with large data sources. It doe
         WpPMHjxKaZ9mNI6QY+R4xImIk/+Jioj+D63Z0b/vmQaFiPFiqAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="createPieChartItem32.Description" xml:space="preserve">
+  <data name="createPieChartItem2.Description" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -351,7 +351,7 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createPieChartItem32.Hint" xml:space="preserve">
+  <data name="createPieChartItem2.Hint" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -359,91 +359,91 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem32.Description" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem2.Description" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem32.Hint" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem2.Hint" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createArea3DChartItem32.Description" xml:space="preserve">
+  <data name="createArea3DChartItem2.Description" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createArea3DChartItem32.Hint" xml:space="preserve">
+  <data name="createArea3DChartItem2.Hint" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createFullStackedArea3DChartItem32.Description" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem2.Description" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFullStackedArea3DChartItem32.Hint" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem2.Hint" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFunnelChartItem32.Description" xml:space="preserve">
+  <data name="createFunnelChartItem2.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnelChartItem32.Hint" xml:space="preserve">
+  <data name="createFunnelChartItem2.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem32.Description" xml:space="preserve">
+  <data name="createFunnel3DChartItem2.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem32.Hint" xml:space="preserve">
+  <data name="createFunnel3DChartItem2.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createStockChartItem32.Description" xml:space="preserve">
+  <data name="createStockChartItem2.Description" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createStockChartItem32.Hint" xml:space="preserve">
+  <data name="createStockChartItem2.Hint" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem32.Description" xml:space="preserve">
+  <data name="createCandleStickChartItem2.Description" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem32.Hint" xml:space="preserve">
+  <data name="createCandleStickChartItem2.Hint" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createScatterRadarLineChartItem26.Description" xml:space="preserve">
+  <data name="createScatterRadarLineChartItem2.Description" xml:space="preserve">
     <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterRadarLineChartItem26.Hint" xml:space="preserve">
+  <data name="createScatterRadarLineChartItem2.Hint" xml:space="preserve">
     <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterPolarLineChartItem26.Description" xml:space="preserve">
+  <data name="createScatterPolarLineChartItem2.Description" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterPolarLineChartItem26.Hint" xml:space="preserve">
+  <data name="createScatterPolarLineChartItem2.Hint" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createSideBySideGanttChartItem32.Description" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem2.Description" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
     </value>
   </data>
-  <data name="createSideBySideGanttChartItem32.Hint" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem2.Hint" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
@@ -458,7 +458,7 @@ Use it when it's necessary to show activity bars from different series one above
   <metadata name="galleryDropDown3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>915, 56</value>
   </metadata>
-  <data name="createPieChartItem33.Description" xml:space="preserve">
+  <data name="createPieChartItem3.Description" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -466,7 +466,7 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createPieChartItem33.Hint" xml:space="preserve">
+  <data name="createPieChartItem3.Hint" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -477,13 +477,13 @@ Use it when values can be added together or when you have only one data series a
   <metadata name="galleryDropDown4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1069, 56</value>
   </metadata>
-  <data name="createRotatedFullStackedBarChartItem33.Description" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem3.Description" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem33.Hint" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem3.Hint" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
@@ -492,19 +492,19 @@ Use it when the values on the chart represent durations or when the category tex
   <metadata name="galleryDropDown5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
-  <data name="createArea3DChartItem33.Description" xml:space="preserve">
+  <data name="createArea3DChartItem3.Description" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createArea3DChartItem33.Hint" xml:space="preserve">
+  <data name="createArea3DChartItem3.Hint" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createFullStackedArea3DChartItem33.Description" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem3.Description" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFullStackedArea3DChartItem33.Hint" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem3.Hint" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
@@ -513,49 +513,49 @@ Use it for comparing the percentage values of several series for the same point 
   <metadata name="galleryDropDown6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>171, 95</value>
   </metadata>
-  <data name="createFunnelChartItem33.Description" xml:space="preserve">
+  <data name="createFunnelChartItem3.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnelChartItem33.Hint" xml:space="preserve">
+  <data name="createFunnelChartItem3.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem33.Description" xml:space="preserve">
+  <data name="createFunnel3DChartItem3.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem33.Hint" xml:space="preserve">
+  <data name="createFunnel3DChartItem3.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createStockChartItem33.Description" xml:space="preserve">
+  <data name="createStockChartItem3.Description" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createStockChartItem33.Hint" xml:space="preserve">
+  <data name="createStockChartItem3.Hint" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem33.Description" xml:space="preserve">
+  <data name="createCandleStickChartItem3.Description" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem33.Hint" xml:space="preserve">
+  <data name="createCandleStickChartItem3.Hint" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createSideBySideGanttChartItem33.Description" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem3.Description" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
     </value>
   </data>
-  <data name="createSideBySideGanttChartItem33.Hint" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem3.Hint" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
@@ -573,6 +573,117 @@ Use it when it's necessary to show activity bars from different series one above
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>88</value>
   </metadata>
+  <data name="Capture.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACI
+        SAAAiEgBZRG1BQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABiJSURBVHhe7d0J
+        sGVFfQZwYWDGYRn2FJthtQCFpGSoUTIOBDAwlgYDFMUmoIXFEiBBSQFSCSEoyFJssiSF6BAlMcEglcCA
+        yB4RKEQhhiVBUUCJ4AaoLCpLvo851+nX73vv3XtP97nnnv6o+lUx/e7tf59/9+l337nndL/p9ddfN7NC
+        yUIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4Ms
+        NLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIz
+        K4MsNLMyyEJLa/78+bNhM9gJDoTj4SSbgDk5AN4Nm8BKKpeWliy0+jCAN4aPw8PwGrxuA3kVvgHHwroq
+        x1afLLThYbDyN9hNwAGsBrYN7jdwDWyrcm7Dk4U2OAzOFeGv4RVQg9jqewmOVfm34chCGwwG5dpwSzVI
+        Lb+lsIbqCxuMLLT+YSDyN/9XqoFpzbkWVlB9Yv2ThdY/DMLTgkFpzTpV9Yn1TxZafzAAdwVf4R8d5n5X
+        1TfWH1loM8PAmwX/XQ1EGx32wSzVRzYzWWgzw6A7IhiENlpHqD6ymclCmx4G3Dx4JhiANlrsi3mqr2x6
+        stCmh8F2ZjD4rB3OVH1l05OFNjUMNN7T/3Iw8Kwd2CebqT6zqclCmxoG2VXBoLN2uUr1mU1NFpqGAbYw
+        GnDWPgtV35kmC20yDKwV4N5goFk7sY98h2CfZKFNhkH1wWCQWbt9UPWhTSYLbSIMqLnwg2CAWbuxr+aq
+        vrSJZKFNhMF0SjC4bDycovrSJpKFthwG0obwq2Bg2Xhgn22o+tSWk4W2HAbRkmBQ2XhZovrUlpOFtgwG
+        0Pbgp/3GF/tue9W3towstGUweG4PBpONp9tV39oystDeOPn3igaSja+9VB+bJwAJA4br+H83GEA23tiX
+        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
+</value>
+  </data>
   <metadata name="mapStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>583, 17</value>
   </metadata>
@@ -6763,7 +6874,7 @@ Use it when it's necessary to show activity bars from different series one above
   <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>633, 95</value>
   </metadata>
-  <data name="createPieChartItem34.Description" xml:space="preserve">
+  <data name="createPieChartItem4.Description" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -6771,7 +6882,7 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createPieChartItem34.Hint" xml:space="preserve">
+  <data name="createPieChartItem4.Hint" xml:space="preserve">
     <value>Insert a pie chart.
 
 Pie charts display the contribution of each value to a total.
@@ -6779,91 +6890,91 @@ Pie charts display the contribution of each value to a total.
 Use it when values can be added together or when you have only one data series and all values are positive.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem34.Description" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem4.Description" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createRotatedFullStackedBarChartItem34.Hint" xml:space="preserve">
+  <data name="createRotatedFullStackedBarChartItem4.Hint" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.
     </value>
   </data>
-  <data name="createArea3DChartItem34.Description" xml:space="preserve">
+  <data name="createArea3DChartItem4.Description" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createArea3DChartItem34.Hint" xml:space="preserve">
+  <data name="createArea3DChartItem4.Hint" xml:space="preserve">
     <value>Display data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area. Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="createFullStackedArea3DChartItem34.Description" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem4.Description" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFullStackedArea3DChartItem34.Hint" xml:space="preserve">
+  <data name="createFullStackedArea3DChartItem4.Hint" xml:space="preserve">
     <value>Display data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.
     </value>
   </data>
-  <data name="createFunnelChartItem34.Description" xml:space="preserve">
+  <data name="createFunnelChartItem4.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnelChartItem34.Hint" xml:space="preserve">
+  <data name="createFunnelChartItem4.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem34.Description" xml:space="preserve">
+  <data name="createFunnel3DChartItem4.Description" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createFunnel3DChartItem34.Hint" xml:space="preserve">
+  <data name="createFunnel3DChartItem4.Hint" xml:space="preserve">
     <value>Display a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.
     </value>
   </data>
-  <data name="createStockChartItem34.Description" xml:space="preserve">
+  <data name="createStockChartItem4.Description" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createStockChartItem34.Hint" xml:space="preserve">
+  <data name="createStockChartItem4.Hint" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem34.Description" xml:space="preserve">
+  <data name="createCandleStickChartItem4.Description" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createCandleStickChartItem34.Hint" xml:space="preserve">
+  <data name="createCandleStickChartItem4.Hint" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="createScatterRadarLineChartItem27.Description" xml:space="preserve">
+  <data name="createScatterRadarLineChartItem3.Description" xml:space="preserve">
     <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterRadarLineChartItem27.Hint" xml:space="preserve">
+  <data name="createScatterRadarLineChartItem3.Hint" xml:space="preserve">
     <value>Display data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterPolarLineChartItem27.Description" xml:space="preserve">
+  <data name="createScatterPolarLineChartItem3.Description" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createScatterPolarLineChartItem27.Hint" xml:space="preserve">
+  <data name="createScatterPolarLineChartItem3.Hint" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="createSideBySideGanttChartItem34.Description" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem4.Description" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
     </value>
   </data>
-  <data name="createSideBySideGanttChartItem34.Hint" xml:space="preserve">
+  <data name="createSideBySideGanttChartItem4.Hint" xml:space="preserve">
     <value>Display horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.
@@ -6877,119 +6988,5 @@ Use it when it's necessary to show activity bars from different series one above
   </metadata>
   <metadata name="snapDocumentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
-  </metadata>
-  <data name="Capture.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAACI
-        SAAAiEgBZRG1BQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABiJSURBVHhe7d0J
-        sGVFfQZwYWDGYRn2FJthtQCFpGSoUTIOBDAwlgYDFMUmoIXFEiBBSQFSCSEoyFJssiSF6BAlMcEglcCA
-        yB4RKEQhhiVBUUCJ4AaoLCpLvo851+nX73vv3XtP97nnnv6o+lUx/e7tf59/9+l337nndL/p9ddfN7NC
-        yUIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4Ms
-        NLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIzK4MsNLMyyEIz
-        K4MsNLMyyEJLa/78+bNhM9gJDoTj4SSbgDk5AN4Nm8BKKpeWliy0+jCAN4aPw8PwGrxuA3kVvgHHwroq
-        x1afLLThYbDyN9hNwAGsBrYN7jdwDWyrcm7Dk4U2OAzOFeGv4RVQg9jqewmOVfm34chCGwwG5dpwSzVI
-        Lb+lsIbqCxuMLLT+YSDyN/9XqoFpzbkWVlB9Yv2ThdY/DMLTgkFpzTpV9Yn1TxZafzAAdwVf4R8d5n5X
-        1TfWH1loM8PAmwX/XQ1EGx32wSzVRzYzWWgzw6A7IhiENlpHqD6ymclCmx4G3Dx4JhiANlrsi3mqr2x6
-        stCmh8F2ZjD4rB3OVH1l05OFNjUMNN7T/3Iw8Kwd2CebqT6zqclCmxoG2VXBoLN2uUr1mU1NFpqGAbYw
-        GnDWPgtV35kmC20yDKwV4N5goFk7sY98h2CfZKFNhkH1wWCQWbt9UPWhTSYLbSIMqLnwg2CAWbuxr+aq
-        vrSJZKFNhMF0SjC4bDycovrSJpKFthwG0obwq2Bg2Xhgn22o+tSWk4W2HAbRkmBQ2XhZovrUlpOFtgwG
-        0Pbgp/3GF/tue9W3towstGUweG4PBpONp9tV39oystDeOPn3igaSja+9VB+bJwAJA4br+H83GEA23tiX
-        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
-</value>
-  </data>
-  <metadata name="mapStatusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>583, 17</value>
   </metadata>
 </root>

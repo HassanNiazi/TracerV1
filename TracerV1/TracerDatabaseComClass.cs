@@ -18,7 +18,10 @@ namespace TracerV1
         /// </summary>
         public readonly string TableName = "TraceDB";
 
-
+        public TracerDatabaseComClass(string mainDir)
+        {
+            firstCall(mainDir);
+        }
         public struct TraceItem
         {
             public string rrcMessage;
@@ -33,7 +36,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) , "Database1.sdf"));
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -49,6 +52,31 @@ namespace TracerV1
 
             }
         }
+
+
+
+        public void firstCall(string mainDir)
+        {
+            try
+            {
+
+                //con = new SqlCeConnection("Data Source = C:/Users/sikan/Documents/Visual Studio 2015/Projects/TracerV1/TracerV1/bin/x64/Debug/Database1.sdf;"); // Max Database Size = 4090");
+                con = new SqlCeConnection("Data Source = " + mainDir + "/Database1.sdf; Max Database Size = 4090");
+
+                //con = new SqlCeConnection();
+                //                con.ConnectionString = "Data Source = Database1.sdf; Max Database Size = 4000; Persist Security Info=  False";
+                SqlCeDataAdapter sda = new SqlCeDataAdapter();
+               // SqlCeCommand cmd = con.CreateCommand();
+                con.Open();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+            }
+        }
+
+
 
         public void insertDataTable(DataTable dataTable)
         {

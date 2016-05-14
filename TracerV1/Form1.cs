@@ -19,19 +19,20 @@ using System.Security.Cryptography;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Net.Cache;
-
+using System.Threading;
 namespace TracerV1
 {
+    
+
     public partial class Form1 : Form
     {
 
-
+        #region Global Vars
         //TODO: Add Names for IMSI's
         //TODO: Add Snap It ---- Done
         //Add Normal Map Search 
         bool started = false;
         bool unknownCellsFlag = false;
-
         static readonly string PasswordHash = "P@@SwAAA";
         static readonly string SaltKey = "S@LT&ZZZ";
         static readonly string VIKey = "HR$2pIjHR$2pIj12";
@@ -44,7 +45,9 @@ namespace TracerV1
         SqlCeConnection con;
         List<string> rrcItems = new List<string>();
         object misValue = System.Reflection.Missing.Value;
-        TracerDatabaseComClass tracerDatabaseComObject = new TracerDatabaseComClass();
+        TracerDatabaseComClass tracerDatabaseComObject = new TracerDatabaseComClass(Environment.CurrentDirectory);
+        OpenFileDialog opf = new OpenFileDialog();
+        #endregion
 
         class _point
         {
@@ -77,11 +80,11 @@ namespace TracerV1
         public Form1()
         {
             InitializeComponent();
-
+            
             mapProviderList.DataSource = GMapProviders.List;
 
-
-
+            CheckForIllegalCrossThreadCalls = false;
+            
             #region Licenscing
             //while (Properties.Settings.Default.expired)
             //{
@@ -192,6 +195,7 @@ namespace TracerV1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            tracerDatabaseComObject.firstCall(mainDir);
             LicensceLoadAndOtherStartUpCode();
         }
 
@@ -562,8 +566,14 @@ namespace TracerV1
         /// <param name="e"></param>
         private void Browse_Click(object sender, EventArgs e)
         {
-            uploadTraceDataFromFile();
+            
+            opf.Multiselect = true;
+            opf.ShowDialog();
+            Thread T1 = new Thread(uploadTraceDataFromFile);
+            T1.Start();        
+
         }
+
         #region Old Trace Data Upload From File
         //private void updateTraceDataFromFile()
         //{
@@ -660,12 +670,15 @@ namespace TracerV1
 
         private void uploadTraceDataFromFile()
         {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Multiselect = true;
-            opf.ShowDialog();
+           
+            progressBar1.Maximum = opf.FileNames.Length;
+            progressBar1.Value = 0;
             foreach (string item in opf.FileNames)
             {
+                path.Text = "Processing " + item;
                 _traceDataUpload(item);
+                progressBar1.Value = progressBar1.Value + 1;
+
             }
         }
 
@@ -717,7 +730,6 @@ namespace TracerV1
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         private void _cellNamesDataUpload()
         {
@@ -1667,9 +1679,6 @@ namespace TracerV1
             }
         }
 
-
-
-
         private void SearchIMSI_Click(object sender, EventArgs e)
         {
             try
@@ -2064,7 +2073,7 @@ namespace TracerV1
 
             List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
 
-            dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text);
+            dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text,mainDir);
             if (dataList == null)
             {
                 MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
@@ -2200,7 +2209,7 @@ namespace TracerV1
 
             List<UserMessageFilter.genericDataContainer> count = new List<UserMessageFilter.genericDataContainer>();
             List<string> str = getIMSIs();
-            count = umf.getResult(chkMessages, str);
+            count = umf.getResult(chkMessages, str,mainDir);
             if (count == null)
             {
                 MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
@@ -2465,6 +2474,7 @@ namespace TracerV1
                 GC.Collect();
             }
         }
+
         public void closeExcelBook(Excel.Workbook xlWorkBook, Excel.Application xlApp, Excel.Worksheet xlWorkSheet)
         {
 
