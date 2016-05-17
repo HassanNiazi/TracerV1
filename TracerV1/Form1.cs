@@ -3020,7 +3020,14 @@ namespace TracerV1
 
         private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Environment.Exit(Environment.ExitCode);
+            try
+            {
+                Environment.Exit(Environment.ExitCode);
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
         }
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -3044,11 +3051,42 @@ namespace TracerV1
         private void button17_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                List<string> imgPaths = new List<string>();
+
+                foreach (string s in listBox4.Items)
+                {
+                    imgPaths.Add(string.Format("{0}/images/" + s + "E.jpg", mainDir));
+                    //   Clipboard.SetImage(Image.FromFile(string.Format("{0}/images/" + s + "E.jpg", mainDir)));
+
+                }
+
+                string[] imgpathArray = imgPaths.ToArray();
+
+                Clipboard.Clear();
+                Clipboard.SetData(DataFormats.FileDrop, imgpathArray);
+                Clipboard.GetDataObject().GetFormats();
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
+
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
-            Clipboard.SetImage(pictureBox1.Image);
+            try
+            {
+
+                Clipboard.SetImage(pictureBox1.Image);
+
+            }
+            catch (Exception EX)
+            {
+                MsgBox(EX.Message);
+            }
         }
     }
 
