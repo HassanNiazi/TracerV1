@@ -17,9 +17,11 @@ namespace TracerV1
         ///  Returns the name of table.
         /// </summary>
         public readonly string TableName = "TraceDB";
+        string _mainDir;
 
         public TracerDatabaseComClass(string mainDir)
         {
+            _mainDir = mainDir;
             firstCall(mainDir);
         }
         public struct TraceItem
@@ -36,7 +38,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) , "Database1.sdf"));
+                con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -87,7 +89,7 @@ namespace TracerV1
                     errorMessage = "Data Not Inserted. {reason} Column Count in input greater then 4. {Method} insertDataTable(DataTable dataTable)";
                     return;
                 }
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
@@ -110,7 +112,7 @@ namespace TracerV1
             try
             {
                
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
@@ -132,7 +134,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -172,7 +174,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -209,7 +211,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
@@ -245,7 +247,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
                 con.Open();
@@ -281,7 +283,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -319,7 +321,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -356,7 +358,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -393,7 +395,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -430,7 +432,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -466,7 +468,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -498,7 +500,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -537,7 +539,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                  con = new SqlCeConnection("Data Source = " + _mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 

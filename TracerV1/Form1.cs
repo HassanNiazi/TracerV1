@@ -20,9 +20,10 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Net.Cache;
 using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
 namespace TracerV1
 {
-    
+
 
     public partial class Form1 : Form
     {
@@ -80,11 +81,11 @@ namespace TracerV1
         public Form1()
         {
             InitializeComponent();
-            
+
             mapProviderList.DataSource = GMapProviders.List;
 
             CheckForIllegalCrossThreadCalls = false;
-            
+
             #region Licenscing
             //while (Properties.Settings.Default.expired)
             //{
@@ -264,9 +265,9 @@ namespace TracerV1
 
             #endregion
             if (Properties.Settings.Default.licenseLastDate > DateTime.Today)
-                expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                expiryLic.Text = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
             else
-                expiryLic.Caption = "Licensce Expired";
+                expiryLic.Text = "Licensce Expired";
             sqlConOpen();
             refetchData();
             mocMessageFilter.Text = Properties.Settings.Default.mocStringOfficial;
@@ -278,7 +279,7 @@ namespace TracerV1
             this.Show();
             this.WindowState = FormWindowState.Maximized;
             f2.Dispose();
-            snapControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
+         //   snapControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -342,7 +343,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source = " + mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -459,7 +460,7 @@ namespace TracerV1
         {
             try
             {
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source = " + mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -486,7 +487,7 @@ namespace TracerV1
         {
             try
             {
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source = " + mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -517,7 +518,7 @@ namespace TracerV1
         {
             try
             {
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source = " + mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -566,11 +567,11 @@ namespace TracerV1
         /// <param name="e"></param>
         private void Browse_Click(object sender, EventArgs e)
         {
-            
+
             opf.Multiselect = true;
             opf.ShowDialog();
             Thread T1 = new Thread(uploadTraceDataFromFile);
-            T1.Start();        
+            T1.Start();
 
         }
 
@@ -670,16 +671,19 @@ namespace TracerV1
 
         private void uploadTraceDataFromFile()
         {
-           
-            progressBar1.Maximum = opf.FileNames.Length;
-            progressBar1.Value = 0;
+
+            progressDB.Maximum = opf.FileNames.Length;
+            progressDB.Value = 0;
             foreach (string item in opf.FileNames)
             {
-                path.Text = "Processing " + item;
-                _traceDataUpload(item);
-                progressBar1.Value = progressBar1.Value + 1;
+                path.Text = "Importing " + item;
 
+                _traceDataUpload(item);
+                progressDB.Value = progressDB.Value + 1;
+                StatusLabelDBProcess.Text = "Importing " + progressDB.Value.ToString() + "/" + progressDB.Maximum.ToString();
             }
+            progressDB.Value = 0;
+            StatusLabelDBProcess.Text = "Done";
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -1185,7 +1189,7 @@ namespace TracerV1
             try
             {
 
-                con = new SqlCeConnection("Data Source=" + Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "Database1.sdf"));
+                con = new SqlCeConnection("Data Source = " + mainDir + "/Database1.sdf; Max Database Size = 4090");
                 SqlCeDataAdapter sda = new SqlCeDataAdapter();
                 SqlCeCommand cmd = con.CreateCommand();
 
@@ -1863,62 +1867,62 @@ namespace TracerV1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                OpenFileDialog opf = new OpenFileDialog();
-                opf.ShowDialog();
-                Excel_Com exc = new Excel_Com();
-                exc.openExcelBook(opf.FileName);
-                DataTable dt = exc.getWorkSheetData(1);
+            //try
+            //{
+            //    OpenFileDialog opf = new OpenFileDialog();
+            //    opf.ShowDialog();
+            //    Excel_Com exc = new Excel_Com();
+            //    exc.openExcelBook(opf.FileName);
+            //    DataTable dt = exc.getWorkSheetData(1);
 
-                //    dataGridView5.DataSource = dt;
-                exc.closeExcelBook();
+            //    //    dataGridView5.DataSource = dt;
+            //    exc.closeExcelBook();
 
-                /**
-                 * 
-                 * 
-                 * 
-                 * 
-                 * */
-                // Specify data members to bind the series.
-                DevExpress.XtraCharts.Series series = new DevExpress.XtraCharts.Series("Series1", ViewType.Line);
-                chartControl1.Series.Add(series);
-                series.DataSource = dt;
-                dataGridView5.DataSource = dt;
-                //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-                dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                series.ArgumentScaleType = ScaleType.Auto;
-                series.ArgumentDataMember = "UserName";
-                series.ValueScaleType = ScaleType.Numerical;
-                string[] STR = new string[1];
-                STR[0] = "Value";
-                series.ValueDataMembers.AddRange(STR);
-                //.AddRange(new string[] { "Value" });
+            //    /**
+            //     * 
+            //     * 
+            //     * 
+            //     * 
+            //     * */
+            //    // Specify data members to bind the series.
+            //    DevExpress.XtraCharts.Series series = new DevExpress.XtraCharts.Series("Series1", ViewType.Line);
+            //    chartControl1.Series.Add(series);
+            //    series.DataSource = dt;
+            //    dataGridView5.DataSource = dt;
+            //    //                dataGridView5.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            //    dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            //    series.ArgumentScaleType = ScaleType.Auto;
+            //    series.ArgumentDataMember = "UserName";
+            //    series.ValueScaleType = ScaleType.Numerical;
+            //    string[] STR = new string[1];
+            //    STR[0] = "Value";
+            //    series.ValueDataMembers.AddRange(STR);
+            //    //.AddRange(new string[] { "Value" });
 
-                // Set some properties to get a nice-looking chart.
-                //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
-                //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
-                //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-                chartControl1.Refresh();
-                chartControl1.RefreshData();
-                /***
-                * 
-                * 
-                * 
-                * 
-                * ***/
+            //    // Set some properties to get a nice-looking chart.
+            //    //   ((SideBySideBarSeriesView)series.View).ColorEach = true;
+            //    //((XYDiagram)chartControl1.Diagram).AxisY.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            //    //chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            //    chartControl1.Refresh();
+            //    chartControl1.RefreshData();
+            //    /***
+            //    * 
+            //    * 
+            //    * 
+            //    * 
+            //    * ***/
 
-                //chart1.Series.Add("test");
-                //chart1.Series["test"].XValueMember = "UserName";
-                //chart1.Series["test"].YValueMembers = "Value";
-                //chart1.DataSource = dt;
-                //chart1.DataBind();
+            //    //chart1.Series.Add("test");
+            //    //chart1.Series["test"].XValueMember = "UserName";
+            //    //chart1.Series["test"].YValueMembers = "Value";
+            //    //chart1.DataSource = dt;
+            //    //chart1.DataBind();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void ribbonStatusBar1_Click(object sender, EventArgs e)
@@ -1932,10 +1936,7 @@ namespace TracerV1
             {
                 SaveFileDialog svf = new SaveFileDialog();
                 svf.ShowDialog();
-
-
-
-                chartControl1.ExportToImage(svf.FileName + ".jpeg", ImageFormat.Jpeg);
+                winChartDV1.SaveImage(svf.FileName + ".jpeg", ImageFormat.Jpeg);
             }
             catch (Exception ex)
             {
@@ -1955,7 +1956,7 @@ namespace TracerV1
             svf.ShowDialog();
             DevExpress.XtraPrinting.XlsExportOptions dxo = new DevExpress.XtraPrinting.XlsExportOptions();
             dxo.ExportMode = DevExpress.XtraPrinting.XlsExportMode.SingleFile;
-            chartControl1.ExportToXlsx(svf.FileName + ".xlsx");
+            //     chartControl1.ExportToXlsx(svf.FileName + ".xlsx");
         }
 
         private void GoTOCoord_Click(object sender, EventArgs e)
@@ -1982,7 +1983,8 @@ namespace TracerV1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            plotGraphCalls(chartControl1, dataGridView5);
+
+            winFromChartPlotter(winChartDV1, dataGridView5);
 
         }
 
@@ -2046,7 +2048,65 @@ namespace TracerV1
 
         private void plotcc1_Click(object sender, EventArgs e)
         {
-            plotGraph2(cc1, dgvV2, messagesListBox, graphLabel2TB.Text);
+            //  plotGraph2(cc1, dgvV2, messagesListBox, graphLabel2TB.Text);
+            winPlotGraph2(cc1win, dgvV2, messagesListBox, graphLabel2TB.Text);
+        }
+
+        private void winFromChartPlotter(Chart _chart, DataGridView _dgv)
+        {
+            _chart.Series.Clear();
+            _chart.Titles.Clear();
+
+
+
+            DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
+
+            DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("MOC", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("MTC", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("TotalCalls", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+            dcGraph = new DataColumn("CallDrop", System.Type.GetType("System.Int32"));
+            graphData.Columns.Add(dcGraph);
+
+            UserMessageFilter umf = new UserMessageFilter();
+
+            List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
+
+            dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text, mainDir);
+            if (dataList == null)
+            {
+                MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
+                return;
+            }
+
+
+
+            foreach (UserMessageFilter.countDate s in dataList)
+            {
+                object[] str = { s.date, s.countMOC - s.countMTC, s.countMTC, s.countMOC + s.countMTC, s.countDropCalls };
+                graphData.Rows.Add(str);
+            }
+
+
+            for (int i = 1; i < graphData.Columns.Count; i++)
+            {
+                System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series(graphData.Columns[i].ColumnName);
+                foreach (DataRow dr in graphData.Rows)
+                {
+                    int y = (int)dr[i];
+                    series.Points.AddXY(dr["Date"].ToString(), y);
+                }
+                _chart.Series.Add(series);
+            }
+
+            _dgv.DataSource = graphData;
+
+            _dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void plotGraphCalls(ChartControl ch, DataGridView _dgv)
@@ -2060,6 +2120,7 @@ namespace TracerV1
             UserMessageFilter umf = new UserMessageFilter();
             DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
             graphData.Clear();
+
             DataColumn dcGraph = new DataColumn("Date", System.Type.GetType("System.DateTime"));
             graphData.Columns.Add(dcGraph);
             dcGraph = new DataColumn("MOC", System.Type.GetType("System.Int32"));
@@ -2073,7 +2134,7 @@ namespace TracerV1
 
             List<UserMessageFilter.countDate> dataList = new List<UserMessageFilter.countDate>();
 
-            dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text,mainDir);
+            dataList = umf.getResult(mocMessageFilter.Text, mtcMessageFilter.Text, callDropFilterMessage.Text, mainDir);
             if (dataList == null)
             {
                 MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
@@ -2176,6 +2237,88 @@ namespace TracerV1
             ch.RefreshData();
         }
 
+        private void winPlotGraph2(Chart ch, DataGridView _dgv, CheckedListBox chkList, string chartTitle)
+        {
+            _dgv.ScrollBars = ScrollBars.Both;
+
+            ch.Series.Clear();
+            ch.Titles.Clear();
+            ch.DataSource = null;
+
+            //// Chart Title Add
+
+            ch.Titles.Add(chartTitle);
+
+            /////
+
+            UserMessageFilter umf = new UserMessageFilter();
+            DataTable graphData = new DataTable(); //rab setup , pagginging type 1 , signanling conn release 
+            graphData.Clear();
+
+            List<string> chkMessages = new List<string>();
+
+            foreach (var r in chkList.CheckedItems)
+            {
+                chkMessages.Add(LookupRRCMessageNameFromCustomValue(r.ToString()));
+            }
+
+            List<UserMessageFilter.genericDataContainer> count = new List<UserMessageFilter.genericDataContainer>();
+            List<string> str = getIMSIs();
+            count = umf.getResult(chkMessages, str, mainDir);
+            if (count == null)
+            {
+                MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
+                return;
+            }
+
+
+            DataColumn dcGraph;
+            dcGraph = new DataColumn("User", System.Type.GetType("System.String"));
+            graphData.Columns.Add(dcGraph);
+
+            foreach (var item in chkMessages)
+            {
+                dcGraph = new DataColumn(LookupRRCMessageName(item), System.Type.GetType("System.Int32"));
+                graphData.Columns.Add(dcGraph);
+            }
+
+            List<object> rowList = new List<object>();
+
+            foreach (var s in count)
+            {
+                rowList.Clear();
+                rowList.Add(getUserNameFromIMSI(s.imsi));
+
+                foreach (var item in s.count)
+                {
+                    rowList.Add(item);
+                }
+
+                graphData.Rows.Add(rowList.ToArray());
+            }
+
+            //object[] rowArray = rowList.ToArray();
+
+            //graphData.Rows.Add(rowArray); // Adding Row to datatable graphData
+
+            _dgv.DataSource = graphData;
+
+            for (int i = 1; i < graphData.Columns.Count; i++)
+            {
+                System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series(graphData.Columns[i].ColumnName);
+                foreach (DataRow dr in graphData.Rows)
+                {
+                    int y = (int)dr[i];
+                    series.Points.AddXY(dr["User"].ToString(), y);
+                }
+                ch.Series.Add(series);
+            }
+
+            dgv4.DataSource = graphData;
+            ch.Refresh();
+            _dgv.Refresh();
+        }
+
         /// <summary>
         /// Graph With Rab Setup Failures and Call Drop For Each User
         /// </summary>
@@ -2209,7 +2352,7 @@ namespace TracerV1
 
             List<UserMessageFilter.genericDataContainer> count = new List<UserMessageFilter.genericDataContainer>();
             List<string> str = getIMSIs();
-            count = umf.getResult(chkMessages, str,mainDir);
+            count = umf.getResult(chkMessages, str, mainDir);
             if (count == null)
             {
                 MessageBox.Show("Please Load Valid Data with valid Date Format i.e. DD/MM/YYYY. Time column should not contain Time value and should only show Date Data. \n\nError Details:\n" + umf.errorMessage);
@@ -2305,19 +2448,37 @@ namespace TracerV1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            plotGraph2(cc2, dgvv2g2, rrcChkListGrap2, graphLabel3TB.Text);
+            //    plotGraph2(cc2, dgvv2g2, rrcChkListGrap2, graphLabel3TB.Text);
+            winPlotGraph2(wincc2, dgvv2g2, rrcChkListGrap2, graphLabel3TB.Text);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            //SaveFileDialog svf = new SaveFileDialog();
-            //svf.ShowDialog();
-            //cc1.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
-            cc1.ExportToImage(string.Format("{0}/chart2dv2.jpg", mainDir), ImageFormat.Jpeg); ;
+            try
+            {
+                //SaveFileDialog svf = new SaveFileDialog();
+                //svf.ShowDialog();
+                //cc1.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
+                string imgPath = string.Format("{0}/images/" + imageList1.Images.Count.ToString() + "E.jpg", mainDir);
 
-            dgv4.DataSource = dgvV2.DataSource;
-            _addImagesToImageControls(string.Format("{0}/chart2dv2.jpg", mainDir), graphLabel2TB.Text);
-            gridToImage(dgv4, cc1.Width, "");
+                cc1win.SaveImage(imgPath, ImageFormat.Jpeg); ;
+                dgv4.DataSource = dgvV2.DataSource;
+                _addImagesToImageControls(imgPath, graphLabel2TB.Text);
+
+                gridToImage(dgv4, cc1win.Width, "");
+            }
+            catch (Exception ex)
+            {
+
+                MsgBox(ex.Message);
+            }
+        }
+
+        private void insertToImageList(string imgPath)
+        {
+
+            imageList1.Images.Add(Image.FromFile(imgPath));
+            listBox4.Items.Add(imageList1.Images.Count.ToString());
         }
 
         private void gridToImage(DataGridView __dgv, int widthToSync, string label)
@@ -2344,7 +2505,8 @@ namespace TracerV1
 
             //Resize DataGridView back to original height.
             __dgv.Height = height;
-            string path = mainDir + "/dgv.png";
+           string path = string.Format("{0}/images/" + imageList1.Images.Count.ToString() + "E.jpg", mainDir);
+            // string path = mainDir + "/dgv.png";
             //Save the Bitmap to folder.
 
             bitmap.Save(path);
@@ -2357,13 +2519,11 @@ namespace TracerV1
             //SaveFileDialog svf = new SaveFileDialog();
             //svf.ShowDialog();
             //cc2.ExportToImage(svf.FileName + ".jpg", ImageFormat.Jpeg);
-
-
-            cc2.ExportToImage(string.Format("{0}/chart3dv2.jpg", mainDir), ImageFormat.Jpeg);
-
+            string imgPath = string.Format("{0}/images/" + imageList1.Images.Count.ToString() + "E.jpg", mainDir);
+            wincc2.SaveImage(imgPath, ImageFormat.Jpeg);
             dgv4.DataSource = dgvv2g2.DataSource;
-            _addImagesToImageControls(string.Format("{0}/chart3dv2.jpg", mainDir), graphLabel3TB.Text);
-            gridToImage(dgv4, cc2.Width, "");
+            _addImagesToImageControls(imgPath, graphLabel3TB.Text);
+            gridToImage(dgv4, wincc2.Width, "");
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -2410,13 +2570,15 @@ namespace TracerV1
 
                 imgMap.Save(mapPath);
 
-                plotGraphCalls(chartControl1, dataGridView5);
+                // plotGraphCalls(winChartDV1, dataGridView5);
+
+                winFromChartPlotter(winChartDV1, dataGridView5);
 
                 Image imgChart1;
 
                 string chartPath = string.Format("{0}/chart1.jpg", mainDir);
 
-                chartControl1.ExportToImage(chartPath, ImageFormat.Jpeg);
+                winChartDV1.SaveImage(chartPath, ImageFormat.Jpeg);
 
                 imgChart1 = Image.FromFile(chartPath);
 
@@ -2496,17 +2658,17 @@ namespace TracerV1
 
         private void _addImagesToImageControls(string FileName, string header)
         {
-            snapControl1.Document.InsertHtmlText(snapControl1.Document.CaretPosition, string.Format("<br><b><font size=3>{0}</font></b><br>", header));
+         //   snapControl1.Document.InsertHtmlText(snapControl1.Document.CaretPosition, string.Format("<br><b><font size=3>{0}</font></b><br>", header));
             Image IMGlOCAL = Image.FromFile(FileName);
             string tempFile = Path.GetTempFileName();
             IMGlOCAL.Save(tempFile);
             Image imgTemp = Image.FromFile(tempFile);
             int width = 0, height = 0;
-            if (!((widthImage == null) || (heightImage == null)))
-                if (!((widthImage.EditValue == null) || (heightImage.EditValue == null)))
+            if (!((imgMaxWidth == null) || (imgMaxHeight == null)))
+                if (!((imgMaxWidth.Text == null) || (imgMaxHeight.Text == null)))
                 {
-                    bool validWidth = int.TryParse(widthImage.EditValue.ToString(), out width);
-                    bool validHeight = int.TryParse(heightImage.EditValue.ToString(), out height);
+                    bool validWidth = int.TryParse(imgMaxWidth.Text, out width);
+                    bool validHeight = int.TryParse(imgMaxHeight.Text, out height);
 
                     if (!(validWidth && validHeight))
                     {
@@ -2520,7 +2682,9 @@ namespace TracerV1
                     width = imgTemp.Width;
                     height = imgTemp.Height;
                 }
-            snapControl1.Document.Images.Insert(snapControl1.Document.CaretPosition, ScaleImage(imgTemp, width, height));
+            //  snapControl1.Document.Images.Insert(snapControl1.Document.CaretPosition, ScaleImage(imgTemp, width, height));
+            imageList1.Images.Add(ScaleImage(imgTemp, width, height));
+            listBox4.Items.Add(imageList1.Images.Count.ToString());
             IMGlOCAL.Dispose();
         }
 
@@ -2553,35 +2717,43 @@ namespace TracerV1
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+        }
+
+        private void generateRCTReport()
+        {
+
             try
             {
                 //SaveFileDialog svf = new SaveFileDialog() { Filter = "Excel Files | *.xlsx" };
                 //svf.ShowDialog();
                 PlotMarkers_Click(null, null);
 
+              
+
                 Image imgMap = getMapImage();
 
-                string mapPath = string.Format("{0}/map.jpg", mainDir);
+                string mapPath = string.Format("{0}/images/" + imageList1.Images.Count.ToString() + "E.jpg", mainDir);
 
                 imgMap.Save(mapPath);
 
                 imgMap.Dispose();
 
-                plotGraphCalls(chartControl1, dataGridView5);
-
+                // plotGraphCalls(winChartDV1, dataGridView5);
+                winFromChartPlotter(winChartDV1, dataGridView5);
                 // Image imgChart1;
 
-                string chartPath = string.Format("{0}/chart1.jpg", mainDir);
+                string chartPath = string.Format("{0}/images/" + (imageList1.Images.Count + 1).ToString() + "E.jpg", mainDir);
 
-                chartControl1.ExportToImage(chartPath, ImageFormat.Jpeg);
-
+                // winChartDV1.ExportToImage(chartPath, ImageFormat.Jpeg);
+                winChartDV1.SaveImage(chartPath, ImageFormat.Jpeg);
                 //  imgChart1 = Image.FromFile(chartPath);
 
                 _addImagesToImageControls(mapPath, "Map : ");
                 _addImagesToImageControls(chartPath, "CTO Trace : ");
 
                 dgv4.DataSource = dataGridView5.DataSource;
-                gridToImage(dgv4, chartControl1.Width, "");
+                gridToImage(dgv4, winChartDV1.Width, "");
             }
             catch (Exception ex) { MsgBox(ex.Message); }
         }
@@ -2612,13 +2784,13 @@ namespace TracerV1
                 {
                     Properties.Settings.Default.expired = false;
                     Properties.Settings.Default.Save();
-                    expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                    expiryLic.Text = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
                 }
                 else
                 {
                     Properties.Settings.Default.expired = true;
                     Properties.Settings.Default.Save();
-                    expiryLic.Caption = "Licensce Expired";
+                    expiryLic.Text = "Licensce Expired";
                 }
             }
             catch (Exception ex)
@@ -2628,13 +2800,13 @@ namespace TracerV1
                 {
                     Properties.Settings.Default.expired = false;
                     Properties.Settings.Default.Save();
-                    expiryLic.Caption = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
+                    expiryLic.Text = "Licensced Till : " + Properties.Settings.Default.licenseLastDate.ToShortDateString();
                 }
                 else
                 {
                     Properties.Settings.Default.expired = true;
                     Properties.Settings.Default.Save();
-                    expiryLic.Caption = "Licensce Expired";
+                    expiryLic.Text = "Licensce Expired";
                 }
             }
 
@@ -2705,10 +2877,13 @@ namespace TracerV1
 
         private void button8_Click_2(object sender, EventArgs e)
         {
-            chartControl1.ExportToImage(string.Format("{0}/chartcon1.png", mainDir), ImageFormat.Png);
+            string imgPath = string.Format("{0}/images/" + imageList1.Images.Count.ToString() + "E.jpg", mainDir);
+
+
+            winChartDV1.SaveImage(imgPath, ImageFormat.Jpeg);
             dgv4.DataSource = dataGridView5.DataSource;
-            _addImagesToImageControls(string.Format("{0}/chartcon1.png", mainDir), graphLabel2TB.Text);
-            gridToImage(dgv4, chartControl1.Width, "");
+            _addImagesToImageControls(imgPath, graphLabel2TB.Text);
+            gridToImage(dgv4, winChartDV1.Width, "");
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -2783,9 +2958,12 @@ namespace TracerV1
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            MessageBox.Show("Developed By Muhammad Hassan Niazi\nHassanniazi93@gmail.com\nRF ZTE Pakistan", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void msgboxAboutDev()
+        {
+            MessageBox.Show("Developed By Muhammad Hassan Niazi\nHassanniazi93@gmail.com\nRF ZTE Pakistan", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void dataGridView3_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -2823,6 +3001,54 @@ namespace TracerV1
         {
             _tempTable.Clear();
             _tempTable.Dispose();
+        }
+
+        private void generateRCTTraceReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            generateRCTReport();
+        }
+
+        private void loadLicensceFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadLicensceFile();
+        }
+
+        private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            msgboxAboutDev();
+        }
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(Environment.ExitCode);
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string imgPath = string.Format("{0}/images/" + listBox4.SelectedIndex.ToString() + "E.jpg", mainDir);
+                pictureBox1.Image = Image.FromFile(imgPath);
+            }
+            catch (Exception ex)
+            {
+                MsgBox(ex.Message);
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            listBox4.Items.Clear();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetImage(pictureBox1.Image);
         }
     }
 
